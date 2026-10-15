@@ -1,0 +1,53 @@
+{
+ "_doc": "Hypothèses de calcul. Toutes modifiables dans l'app (panneau Hypothèses). Chaque bloc indique sa source ou son statut.",
+ "combustibles": {
+  "_statut": "Valeurs indicatives, sans API officielle gratuite. À mettre à jour à la main ou via les curseurs.",
+  "gaz_ttf_eur_mwh": 32,
+  "co2_eua_eur_t": 75,
+  "charbon_eur_mwh_th": 11,
+  "fioul_eur_mwh_th": 50
+ },
+ "technos": {
+  "_doc": "rendement (PCI), facteur d'émission du combustible (tCO2/MWh thermique), O&M variable (€/MWh), coût fixe (€/kW/an, hors capital historique), durée de vie (ans). Ordres de grandeur, à affiner.",
+  "nucleaire": {"cmg_fixe": 12, "cout_fixe_kw_an": 170, "vie": 60},
+  "hydraulique:fil": {"cmg_fixe": 0, "cout_fixe_kw_an": 30, "vie": 100},
+  "hydraulique:lac": {"valeur_eau": 65, "cout_fixe_kw_an": 30, "vie": 100},
+  "hydraulique:STEP": {"valeur_eau": 80, "cout_fixe_kw_an": 25, "vie": 100},
+  "gaz": {"rendement": 0.55, "emission_t_mwh_th": 0.202, "om_var": 3, "cout_fixe_kw_an": 25, "vie": 35},
+  "gaz:diffus": {"cmg_fixe": 0, "fatal": true, "_note": "Cogénérations sous obligation d'achat : production fatale, preneuse de prix.", "cout_fixe_kw_an": 30, "vie": 30},
+  "charbon": {"rendement": 0.38, "emission_t_mwh_th": 0.341, "om_var": 4, "cout_fixe_kw_an": 40, "vie": 45},
+  "fioul": {"rendement": 0.33, "emission_t_mwh_th": 0.279, "om_var": 5, "cout_fixe_kw_an": 15, "vie": 40},
+  "eolien": {"cmg_fixe": 0, "cout_fixe_kw_an": 45, "vie": 25},
+  "eolien:offshore": {"cmg_fixe": 0, "cout_fixe_kw_an": 90, "vie": 30},
+  "solaire": {"cmg_fixe": 0, "cout_fixe_kw_an": 15, "vie": 30},
+  "bioenergies": {"cmg_fixe": 50, "cout_fixe_kw_an": 60, "vie": 30}
+ },
+ "capacite_nationale_mw": {
+  "_statut": "Ordres de grandeur du parc installé. Sert à créer les blocs « diffus » (petites installations non listées) dans le merit order.",
+  "nucleaire": 62970,
+  "hydraulique": 25700,
+  "gaz": 12600,
+  "charbon": 1160,
+  "fioul": 2500,
+  "eolien": 26800,
+  "solaire": 27000,
+  "bioenergies": 2300
+ },
+ "couverture_edf_nucleaire": {
+  "_statut": "HYPOTHÈSE à remplacer par les chiffres publiés par EDF (résultats annuels et semestriels). Part de la production nucléaire vendue à terme et prix moyen, par année de livraison.",
+  "2026": {"part": 0.85, "prix": 74},
+  "2027": {"part": 0.55, "prix": 70},
+  "2028": {"part": 0.25, "prix": 68}
+ },
+ "vnu": {
+  "_statut": "Versement nucléaire universel (remplace l'ARENH depuis le 1er janvier 2026). Seuils et taux à vérifier dans le décret et les délibérations CRE : les sources publiques divergent.",
+  "seuil1": 78, "taux1": 0.5,
+  "seuil2": 110, "taux2": 0.9,
+  "cout_complet_cre": 60.3
+ },
+ "valorisation": {
+  "wacc": 0.07,
+  "prix_long_terme": 70,
+  "horizon_max_ans": 40
+ }
+}
