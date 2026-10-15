@@ -16,6 +16,16 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
 
   /** Entité affichée : une tranche, ou un site/actif (somme de ses unités). */
   function entity(id) {
+    if (id.startsWith('fil-')) {
+      const f = id.slice(4), units = D.byFil[f] || [];
+      const prod = new Float32Array(D.H);
+      for (const u of units) { const p = D.prod[u.idx]; for (let h = 0; h < D.H; h++) prod[h] += p[h]; }
+      const p_mw = D.filCap[f];
+      const cmg = units.reduce((s, u) => s + D.cmg[u.idx] * u.p_mw, 0) / p_mw;
+      const nom = `Parc ${LBL[f].toLowerCase()}`;
+      return { id, nom, units, prod, cmg, fil: true,
+        u: { filiere: f, p_mw, id, nom, type: null, tranche: null, exploitant: f === 'nucleaire' ? 'EDF' : null } };
+    }
     const u0 = D.unitById[id];
     if (u0 && (u0.tranche || !u0.mapId || u0.mapId === u0.id)) {
       return { id, nom: u0.nom, units: [u0], u: u0, prod: D.prod[u0.idx], cmg: D.cmg[u0.idx], asset: D.assets.find((a) => a.id === u0.mapId) };
@@ -45,27 +55,55 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
 
   function header(e) {
     const u = e.u, a = e.asset || {};
-    const bits = [LBL[u.filiere], u.type && u.type !== 'diffus' ? u.type : null, u.palier, `${fmt(u.p_mw)} MW`, u.exploitant, a.region].filter(Boolean);
+    const nSites = e.fil ? new Set(e.units.map((x) => x.mapId).filter(Boolean)).size : 0;
+    const bits = e.fil
+      ? [u.filiere === 'nucleaire' ? `${e.units.length} tranches · ${nSites} sites` : `${nSites} centrales ou parcs suivis`, `${fmt(u.p_mw / 1000, 1)} GW installés`, u.exploitant]
+      : [LBL[u.filiere], u.type && u.type !== 'diffus' ? u.type : null, u.palier, `${fmt(u.p_mw)} MW`, u.exploitant, a.region];
+    const crumb = u.tranche ? `<button class="crumb" data-pick="${u.mapId}">← ${esc(e.asset?.nom)}</button>`
+      : !e.fil ? `<button class="crumb" data-pick="fil-${u.filiere}">← Parc ${esc(LBL[u.filiere].toLowerCase())}</button>` : '';
     const now = e.prod[hour];
     return `<div class="p-head">
       <button class="icon close" aria-label="Fermer la fiche">✕</button>
-      ${u.tranche ? `<button class="crumb" data-pick="${u.mapId}">← ${esc(e.asset?.nom)}</button>` : ''}
+      ${crumb}
       <div class="p-title">${icon(u.filiere, 34)}<h2>${esc(e.nom)}</h2></div>
-      <p class="p-sub mono">${bits.map(esc).join(' · ')}</p>
-      <p class="p-now"><span>${dFull.format(hourDate(D, hour))}</span> <b>${fmt(now)} MW</b> <span class="muted">soit ${fmt(now / u.p_mw * 100)} % · CMg ${fmt(e.cmg)} €/MWh</span></p>
+      <p class="p-sub mono">${bits.filter(Boolean).map(esc).join(' · ')}</p>
+      <p class="p-now"><span>${dFull.format(hourDate(D, hour))}</span> <b>${e.fil ? `${fmt(now / 1000, 1)} GW` : `${fmt(now)} MW`}</b> <span class="muted">soit ${fmt(now / u.p_mw * 100)} % · CMg ${fmt(e.cmg)} €/MWh</span></p>
       ${a.note ? `<p class="muted small">${esc(a.note)}</p>` : ''}
     </div>
     <div class="tabs" role="tablist">${[['merit', 'Merit'], ['hedge', 'Couverture'], ['valo', 'Valo'], ['json', 'JSON']]
       .map(([k, l]) => `<button role="tab" aria-selected="${k === tab}" data-tab="${k}">${l}</button>`).join('')}</div>`;
   }
 
+  const statusOf = (p, pmw) => { const r = p / pmw; return r > 0.9 ? ['ok', 'marche'] : r > 0.02 ? ['mod', 'modulation'] : ['off', 'arrêt']; };
+
+  /** Fiche d'une filière : ce que la maquette représente (sites et tranches, ou centrales). */
+  function membersList(e) {
+    if (!e.fil) return '';
+    const f = e.u.filiere;
+    const sites = [...new Set(e.units.map((u) => u.mapId).filter(Boolean))].map((id) => D.assets.find((a) => a.id === id))
+      .sort((a, b) => b.p_mw - a.p_mw);
+    const diffus = e.units.filter((u) => !u.mapId);
+    const row = (id, nom, p, pmw, extra = '') => {
+      const st = statusOf(p, pmw);
+      return `<li><button data-pick="${id}"><i class="st ${st[0]}"></i><b>${esc(nom)}</b><span>${extra}</span><span class="mono r">${fmt(p)} / ${fmt(pmw)} MW</span></button></li>`;
+    };
+    const items = sites.map((a) => {
+      const us = D.byMap[a.id] || [];
+      const extra = f === 'nucleaire' ? us.map((u) => `<i class="st ${statusOf(D.prod[u.idx][hour], u.p_mw)[0]}" title="${u.id}"></i>`).join('') : esc(a.type || '');
+      return row(a.id, a.nom, D.siteProd(a.id, hour), a.p_mw, extra);
+    }).join('') + diffus.map((u) => row(u.id, u.nom, D.prod[u.idx][hour], u.p_mw, 'petites installations')).join('');
+    const title = f === 'nucleaire' ? `Les ${sites.length} sites et leurs ${e.units.length} tranches` : 'Ce que regroupe cette maquette';
+    return `<section><h3>${title}</h3><p class="muted small">Une seule maquette représente toute la filière. Ouvre un site pour sa fiche détaillée.</p><ul class="tranches members">${items}</ul></section>`;
+  }
+
   function tranchesList(e) {
+    if (e.fil) return '';
     const ts = e.units.filter((u) => u.tranche);
     if (ts.length < 2 && !(e.u.tranche)) return '';
     const list = e.u.tranche ? D.units.filter((u) => u.mapId === e.u.mapId) : ts;
     return `<section><h3>Tranches du site</h3><ul class="tranches">${list.map((u) => {
-      const p = D.prod[u.idx][hour], r = p / u.p_mw;
-      const st = r > 0.9 ? ['ok', 'marche'] : r > 0.02 ? ['mod', 'modulation'] : ['off', 'arrêt'];
+      const p = D.prod[u.idx][hour];
+      const st = statusOf(p, u.p_mw);
       return `<li><button data-pick="${u.id}" class="${u.id === e.id ? 'cur' : ''}"><i class="st ${st[0]}"></i><b class="mono">${u.id}</b><span>${st[1]} · ${u.palier} · ${u.couplage}</span><span class="mono r">${fmt(p)} / ${fmt(u.p_mw)} MW</span></button></li>`;
     }).join('')}</ul></section>`;
   }
@@ -79,8 +117,8 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     const r0 = Math.max(0, hour - 84), r1 = Math.min(D.now + 1, r0 + 168);
     const rk = rankSeries(e.u.tranche ? e.u : e.units[0], D.units, D.cmg, D.prod, r0, r1);
     const xl = [0, 48, 96, 144].filter((i) => i < r1 - r0).map((i) => [i, dShort.format(hourDate(D, r0 + i))]);
-    const parts = srmcParts(e.u, D.params);
-    return `<section>
+    const parts = e.fil ? [{ k: 'Moyenne du parc, pondérée par la puissance', v: e.cmg }] : srmcParts(e.u, D.params);
+    return `${membersList(e)}<section>
       <h3>Quand est-il appelé ? <span class="muted">12 derniers mois</span></h3>
       <p class="muted small">Chaque case = une heure de la journée, une semaine. Vert : il tourne et le prix dépasse son coût marginal. Rouge : il tourne à perte. Gris : à l'arrêt.</p>
       ${heatSvg(cells, { labels })}
@@ -230,7 +268,7 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
       <section><h3>Fichiers sources</h3><ul class="files">
         ${['data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/meta.json', `data/series/${lastMonth}.json`, 'data/live.json']
           .map((f) => `<li><a href="${f}" target="_blank" rel="noopener" class="mono">${f}</a></li>`).join('')}
-      </ul></section>${tranchesList(e)}`;
+      </ul></section>${membersList(e)}${tranchesList(e)}`;
   }
 
   function render() {

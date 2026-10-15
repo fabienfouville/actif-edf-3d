@@ -250,3 +250,6 @@ pre.json .k { color: #1d4ed8; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.members button { grid-template-columns: 12px minmax(0, 1fr) auto auto; }
+.members button > span:not(.r) { display: flex; gap: 3px; color: var(--muted); }
+.members button > span .st { width: 8px; height: 8px; }

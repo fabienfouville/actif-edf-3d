@@ -65,7 +65,7 @@ export function createMerit(el, D, { project, onPick, onHover }) {
       b.classList.toggle('marg', S.marginal && S.marginal.u === u);
       const target = `translate(${x}px, ${top}px)`;
       if (fromMap && !reduced) {
-        const p = u.lat != null ? project(u.lon, u.lat) : { x: g.w / 2, y: g.h - 40 };
+        const p = project(u);
         b.style.transition = 'none';
         b.style.width = '7px'; b.style.height = '7px';
         b.style.transform = `translate(${p.x}px, ${p.y}px)`;
@@ -100,7 +100,7 @@ export function createMerit(el, D, { project, onPick, onHover }) {
       if (!reduced) {
         for (const [id, b] of blocks) {
           const u = D.unitById[id];
-          const p = u.lat != null ? project(u.lon, u.lat) : { x: el.clientWidth / 2, y: el.clientHeight };
+          const p = project(u);
           b.style.transition = 'transform 600ms ease-in, width 600ms, height 600ms, opacity 600ms';
           b.style.transform = `translate(${p.x}px, ${p.y}px)`;
           b.style.width = '6px'; b.style.height = '6px'; b.style.opacity = '0';

@@ -8,6 +8,16 @@ export { COLORS };
 
 const SCALE = 10, LON0 = 2.5, LAT0 = 46.4, KX = Math.cos(LAT0 * Math.PI / 180);
 const TOP = 0.8; // épaisseur du plateau France
+export const SPOTS = {
+  nucleaire: { lon: 1.6, lat: 47.35, nom: 'Parc nucléaire' },
+  hydraulique: { lon: 6.2, lat: 45.1, nom: 'Parc hydraulique' },
+  eolien: { lon: 2.9, lat: 49.85, nom: 'Parc éolien' },
+  solaire: { lon: 0.0, lat: 44.2, nom: 'Parc solaire' },
+  gaz: { lon: 4.6, lat: 43.75, nom: 'Parc gaz' },
+  charbon: { lon: -1.6, lat: 47.6, nom: 'Parc charbon' },
+  fioul: { lon: -3.6, lat: 48.3, nom: 'Parc fioul' },
+  bioenergies: { lon: 4.3, lat: 46.6, nom: 'Parc bioénergies' },
+};
 export const toXZ = (lon, lat) => [(lon - LON0) * KX * SCALE, -(lat - LAT0) * SCALE];
 
 function franceSlab(regions) {
@@ -43,7 +53,7 @@ function relax(items) {
     for (let i = 0; i < items.length; i++) {
       for (let j = i + 1; j < items.length; j++) {
         const a = items[i], b = items[j];
-        const min = 2.15 * (a.s + b.s);
+        const min = 2.3 * (a.s + b.s);
         let dx = b.x - a.x, dz = b.z - a.z;
         const d = Math.hypot(dx, dz) || 0.01;
         if (d < min) {
@@ -83,10 +93,11 @@ export function createScene(el, D, { onPick, onHover }) {
   scene.add(sun);
 
   // ---------------------------------------------------------------- sites
-  const sites = [...new Set(D.units.filter((u) => u.mapId).map((u) => u.mapId))].map((id) => {
-    const a = D.assets.find((x) => x.id === id);
-    const [x, z] = toXZ(a.lon, a.lat);
-    return { id, a, x, z, s: Math.min(1.35, 0.62 + Math.sqrt(a.p_mw) / 95), load: 0 };
+  // Une seule maquette par filière, posée dans une région emblématique ; sa taille suit la puissance installée.
+  const sites = Object.entries(SPOTS).filter(([f]) => D.filCap[f]).map(([f, { lon, lat, nom }]) => {
+    const [x, z] = toXZ(lon, lat);
+    const p = D.filCap[f];
+    return { id: `fil-${f}`, f, a: { filiere: f, nom, p_mw: p }, x, z, s: 1.7 + Math.sqrt(p / 1000) * 0.34, load: 0 };
   });
   relax(sites);
 
@@ -102,7 +113,7 @@ export function createScene(el, D, { onPick, onHover }) {
     st.model = model;
     const root = new THREE.Group();
     root.position.set(st.x, TOP, st.z);
-    root.rotation.y = (st.a.filiere === 'eolien' ? 0.4 : 0) + ((st.id.charCodeAt(4) || 0) % 3) * 0.12 - 0.12;
+    root.rotation.y = st.f === 'eolien' ? 0.4 : -0.1;
     model.g.scale.setScalar(st.s);
     root.add(model.g);
     const bg = new THREE.Mesh(new THREE.RingGeometry(2.4 * st.s, 2.75 * st.s, 64), ringBg);
@@ -160,8 +171,9 @@ export function createScene(el, D, { onPick, onHover }) {
     tag.style.transform = `translate(${p.x}px, ${p.y}px) translate(-50%, -100%)`;
   }
   function fillTag(st) {
-    const prod = D.siteProd(st.id, hour);
-    tag.innerHTML = `<i style="background:${COLORS[st.a.filiere]}"></i><b>${st.a.nom}</b><span>${Math.round(prod).toLocaleString('fr-FR')} / ${st.a.p_mw.toLocaleString('fr-FR')} MW</span>`;
+    const prod = D.filProd(st.f, hour);
+    const gw = (v) => (v / 1000).toLocaleString('fr-FR', { maximumFractionDigits: 1 });
+    tag.innerHTML = `<i style="background:${COLORS[st.f]}"></i><b>${st.a.nom}</b><span>${gw(prod)} / ${gw(st.a.p_mw)} GW</span>`;
   }
 
   // ---------------------------------------------------------------- interactions
@@ -191,7 +203,7 @@ export function createScene(el, D, { onPick, onHover }) {
   let hour = D.now, filter = null, fly = null;
   function setLoads() {
     for (const st of sites) {
-      const load = Math.max(0, Math.min(1, D.siteProd(st.id, hour) / st.a.p_mw));
+      const load = Math.max(0, Math.min(1, D.filProd(st.f, hour) / st.a.p_mw));
       st.load = load;
       st.ring.geometry.dispose();
       const arc = Math.max(0.0001, load) * Math.PI * 2;
@@ -228,14 +240,15 @@ export function createScene(el, D, { onPick, onHover }) {
     setHour(h) { hour = h; setLoads(); },
     setFilter(set) { filter = set; for (const st of sites) st.root.visible = !filter || filter.has(st.a.filiere); },
     select(id) {
-      selected = sites.find((s) => s.id === id) || null;
+      const f = id && (D.unitById[id]?.filiere || D.assets.find((a) => a.id === id)?.filiere || id.replace(/^fil-/, ''));
+      selected = sites.find((s) => s.f === f) || null;
       selRing.visible = !!selected;
       if (!selected) { if (!hovered) tag.hidden = true; return; }
       selRing.position.set(selected.x, TOP + 0.04, selected.z);
       fillTag(selected);
       const wide = matchMedia('(min-width: 900px)').matches;
       // décale la cible pour que le site reste visible à côté de la fiche
-      const toZ = Math.max(camera.zoom, 2.2);
+      const toZ = Math.max(camera.zoom, 1.6);
       const shift = new THREE.Vector3(wide ? 9 / toZ * 2.2 : 0, 0, wide ? 0 : 14 / toZ * 2.2);
       fly = { t0: clock.getElapsedTime(), fromT: controls.target.clone(), toT: new THREE.Vector3(selected.x, 0, selected.z).add(shift),
         fromO: camera.position.clone().sub(controls.target), toO: camera.position.clone().sub(controls.target), fromZ: camera.zoom, toZ };
@@ -249,6 +262,7 @@ export function createScene(el, D, { onPick, onHover }) {
     },
     zoom(f) { camera.zoom = Math.min(7, Math.max(0.6, camera.zoom * f)); camera.updateProjectionMatrix(); },
     project(lon, lat) { const [x, z] = toXZ(lon, lat); return screenOf(x, TOP + 1, z); },
+    projectFiliere(f) { const st = sites.find((s) => s.f === f); return st ? screenOf(st.x, TOP + 2 * st.s, st.z) : { x: el.clientWidth / 2, y: el.clientHeight }; },
     resize,
   };
 }

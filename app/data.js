@@ -117,6 +117,11 @@ function buildProduction(D) {
     }
   }
   D.siteProd = (mapId, h) => (D.byMap[mapId] || []).reduce((s, u) => s + D.prod[u.idx][h], 0);
+  // une maquette par filière : production et puissance de tout le parc de la filière
+  D.byFil = {};
+  for (const u of units) (D.byFil[u.filiere] ||= []).push(u);
+  D.filCap = Object.fromEntries(Object.entries(D.byFil).map(([f, us]) => [f, us.reduce((s, u) => s + u.p_mw, 0)]));
+  D.filProd = (f, h) => (D.byFil[f] || []).reduce((s, u) => s + D.prod[u.idx][h], 0);
 }
 
 export function recomputeCosts(D) {

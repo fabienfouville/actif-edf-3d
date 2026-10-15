@@ -4,8 +4,8 @@ Carte 3D interactive du parc de production électrique français. Chaque central
 clique pour voir quand elle est appelée dans le merit order du marché spot, comment sa production est
 couverte, ce qu'elle vaut, et le JSON qui alimente chaque chiffre.
 
-- **Carte 3D** : France en relief, une colonne par actif (hauteur pleine = production à l'heure choisie,
-  partie transparente = puissance). Frise en bas pour changer d'heure et rejouer une journée.
+- **Maquette 3D** : France en plateau blanc, une seule maquette par filière (une centrale nucléaire pour tout le nucléaire, un barrage pour tout l'hydraulique…), animée selon la production ; un anneau au sol indique la charge,
+  et la fiche liste les sites et tranches. Frise en bas pour changer d'heure et rejouer une journée.
 - **Merit order** : un bouton fait s'envoler les colonnes, qui se rangent par coût marginal croissant.
   Ligne de production, prix du modèle, prix spot réel, centrale marginale.
 - **Fiche actif** : onglets *Merit* (carte heure × semaine, place dans l'escalier), *Couverture*

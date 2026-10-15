@@ -55,7 +55,7 @@ async function boot() {
   $('#c-rot').addEventListener('click', () => scene.rotate(Math.PI / 4));
   $('#c-home').addEventListener('click', () => scene.home());
   const merit = createMerit($('#merit'), D, {
-    project: (lon, lat) => scene.project(lon, lat),
+    project: (u) => scene.projectFiliere(u.filiere),
     onPick: pick,
     onHover: (u, ev) => {
       if (!u) return showTip(null);
@@ -71,8 +71,7 @@ async function boot() {
   function pick(id) {
     showTip(null);
     const u = D.unitById[id];
-    const mapId = u ? u.mapId : id;
-    scene.select(mapId);
+    scene.select(id);
     merit.select(id);
     panel.open(id);
     setHash(id);
@@ -258,11 +257,11 @@ async function boot() {
   $('#loader').classList.add('done');
   setTimeout(() => $('#loader').remove(), 600);
   const id = decodeURIComponent(location.hash.slice(1));
-  if (id && (D.unitById[id] || D.byMap[id])) pick(id);
+  if (id && (D.unitById[id] || D.byMap[id] || D.byFil[id.replace(/^fil-/, '')])) pick(id);
   else if (D.meta.mode === 'demo') toast('Mode démo : données synthétiques en attendant le pipeline');
   addEventListener('hashchange', () => {
     const h = decodeURIComponent(location.hash.slice(1));
-    if (h && h !== panel.current && (D.unitById[h] || D.byMap[h])) pick(h);
+    if (h && h !== panel.current && (D.unitById[h] || D.byMap[h] || D.byFil[h.replace(/^fil-/, '')])) pick(h);
   });
 }
 
