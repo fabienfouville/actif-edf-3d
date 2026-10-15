@@ -5,19 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Parc Électrique 3D</title>
 <meta name="description" content="Carte 3D interactive du parc de production électrique français : merit order, couverture et valorisation de chaque centrale.">
-<meta name="theme-color" content="#060b14">
+<meta name="theme-color" content="#efece6">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="app/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="app/icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,700;112,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <link rel="stylesheet" href="app/style.css">
-<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 </head>
 <body>
-<div id="map" aria-label="Carte 3D des centrales"></div>
+<div id="map" aria-label="Maquette 3D des centrales"></div>
+<div class="camctl" role="group" aria-label="Caméra">
+  <button id="c-in" aria-label="Zoomer">+</button><button id="c-out" aria-label="Dézoomer">−</button>
+  <button id="c-rot" aria-label="Tourner la maquette">⟳</button><button id="c-home" aria-label="Vue d'ensemble">⌂</button>
+</div>
 <div id="merit" class="merit" hidden></div>
 
 <header class="top">

@@ -5,6 +5,7 @@ import { createMerit } from './merit.js';
 import { createPanel } from './panel.js';
 import { createGame } from './game.js';
 import { fmt, stackedArea } from './charts.js';
+import { icon } from './icons.js';
 
 const $ = (s) => document.querySelector(s);
 const LBL = { nucleaire: 'Nucléaire', hydraulique: 'Hydraulique', gaz: 'Gaz', charbon: 'Charbon', fioul: 'Fioul', eolien: 'Éolien', solaire: 'Solaire', bioenergies: 'Bioénergies' };
@@ -31,10 +32,6 @@ async function boot() {
     $('#load-msg').textContent = `Impossible de charger les données : ${e.message}`;
     return;
   }
-  if (typeof maplibregl === 'undefined') {
-    $('#load-msg').textContent = 'La librairie de carte ne s\'est pas chargée. Vérifie la connexion puis recharge la page.';
-    return;
-  }
 
   let hour = D.now, playTimer = null, filter = new Set(ORDER);
 
@@ -46,15 +43,17 @@ async function boot() {
     tip.style.left = `${Math.min(innerWidth - 270, x + 14)}px`; tip.style.top = `${y + 14}px`;
   };
   const game = createGame($('#game'), D, { stackAt: (h) => merit.stackAt(h), toast });
-  const scene = createScene($('#map'), D, {
-    onPick: pick,
-    onHover: (id, pt) => {
-      if (!id) return showTip(null);
-      const a = D.assets.find((x) => x.id === id);
-      const p = D.siteProd(id, hour);
-      showTip(`<b>${a.nom}</b>${LBL[a.filiere]} · ${fmt(p)} / ${fmt(a.p_mw)} MW`, pt.x, pt.y);
-    },
-  });
+  let scene;
+  try {
+    scene = createScene($('#map'), D, { onPick: pick });
+  } catch (e) {
+    $('#load-msg').textContent = `La maquette 3D ne peut pas s'afficher sur cet appareil (WebGL indisponible) : ${e.message}`;
+    return;
+  }
+  $('#c-in').addEventListener('click', () => scene.zoom(1.35));
+  $('#c-out').addEventListener('click', () => scene.zoom(1 / 1.35));
+  $('#c-rot').addEventListener('click', () => scene.rotate(Math.PI / 4));
+  $('#c-home').addEventListener('click', () => scene.home());
   const merit = createMerit($('#merit'), D, {
     project: (lon, lat) => scene.project(lon, lat),
     onPick: pick,
@@ -100,7 +99,7 @@ async function boot() {
   game.on(renderLevel);
 
   // ---------------------------------------------------------------- filtres
-  $('#chips').innerHTML = ORDER.map((f) => `<button class="chip" data-f="${f}" aria-pressed="true" style="--cc:${COLORS[f]}"><i class="dot" style="background:${COLORS[f]}"></i>${LBL[f]}</button>`).join('');
+  $('#chips').innerHTML = ORDER.map((f) => `<button class="chip" data-f="${f}" aria-pressed="true" style="--cc:${COLORS[f]}">${icon(f, 20)}${LBL[f]}</button>`).join('');
   $('#chips').addEventListener('click', (ev) => {
     const b = ev.target.closest('.chip');
     if (!b) return;
@@ -117,7 +116,7 @@ async function boot() {
     const vals = ORDER.map((f) => [f, Math.max(0, D.mix[f][hour] || 0)]);
     const max = Math.max(...vals.map((v) => v[1]), 1);
     $('#mix').innerHTML = `<h3>Production · ${fHour.format(hourDate(D, hour))}</h3><ul>${vals.map(([f, v]) =>
-      `<li><span>${LBL[f]}</span><i style="width:${Math.max(2, v / max * 100)}%;background:${COLORS[f]}"></i><b>${fmt(v / 1000, 1)}</b></li>`).join('')}</ul>
+      `<li><span>${icon(f, 16)}${LBL[f]}</span><i style="width:${Math.max(2, v / max * 100)}%;background:${COLORS[f]}"></i><b>${fmt(v / 1000, 1)}</b></li>`).join('')}</ul>
       <div class="kv"><span>Spot</span><b>${fmt(D.price[hour], 1)} €/MWh</b></div>
       <div class="kv"><span>Consommation</span><b>${fmt(D.mix.consommation[hour] / 1000, 1)} GW</b></div>`;
   }

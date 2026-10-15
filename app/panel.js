@@ -2,6 +2,7 @@
 import { bars, col, fmt, heatmap as heatSvg, lines, tornadoChart, waterfall } from './charts.js';
 import { dcf, heatmap, hedge, kpis, marginalSeries, rankSeries, srmc, srmcParts, tech, tornado } from './finance.js';
 import { hourDate } from './data.js';
+import { icon } from './icons.js';
 
 const LBL = { nucleaire: 'Nucléaire', hydraulique: 'Hydraulique', gaz: 'Gaz', charbon: 'Charbon', fioul: 'Fioul', eolien: 'Éolien', solaire: 'Solaire', bioenergies: 'Bioénergies' };
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -49,7 +50,7 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     return `<div class="p-head">
       <button class="icon close" aria-label="Fermer la fiche">✕</button>
       ${u.tranche ? `<button class="crumb" data-pick="${u.mapId}">← ${esc(e.asset?.nom)}</button>` : ''}
-      <div class="p-title"><i class="dot" style="background:${col(u.filiere)}"></i><h2>${esc(e.nom)}</h2></div>
+      <div class="p-title">${icon(u.filiere, 34)}<h2>${esc(e.nom)}</h2></div>
       <p class="p-sub mono">${bits.map(esc).join(' · ')}</p>
       <p class="p-now"><span>${dFull.format(hourDate(D, hour))}</span> <b>${fmt(now)} MW</b> <span class="muted">soit ${fmt(now / u.p_mw * 100)} % · CMg ${fmt(e.cmg)} €/MWh</span></p>
       ${a.note ? `<p class="muted small">${esc(a.note)}</p>` : ''}
