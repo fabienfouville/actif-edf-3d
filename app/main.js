@@ -78,7 +78,9 @@ async function boot() {
     panel.open(id);
     setHash(id);
   }
-  function setHash(id) { history.replaceState(null, '', id ? `#${id}` : location.pathname + location.search); }
+  function setHash(id) {
+    try { history.replaceState(null, '', id ? `#${id}` : location.pathname + location.search); } catch { /* cadre restreint */ }
+  }
 
   // ---------------------------------------------------------------- en-tête
   function renderLive() {
