@@ -1,5 +1,6 @@
 {
- "_doc": "57 réacteurs EDF en exploitation (56 + Flamanville 3). Puissance nette indicative en MW, année de premier couplage. fin_vie_hyp = hypothèse 60 ans.",
+ "_doc": "57 réacteurs EDF en exploitation. Puissance nette : ENTSO-E 14.1.B. Couplage : WNA / IAEA PRIS. fin_vie_hyp = hypothèse 60 ans.",
+ "genere": "2026-10-16",
  "tranches": [
   {
    "id": "BEL1",
@@ -10,7 +11,13 @@
    "p_net_mw": 1310,
    "couplage": 1987,
    "fin_vie_hyp": 2047,
-   "rte": "BELLEVILLE 1"
+   "rte": "BELLEVILLE 1",
+   "eic": "17W100P100P0090I",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "BEL2",
@@ -21,7 +28,13 @@
    "p_net_mw": 1310,
    "couplage": 1988,
    "fin_vie_hyp": 2048,
-   "rte": "BELLEVILLE 2"
+   "rte": "BELLEVILLE 2",
+   "eic": "17W100P100P0091G",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "BLA1",
@@ -32,7 +45,13 @@
    "p_net_mw": 910,
    "couplage": 1981,
    "fin_vie_hyp": 2041,
-   "rte": "BLAYAIS 1"
+   "rte": "BLAYAIS 1",
+   "eic": "17W100P100P0092E",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "BLA2",
@@ -43,7 +62,13 @@
    "p_net_mw": 910,
    "couplage": 1982,
    "fin_vie_hyp": 2042,
-   "rte": "BLAYAIS 2"
+   "rte": "BLAYAIS 2",
+   "eic": "17W100P100P0093C",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "BLA3",
@@ -54,7 +79,13 @@
    "p_net_mw": 910,
    "couplage": 1983,
    "fin_vie_hyp": 2043,
-   "rte": "BLAYAIS 3"
+   "rte": "BLAYAIS 3",
+   "eic": "17W100P100P0094A",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "BLA4",
@@ -65,7 +96,13 @@
    "p_net_mw": 910,
    "couplage": 1983,
    "fin_vie_hyp": 2043,
-   "rte": "BLAYAIS 4"
+   "rte": "BLAYAIS 4",
+   "eic": "17W100P100P00958",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "BUG2",
@@ -76,7 +113,13 @@
    "p_net_mw": 910,
    "couplage": 1978,
    "fin_vie_hyp": 2038,
-   "rte": "BUGEY 2"
+   "rte": "BUGEY 2",
+   "eic": "17W100P100P00966",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "BUG3",
@@ -87,7 +130,13 @@
    "p_net_mw": 910,
    "couplage": 1978,
    "fin_vie_hyp": 2038,
-   "rte": "BUGEY 3"
+   "rte": "BUGEY 3",
+   "eic": "17W100P100P00974",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "BUG4",
@@ -98,7 +147,13 @@
    "p_net_mw": 880,
    "couplage": 1979,
    "fin_vie_hyp": 2039,
-   "rte": "BUGEY 4"
+   "rte": "BUGEY 4",
+   "eic": "17W100P100P00982",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "BUG5",
@@ -109,7 +164,13 @@
    "p_net_mw": 880,
    "couplage": 1979,
    "fin_vie_hyp": 2039,
-   "rte": "BUGEY 5"
+   "rte": "BUGEY 5",
+   "eic": "17W100P100P01004",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CAT1",
@@ -120,7 +181,13 @@
    "p_net_mw": 1300,
    "couplage": 1986,
    "fin_vie_hyp": 2046,
-   "rte": "CATTENOM 1"
+   "rte": "CATTENOM 1",
+   "eic": "17W100P100P01012",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CAT2",
@@ -131,7 +198,13 @@
    "p_net_mw": 1300,
    "couplage": 1987,
    "fin_vie_hyp": 2047,
-   "rte": "CATTENOM 2"
+   "rte": "CATTENOM 2",
+   "eic": "17W100P100P0103Z",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CAT3",
@@ -142,7 +215,13 @@
    "p_net_mw": 1300,
    "couplage": 1990,
    "fin_vie_hyp": 2050,
-   "rte": "CATTENOM 3"
+   "rte": "CATTENOM 3",
+   "eic": "17W100P100P0104X",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CAT4",
@@ -153,7 +232,13 @@
    "p_net_mw": 1300,
    "couplage": 1991,
    "fin_vie_hyp": 2051,
-   "rte": "CATTENOM 4"
+   "rte": "CATTENOM 4",
+   "eic": "17W100P100P0105V",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CHI1",
@@ -164,7 +249,13 @@
    "p_net_mw": 905,
    "couplage": 1982,
    "fin_vie_hyp": 2042,
-   "rte": "CHINON 1"
+   "rte": "CHINON 1",
+   "eic": "17W100P100P0106T",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CHI2",
@@ -175,7 +266,13 @@
    "p_net_mw": 905,
    "couplage": 1983,
    "fin_vie_hyp": 2043,
-   "rte": "CHINON 2"
+   "rte": "CHINON 2",
+   "eic": "17W100P100P0107R",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CHI3",
@@ -186,7 +283,13 @@
    "p_net_mw": 905,
    "couplage": 1986,
    "fin_vie_hyp": 2046,
-   "rte": "CHINON 3"
+   "rte": "CHINON 3",
+   "eic": "17W100P100P0108P",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CHI4",
@@ -197,7 +300,13 @@
    "p_net_mw": 905,
    "couplage": 1987,
    "fin_vie_hyp": 2047,
-   "rte": "CHINON 4"
+   "rte": "CHINON 4",
+   "eic": "17W100P100P0109N",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CHO1",
@@ -208,7 +317,13 @@
    "p_net_mw": 1500,
    "couplage": 1996,
    "fin_vie_hyp": 2056,
-   "rte": "CHOOZ 1"
+   "rte": "CHOOZ 1",
+   "eic": "17W100P100P01101",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CHO2",
@@ -219,7 +334,13 @@
    "p_net_mw": 1500,
    "couplage": 1997,
    "fin_vie_hyp": 2057,
-   "rte": "CHOOZ 2"
+   "rte": "CHOOZ 2",
+   "eic": "17W100P100P0112Y",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CIV1",
@@ -230,7 +351,13 @@
    "p_net_mw": 1495,
    "couplage": 1997,
    "fin_vie_hyp": 2057,
-   "rte": "CIVAUX 1"
+   "rte": "CIVAUX 1",
+   "eic": "17W100P100P0113W",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CIV2",
@@ -241,7 +368,13 @@
    "p_net_mw": 1495,
    "couplage": 1999,
    "fin_vie_hyp": 2059,
-   "rte": "CIVAUX 2"
+   "rte": "CIVAUX 2",
+   "eic": "17W100P100P0114U",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CRU1",
@@ -252,7 +385,13 @@
    "p_net_mw": 915,
    "couplage": 1983,
    "fin_vie_hyp": 2043,
-   "rte": "CRUAS 1"
+   "rte": "CRUAS 1",
+   "eic": "17W100P100P0115S",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CRU2",
@@ -263,7 +402,13 @@
    "p_net_mw": 915,
    "couplage": 1984,
    "fin_vie_hyp": 2044,
-   "rte": "CRUAS 2"
+   "rte": "CRUAS 2",
+   "eic": "17W100P100P0116Q",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CRU3",
@@ -274,7 +419,13 @@
    "p_net_mw": 915,
    "couplage": 1984,
    "fin_vie_hyp": 2044,
-   "rte": "CRUAS 3"
+   "rte": "CRUAS 3",
+   "eic": "17W100P100P0118M",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "CRU4",
@@ -285,7 +436,13 @@
    "p_net_mw": 915,
    "couplage": 1984,
    "fin_vie_hyp": 2044,
-   "rte": "CRUAS 4"
+   "rte": "CRUAS 4",
+   "eic": "17W100P100P0119K",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "DAM1",
@@ -296,7 +453,13 @@
    "p_net_mw": 890,
    "couplage": 1980,
    "fin_vie_hyp": 2040,
-   "rte": "DAMPIERRE 1"
+   "rte": "DAMPIERRE 1",
+   "eic": "17W100P100P0120Z",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "DAM2",
@@ -307,7 +470,13 @@
    "p_net_mw": 890,
    "couplage": 1980,
    "fin_vie_hyp": 2040,
-   "rte": "DAMPIERRE 2"
+   "rte": "DAMPIERRE 2",
+   "eic": "17W100P100P0121X",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "DAM3",
@@ -318,7 +487,13 @@
    "p_net_mw": 890,
    "couplage": 1981,
    "fin_vie_hyp": 2041,
-   "rte": "DAMPIERRE 3"
+   "rte": "DAMPIERRE 3",
+   "eic": "17W100P100P0122V",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "DAM4",
@@ -329,7 +504,13 @@
    "p_net_mw": 890,
    "couplage": 1981,
    "fin_vie_hyp": 2041,
-   "rte": "DAMPIERRE 4"
+   "rte": "DAMPIERRE 4",
+   "eic": "17W100P100P0123T",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "FLA1",
@@ -340,7 +521,13 @@
    "p_net_mw": 1330,
    "couplage": 1985,
    "fin_vie_hyp": 2045,
-   "rte": "FLAMANVILLE 1"
+   "rte": "FLAMANVILLE 1",
+   "eic": "17W100P100P0126N",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "FLA2",
@@ -351,7 +538,13 @@
    "p_net_mw": 1330,
    "couplage": 1986,
    "fin_vie_hyp": 2046,
-   "rte": "FLAMANVILLE 2"
+   "rte": "FLAMANVILLE 2",
+   "eic": "17W100P100P0127L",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "FLA3",
@@ -359,10 +552,16 @@
    "nom": "Flamanville 3",
    "num": 3,
    "palier": "EPR",
-   "p_net_mw": 1600,
+   "p_net_mw": 1620,
    "couplage": 2024,
    "fin_vie_hyp": 2084,
-   "rte": "FLAMANVILLE 3"
+   "rte": "FLAMANVILLE 3",
+   "eic": "17W100P100P03639",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "GOL1",
@@ -373,7 +572,13 @@
    "p_net_mw": 1310,
    "couplage": 1990,
    "fin_vie_hyp": 2050,
-   "rte": "GOLFECH 1"
+   "rte": "GOLFECH 1",
+   "eic": "17W100P100P0128J",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "GOL2",
@@ -384,7 +589,13 @@
    "p_net_mw": 1310,
    "couplage": 1993,
    "fin_vie_hyp": 2053,
-   "rte": "GOLFECH 2"
+   "rte": "GOLFECH 2",
+   "eic": "17W100P100P0129H",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "GRA1",
@@ -395,7 +606,13 @@
    "p_net_mw": 910,
    "couplage": 1980,
    "fin_vie_hyp": 2040,
-   "rte": "GRAVELINES 1"
+   "rte": "GRAVELINES 1",
+   "eic": "17W100P100P0130W",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "GRA2",
@@ -406,7 +623,13 @@
    "p_net_mw": 910,
    "couplage": 1980,
    "fin_vie_hyp": 2040,
-   "rte": "GRAVELINES 2"
+   "rte": "GRAVELINES 2",
+   "eic": "17W100P100P0131U",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "GRA3",
@@ -417,7 +640,13 @@
    "p_net_mw": 910,
    "couplage": 1980,
    "fin_vie_hyp": 2040,
-   "rte": "GRAVELINES 3"
+   "rte": "GRAVELINES 3",
+   "eic": "17W100P100P0132S",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "GRA4",
@@ -428,7 +657,13 @@
    "p_net_mw": 910,
    "couplage": 1981,
    "fin_vie_hyp": 2041,
-   "rte": "GRAVELINES 4"
+   "rte": "GRAVELINES 4",
+   "eic": "17W100P100P0133Q",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "GRA5",
@@ -439,7 +674,13 @@
    "p_net_mw": 910,
    "couplage": 1984,
    "fin_vie_hyp": 2044,
-   "rte": "GRAVELINES 5"
+   "rte": "GRAVELINES 5",
+   "eic": "17W100P100P0135M",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "GRA6",
@@ -450,7 +691,13 @@
    "p_net_mw": 910,
    "couplage": 1985,
    "fin_vie_hyp": 2045,
-   "rte": "GRAVELINES 6"
+   "rte": "GRAVELINES 6",
+   "eic": "17W100P100P0136K",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "NOG1",
@@ -461,7 +708,13 @@
    "p_net_mw": 1310,
    "couplage": 1987,
    "fin_vie_hyp": 2047,
-   "rte": "NOGENT 1"
+   "rte": "NOGENT 1",
+   "eic": "17W100P100P0137I",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "NOG2",
@@ -472,7 +725,13 @@
    "p_net_mw": 1310,
    "couplage": 1988,
    "fin_vie_hyp": 2048,
-   "rte": "NOGENT 2"
+   "rte": "NOGENT 2",
+   "eic": "17W100P100P0138G",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "PAL1",
@@ -483,7 +742,13 @@
    "p_net_mw": 1330,
    "couplage": 1984,
    "fin_vie_hyp": 2044,
-   "rte": "PALUEL 1"
+   "rte": "PALUEL 1",
+   "eic": "17W100P100P0139E",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "PAL2",
@@ -494,7 +759,13 @@
    "p_net_mw": 1330,
    "couplage": 1984,
    "fin_vie_hyp": 2044,
-   "rte": "PALUEL 2"
+   "rte": "PALUEL 2",
+   "eic": "17W100P100P0140T",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "PAL3",
@@ -505,7 +776,13 @@
    "p_net_mw": 1330,
    "couplage": 1985,
    "fin_vie_hyp": 2045,
-   "rte": "PALUEL 3"
+   "rte": "PALUEL 3",
+   "eic": "17W100P100P0141R",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "PAL4",
@@ -516,7 +793,13 @@
    "p_net_mw": 1330,
    "couplage": 1986,
    "fin_vie_hyp": 2046,
-   "rte": "PALUEL 4"
+   "rte": "PALUEL 4",
+   "eic": "17W100P100P0142P",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "PEN1",
@@ -527,7 +810,13 @@
    "p_net_mw": 1330,
    "couplage": 1990,
    "fin_vie_hyp": 2050,
-   "rte": "PENLY 1"
+   "rte": "PENLY 1",
+   "eic": "17W100P100P0143N",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "PEN2",
@@ -538,7 +827,13 @@
    "p_net_mw": 1330,
    "couplage": 1992,
    "fin_vie_hyp": 2052,
-   "rte": "PENLY 2"
+   "rte": "PENLY 2",
+   "eic": "17W100P100P0144L",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "SAL1",
@@ -549,7 +844,13 @@
    "p_net_mw": 1335,
    "couplage": 1985,
    "fin_vie_hyp": 2045,
-   "rte": "ST ALBAN 1"
+   "rte": "ST ALBAN 1",
+   "eic": "17W100P100P0145J",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "SAL2",
@@ -560,7 +861,13 @@
    "p_net_mw": 1335,
    "couplage": 1986,
    "fin_vie_hyp": 2046,
-   "rte": "ST ALBAN 2"
+   "rte": "ST ALBAN 2",
+   "eic": "17W100P100P0146H",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "SLB1",
@@ -571,7 +878,13 @@
    "p_net_mw": 915,
    "couplage": 1981,
    "fin_vie_hyp": 2041,
-   "rte": "ST LAURENT 1"
+   "rte": "ST LAURENT 1",
+   "eic": "17W100P100P0147F",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "SLB2",
@@ -582,7 +895,13 @@
    "p_net_mw": 915,
    "couplage": 1981,
    "fin_vie_hyp": 2041,
-   "rte": "ST LAURENT 2"
+   "rte": "ST LAURENT 2",
+   "eic": "17W100P100P0148D",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "TRI1",
@@ -593,7 +912,13 @@
    "p_net_mw": 915,
    "couplage": 1980,
    "fin_vie_hyp": 2040,
-   "rte": "TRICASTIN 1"
+   "rte": "TRICASTIN 1",
+   "eic": "17W100P100P0149B",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "TRI2",
@@ -604,7 +929,13 @@
    "p_net_mw": 915,
    "couplage": 1980,
    "fin_vie_hyp": 2040,
-   "rte": "TRICASTIN 2"
+   "rte": "TRICASTIN 2",
+   "eic": "17W100P100P0150Q",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "TRI3",
@@ -615,7 +946,13 @@
    "p_net_mw": 915,
    "couplage": 1981,
    "fin_vie_hyp": 2041,
-   "rte": "TRICASTIN 3"
+   "rte": "TRICASTIN 3",
+   "eic": "17W100P100P0152M",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   },
   {
    "id": "TRI4",
@@ -626,7 +963,13 @@
    "p_net_mw": 915,
    "couplage": 1981,
    "fin_vie_hyp": 2041,
-   "rte": "TRICASTIN 4"
+   "rte": "TRICASTIN 4",
+   "eic": "17W100P100P0153K",
+   "verif": {
+    "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
+    "palier": "ASN, WNA (vérification du 16/10/2026)"
+   }
   }
  ]
 }

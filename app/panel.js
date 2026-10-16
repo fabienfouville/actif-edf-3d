@@ -47,10 +47,12 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
   }
 
   function sourceNote(e) {
-    const realU = e.units.every((u) => u.real);
     if (D.meta.mode === 'demo') return '<span class="tag warn">Données de démonstration</span>';
-    if (realU) return '<span class="tag ok">Production mesurée (RTE, par groupe)</span>';
-    return '<span class="tag">Production modélisée : part du mix national de la filière</span>';
+    const src = { rte: 'RTE Data', entsoe: 'ENTSO-E' }[D.meta.sources?.units?.source] || 'source officielle';
+    const cov = e.units.reduce((s, u) => s + (u.realHours || 0) * u.p_mw, 0) / (e.units.reduce((s, u) => s + u.p_mw, 0) * (D.now + 1));
+    if (cov > 0.95) return `<span class="tag ok">Production mesurée par groupe (${src})</span>`;
+    if (cov > 0.01) return `<span class="tag">Production mesurée (${src}) sur ${fmt(cov * 100)} % des heures, estimée ailleurs</span>`;
+    return '<span class="tag">Production estimée : part du mix national de la filière</span>';
   }
 
   function header(e) {
@@ -58,7 +60,7 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     const nSites = e.fil ? new Set(e.units.map((x) => x.mapId).filter(Boolean)).size : 0;
     const bits = e.fil
       ? [u.filiere === 'nucleaire' ? `${e.units.length} tranches · ${nSites} sites` : `${nSites} centrales ou parcs suivis`, `${fmt(u.p_mw / 1000, 1)} GW installés`, u.exploitant]
-      : [LBL[u.filiere], u.type && u.type !== 'diffus' ? u.type : null, u.palier, `${fmt(u.p_mw)} MW`, u.exploitant, a.region];
+      : [LBL[u.filiere], u.type && u.type !== 'diffus' ? u.type : null, u.palier, `${fmt(u.p_mw)} MW`, u.exploitant, a.commune, a.region];
     const crumb = u.tranche ? `<button class="crumb" data-pick="${u.mapId}">← ${esc(e.asset?.nom)}</button>`
       : !e.fil ? `<button class="crumb" data-pick="fil-${u.filiere}">← Parc ${esc(LBL[u.filiere].toLowerCase())}</button>` : '';
     const now = e.prod[hour];
@@ -68,6 +70,7 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
       <div class="p-title">${icon(u.filiere, 34)}<h2>${esc(e.nom)}</h2></div>
       <p class="p-sub mono">${bits.filter(Boolean).map(esc).join(' · ')}</p>
       <p class="p-now"><span>${dFull.format(hourDate(D, hour))}</span> <b>${e.fil ? `${fmt(now / 1000, 1)} GW` : `${fmt(now)} MW`}</b> <span class="muted">soit ${fmt(now / u.p_mw * 100)} % · CMg ${fmt(e.cmg)} €/MWh</span></p>
+      ${a.statut && a.statut !== 'en service' ? `<p class="tag warn">${esc(a.statut)}</p>` : ''}
       ${a.note ? `<p class="muted small">${esc(a.note)}</p>` : ''}
     </div>
     <div class="tabs" role="tablist">${[['merit', 'Merit'], ['hedge', 'Couverture'], ['valo', 'Valo'], ['json', 'JSON']]
@@ -195,14 +198,14 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     <section>
       <h3>Simulateur de couverture <span class="muted">1 an de production</span></h3>
       ${isEdfNuc ? `<div class="seg" role="group" aria-label="Année de livraison">${Object.keys(cov).filter((y) => !y.startsWith('_')).map((y) => `<button data-year="${y}" aria-pressed="${s.annee === y}">${y}</button>`).join('')}</div>
-      <p class="muted small">Part vendue à terme et prix : ${esc(cov._statut)}</p>` : '<p class="muted small">Exemple : vendre une partie de la production à terme pour fixer le prix, le reste au spot.</p>'}
+      <p class="muted small">${esc(cov._statut)} <br>Source : ${esc(cov._source)}</p>` : '<p class="muted small">Exemple : vendre une partie de la production à terme pour fixer le prix, le reste au spot.</p>'}
       ${slider('h-part', 'Vendu à terme', s.part, 0, 1, 0.01, '%')}
       ${slider('h-terme', 'Prix à terme', s.terme, 0, 200, 1, '€/MWh')}
       ${slider('h-spot', 'Prix spot moyen (scénario)', s.spot, -10, 250, 1, '€/MWh')}
       ${slider('h-lf', 'Facteur de charge', s.lf, 0.02, 1, 0.01, '%')}
       ${waterfall(res.items, res.marge)}
       <p class="small">Prix moyen obtenu <b>${fmt(res.prix_moyen, 1)} €/MWh</b> sur ${fmt(vol / 1e6, 2)} TWh. Avec 10 €/MWh de spot en plus, la marge varie de <b>${fmt(up.marge - res.marge, 1)} M€</b> : c'est l'exposition qui reste après couverture.</p>
-      ${isEdfNuc ? `<p class="muted small">VNU : ${esc(D.params.vnu._statut)} Coût complet de référence ${fmt(D.params.vnu.cout_complet_cre, 1)} €/MWh (estimation CRE 2026-2028).</p>` : ''}
+      ${isEdfNuc ? `<p class="muted small">VNU : seuils ${fmt(D.params.vnu.seuil1)} et ${fmt(D.params.vnu.seuil2)} €/MWh, reversement ${fmt(D.params.vnu.taux1 * 100)} % puis ${fmt(D.params.vnu.taux2 * 100)} %. ${esc(D.params.vnu._source)} Coût complet ${fmt(D.params.vnu.cout_complet_cre, 1)} €/MWh : ${esc(D.params.vnu._source_cout_complet)}</p>` : ''}
     </section>`;
   }
 
@@ -248,13 +251,16 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     const lastMonth = D.meta.mois[D.meta.mois.length - 1];
     return {
       id: e.id, nom: e.nom, filiere: e.u.filiere, type: e.u.type, exploitant: e.u.exploitant, region: e.asset?.region ?? e.u.region,
-      p_mw: e.u.p_mw, geo: e.asset ? [e.asset.lat, e.asset.lon] : null,
+      p_mw: e.u.p_mw, geo: e.asset ? [e.asset.lat, e.asset.lon] : null, commune: e.asset?.commune,
+      mise_service: e.asset?.mise_service, statut: e.asset?.statut, eic: (e.u.tranche?.eic ? [e.u.tranche.eic] : e.asset?.eic) || undefined,
+      groupes_entsoe: e.asset?.groupes_entsoe,
       tranches: e.u.tranche ? undefined : e.units.filter((u) => u.tranche).map((u) => ({ id: u.id, palier: u.palier, p_net_mw: u.p_mw, couplage: u.couplage })),
       tranche: e.u.tranche || undefined,
       cmg_eur_mwh: r(e.cmg, 1), cmg_detail: srmcParts(e.u, D.params).map((p) => ({ [p.k]: r(p.v, 1) })),
       heure_affichee: { t: hourDate(D, hour).toISOString(), production_mw: r(e.prod[hour], 0), prix_spot: r(D.price[hour], 1) },
       kpi_12_mois: Object.fromEntries(Object.entries(k).map(([kk, v]) => [kk, r(v, 3)])),
       simulation: s,
+      sources_verifiees: (e.u.tranche?.verif || e.asset?.verif) ?? undefined,
       donnees: { mode: D.meta.mode, production: e.units.every((u) => u.real) ? 'mesurée' : 'modélisée', genere: D.meta.genere },
       fichiers: ['data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/meta.json', `data/series/${lastMonth}.json`],
     };

@@ -1,53 +1,138 @@
 {
  "_doc": "Hypothèses de calcul. Toutes modifiables dans l'app (panneau Hypothèses). Chaque bloc indique sa source ou son statut.",
  "combustibles": {
-  "_statut": "Valeurs indicatives, sans API officielle gratuite. À mettre à jour à la main ou via les curseurs.",
-  "gaz_ttf_eur_mwh": 32,
-  "co2_eua_eur_t": 75,
-  "charbon_eur_mwh_th": 11,
-  "fioul_eur_mwh_th": 50
+  "_statut": "Niveaux de marché relevés le 12-16/10/2026 (sources secondaires, à arrondir). Réglables dans l'app (panneau Hypothèses).",
+  "_sources": {
+   "gaz_ttf_eur_mwh": "TTF front-month ~85 €/MWh (pic 87,4 les 13-14/10/2026), lenergeek.com 14/10/2026, cbonds.com",
+   "co2_eua_eur_t": "EUA ~88 €/t (12/10/2026), indexbox.io",
+   "charbon_eur_mwh_th": "API2 146,8 $/t (sem. du 12/10/2026, thecoalhub.com) ÷ 1,1253 $/€ (BCE) ÷ 6,978 MWh/t",
+   "fioul_eur_mwh_th": "Gasoil ICE ~1 447 $/t (15/10/2026) ÷ 1,1253 ÷ 11,83 MWh/t PCI ; valeur la plus incertaine"
+  },
+  "date": "2026-10-16",
+  "gaz_ttf_eur_mwh": 85,
+  "co2_eua_eur_t": 88,
+  "charbon_eur_mwh_th": 18.7,
+  "fioul_eur_mwh_th": 109
  },
  "technos": {
   "_doc": "rendement (PCI), facteur d'émission du combustible (tCO2/MWh thermique), O&M variable (€/MWh), coût fixe (€/kW/an, hors capital historique), durée de vie (ans). Ordres de grandeur, à affiner.",
-  "nucleaire": {"cmg_fixe": 12, "cout_fixe_kw_an": 170, "vie": 60},
-  "hydraulique:fil": {"cmg_fixe": 0, "cout_fixe_kw_an": 30, "vie": 100},
-  "hydraulique:lac": {"valeur_eau": 65, "cout_fixe_kw_an": 30, "vie": 100},
-  "hydraulique:STEP": {"valeur_eau": 80, "cout_fixe_kw_an": 25, "vie": 100},
-  "gaz": {"rendement": 0.55, "emission_t_mwh_th": 0.202, "om_var": 3, "cout_fixe_kw_an": 25, "vie": 35},
-  "gaz:diffus": {"cmg_fixe": 0, "fatal": true, "_note": "Cogénérations sous obligation d'achat : production fatale, preneuse de prix.", "cout_fixe_kw_an": 30, "vie": 30},
-  "charbon": {"rendement": 0.38, "emission_t_mwh_th": 0.341, "om_var": 4, "cout_fixe_kw_an": 40, "vie": 45},
-  "fioul": {"rendement": 0.33, "emission_t_mwh_th": 0.279, "om_var": 5, "cout_fixe_kw_an": 15, "vie": 40},
-  "eolien": {"cmg_fixe": 0, "cout_fixe_kw_an": 45, "vie": 25},
-  "eolien:offshore": {"cmg_fixe": 0, "cout_fixe_kw_an": 90, "vie": 30},
-  "solaire": {"cmg_fixe": 0, "cout_fixe_kw_an": 15, "vie": 30},
-  "bioenergies": {"cmg_fixe": 50, "cout_fixe_kw_an": 60, "vie": 30}
+  "nucleaire": {
+   "cmg_fixe": 12,
+   "cout_fixe_kw_an": 170,
+   "vie": 60
+  },
+  "hydraulique:fil": {
+   "cmg_fixe": 0,
+   "cout_fixe_kw_an": 30,
+   "vie": 100
+  },
+  "hydraulique:lac": {
+   "valeur_eau": 65,
+   "cout_fixe_kw_an": 30,
+   "vie": 100
+  },
+  "hydraulique:STEP": {
+   "valeur_eau": 80,
+   "cout_fixe_kw_an": 25,
+   "vie": 100
+  },
+  "gaz": {
+   "rendement": 0.55,
+   "emission_t_mwh_th": 0.202,
+   "om_var": 3,
+   "cout_fixe_kw_an": 25,
+   "vie": 35
+  },
+  "gaz:diffus": {
+   "cmg_fixe": 0,
+   "fatal": true,
+   "_note": "Cogénérations (sites listés et parc diffus) : production pilotée par la chaleur ou l'obligation d'achat, traitée comme fatale et preneuse de prix.",
+   "cout_fixe_kw_an": 30,
+   "vie": 30
+  },
+  "gaz:TAC": {
+   "rendement": 0.36,
+   "emission_t_mwh_th": 0.202,
+   "om_var": 6,
+   "cout_fixe_kw_an": 15,
+   "vie": 40,
+   "_note": "Turbine à combustion gaz : pointe."
+  },
+  "charbon": {
+   "rendement": 0.38,
+   "emission_t_mwh_th": 0.341,
+   "om_var": 4,
+   "cout_fixe_kw_an": 40,
+   "vie": 45
+  },
+  "fioul": {
+   "rendement": 0.33,
+   "emission_t_mwh_th": 0.267,
+   "om_var": 5,
+   "cout_fixe_kw_an": 15,
+   "vie": 40
+  },
+  "eolien": {
+   "cmg_fixe": 0,
+   "cout_fixe_kw_an": 45,
+   "vie": 25
+  },
+  "eolien:offshore": {
+   "cmg_fixe": 0,
+   "cout_fixe_kw_an": 90,
+   "vie": 30
+  },
+  "solaire": {
+   "cmg_fixe": 0,
+   "cout_fixe_kw_an": 15,
+   "vie": 30
+  },
+  "bioenergies": {
+   "cmg_fixe": 50,
+   "cout_fixe_kw_an": 60,
+   "vie": 30
+  },
+  "_sources": "Facteurs d'émission : GIEC 2006 (gaz 56,1 / charbon 94,6 / gasoil 74,1 tCO2/TJ PCI). Rendement CCG ~55 % (Sia Partners). Rendements charbon et TAC, coûts variables, valeurs de l'eau, coûts fixes et durées de vie : ordres de grandeur non sourcés."
  },
  "capacite_nationale_mw": {
-  "_statut": "Ordres de grandeur du parc installé. Sert à créer les blocs « diffus » (petites installations non listées) dans le merit order.",
-  "nucleaire": 62970,
-  "hydraulique": 25700,
-  "gaz": 12600,
-  "charbon": 1160,
-  "fioul": 2500,
-  "eolien": 26800,
-  "solaire": 27000,
-  "bioenergies": 2300
+  "_statut": "Parc installé au 31/12/2025, source officielle : ODRÉ « Parc national annuel de production par filière » (RTE), publié le 25/02/2026.",
+  "nucleaire": 62990,
+  "hydraulique": 25747,
+  "gaz": 12410,
+  "charbon": 1811,
+  "fioul": 2974,
+  "eolien": 25789,
+  "solaire": 30437,
+  "bioenergies": 2295
  },
  "couverture_edf_nucleaire": {
-  "_statut": "HYPOTHÈSE à remplacer par les chiffres publiés par EDF (résultats annuels et semestriels). Part de la production nucléaire vendue à terme et prix moyen, par année de livraison.",
-  "2026": {"part": 0.85, "prix": 74},
-  "2027": {"part": 0.55, "prix": 70},
-  "2028": {"part": 0.25, "prix": 68}
+  "_statut": "EDF ne publie pas sa part vendue à terme par année. Valeur affichée : revenu nucléaire moyen estimé par la CRE, qui intègre les ventes à terme déjà réalisées. La part couverte par défaut (curseur) est une hypothèse.",
+  "_source": "CRE, estimation des revenus nucléaires d'EDF (VNU) : 2026 = 66,1 €/MWh ; 2027 = 63,82 €/MWh (estimation du 01/07/2026, 360 TWh). https://www.cre.fr/electricite/marche-de-detail-de-lelectricite/vnu-estimation-des-revenus-nucleaires-dedf.html",
+  "2026": {
+   "part": 0.9,
+   "prix": 66.1,
+   "part_hypothese": true
+  },
+  "2027": {
+   "part": 0.7,
+   "prix": 63.8,
+   "part_hypothese": true
+  }
  },
  "vnu": {
-  "_statut": "Versement nucléaire universel (remplace l'ARENH depuis le 1er janvier 2026). Seuils et taux à vérifier dans le décret et les délibérations CRE : les sources publiques divergent.",
-  "seuil1": 78, "taux1": 0.5,
-  "seuil2": 110, "taux2": 0.9,
-  "cout_complet_cre": 60.3
+  "_statut": "Confirmé : seuils fixés par arrêté de février 2026 pour 2026-2028 ; taux fixés par la loi.",
+  "_source": "Loi n° 2025-127 de finances pour 2025, art. 17 ; décret n° 2026-55 du 4/02/2026 ; délibération CRE n° 2026-52 du 26/02/2026 (minoration 2026 = 0 €/MWh).",
+  "seuil1": 78,
+  "taux1": 0.5,
+  "seuil2": 110,
+  "taux2": 0.9,
+  "cout_complet_cre": 60.3,
+  "_source_cout_complet": "CRE, coût complet du nucléaire existant 2026-2028 : 60,3 €2026/MWh (communiqué du 30/09/2025)."
  },
  "valorisation": {
   "wacc": 0.07,
   "prix_long_terme": 70,
-  "horizon_max_ans": 40
+  "horizon_max_ans": 40,
+  "_statut": "Hypothèses pédagogiques. Repères : spot France 2025 = 61 €/MWh base (RTE) ; Cal-27 base = 107,6 €/MWh le 14/10/2026, Cal-28 = 65,1, Cal-29 = 59,8 (Selectra)."
  }
 }

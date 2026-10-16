@@ -93,29 +93,34 @@ function buildUnits(D) {
  */
 function buildProduction(D) {
   const { H, units, mix, real } = D;
-  D.prod = units.map((u) => real[u.id] ? Float32Array.from(real[u.id], (v) => (Number.isNaN(v) ? 0 : Math.max(0, v))) : new Float32Array(H));
+  D.prod = units.map(() => new Float32Array(H));
   const byF = {};
   for (const u of units) (byF[u.filiere] ||= []).push(u);
+  for (const u of units) u.realHours = 0;
   for (const [f, us] of Object.entries(byF)) {
-    const known = us.filter((u) => u.real), unknown = us.filter((u) => !u.real);
-    if (!unknown.length || !mix[f]) continue;
-    const fil = unknown.filter((u) => f === 'hydraulique' && u.type === 'fil');
-    const other = unknown.filter((u) => !fil.includes(u));
-    const capFil = fil.reduce((s, u) => s + u.p_mw, 0), capOther = other.reduce((s, u) => s + u.p_mw, 0);
+    const isFil = (u) => f === 'hydraulique' && u.type === 'fil';
     for (let h = 0; h < H; h++) {
-      let rest = mix[f][h];
-      if (Number.isNaN(rest)) continue;
-      for (const u of known) rest -= D.prod[u.idx][h];
-      rest = Math.max(0, rest);
-      let toFil = 0;
-      if (capFil) {
-        toFil = Math.min(rest, capFil * 0.6);
-        for (const u of fil) D.prod[u.idx][h] = toFil * u.p_mw / capFil;
+      // heure par heure : les groupes mesurés gardent leur valeur, les autres se partagent le reste du mix
+      let rest = mix[f] ? mix[f][h] : NaN;
+      let capFil = 0, capOther = 0;
+      for (const u of us) {
+        const v = real[u.id] ? real[u.id][h] : NaN;
+        if (!Number.isNaN(v)) { D.prod[u.idx][h] = Math.max(0, v); rest -= Math.max(0, v); u.realHours++; }
+        else if (isFil(u)) capFil += u.p_mw; else capOther += u.p_mw;
       }
+      if (Number.isNaN(rest)) continue;
+      rest = Math.max(0, rest);
+      const toFil = capFil ? Math.min(rest, capFil * 0.6) : 0;
       const r2 = rest - toFil;
-      if (capOther) for (const u of other) D.prod[u.idx][h] = Math.min(u.p_mw, r2 * u.p_mw / capOther);
+      for (const u of us) {
+        if (real[u.id] && !Number.isNaN(real[u.id][h])) continue;
+        if (isFil(u)) D.prod[u.idx][h] = toFil * u.p_mw / capFil;
+        else if (capOther) D.prod[u.idx][h] = Math.min(u.p_mw, r2 * u.p_mw / capOther);
+      }
     }
   }
+  // « mesurée » si la série réelle couvre au moins la moitié de l'historique chargé
+  for (const u of units) u.real = u.realHours > 0.5 * (D.now + 1);
   D.siteProd = (mapId, h) => (D.byMap[mapId] || []).reduce((s, u) => s + D.prod[u.idx][h], 0);
   // une maquette par filière : production et puissance de tout le parc de la filière
   D.byFil = {};

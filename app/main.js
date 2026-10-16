@@ -228,6 +228,37 @@ async function boot() {
   });
 
   // ---------------------------------------------------------------- sources
+  /** Tableau de fiabilité : source, date et niveau de confiance de chaque famille de données. */
+  function reliability() {
+    const s = D.meta.sources || {}, P = D.params, A = D.assets;
+    const listed = D.units.filter((u) => u.mapId);
+    const measured = listed.filter((u) => u.real);
+    const pMeas = measured.reduce((t, u) => t + u.p_mw, 0), pAll = listed.reduce((t, u) => t + u.p_mw, 0);
+    const offi = A.filter((a) => /^ENTSO-E|somme des tranches|ODRÉ/.test(a.verif?.puissance || '')).length;
+    const sites = A.filter((a) => !/agrégat/.test(a.type || '')), com = sites.filter((a) => a.commune).length;
+    const src = s.units?.source === 'entsoe' ? 'ENTSO-E 16.1.A' : s.units?.source === 'rte' ? 'RTE Data' : null;
+    const rows = [
+      ['Mix national par filière', 'RTE éCO2mix (ODRÉ), temps réel puis consolidé', s.mix?.ok ? 'mesuré' : 'indisponible', s.mix?.ok ? 3 : 0],
+      ['Prix spot day-ahead', s.prix?.source === 'entsoe' ? 'ENTSO-E Transparency' : (s.prix?.source || '—'), s.prix?.ok ? 'mesuré' : 'indisponible', s.prix?.ok ? 3 : 0],
+      ['Production par centrale', src ? `${src}, groupes ≥ 100 MW` : 'part du mix de la filière',
+        src ? `mesurée pour ${measured.length} centrales et tranches (${fmt(pMeas / Math.max(pAll, 1) * 100)} % de la puissance listée)` : 'modélisée', src ? (pMeas / pAll > 0.6 ? 3 : 2) : 1],
+      ['Puissance des centrales', 'ENTSO-E 14.1.B (par unité) ; ODRÉ pour les agrégats régionaux', `${offi} / ${A.length} actifs sur source officielle`, 3],
+      ['Tranches nucléaires', 'ENTSO-E 14.1.B ; couplage WNA / IAEA PRIS', `${D.units.filter((u) => u.tranche).length} réacteurs`, 3],
+      ['Commune d\'implantation', 'Registre national des installations (ODRÉ)', `${com} / ${sites.length} sites`, 3],
+      ['Position sur la carte', 'relevée à la main, recoupée avec le centre de la commune (geo.api.gouv.fr)',
+        `${A.filter((a) => /km du centre/.test(a.verif?.coordonnees || '')).length} sites à moins de 15 km ; agrégats régionaux placés au centre de la région`, 2],
+      ['Parc national installé', P.capacite_nationale_mw?._statut || 'ODRÉ', 'officiel, fin 2025', 3],
+      ['Combustibles et CO2', P.combustibles?._statut || '', 'niveau de marché daté, réglable', 2],
+      ['Mécanisme VNU', P.vnu?._source || 'loi de finances 2025, CRE', 'texte officiel', 3],
+      ['Revenu nucléaire EDF', P.couverture_edf_nucleaire?._source?.split('http')[0] || 'CRE', 'estimation CRE ; part couverte = hypothèse', 2],
+      ['Rendements, valeurs de l\'eau, coûts fixes', 'ordres de grandeur (GIEC pour les facteurs CO2)', 'hypothèse', 1],
+      ['Merit order et marginalité', 'modèle simplifié, sans interconnexions', 'pédagogique', 1],
+    ];
+    const lvl = ['indisponible', 'hypothèse', 'estimé', 'officiel'], cls = ['off', 'off', 'mod', 'ok'];
+    return `<table class="rel small"><thead><tr><th>Donnée</th><th>Source</th><th>Fiabilité</th></tr></thead><tbody>${rows.map(([k, src, note, n]) =>
+      `<tr><td><b>${k}</b></td><td>${src}</td><td><i class="st ${cls[n]}"></i>${lvl[n]}<br><span class="muted">${note}</span></td></tr>`).join('')}</tbody></table>`;
+  }
+
   function renderAbout() {
     const m = D.meta, s = m.sources || {};
     const line = (k, l) => {
@@ -237,12 +268,13 @@ async function boot() {
     };
     $('#about').innerHTML = `<div class="inner"><div class="d-head"><h2>Sources et méthode</h2><button class="icon close" aria-label="Fermer">✕</button></div>
       ${m.mode === 'demo' ? `<p class="tag warn">Données de démonstration</p><p>${m.note}</p>` : `<p>Données mises à jour le <b>${new Date(m.genere).toLocaleString('fr-FR')}</b>.</p>`}
-      <ul class="files">${line('mix', 'Mix national (RTE éCO2mix)')}${line('prix', 'Prix spot day-ahead')}${line('units', 'Production par groupe (RTE)')}</ul>
+      <ul class="files">${line('mix', 'Mix national (RTE éCO2mix)')}${line('prix', 'Prix spot day-ahead')}${line('units', 'Production par groupe (RTE ou ENTSO-E)')}</ul>
+      <h3>Fiabilité des données</h3>${reliability()}
       <h3>Comment lire l'app</h3>
       <p>Chaque colonne est une centrale. La partie pleine est sa production à l'heure choisie, la partie transparente sa puissance. La frise en bas permet de changer d'heure et de rejouer une journée.</p>
       <p>La vue <b>Merit order</b> range toutes les capacités disponibles par coût marginal croissant. La centrale la plus chère encore en marche est marginale : c'est elle qui fixe le prix dans ce modèle simplifié, qui ignore le couplage avec les pays voisins.</p>
       <h3>Limites</h3>
-      <p class="small">Sans les identifiants RTE, la production de chaque centrale est estimée comme une part du mix national de sa filière. Les prix du gaz, du CO2 et les couvertures EDF sont des hypothèses réglables. La valorisation est un ordre de grandeur pédagogique, pas une évaluation financière.</p>
+      <p class="small">Quand un groupe n'est pas publié heure par heure (moins de 100 MW, ou donnée manquante), sa production est estimée comme une part du mix national de sa filière. Les prix du gaz, du CO2 et la part couverte d'EDF sont des hypothèses réglables. La valorisation est un ordre de grandeur pédagogique, pas une évaluation financière.</p>
       <h3>Données brutes</h3>
       <ul class="files">${['data/meta.json', 'data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/live.json'].map((f) => `<li><a class="mono" href="${f}" target="_blank" rel="noopener">${f}</a></li>`).join('')}</ul>
       ${m.licences ? `<h3>Licences</h3><ul class="files small">${Object.values(m.licences).map((l) => `<li>${l}</li>`).join('')}</ul>` : ''}
