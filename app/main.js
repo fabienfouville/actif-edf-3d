@@ -235,7 +235,7 @@ async function boot() {
     const measured = listed.filter((u) => u.real);
     const pMeas = measured.reduce((t, u) => t + u.p_mw, 0), pAll = listed.reduce((t, u) => t + u.p_mw, 0);
     const offi = A.filter((a) => /^ENTSO-E|somme des tranches|ODRÉ/.test(a.verif?.puissance || '')).length;
-    const com = A.filter((a) => a.commune).length;
+    const sites = A.filter((a) => !/agrégat/.test(a.type || '')), com = sites.filter((a) => a.commune).length;
     const src = s.units?.source === 'entsoe' ? 'ENTSO-E 16.1.A' : s.units?.source === 'rte' ? 'RTE Data' : null;
     const rows = [
       ['Mix national par filière', 'RTE éCO2mix (ODRÉ), temps réel puis consolidé', s.mix?.ok ? 'mesuré' : 'indisponible', s.mix?.ok ? 3 : 0],
@@ -244,8 +244,9 @@ async function boot() {
         src ? `mesurée pour ${measured.length} centrales et tranches (${fmt(pMeas / Math.max(pAll, 1) * 100)} % de la puissance listée)` : 'modélisée', src ? (pMeas / pAll > 0.6 ? 3 : 2) : 1],
       ['Puissance des centrales', 'ENTSO-E 14.1.B (par unité) ; ODRÉ pour les agrégats régionaux', `${offi} / ${A.length} actifs sur source officielle`, 3],
       ['Tranches nucléaires', 'ENTSO-E 14.1.B ; couplage WNA / IAEA PRIS', `${D.units.filter((u) => u.tranche).length} réacteurs`, 3],
-      ['Commune d\'implantation', 'Registre national des installations (ODRÉ)', `${com} / ${A.length} actifs`, 3],
-      ['Position sur la carte', 'coordonnées relevées à la main', 'à ±0,05° près', 2],
+      ['Commune d\'implantation', 'Registre national des installations (ODRÉ)', `${com} / ${sites.length} sites`, 3],
+      ['Position sur la carte', 'relevée à la main, recoupée avec le centre de la commune (geo.api.gouv.fr)',
+        `${A.filter((a) => /km du centre/.test(a.verif?.coordonnees || '')).length} sites à moins de 15 km ; agrégats régionaux placés au centre de la région`, 2],
       ['Parc national installé', P.capacite_nationale_mw?._statut || 'ODRÉ', 'officiel, fin 2025', 3],
       ['Combustibles et CO2', P.combustibles?._statut || '', 'niveau de marché daté, réglable', 2],
       ['Mécanisme VNU', P.vnu?._source || 'loi de finances 2025, CRE', 'texte officiel', 3],

@@ -180,8 +180,8 @@ def rte_units(start, end, cid, secret):
 def match_units(rte, catalog):
     """Rapproche les noms RTE des identifiants du catalogue.
 
-    Tranches nucléaires : nom du site + numéro final. Autres actifs : somme des groupes
-    dont le nom contient la clé (ex. MARTIGUES 5 + MARTIGUES 6).
+    Tranches nucléaires : nom du site + numéro final. Autres actifs : somme des groupes ENTSO-E
+    listés dans le catalogue (groupes_entsoe), sinon des groupes dont le nom contient la clé.
     """
     series, used = {}, set()
     for t in catalog["tranches"]:
@@ -196,8 +196,9 @@ def match_units(rte, catalog):
     for a in catalog["assets"]:
         if a["filiere"] == "nucleaire" or "rte" not in a:
             continue
+        exact = {norm(g) for g in a.get("groupes_entsoe") or []}
         key = norm(a["rte"])
-        names = [n for n in rte if key in n and n not in used]
+        names = [n for n in rte if n not in used and (n in exact if exact else key in n)]
         if not names:
             continue
         acc = {}

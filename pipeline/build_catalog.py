@@ -13,6 +13,7 @@ Règles :
 Usage : python pipeline/build_catalog.py   (hors ligne, après catalog.py)
 """
 import json
+import math
 
 from common import DATA, load_json, norm, save_json
 
@@ -44,6 +45,25 @@ def main():
         insee = next((u.get("insee") for u in units + gens if u.get("insee")), None)
         return units, gens, insee
 
+    fam = {"hydraulique": "Hydraulique", "gaz": "Thermique non renouvelable", "charbon": "Thermique non renouvelable",
+           "fioul": "Thermique non renouvelable", "eolien": "Eolien", "solaire": "Solaire", "bioenergies": "Bioénergies"}
+
+    def registre_by_name(keys, filiere):
+        for r in ref["registre"]:
+            n = norm(r.get("nominstallation") or "")
+            if r.get("filiere") == fam.get(filiere) and r.get("commune") and any(f"DE {k}" in n for k in keys):
+                return r
+        return None
+
+    def check_position(a, verif, insee):
+        """Écart entre la position de la carte et le centre de la commune d'implantation (geo.api.gouv.fr)."""
+        c = communes.get(insee) or {}
+        if "lat" not in c or a.get("type") == "offshore":
+            return
+        d = math.hypot(a["lat"] - c["lat"], (a["lon"] - c["lon"]) * math.cos(math.radians(c["lat"]))) * 111
+        verif["coordonnees"] = (f"relevées à la main, à {d:.0f} km du centre de la commune ({c['nom']}, geo.api.gouv.fr)"
+                                if d <= 15 else f"à vérifier : {d:.0f} km du centre de la commune {c['nom']}")
+
     assets, report = [], []
     # ------------------------------------------------------------ centrales hors nucléaire
     for c in cmap["centrales"]:
@@ -63,6 +83,14 @@ def main():
         if insee and insee in communes and "nom" in communes[insee]:
             a["commune"] = communes[insee]["nom"]
             verif["commune"] = f"Registre national des installations (ODRÉ), code EIC rapproché"
+        elif len(keys) <= 2:
+            # le registre code l'hydraulique avec un autre EIC qu'ENTSO-E : rapprochement par le nom de l'installation
+            r = registre_by_name(keys or [norm(c["nom"].split(" (")[0])], c["filiere"])
+            if r:
+                insee = r.get("codeinseecommuneimplantation") or r.get("codeinseecommune")
+                a["commune"] = communes.get(insee, {}).get("nom") or r["commune"]
+                verif["commune"] = f"Registre national des installations (ODRÉ), « {r['nominstallation']} »"
+        check_position(a, verif, insee)
         a["verif"] = verif
         a = {k: v for k, v in a.items() if v is not None}
         assets.append(a)
@@ -92,6 +120,7 @@ def main():
                        "verif": {"coordonnees": "Wikipédia / WNA, à ±0,01° (vérification du 16/10/2026)",
                                  "puissance": f"somme des tranches, ENTSO-E 14.1.B, relevé du {date_ref}",
                                  "commune": "Registre national des installations (ODRÉ)"}})
+        check_position(assets[-1], assets[-1]["verif"], insee)
 
     # ------------------------------------------------------------ éolien terrestre et solaire par région (ODRÉ)
     # le parc régional ODRÉ inclut l'éolien en mer (somme des régions = total national) : on retire les
