@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-16T19:49:39Z",
+ "genere": "2026-10-16T20:01:08Z",
  "sources": {
   "unites_entsoe": "ok",
   "groupes_entsoe": "ok",
@@ -2733,24 +2733,6 @@
    "energieannuelleglissanteinjectee": 7931605235
   },
   {
-   "nominstallation": "CRUA5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CRUAS",
-   "codeeicresourceobject": "17W100P100P0115S",
-   "commune": "Cruas",
-   "codeinseecommune": "07076",
-   "codeinseecommuneimplantation": "07076",
-   "region": "Auvergne-Rhône-Alpes",
-   "codefiliere": "NUCLE",
-   "filiere": "Nucléaire",
-   "technologie": "Fission nucléaire",
-   "combustible": "Uranium",
-   "datemiseenservice_date": "1984-04-02",
-   "puismaxinstallee": 915000.0,
-   "nbgroupes": 1,
-   "regime": "En service",
-   "gestionnaire": "RTE",
-   "energieannuelleglissanteinjectee": 4952184170
-  },
-  {
    "nominstallation": "TRICAN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)",
    "codeeicresourceobject": "17W100P100P0153K",
    "commune": "Pierrelatte",
@@ -2769,8 +2751,8 @@
    "energieannuelleglissanteinjectee": 5660664604
   },
   {
-   "nominstallation": "CRUA5N03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CRUAS",
-   "codeeicresourceobject": "17W100P100P0118M",
+   "nominstallation": "CRUA5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CRUAS",
+   "codeeicresourceobject": "17W100P100P0115S",
    "commune": "Cruas",
    "codeinseecommune": "07076",
    "codeinseecommuneimplantation": "07076",
@@ -2779,12 +2761,12 @@
    "filiere": "Nucléaire",
    "technologie": "Fission nucléaire",
    "combustible": "Uranium",
-   "datemiseenservice_date": "1984-09-10",
+   "datemiseenservice_date": "1984-04-02",
    "puismaxinstallee": 915000.0,
    "nbgroupes": 1,
    "regime": "En service",
    "gestionnaire": "RTE",
-   "energieannuelleglissanteinjectee": 5734245461
+   "energieannuelleglissanteinjectee": 4952184170
   },
   {
    "nominstallation": "TRICAN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)",
@@ -2803,6 +2785,24 @@
    "regime": "En service",
    "gestionnaire": "RTE",
    "energieannuelleglissanteinjectee": 6607611289
+  },
+  {
+   "nominstallation": "CRUA5N03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CRUAS",
+   "codeeicresourceobject": "17W100P100P0118M",
+   "commune": "Cruas",
+   "codeinseecommune": "07076",
+   "codeinseecommuneimplantation": "07076",
+   "region": "Auvergne-Rhône-Alpes",
+   "codefiliere": "NUCLE",
+   "filiere": "Nucléaire",
+   "technologie": "Fission nucléaire",
+   "combustible": "Uranium",
+   "datemiseenservice_date": "1984-09-10",
+   "puismaxinstallee": 915000.0,
+   "nbgroupes": 1,
+   "regime": "En service",
+   "gestionnaire": "RTE",
+   "energieannuelleglissanteinjectee": 5734245461
   },
   {
    "nominstallation": "SSEA2N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE ST-LAURENT-DES-EAUX B",
@@ -2859,6 +2859,24 @@
    "energieannuelleglissanteinjectee": 5923372358
   },
   {
+   "nominstallation": "CRUA5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CRUAS",
+   "codeeicresourceobject": "17W100P100P0116Q",
+   "commune": "Cruas",
+   "codeinseecommune": "07076",
+   "codeinseecommuneimplantation": "07076",
+   "region": "Auvergne-Rhône-Alpes",
+   "codefiliere": "NUCLE",
+   "filiere": "Nucléaire",
+   "technologie": "Fission nucléaire",
+   "combustible": "Uranium",
+   "datemiseenservice_date": "1985-04-01",
+   "puismaxinstallee": 915000.0,
+   "nbgroupes": 1,
+   "regime": "En service",
+   "gestionnaire": "RTE",
+   "energieannuelleglissanteinjectee": 6828757280
+  },
+  {
    "nominstallation": "SSEA2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE ST-LAURENT-DES-EAUX B",
    "codeeicresourceobject": "17W100P100P0148D",
    "commune": "Saint-Laurent-Nouan",
@@ -2893,24 +2911,6 @@
    "regime": "En service",
    "gestionnaire": "RTE",
    "energieannuelleglissanteinjectee": 5626130202
-  },
-  {
-   "nominstallation": "CRUA5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CRUAS",
-   "codeeicresourceobject": "17W100P100P0116Q",
-   "commune": "Cruas",
-   "codeinseecommune": "07076",
-   "codeinseecommuneimplantation": "07076",
-   "region": "Auvergne-Rhône-Alpes",
-   "codefiliere": "NUCLE",
-   "filiere": "Nucléaire",
-   "technologie": "Fission nucléaire",
-   "combustible": "Uranium",
-   "datemiseenservice_date": "1985-04-01",
-   "puismaxinstallee": 915000.0,
-   "nbgroupes": 1,
-   "regime": "En service",
-   "gestionnaire": "RTE",
-   "energieannuelleglissanteinjectee": 6828757280
   },
   {
    "nominstallation": "BLAYAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)",
@@ -3921,6 +3921,24 @@
    "energieannuelleglissanteinjectee": 984611066
   },
   {
+   "nominstallation": "V.ILEE02 - ADP 02 DE LA FERME EOLIENNE DE VENT-DES-ILES",
+   "codeeicresourceobject": "17W000002144987U",
+   "commune": "La Barre-de-Monts",
+   "codeinseecommune": "85012",
+   "codeinseecommuneimplantation": "85012",
+   "region": "Pays de la Loire",
+   "codefiliere": "EOLIE",
+   "filiere": "Eolien",
+   "technologie": "En mer posé",
+   "combustible": null,
+   "datemiseenservice_date": "2025-08-10",
+   "puismaxinstallee": 250000.0,
+   "nbgroupes": 30,
+   "regime": "En service",
+   "gestionnaire": "RTE",
+   "energieannuelleglissanteinjectee": 580414489
+  },
+  {
    "nominstallation": "BOUCHT02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE BOUCHAIN",
    "codeeicresourceobject": "17W000000012237D",
    "commune": "Bouchain",
@@ -3957,24 +3975,6 @@
    "energieannuelleglissanteinjectee": null
   },
   {
-   "nominstallation": "V.ILEE02 - ADP 02 DE LA FERME EOLIENNE DE VENT-DES-ILES",
-   "codeeicresourceobject": "17W000002144987U",
-   "commune": "La Barre-de-Monts",
-   "codeinseecommune": "85012",
-   "codeinseecommuneimplantation": "85012",
-   "region": "Pays de la Loire",
-   "codefiliere": "EOLIE",
-   "filiere": "Eolien",
-   "technologie": "En mer posé",
-   "combustible": null,
-   "datemiseenservice_date": "2025-08-10",
-   "puismaxinstallee": 250000.0,
-   "nbgroupes": 30,
-   "regime": "En service",
-   "gestionnaire": "RTE",
-   "energieannuelleglissanteinjectee": 580414489
-  },
-  {
    "nominstallation": "MAXE T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE MAXE (LA)",
    "codeeicresourceobject": "17W000000012683R",
    "commune": "La Maxe",
@@ -3986,6 +3986,24 @@
    "technologie": "Turbine à vapeur",
    "combustible": "Charbon",
    "datemiseenservice_date": "1971-06-01",
+   "puismaxinstallee": 250000.0,
+   "nbgroupes": 1,
+   "regime": "En retrait provisoire",
+   "gestionnaire": "RTE",
+   "energieannuelleglissanteinjectee": null
+  },
+  {
+   "nominstallation": "MAXE T02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE MAXE (LA)",
+   "codeeicresourceobject": "17W000000012673U",
+   "commune": "La Maxe",
+   "codeinseecommune": "57452",
+   "codeinseecommuneimplantation": "57452",
+   "region": "Grand Est",
+   "codefiliere": "THERM",
+   "filiere": "Thermique non renouvelable",
+   "technologie": "Turbine à vapeur",
+   "combustible": "Charbon",
+   "datemiseenservice_date": "1971-11-01",
    "puismaxinstallee": 250000.0,
    "nbgroupes": 1,
    "regime": "En retrait provisoire",
@@ -4009,24 +4027,6 @@
    "regime": "En service",
    "gestionnaire": "RTE",
    "energieannuelleglissanteinjectee": 911260764
-  },
-  {
-   "nominstallation": "MAXE T02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE MAXE (LA)",
-   "codeeicresourceobject": "17W000000012673U",
-   "commune": "La Maxe",
-   "codeinseecommune": "57452",
-   "codeinseecommuneimplantation": "57452",
-   "region": "Grand Est",
-   "codefiliere": "THERM",
-   "filiere": "Thermique non renouvelable",
-   "technologie": "Turbine à vapeur",
-   "combustible": "Charbon",
-   "datemiseenservice_date": "1971-11-01",
-   "puismaxinstallee": 250000.0,
-   "nbgroupes": 1,
-   "regime": "En retrait provisoire",
-   "gestionnaire": "RTE",
-   "energieannuelleglissanteinjectee": null
   },
   {
    "nominstallation": "R.DIEEA1 - ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
@@ -5325,24 +5325,6 @@
    "energieannuelleglissanteinjectee": 244601254
   },
   {
-   "nominstallation": "GUESDT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GUESDE",
-   "codeeicresourceobject": "17W000001418626A",
-   "commune": "Vitry-sur-Seine",
-   "codeinseecommune": "94081",
-   "codeinseecommuneimplantation": "94081",
-   "region": "Île-de-France",
-   "codefiliere": "THERM",
-   "filiere": "Thermique non renouvelable",
-   "technologie": "Cogénération à combustion",
-   "combustible": "Gaz",
-   "datemiseenservice_date": null,
-   "puismaxinstallee": 100000.0,
-   "nbgroupes": 1,
-   "regime": "En service",
-   "gestionnaire": "RTE",
-   "energieannuelleglissanteinjectee": 113611556
-  },
-  {
    "nominstallation": "C.GUEV01 - ADP 01 DE LA CENTRALE SOLAIRE PHOTOVOLTAIQUE DE CHAMPS GUERIN (LES)",
    "codeeicresourceobject": "17W0000024409377",
    "commune": "Champvert",
@@ -5359,6 +5341,24 @@
    "regime": "En service",
    "gestionnaire": "RTE",
    "energieannuelleglissanteinjectee": 1831801
+  },
+  {
+   "nominstallation": "GUESDT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GUESDE",
+   "codeeicresourceobject": "17W000001418626A",
+   "commune": "Vitry-sur-Seine",
+   "codeinseecommune": "94081",
+   "codeinseecommuneimplantation": "94081",
+   "region": "Île-de-France",
+   "codefiliere": "THERM",
+   "filiere": "Thermique non renouvelable",
+   "technologie": "Cogénération à combustion",
+   "combustible": "Gaz",
+   "datemiseenservice_date": null,
+   "puismaxinstallee": 100000.0,
+   "nbgroupes": 1,
+   "regime": "En service",
+   "gestionnaire": "RTE",
+   "energieannuelleglissanteinjectee": 113611556
   },
   {
    "nominstallation": "DOPPLS01-STOCKAGE N0 01 DE DOPPLER",
@@ -6567,24 +6567,6 @@
    "energieannuelleglissanteinjectee": 179527217
   },
   {
-   "nominstallation": "ESPI5EA1 - ADP A1 DE LA FERME EOLIENNE DES ESPIERS (CHEMIN D ABLIS)",
-   "codeeicresourceobject": "17W100P100P2755J",
-   "commune": "Fresnay-l'Évêque",
-   "codeinseecommune": "28164",
-   "codeinseecommuneimplantation": "28164",
-   "region": "Centre-Val de Loire",
-   "codefiliere": "EOLIE",
-   "filiere": "Eolien",
-   "technologie": "Terrestre",
-   "combustible": null,
-   "datemiseenservice_date": null,
-   "puismaxinstallee": 52000.0,
-   "nbgroupes": 26,
-   "regime": "En service",
-   "gestionnaire": "RTE",
-   "energieannuelleglissanteinjectee": 126934503
-  },
-  {
    "nominstallation": "SAUV6H-CENTRALE HYDRAULIQUE DE SAUVETERRE-3",
    "codeeicresourceobject": "17W000001017800G",
    "commune": "Villeneuve-lès-Avignon",
@@ -6601,6 +6583,24 @@
    "regime": "En service",
    "gestionnaire": "RTE",
    "energieannuelleglissanteinjectee": 195523419
+  },
+  {
+   "nominstallation": "ESPI5EA1 - ADP A1 DE LA FERME EOLIENNE DES ESPIERS (CHEMIN D ABLIS)",
+   "codeeicresourceobject": "17W100P100P2755J",
+   "commune": "Fresnay-l'Évêque",
+   "codeinseecommune": "28164",
+   "codeinseecommuneimplantation": "28164",
+   "region": "Centre-Val de Loire",
+   "codefiliere": "EOLIE",
+   "filiere": "Eolien",
+   "technologie": "Terrestre",
+   "combustible": null,
+   "datemiseenservice_date": null,
+   "puismaxinstallee": 52000.0,
+   "nbgroupes": 26,
+   "regime": "En service",
+   "gestionnaire": "RTE",
+   "energieannuelleglissanteinjectee": 126934503
   },
   {
    "nominstallation": "PASSYH-CENTRALE HYDRAULIQUE DE PASSY-6",
