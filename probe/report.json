@@ -1,0 +1,3715 @@
+{
+ "genere": "2026-10-16T17:43:27.143174+00:00",
+ "entsoe_A73_bytes": 1910352,
+ "entsoe_A73_units": [
+  {
+   "name": "PROVENCE 4",
+   "mrid": "17W100P100P03655",
+   "psr": "B01",
+   "n": 1,
+   "max": 0.1,
+   "mean": 0.1
+  },
+  {
+   "name": "BAYET MORANDES (LES)",
+   "mrid": "17W000000918390N",
+   "psr": "B04",
+   "n": 89,
+   "max": 399.03,
+   "mean": 271.3
+  },
+  {
+   "name": "BLENOD 5",
+   "mrid": "17W100P100P0173E",
+   "psr": "B04",
+   "n": 89,
+   "max": 3.59,
+   "mean": 1.5
+  },
+  {
+   "name": "BOUCHAIN 7",
+   "mrid": "17W100P100P01768",
+   "psr": "B04",
+   "n": 95,
+   "max": 584.42,
+   "mean": 372.1
+  },
+  {
+   "name": "COGENERATION NORMANDIE (AMFARD) TRAIN 14",
+   "mrid": "17W000001468589Y",
+   "psr": "B04",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "COGENERATION NORMANDIE (AMFARD) TRAIN 15",
+   "mrid": "17W000001468590C",
+   "psr": "B04",
+   "n": 82,
+   "max": 69.01,
+   "mean": 68.7
+  },
+  {
+   "name": "COMBIGOLFE CCG",
+   "mrid": "17W100P100P01679",
+   "psr": "B04",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "COMPAGNIE ELECTRIQUE DE BRETAGNE",
+   "mrid": "17W000001023725I",
+   "psr": "B04",
+   "n": 95,
+   "max": 442.67,
+   "mean": 252.5
+  },
+  {
+   "name": "CPCU-CogeVitry–GP",
+   "mrid": "17W000001418626A",
+   "psr": "B04",
+   "n": 78,
+   "max": 1.32,
+   "mean": 1.0
+  },
+  {
+   "name": "CPCU-StOuen-GP",
+   "mrid": "17W0000014186456",
+   "psr": "B04",
+   "n": 16,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "CROIX DE METZ",
+   "mrid": "17W000000918406Y",
+   "psr": "B04",
+   "n": 89,
+   "max": 434.9,
+   "mean": 165.3
+  },
+  {
+   "name": "CYCOFOS PL1",
+   "mrid": "17W100P100P03388",
+   "psr": "B04",
+   "n": 87,
+   "max": 428.56,
+   "mean": 297.6
+  },
+  {
+   "name": "DK6-TG1",
+   "mrid": "17W100P100P0330O",
+   "psr": "B04",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "DK6-TG2",
+   "mrid": "17W100P100P0332K",
+   "psr": "B04",
+   "n": 31,
+   "max": 151.24,
+   "mean": 113.4
+  },
+  {
+   "name": "DK6-TV1",
+   "mrid": "17W100P100P0331M",
+   "psr": "B04",
+   "n": 30,
+   "max": 95.79,
+   "mean": 64.2
+  },
+  {
+   "name": "DK6-TV2",
+   "mrid": "17W100P100P0333I",
+   "psr": "B04",
+   "n": 96,
+   "max": 184.82,
+   "mean": 124.2
+  },
+  {
+   "name": "GENNEVILLIERS 1",
+   "mrid": "17W100P100P0037M",
+   "psr": "B04",
+   "n": 27,
+   "max": 0.94,
+   "mean": 0.9
+  },
+  {
+   "name": "MARTIGUES PONTEAU 5",
+   "mrid": "17W100P100P0174C",
+   "psr": "B04",
+   "n": 93,
+   "max": 446.11,
+   "mean": 275.0
+  },
+  {
+   "name": "MARTIGUES PONTEAU 6",
+   "mrid": "17W100P100P0175A",
+   "psr": "B04",
+   "n": 94,
+   "max": 446.25,
+   "mean": 281.0
+  },
+  {
+   "name": "PONT SUR SAMBRE",
+   "mrid": "17W100P100P00016",
+   "psr": "B04",
+   "n": 92,
+   "max": 452.99,
+   "mean": 220.4
+  },
+  {
+   "name": "SAINT AVOLD 7",
+   "mrid": "17W100P100P00105",
+   "psr": "B04",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "SAINT AVOLD 8",
+   "mrid": "17W100P100P00113",
+   "psr": "B04",
+   "n": 94,
+   "max": 366.06,
+   "mean": 176.8
+  },
+  {
+   "name": "SPEM CCG",
+   "mrid": "17W100P100P0171I",
+   "psr": "B04",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "CORDEMAIS 4",
+   "mrid": "17W100P100P0017S",
+   "psr": "B05",
+   "n": 1,
+   "max": 0.38,
+   "mean": 0.4
+  },
+  {
+   "name": "CORDEMAIS 5",
+   "mrid": "17W100P100P0018Q",
+   "psr": "B05",
+   "n": 94,
+   "max": 6.49,
+   "mean": 5.7
+  },
+  {
+   "name": "EMILE HUCHET 6",
+   "mrid": "17W100P100P0005Z",
+   "psr": "B05",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "ARRIGHI 1",
+   "mrid": "17W100P100P0031Y",
+   "psr": "B06",
+   "n": 79,
+   "max": 0.45,
+   "mean": 0.4
+  },
+  {
+   "name": "ARRIGHI 2",
+   "mrid": "17W100P100P0032W",
+   "psr": "B06",
+   "n": 41,
+   "max": 0.96,
+   "mean": 0.5
+  },
+  {
+   "name": "BRENNILIS 3",
+   "mrid": "17W100P100P0033U",
+   "psr": "B06",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "MONTEREAU 5",
+   "mrid": "17W100P100P0040X",
+   "psr": "B06",
+   "n": 3,
+   "max": 0.55,
+   "mean": 0.5
+  },
+  {
+   "name": "MONTEREAU 6",
+   "mrid": "17W100P100P0041V",
+   "psr": "B06",
+   "n": 74,
+   "max": 0.39,
+   "mean": 0.4
+  },
+  {
+   "name": "VAIRES 1",
+   "mrid": "17W100P100P0046L",
+   "psr": "B06",
+   "n": 7,
+   "max": 0.01,
+   "mean": 0.0
+  },
+  {
+   "name": "VAIRES 2",
+   "mrid": "17W100P100P0047J",
+   "psr": "B06",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "VAIRES 3",
+   "mrid": "17W100P100P0048H",
+   "psr": "B06",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "CHEYLAS 1",
+   "mrid": "17W100P100P0056I",
+   "psr": "B10",
+   "n": 52,
+   "max": 235.2,
+   "mean": 162.2
+  },
+  {
+   "name": "CHEYLAS 2",
+   "mrid": "17W100P100P0057G",
+   "psr": "B10",
+   "n": 57,
+   "max": 236.52,
+   "mean": 175.4
+  },
+  {
+   "name": "COCHE 5",
+   "mrid": "17W100P100P20746",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "GRAND MAISON 1",
+   "mrid": "17W100P100P0059C",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "GRAND MAISON 10",
+   "mrid": "17W100P100P0058E",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "GRAND MAISON 11",
+   "mrid": "17W100P100P0060R",
+   "psr": "B10",
+   "n": 53,
+   "max": 152.68,
+   "mean": 104.4
+  },
+  {
+   "name": "GRAND MAISON 12",
+   "mrid": "17W100P100P0062N",
+   "psr": "B10",
+   "n": 57,
+   "max": 152.2,
+   "mean": 104.3
+  },
+  {
+   "name": "GRAND MAISON 2",
+   "mrid": "17W100P100P0061P",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "GRAND MAISON 3",
+   "mrid": "17W100P100P0063L",
+   "psr": "B10",
+   "n": 37,
+   "max": 163.21,
+   "mean": 113.8
+  },
+  {
+   "name": "GRAND MAISON 4",
+   "mrid": "17W100P100P0064J",
+   "psr": "B10",
+   "n": 41,
+   "max": 161.75,
+   "mean": 111.7
+  },
+  {
+   "name": "GRAND MAISON 5",
+   "mrid": "17W100P100P0065H",
+   "psr": "B10",
+   "n": 60,
+   "max": 163.35,
+   "mean": 117.0
+  },
+  {
+   "name": "GRAND MAISON 6",
+   "mrid": "17W100P100P0066F",
+   "psr": "B10",
+   "n": 60,
+   "max": 162.51,
+   "mean": 116.0
+  },
+  {
+   "name": "GRAND MAISON 7",
+   "mrid": "17W100P100P0067D",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "GRAND MAISON 8",
+   "mrid": "17W100P100P0068B",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "GRAND MAISON 9",
+   "mrid": "17W100P100P00699",
+   "psr": "B10",
+   "n": 54,
+   "max": 152.52,
+   "mean": 100.2
+  },
+  {
+   "name": "MONTEZIC 1",
+   "mrid": "17W100P100P0071M",
+   "psr": "B10",
+   "n": 88,
+   "max": 221.09,
+   "mean": 174.8
+  },
+  {
+   "name": "MONTEZIC 2",
+   "mrid": "17W100P100P0072K",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "MONTEZIC 3",
+   "mrid": "17W100P100P0073I",
+   "psr": "B10",
+   "n": 37,
+   "max": 221.27,
+   "mean": 165.2
+  },
+  {
+   "name": "MONTEZIC 4",
+   "mrid": "17W100P100P0074G",
+   "psr": "B10",
+   "n": 81,
+   "max": 220.85,
+   "mean": 167.3
+  },
+  {
+   "name": "REVIN 1",
+   "mrid": "17W100P100P0076C",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "REVIN 2",
+   "mrid": "17W100P100P0077A",
+   "psr": "B10",
+   "n": 75,
+   "max": 196.69,
+   "mean": 124.7
+  },
+  {
+   "name": "REVIN 3",
+   "mrid": "17W100P100P00788",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "REVIN 4",
+   "mrid": "17W100P100P00796",
+   "psr": "B10",
+   "n": 73,
+   "max": 182.58,
+   "mean": 117.0
+  },
+  {
+   "name": "SUPER BISSORTE 1",
+   "mrid": "17W100P100P0082H",
+   "psr": "B10",
+   "n": 94,
+   "max": 141.53,
+   "mean": 44.0
+  },
+  {
+   "name": "SUPER BISSORTE 2",
+   "mrid": "17W100P100P0083F",
+   "psr": "B10",
+   "n": 94,
+   "max": 160.37,
+   "mean": 35.3
+  },
+  {
+   "name": "SUPER BISSORTE 3",
+   "mrid": "17W100P100P0084D",
+   "psr": "B10",
+   "n": 53,
+   "max": 0.26,
+   "mean": 0.1
+  },
+  {
+   "name": "SUPER BISSORTE 4",
+   "mrid": "17W100P100P0085B",
+   "psr": "B10",
+   "n": 82,
+   "max": 159.97,
+   "mean": 40.9
+  },
+  {
+   "name": "SUPER BISSORTE 5",
+   "mrid": "17W100P100P00869",
+   "psr": "B10",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "CHASTANG 2",
+   "mrid": "17W100P100P0049F",
+   "psr": "B11",
+   "n": 10,
+   "max": 74.25,
+   "mean": 44.0
+  },
+  {
+   "name": "CHASTANG 3",
+   "mrid": "17W100P100P0050U",
+   "psr": "B11",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "SAINT-PIERRE",
+   "mrid": "17W100P100P0166B",
+   "psr": "B11",
+   "n": 16,
+   "max": 88.62,
+   "mean": 53.1
+  },
+  {
+   "name": "AIGLE 6",
+   "mrid": "17W100P100P0051S",
+   "psr": "B12",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "BATHIE 1",
+   "mrid": "17W100P100P03566",
+   "psr": "B12",
+   "n": 27,
+   "max": 98.6,
+   "mean": 68.0
+  },
+  {
+   "name": "BATHIE 2",
+   "mrid": "17W100P100P03574",
+   "psr": "B12",
+   "n": 21,
+   "max": 101.28,
+   "mean": 67.2
+  },
+  {
+   "name": "BATHIE 3",
+   "mrid": "17W100P100P03582",
+   "psr": "B12",
+   "n": 29,
+   "max": 99.5,
+   "mean": 68.6
+  },
+  {
+   "name": "BATHIE 4",
+   "mrid": "17W100P100P03590",
+   "psr": "B12",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "BATHIE 5",
+   "mrid": "17W100P100P0360F",
+   "psr": "B12",
+   "n": 36,
+   "max": 97.64,
+   "mean": 60.2
+  },
+  {
+   "name": "BATHIE 6",
+   "mrid": "17W100P100P0361D",
+   "psr": "B12",
+   "n": 27,
+   "max": 100.32,
+   "mean": 68.4
+  },
+  {
+   "name": "BORT 1",
+   "mrid": "17W100P100P0052Q",
+   "psr": "B12",
+   "n": 11,
+   "max": 79.28,
+   "mean": 51.4
+  },
+  {
+   "name": "BORT 2",
+   "mrid": "17W100P100P0054M",
+   "psr": "B12",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "BROMMAT 7",
+   "mrid": "17W100P100P0055K",
+   "psr": "B12",
+   "n": 67,
+   "max": 0.22,
+   "mean": 0.2
+  },
+  {
+   "name": "COMBE D'AVRIEUX 1",
+   "mrid": "17W100P100P00893",
+   "psr": "B12",
+   "n": 1,
+   "max": 0.15,
+   "mean": 0.1
+  },
+  {
+   "name": "POUGET 4",
+   "mrid": "17W100P100P0075E",
+   "psr": "B12",
+   "n": 12,
+   "max": 216.28,
+   "mean": 119.0
+  },
+  {
+   "name": "SISTERON 1",
+   "mrid": "17W100P100P0080L",
+   "psr": "B12",
+   "n": 72,
+   "max": 104.54,
+   "mean": 78.1
+  },
+  {
+   "name": "SISTERON 2",
+   "mrid": "17W100P100P0081J",
+   "psr": "B12",
+   "n": 92,
+   "max": 110.74,
+   "mean": 85.0
+  },
+  {
+   "name": "VILLARODIN 1",
+   "mrid": "17W100P100P00877",
+   "psr": "B12",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "VILLARODIN 2",
+   "mrid": "17W100P100P00885",
+   "psr": "B12",
+   "n": 59,
+   "max": 178.39,
+   "mean": 148.9
+  },
+  {
+   "name": "BELLEVILLE 1",
+   "mrid": "17W100P100P0090I",
+   "psr": "B14",
+   "n": 82,
+   "max": 4.97,
+   "mean": 4.2
+  },
+  {
+   "name": "BELLEVILLE 2",
+   "mrid": "17W100P100P0091G",
+   "psr": "B14",
+   "n": 96,
+   "max": 1276.08,
+   "mean": 1266.5
+  },
+  {
+   "name": "BLAYAIS 1",
+   "mrid": "17W100P100P0092E",
+   "psr": "B14",
+   "n": 55,
+   "max": 0.36,
+   "mean": 0.3
+  },
+  {
+   "name": "BLAYAIS 2",
+   "mrid": "17W100P100P0093C",
+   "psr": "B14",
+   "n": 95,
+   "max": 929.4,
+   "mean": 928.1
+  },
+  {
+   "name": "BLAYAIS 3",
+   "mrid": "17W100P100P0094A",
+   "psr": "B14",
+   "n": 93,
+   "max": 937.55,
+   "mean": 936.6
+  },
+  {
+   "name": "BLAYAIS 4",
+   "mrid": "17W100P100P00958",
+   "psr": "B14",
+   "n": 95,
+   "max": 899.49,
+   "mean": 898.6
+  },
+  {
+   "name": "BUGEY 2",
+   "mrid": "17W100P100P00966",
+   "psr": "B14",
+   "n": 95,
+   "max": 876.02,
+   "mean": 874.5
+  },
+  {
+   "name": "BUGEY 3",
+   "mrid": "17W100P100P00974",
+   "psr": "B14",
+   "n": 93,
+   "max": 856.12,
+   "mean": 850.7
+  },
+  {
+   "name": "BUGEY 4",
+   "mrid": "17W100P100P00982",
+   "psr": "B14",
+   "n": 95,
+   "max": 866.53,
+   "mean": 859.8
+  },
+  {
+   "name": "BUGEY 5",
+   "mrid": "17W100P100P01004",
+   "psr": "B14",
+   "n": 96,
+   "max": 870.02,
+   "mean": 763.6
+  },
+  {
+   "name": "CATTENOM 1",
+   "mrid": "17W100P100P01012",
+   "psr": "B14",
+   "n": 96,
+   "max": 1262.9,
+   "mean": 1245.9
+  },
+  {
+   "name": "CATTENOM 2",
+   "mrid": "17W100P100P0103Z",
+   "psr": "B14",
+   "n": 96,
+   "max": 1260.0,
+   "mean": 1245.1
+  },
+  {
+   "name": "CATTENOM 3",
+   "mrid": "17W100P100P0104X",
+   "psr": "B14",
+   "n": 51,
+   "max": 5.55,
+   "mean": 1.0
+  },
+  {
+   "name": "CATTENOM 4",
+   "mrid": "17W100P100P0105V",
+   "psr": "B14",
+   "n": 68,
+   "max": 52.2,
+   "mean": 47.2
+  },
+  {
+   "name": "CHINON 1",
+   "mrid": "17W100P100P0106T",
+   "psr": "B14",
+   "n": 95,
+   "max": 871.1,
+   "mean": 865.2
+  },
+  {
+   "name": "CHINON 2",
+   "mrid": "17W100P100P0107R",
+   "psr": "B14",
+   "n": 75,
+   "max": 0.08,
+   "mean": 0.1
+  },
+  {
+   "name": "CHINON 3",
+   "mrid": "17W100P100P0108P",
+   "psr": "B14",
+   "n": 96,
+   "max": 899.32,
+   "mean": 892.9
+  },
+  {
+   "name": "CHINON 4",
+   "mrid": "17W100P100P0109N",
+   "psr": "B14",
+   "n": 96,
+   "max": 897.81,
+   "mean": 893.0
+  },
+  {
+   "name": "CHOOZ 1",
+   "mrid": "17W100P100P01101",
+   "psr": "B14",
+   "n": 88,
+   "max": 40.8,
+   "mean": 34.3
+  },
+  {
+   "name": "CHOOZ 2",
+   "mrid": "17W100P100P0112Y",
+   "psr": "B14",
+   "n": 96,
+   "max": 22.97,
+   "mean": 21.3
+  },
+  {
+   "name": "CIVAUX 1",
+   "mrid": "17W100P100P0113W",
+   "psr": "B14",
+   "n": 96,
+   "max": 1485.88,
+   "mean": 1476.5
+  },
+  {
+   "name": "CIVAUX 2",
+   "mrid": "17W100P100P0114U",
+   "psr": "B14",
+   "n": 95,
+   "max": 1457.43,
+   "mean": 1444.3
+  },
+  {
+   "name": "CRUAS 1",
+   "mrid": "17W100P100P0115S",
+   "psr": "B14",
+   "n": 94,
+   "max": 622.03,
+   "mean": 616.4
+  },
+  {
+   "name": "CRUAS 2",
+   "mrid": "17W100P100P0116Q",
+   "psr": "B14",
+   "n": 95,
+   "max": 889.62,
+   "mean": 877.6
+  },
+  {
+   "name": "CRUAS 3",
+   "mrid": "17W100P100P0118M",
+   "psr": "B14",
+   "n": 95,
+   "max": 892.07,
+   "mean": 870.0
+  },
+  {
+   "name": "CRUAS 4",
+   "mrid": "17W100P100P0119K",
+   "psr": "B14",
+   "n": 94,
+   "max": 0.74,
+   "mean": 0.6
+  },
+  {
+   "name": "DAMPIERRE 1",
+   "mrid": "17W100P100P0120Z",
+   "psr": "B14",
+   "n": 96,
+   "max": 879.24,
+   "mean": 869.0
+  },
+  {
+   "name": "DAMPIERRE 2",
+   "mrid": "17W100P100P0121X",
+   "psr": "B14",
+   "n": 92,
+   "max": 919.43,
+   "mean": 912.5
+  },
+  {
+   "name": "DAMPIERRE 3",
+   "mrid": "17W100P100P0122V",
+   "psr": "B14",
+   "n": 92,
+   "max": 890.89,
+   "mean": 883.5
+  },
+  {
+   "name": "DAMPIERRE 4",
+   "mrid": "17W100P100P0123T",
+   "psr": "B14",
+   "n": 88,
+   "max": 3.36,
+   "mean": 1.7
+  },
+  {
+   "name": "FLAMANVILLE 1",
+   "mrid": "17W100P100P0126N",
+   "psr": "B14",
+   "n": 87,
+   "max": 2.89,
+   "mean": 2.6
+  },
+  {
+   "name": "FLAMANVILLE 2",
+   "mrid": "17W100P100P0127L",
+   "psr": "B14",
+   "n": 95,
+   "max": 1282.51,
+   "mean": 1279.8
+  },
+  {
+   "name": "FLAMANVILLE 3",
+   "mrid": "17W100P100P03639",
+   "psr": "B14",
+   "n": 93,
+   "max": 18.29,
+   "mean": 16.9
+  },
+  {
+   "name": "GOLFECH 1",
+   "mrid": "17W100P100P0128J",
+   "psr": "B14",
+   "n": 96,
+   "max": 1256.92,
+   "mean": 1243.0
+  },
+  {
+   "name": "GOLFECH 2",
+   "mrid": "17W100P100P0129H",
+   "psr": "B14",
+   "n": 94,
+   "max": 44.85,
+   "mean": 42.8
+  },
+  {
+   "name": "GRAVELINES 1",
+   "mrid": "17W100P100P0130W",
+   "psr": "B14",
+   "n": 96,
+   "max": 893.4,
+   "mean": 890.5
+  },
+  {
+   "name": "GRAVELINES 2",
+   "mrid": "17W100P100P0131U",
+   "psr": "B14",
+   "n": 95,
+   "max": 894.16,
+   "mean": 892.0
+  },
+  {
+   "name": "GRAVELINES 3",
+   "mrid": "17W100P100P0132S",
+   "psr": "B14",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "GRAVELINES 4",
+   "mrid": "17W100P100P0133Q",
+   "psr": "B14",
+   "n": 96,
+   "max": 933.42,
+   "mean": 918.6
+  },
+  {
+   "name": "GRAVELINES 5",
+   "mrid": "17W100P100P0135M",
+   "psr": "B14",
+   "n": 89,
+   "max": 6.18,
+   "mean": 2.0
+  },
+  {
+   "name": "GRAVELINES 6",
+   "mrid": "17W100P100P0136K",
+   "psr": "B14",
+   "n": 96,
+   "max": 928.92,
+   "mean": 927.1
+  },
+  {
+   "name": "NOGENT 1",
+   "mrid": "17W100P100P0137I",
+   "psr": "B14",
+   "n": 95,
+   "max": 2.8,
+   "mean": 1.0
+  },
+  {
+   "name": "NOGENT 2",
+   "mrid": "17W100P100P0138G",
+   "psr": "B14",
+   "n": 95,
+   "max": 1270.66,
+   "mean": 1250.5
+  },
+  {
+   "name": "PALUEL 1",
+   "mrid": "17W100P100P0139E",
+   "psr": "B14",
+   "n": 96,
+   "max": 108.38,
+   "mean": 49.0
+  },
+  {
+   "name": "PALUEL 2",
+   "mrid": "17W100P100P0140T",
+   "psr": "B14",
+   "n": 96,
+   "max": 1242.32,
+   "mean": 1228.0
+  },
+  {
+   "name": "PALUEL 3",
+   "mrid": "17W100P100P0141R",
+   "psr": "B14",
+   "n": 96,
+   "max": 1223.31,
+   "mean": 1200.4
+  },
+  {
+   "name": "PALUEL 4",
+   "mrid": "17W100P100P0142P",
+   "psr": "B14",
+   "n": 83,
+   "max": 0.56,
+   "mean": 0.5
+  },
+  {
+   "name": "PENLY 1",
+   "mrid": "17W100P100P0143N",
+   "psr": "B14",
+   "n": 96,
+   "max": 1325.72,
+   "mean": 1309.9
+  },
+  {
+   "name": "PENLY 2",
+   "mrid": "17W100P100P0144L",
+   "psr": "B14",
+   "n": 93,
+   "max": 752.34,
+   "mean": 750.2
+  },
+  {
+   "name": "ST ALBAN 1",
+   "mrid": "17W100P100P0145J",
+   "psr": "B14",
+   "n": 96,
+   "max": 1291.3,
+   "mean": 1285.9
+  },
+  {
+   "name": "ST ALBAN 2",
+   "mrid": "17W100P100P0146H",
+   "psr": "B14",
+   "n": 95,
+   "max": 1270.88,
+   "mean": 999.7
+  },
+  {
+   "name": "ST LAURENT 1",
+   "mrid": "17W100P100P0147F",
+   "psr": "B14",
+   "n": 96,
+   "max": 888.66,
+   "mean": 880.0
+  },
+  {
+   "name": "ST LAURENT 2",
+   "mrid": "17W100P100P0148D",
+   "psr": "B14",
+   "n": 88,
+   "max": 33.1,
+   "mean": 32.1
+  },
+  {
+   "name": "TRICASTIN 1",
+   "mrid": "17W100P100P0149B",
+   "psr": "B14",
+   "n": 92,
+   "max": 815.77,
+   "mean": 814.7
+  },
+  {
+   "name": "TRICASTIN 2",
+   "mrid": "17W100P100P0150Q",
+   "psr": "B14",
+   "n": 94,
+   "max": 841.76,
+   "mean": 841.0
+  },
+  {
+   "name": "TRICASTIN 3",
+   "mrid": "17W100P100P0152M",
+   "psr": "B14",
+   "n": 1,
+   "max": 0.0,
+   "mean": 0.0
+  },
+  {
+   "name": "TRICASTIN 4",
+   "mrid": "17W100P100P0153K",
+   "psr": "B14",
+   "n": 92,
+   "max": 540.16,
+   "mean": 418.4
+  },
+  {
+   "name": "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
+   "mrid": "17W100P100P0842Y",
+   "psr": "B18",
+   "n": 96,
+   "max": 104.83,
+   "mean": 20.0
+  },
+  {
+   "name": "A2 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
+   "mrid": "17W100P100P3382R",
+   "psr": "B18",
+   "n": 95,
+   "max": 119.39,
+   "mean": 21.7
+  },
+  {
+   "name": "ADP 01 DE LA FERME EOLIENNE DE VENT-DES-ILES",
+   "mrid": "17W000002144986W",
+   "psr": "B18",
+   "n": 96,
+   "max": 104.0,
+   "mean": 24.6
+  },
+  {
+   "name": "ADP 02 DE LA FERME EOLIENNE DE VENT-DES-ILES",
+   "mrid": "17W000002144987U",
+   "psr": "B18",
+   "n": 95,
+   "max": 128.43,
+   "mean": 30.6
+  },
+  {
+   "name": "ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
+   "mrid": "17W100P100P21629",
+   "psr": "B18",
+   "n": 96,
+   "max": 109.27,
+   "mean": 25.8
+  },
+  {
+   "name": "ADP A2 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
+   "mrid": "17W100P100P2830V",
+   "psr": "B18",
+   "n": 21,
+   "max": 0.09,
+   "mean": 0.1
+  },
+  {
+   "name": "BANC DE GUERANDE 1",
+   "mrid": "17W0000014455651",
+   "psr": "B18",
+   "n": 71,
+   "max": 60.95,
+   "mean": 24.3
+  },
+  {
+   "name": "BANC DE GUERANDE 2",
+   "mrid": "17W000001445567Y",
+   "psr": "B18",
+   "n": 78,
+   "max": 63.92,
+   "mean": 27.1
+  },
+  {
+   "name": "FECAMP 1",
+   "mrid": "17W000001445569U",
+   "psr": "B18",
+   "n": 96,
+   "max": 46.59,
+   "mean": 14.1
+  },
+  {
+   "name": "FECAMP 2",
+   "mrid": "17W0000014455708",
+   "psr": "B18",
+   "n": 93,
+   "max": 54.48,
+   "mean": 18.2
+  },
+  {
+   "name": "BESS_AFD7_BARBAN_SAUCATS_1",
+   "mrid": "17W000001637626Q",
+   "psr": "B20",
+   "n": 96,
+   "max": 44.28,
+   "mean": 5.2
+  },
+  {
+   "name": "CERNAY",
+   "mrid": "17W000002385265P",
+   "psr": "B20",
+   "n": 93,
+   "max": 241.51,
+   "mean": 86.5
+  }
+ ],
+ "entsoe_A71_units": [
+  {
+   "name": "PROVENCE 4",
+   "mrid": "17W100P100P03655",
+   "psr": "B01",
+   "n": 1,
+   "max": 150.0,
+   "mean": 150.0
+  },
+  {
+   "name": "AMFARD14",
+   "mrid": "17W100P100P03477",
+   "psr": "B04",
+   "n": 1,
+   "max": 130.0,
+   "mean": 130.0
+  },
+  {
+   "name": "AMFARD15",
+   "mrid": "17W100P100P03485",
+   "psr": "B04",
+   "n": 1,
+   "max": 130.0,
+   "mean": 130.0
+  },
+  {
+   "name": "BLENOD 5",
+   "mrid": "17W100P100P0173E",
+   "psr": "B04",
+   "n": 1,
+   "max": 427.0,
+   "mean": 427.0
+  },
+  {
+   "name": "BOUCHAIN 7",
+   "mrid": "17W100P100P01768",
+   "psr": "B04",
+   "n": 1,
+   "max": 585.0,
+   "mean": 585.0
+  },
+  {
+   "name": "COGENERATION NORMANDIE (AMFARD) TRAIN 14",
+   "mrid": "17W000001468589Y",
+   "psr": "B04",
+   "n": 1,
+   "max": 240.0,
+   "mean": 240.0
+  },
+  {
+   "name": "COMBIGOLFE CCG",
+   "mrid": "17W100P100P01679",
+   "psr": "B04",
+   "n": 1,
+   "max": 425.0,
+   "mean": 425.0
+  },
+  {
+   "name": "CPCU-CogeVitry–GP",
+   "mrid": "17W000001418626A",
+   "psr": "B04",
+   "n": 1,
+   "max": 125.0,
+   "mean": 125.0
+  },
+  {
+   "name": "CPCU-StOuen-GP",
+   "mrid": "17W0000014186456",
+   "psr": "B04",
+   "n": 1,
+   "max": 126.0,
+   "mean": 126.0
+  },
+  {
+   "name": "CYCOFOS PL1",
+   "mrid": "17W100P100P03388",
+   "psr": "B04",
+   "n": 1,
+   "max": 428.0,
+   "mean": 428.0
+  },
+  {
+   "name": "Croix-de-Metz",
+   "mrid": "17W100P100P00123",
+   "psr": "B04",
+   "n": 1,
+   "max": 445.0,
+   "mean": 445.0
+  },
+  {
+   "name": "DK6-TG1",
+   "mrid": "17W100P100P0330O",
+   "psr": "B04",
+   "n": 1,
+   "max": 796.0,
+   "mean": 796.0
+  },
+  {
+   "name": "FR-GA-MORANT1",
+   "mrid": "17W100P100P00122",
+   "psr": "B04",
+   "n": 1,
+   "max": 420.0,
+   "mean": 420.0
+  },
+  {
+   "name": "FR_LANDIVISIAUGU",
+   "mrid": "17W000001023725I",
+   "psr": "B04",
+   "n": 1,
+   "max": 446.0,
+   "mean": 446.0
+  },
+  {
+   "name": "GENNEVILLIERS 1",
+   "mrid": "17W100P100P0037M",
+   "psr": "B04",
+   "n": 1,
+   "max": 203.0,
+   "mean": 203.0
+  },
+  {
+   "name": "MARTIGUES PONTEAU 5",
+   "mrid": "17W100P100P0174C",
+   "psr": "B04",
+   "n": 1,
+   "max": 465.0,
+   "mean": 465.0
+  },
+  {
+   "name": "MARTIGUES PONTEAU 6",
+   "mrid": "17W100P100P0175A",
+   "psr": "B04",
+   "n": 1,
+   "max": 465.0,
+   "mean": 465.0
+  },
+  {
+   "name": "Pont-sur-Sambre",
+   "mrid": "17W100P100P00016",
+   "psr": "B04",
+   "n": 1,
+   "max": 445.0,
+   "mean": 445.0
+  },
+  {
+   "name": "SPEM CCG",
+   "mrid": "17W100P100P0171I",
+   "psr": "B04",
+   "n": 1,
+   "max": 435.0,
+   "mean": 435.0
+  },
+  {
+   "name": "SPEM pointe",
+   "mrid": "17W100P100P0336C",
+   "psr": "B04",
+   "n": 1,
+   "max": 45.0,
+   "mean": 45.0
+  },
+  {
+   "name": "Saint_Avold_7",
+   "mrid": "17W100P100P00105",
+   "psr": "B04",
+   "n": 1,
+   "max": 446.0,
+   "mean": 446.0
+  },
+  {
+   "name": "Saint_Avold_8",
+   "mrid": "17W100P100P00113",
+   "psr": "B04",
+   "n": 1,
+   "max": 446.0,
+   "mean": 446.0
+  },
+  {
+   "name": "CORDEMAIS 4",
+   "mrid": "17W100P100P0017S",
+   "psr": "B05",
+   "n": 1,
+   "max": 580.0,
+   "mean": 580.0
+  },
+  {
+   "name": "CORDEMAIS 5",
+   "mrid": "17W100P100P0018Q",
+   "psr": "B05",
+   "n": 1,
+   "max": 580.0,
+   "mean": 580.0
+  },
+  {
+   "name": "EMILE HUCHET 6",
+   "mrid": "17W100P100P0005Z",
+   "psr": "B05",
+   "n": 1,
+   "max": 595.0,
+   "mean": 595.0
+  },
+  {
+   "name": "PROVENCE 5",
+   "mrid": "17W100P100P0009R",
+   "psr": "B05",
+   "n": 1,
+   "max": 595.0,
+   "mean": 595.0
+  },
+  {
+   "name": "ARRIGHI 1",
+   "mrid": "17W100P100P0031Y",
+   "psr": "B06",
+   "n": 1,
+   "max": 125.0,
+   "mean": 125.0
+  },
+  {
+   "name": "ARRIGHI 2",
+   "mrid": "17W100P100P0032W",
+   "psr": "B06",
+   "n": 1,
+   "max": 129.0,
+   "mean": 129.0
+  },
+  {
+   "name": "BRENNILIS 1",
+   "mrid": "17W100P100P02578",
+   "psr": "B06",
+   "n": 1,
+   "max": 85.0,
+   "mean": 85.0
+  },
+  {
+   "name": "BRENNILIS 2",
+   "mrid": "17W100P100P02594",
+   "psr": "B06",
+   "n": 1,
+   "max": 85.0,
+   "mean": 85.0
+  },
+  {
+   "name": "BRENNILIS 3",
+   "mrid": "17W100P100P0033U",
+   "psr": "B06",
+   "n": 1,
+   "max": 134.0,
+   "mean": 134.0
+  },
+  {
+   "name": "DIRINON 1",
+   "mrid": "17W100P100P0262F",
+   "psr": "B06",
+   "n": 1,
+   "max": 85.0,
+   "mean": 85.0
+  },
+  {
+   "name": "DIRINON 2",
+   "mrid": "17W100P100P0264B",
+   "psr": "B06",
+   "n": 1,
+   "max": 85.0,
+   "mean": 85.0
+  },
+  {
+   "name": "MONTEREAU 5",
+   "mrid": "17W100P100P0040X",
+   "psr": "B06",
+   "n": 1,
+   "max": 175.0,
+   "mean": 175.0
+  },
+  {
+   "name": "MONTEREAU 6",
+   "mrid": "17W100P100P0041V",
+   "psr": "B06",
+   "n": 1,
+   "max": 175.0,
+   "mean": 175.0
+  },
+  {
+   "name": "VAIRES 1",
+   "mrid": "17W100P100P0046L",
+   "psr": "B06",
+   "n": 1,
+   "max": 181.0,
+   "mean": 181.0
+  },
+  {
+   "name": "VAIRES 2",
+   "mrid": "17W100P100P0047J",
+   "psr": "B06",
+   "n": 1,
+   "max": 179.0,
+   "mean": 179.0
+  },
+  {
+   "name": "VAIRES 3",
+   "mrid": "17W100P100P0048H",
+   "psr": "B06",
+   "n": 1,
+   "max": 182.0,
+   "mean": 182.0
+  },
+  {
+   "name": "CHEYLAS 1",
+   "mrid": "17W100P100P0056I",
+   "psr": "B10",
+   "n": 1,
+   "max": 485.0,
+   "mean": 485.0
+  },
+  {
+   "name": "COCHE 5",
+   "mrid": "17W100P100P20746",
+   "psr": "B10",
+   "n": 1,
+   "max": 384.0,
+   "mean": 384.0
+  },
+  {
+   "name": "GRAND MAISON 10",
+   "mrid": "17W100P100P0058E",
+   "psr": "B10",
+   "n": 1,
+   "max": 1714.0,
+   "mean": 1714.0
+  },
+  {
+   "name": "MONTEZIC 1",
+   "mrid": "17W100P100P0071M",
+   "psr": "B10",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "REVIN 1",
+   "mrid": "17W100P100P0076C",
+   "psr": "B10",
+   "n": 1,
+   "max": 800.0,
+   "mean": 800.0
+  },
+  {
+   "name": "SUPER BISSORTE 1",
+   "mrid": "17W100P100P0082H",
+   "psr": "B10",
+   "n": 1,
+   "max": 742.0,
+   "mean": 742.0
+  },
+  {
+   "name": "AVIGNON G1",
+   "mrid": "17W100P100P1204O",
+   "psr": "B11",
+   "n": 1,
+   "max": 120.0,
+   "mean": 120.0
+  },
+  {
+   "name": "BEAUCAIRE G1",
+   "mrid": "17W100P100P1330J",
+   "psr": "B11",
+   "n": 1,
+   "max": 210.0,
+   "mean": 210.0
+  },
+  {
+   "name": "BEAUCHASTEL G1",
+   "mrid": "17W100P100P13367",
+   "psr": "B11",
+   "n": 1,
+   "max": 192.0,
+   "mean": 192.0
+  },
+  {
+   "name": "BOLLENE G1",
+   "mrid": "17W100P100P1268Z",
+   "psr": "B11",
+   "n": 1,
+   "max": 349.2,
+   "mean": 349.2
+  },
+  {
+   "name": "BOURG-LES-VALENCE G1",
+   "mrid": "17W100P100P13189",
+   "psr": "B11",
+   "n": 1,
+   "max": 180.0,
+   "mean": 180.0
+  },
+  {
+   "name": "BREGNIER-CORDON G1",
+   "mrid": "17W100P100P1230N",
+   "psr": "B11",
+   "n": 1,
+   "max": 70.0,
+   "mean": 70.0
+  },
+  {
+   "name": "BRENS G1",
+   "mrid": "17W100P100P1288T",
+   "psr": "B11",
+   "n": 1,
+   "max": 90.0,
+   "mean": 90.0
+  },
+  {
+   "name": "CADEROUSSE G1",
+   "mrid": "17W100P100P13650",
+   "psr": "B11",
+   "n": 1,
+   "max": 186.6,
+   "mean": 186.6
+  },
+  {
+   "name": "CHASTANG 2",
+   "mrid": "17W100P100P0049F",
+   "psr": "B11",
+   "n": 1,
+   "max": 293.0,
+   "mean": 293.0
+  },
+  {
+   "name": "CHATEAUNEUF-DU-RHONE G1",
+   "mrid": "17W100P100P1485R",
+   "psr": "B11",
+   "n": 1,
+   "max": 275.4,
+   "mean": 275.4
+  },
+  {
+   "name": "CHAUTAGNE G1",
+   "mrid": "17W100P100P15262",
+   "psr": "B11",
+   "n": 1,
+   "max": 90.0,
+   "mean": 90.0
+  },
+  {
+   "name": "FR_MAREGES_G2",
+   "mrid": "17W000000460346Y",
+   "psr": "B11",
+   "n": 1,
+   "max": 146.0,
+   "mean": 146.0
+  },
+  {
+   "name": "GENISSIAT G1",
+   "mrid": "17W100P100P1594M",
+   "psr": "B11",
+   "n": 1,
+   "max": 397.5,
+   "mean": 397.5
+  },
+  {
+   "name": "GERVANS G1",
+   "mrid": "17W100P100P16153",
+   "psr": "B11",
+   "n": 1,
+   "max": 60.0,
+   "mean": 60.0
+  },
+  {
+   "name": "GERVANS G3",
+   "mrid": "17W100P100P1619W",
+   "psr": "B11",
+   "n": 1,
+   "max": 60.0,
+   "mean": 60.0
+  },
+  {
+   "name": "LOGIS-NEUF G1",
+   "mrid": "17W100P100P1734W",
+   "psr": "B11",
+   "n": 1,
+   "max": 128.0,
+   "mean": 128.0
+  },
+  {
+   "name": "LOGIS-NEUF G3",
+   "mrid": "17W100P100P1736S",
+   "psr": "B11",
+   "n": 1,
+   "max": 63.8,
+   "mean": 63.8
+  },
+  {
+   "name": "PIERRE-BENITE G1",
+   "mrid": "17W000001353785Z",
+   "psr": "B11",
+   "n": 1,
+   "max": 80.0,
+   "mean": 80.0
+  },
+  {
+   "name": "SABLONS G1",
+   "mrid": "17W100P100P19004",
+   "psr": "B11",
+   "n": 1,
+   "max": 80.0,
+   "mean": 80.0
+  },
+  {
+   "name": "SABLONS G3",
+   "mrid": "17W100P100P19020",
+   "psr": "B11",
+   "n": 1,
+   "max": 80.0,
+   "mean": 80.0
+  },
+  {
+   "name": "SAINT-PIERRE",
+   "mrid": "17W100P100P0166B",
+   "psr": "B11",
+   "n": 1,
+   "max": 122.0,
+   "mean": 122.0
+  },
+  {
+   "name": "SAULT-BRENAZ G1",
+   "mrid": "17W100P100P1929H",
+   "psr": "B11",
+   "n": 1,
+   "max": 44.6,
+   "mean": 44.6
+  },
+  {
+   "name": "SAUVETERRE G1",
+   "mrid": "17W100P100P1211R",
+   "psr": "B11",
+   "n": 1,
+   "max": 66.0,
+   "mean": 66.0
+  },
+  {
+   "name": "SEYSSEL G1",
+   "mrid": "17W100P100P1932S",
+   "psr": "B11",
+   "n": 1,
+   "max": 40.5,
+   "mean": 40.5
+  },
+  {
+   "name": "VAUGRIS G1",
+   "mrid": "17W100P100P2036E",
+   "psr": "B11",
+   "n": 1,
+   "max": 72.0,
+   "mean": 72.0
+  },
+  {
+   "name": null,
+   "mrid": null,
+   "psr": "B12",
+   "n": 35,
+   "max": 384.0,
+   "mean": 163.9
+  },
+  {
+   "name": "AIGLE 6",
+   "mrid": "17W100P100P0051S",
+   "psr": "B12",
+   "n": 1,
+   "max": 360.0,
+   "mean": 360.0
+  },
+  {
+   "name": "BATHIE 1",
+   "mrid": "17W100P100P03566",
+   "psr": "B12",
+   "n": 1,
+   "max": 600.0,
+   "mean": 600.0
+  },
+  {
+   "name": "BORT 1",
+   "mrid": "17W100P100P0052Q",
+   "psr": "B12",
+   "n": 1,
+   "max": 235.0,
+   "mean": 235.0
+  },
+  {
+   "name": "BROMMAT 7",
+   "mrid": "17W100P100P0055K",
+   "psr": "B12",
+   "n": 1,
+   "max": 406.0,
+   "mean": 406.0
+  },
+  {
+   "name": "COMBE D'AVRIEUX 1",
+   "mrid": "17W100P100P00893",
+   "psr": "B12",
+   "n": 1,
+   "max": 123.0,
+   "mean": 123.0
+  },
+  {
+   "name": "POUGET 4",
+   "mrid": "17W100P100P0075E",
+   "psr": "B12",
+   "n": 1,
+   "max": 446.0,
+   "mean": 446.0
+  },
+  {
+   "name": "SISTERON 1",
+   "mrid": "17W100P100P0080L",
+   "psr": "B12",
+   "n": 1,
+   "max": 240.0,
+   "mean": 240.0
+  },
+  {
+   "name": "VILLARODIN 1",
+   "mrid": "17W100P100P00877",
+   "psr": "B12",
+   "n": 1,
+   "max": 364.0,
+   "mean": 364.0
+  },
+  {
+   "name": "BELLEVILLE 1",
+   "mrid": "17W100P100P0090I",
+   "psr": "B14",
+   "n": 1,
+   "max": 1310.0,
+   "mean": 1310.0
+  },
+  {
+   "name": "BELLEVILLE 2",
+   "mrid": "17W100P100P0091G",
+   "psr": "B14",
+   "n": 1,
+   "max": 1310.0,
+   "mean": 1310.0
+  },
+  {
+   "name": "BLAYAIS 1",
+   "mrid": "17W100P100P0092E",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "BLAYAIS 2",
+   "mrid": "17W100P100P0093C",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "BLAYAIS 3",
+   "mrid": "17W100P100P0094A",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "BLAYAIS 4",
+   "mrid": "17W100P100P00958",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "BUGEY 2",
+   "mrid": "17W100P100P00966",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "BUGEY 3",
+   "mrid": "17W100P100P00974",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "BUGEY 4",
+   "mrid": "17W100P100P00982",
+   "psr": "B14",
+   "n": 1,
+   "max": 880.0,
+   "mean": 880.0
+  },
+  {
+   "name": "BUGEY 5",
+   "mrid": "17W100P100P01004",
+   "psr": "B14",
+   "n": 1,
+   "max": 880.0,
+   "mean": 880.0
+  },
+  {
+   "name": "CATTENOM 1",
+   "mrid": "17W100P100P01012",
+   "psr": "B14",
+   "n": 1,
+   "max": 1300.0,
+   "mean": 1300.0
+  },
+  {
+   "name": "CATTENOM 2",
+   "mrid": "17W100P100P0103Z",
+   "psr": "B14",
+   "n": 1,
+   "max": 1300.0,
+   "mean": 1300.0
+  },
+  {
+   "name": "CATTENOM 3",
+   "mrid": "17W100P100P0104X",
+   "psr": "B14",
+   "n": 1,
+   "max": 1300.0,
+   "mean": 1300.0
+  },
+  {
+   "name": "CATTENOM 4",
+   "mrid": "17W100P100P0105V",
+   "psr": "B14",
+   "n": 1,
+   "max": 1300.0,
+   "mean": 1300.0
+  },
+  {
+   "name": "CHINON 1",
+   "mrid": "17W100P100P0106T",
+   "psr": "B14",
+   "n": 1,
+   "max": 905.0,
+   "mean": 905.0
+  },
+  {
+   "name": "CHINON 2",
+   "mrid": "17W100P100P0107R",
+   "psr": "B14",
+   "n": 1,
+   "max": 905.0,
+   "mean": 905.0
+  },
+  {
+   "name": "CHINON 3",
+   "mrid": "17W100P100P0108P",
+   "psr": "B14",
+   "n": 1,
+   "max": 905.0,
+   "mean": 905.0
+  },
+  {
+   "name": "CHINON 4",
+   "mrid": "17W100P100P0109N",
+   "psr": "B14",
+   "n": 1,
+   "max": 905.0,
+   "mean": 905.0
+  },
+  {
+   "name": "CHOOZ 1",
+   "mrid": "17W100P100P01101",
+   "psr": "B14",
+   "n": 1,
+   "max": 1500.0,
+   "mean": 1500.0
+  },
+  {
+   "name": "CHOOZ 2",
+   "mrid": "17W100P100P0112Y",
+   "psr": "B14",
+   "n": 1,
+   "max": 1500.0,
+   "mean": 1500.0
+  },
+  {
+   "name": "CIVAUX 1",
+   "mrid": "17W100P100P0113W",
+   "psr": "B14",
+   "n": 1,
+   "max": 1495.0,
+   "mean": 1495.0
+  },
+  {
+   "name": "CIVAUX 2",
+   "mrid": "17W100P100P0114U",
+   "psr": "B14",
+   "n": 1,
+   "max": 1495.0,
+   "mean": 1495.0
+  },
+  {
+   "name": "CRUAS 1",
+   "mrid": "17W100P100P0115S",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "CRUAS 2",
+   "mrid": "17W100P100P0116Q",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "CRUAS 3",
+   "mrid": "17W100P100P0118M",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "CRUAS 4",
+   "mrid": "17W100P100P0119K",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "DAMPIERRE 1",
+   "mrid": "17W100P100P0120Z",
+   "psr": "B14",
+   "n": 1,
+   "max": 890.0,
+   "mean": 890.0
+  },
+  {
+   "name": "DAMPIERRE 2",
+   "mrid": "17W100P100P0121X",
+   "psr": "B14",
+   "n": 1,
+   "max": 890.0,
+   "mean": 890.0
+  },
+  {
+   "name": "DAMPIERRE 3",
+   "mrid": "17W100P100P0122V",
+   "psr": "B14",
+   "n": 1,
+   "max": 890.0,
+   "mean": 890.0
+  },
+  {
+   "name": "DAMPIERRE 4",
+   "mrid": "17W100P100P0123T",
+   "psr": "B14",
+   "n": 1,
+   "max": 890.0,
+   "mean": 890.0
+  },
+  {
+   "name": "FLAMANVILLE 1",
+   "mrid": "17W100P100P0126N",
+   "psr": "B14",
+   "n": 1,
+   "max": 1330.0,
+   "mean": 1330.0
+  },
+  {
+   "name": "FLAMANVILLE 2",
+   "mrid": "17W100P100P0127L",
+   "psr": "B14",
+   "n": 1,
+   "max": 1330.0,
+   "mean": 1330.0
+  },
+  {
+   "name": "FLAMANVILLE 3",
+   "mrid": "17W100P100P03639",
+   "psr": "B14",
+   "n": 1,
+   "max": 1620.0,
+   "mean": 1620.0
+  },
+  {
+   "name": "GOLFECH 1",
+   "mrid": "17W100P100P0128J",
+   "psr": "B14",
+   "n": 1,
+   "max": 1310.0,
+   "mean": 1310.0
+  },
+  {
+   "name": "GOLFECH 2",
+   "mrid": "17W100P100P0129H",
+   "psr": "B14",
+   "n": 1,
+   "max": 1310.0,
+   "mean": 1310.0
+  },
+  {
+   "name": "GRAVELINES 1",
+   "mrid": "17W100P100P0130W",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "GRAVELINES 2",
+   "mrid": "17W100P100P0131U",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "GRAVELINES 3",
+   "mrid": "17W100P100P0132S",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "GRAVELINES 4",
+   "mrid": "17W100P100P0133Q",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "GRAVELINES 5",
+   "mrid": "17W100P100P0135M",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "GRAVELINES 6",
+   "mrid": "17W100P100P0136K",
+   "psr": "B14",
+   "n": 1,
+   "max": 910.0,
+   "mean": 910.0
+  },
+  {
+   "name": "NOGENT 1",
+   "mrid": "17W100P100P0137I",
+   "psr": "B14",
+   "n": 1,
+   "max": 1310.0,
+   "mean": 1310.0
+  },
+  {
+   "name": "NOGENT 2",
+   "mrid": "17W100P100P0138G",
+   "psr": "B14",
+   "n": 1,
+   "max": 1310.0,
+   "mean": 1310.0
+  },
+  {
+   "name": "PALUEL 1",
+   "mrid": "17W100P100P0139E",
+   "psr": "B14",
+   "n": 1,
+   "max": 1330.0,
+   "mean": 1330.0
+  },
+  {
+   "name": "PALUEL 2",
+   "mrid": "17W100P100P0140T",
+   "psr": "B14",
+   "n": 1,
+   "max": 1330.0,
+   "mean": 1330.0
+  },
+  {
+   "name": "PALUEL 3",
+   "mrid": "17W100P100P0141R",
+   "psr": "B14",
+   "n": 1,
+   "max": 1330.0,
+   "mean": 1330.0
+  },
+  {
+   "name": "PALUEL 4",
+   "mrid": "17W100P100P0142P",
+   "psr": "B14",
+   "n": 1,
+   "max": 1330.0,
+   "mean": 1330.0
+  },
+  {
+   "name": "PENLY 1",
+   "mrid": "17W100P100P0143N",
+   "psr": "B14",
+   "n": 1,
+   "max": 1330.0,
+   "mean": 1330.0
+  },
+  {
+   "name": "PENLY 2",
+   "mrid": "17W100P100P0144L",
+   "psr": "B14",
+   "n": 1,
+   "max": 1330.0,
+   "mean": 1330.0
+  },
+  {
+   "name": "ST ALBAN 1",
+   "mrid": "17W100P100P0145J",
+   "psr": "B14",
+   "n": 1,
+   "max": 1335.0,
+   "mean": 1335.0
+  },
+  {
+   "name": "ST ALBAN 2",
+   "mrid": "17W100P100P0146H",
+   "psr": "B14",
+   "n": 1,
+   "max": 1335.0,
+   "mean": 1335.0
+  },
+  {
+   "name": "ST LAURENT 1",
+   "mrid": "17W100P100P0147F",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "ST LAURENT 2",
+   "mrid": "17W100P100P0148D",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "TRICASTIN 1",
+   "mrid": "17W100P100P0149B",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "TRICASTIN 2",
+   "mrid": "17W100P100P0150Q",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "TRICASTIN 3",
+   "mrid": "17W100P100P0152M",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "TRICASTIN 4",
+   "mrid": "17W100P100P0153K",
+   "psr": "B14",
+   "n": 1,
+   "max": 915.0,
+   "mean": 915.0
+  },
+  {
+   "name": "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
+   "mrid": "17W100P100P0842Y",
+   "psr": "B18",
+   "n": 1,
+   "max": 496.0,
+   "mean": 496.0
+  },
+  {
+   "name": "ADP 01 DE LA FERME EOLIENNE DE VENT-DES-ILES",
+   "mrid": "17W000002144986W",
+   "psr": "B18",
+   "n": 1,
+   "max": 500.0,
+   "mean": 500.0
+  },
+  {
+   "name": "BANC DE GUERANDE 1",
+   "mrid": "17W0000014455651",
+   "psr": "B18",
+   "n": 1,
+   "max": 480.0,
+   "mean": 480.0
+  },
+  {
+   "name": "FECAMP 1",
+   "mrid": "17W000001445569U",
+   "psr": "B18",
+   "n": 1,
+   "max": 497.0,
+   "mean": 497.0
+  },
+  {
+   "name": "CLAUD1TB",
+   "mrid": "17W000001637626Q",
+   "psr": "B20",
+   "n": 1,
+   "max": 105.0,
+   "mean": 105.0
+  }
+ ],
+ "entsoe_A68": [
+  {
+   "psr": "B01",
+   "mw": 62990.0
+  }
+ ],
+ "entsoe_A80_error": "HTTP Error 400: Bad Request",
+ "odre_datasets": {
+  "prod-igr-prosp-reg-grtgaz": {
+   "title": "Indicateur Prospectif de Gaz Renouvelable - Dynamique engagée à la maille régionale",
+   "records": 12,
+   "modified": "2021-07-13T18:03:53+00:00",
+   "fields": [
+    "reg_code",
+    "reg_name",
+    "nb_id_projet",
+    "igr_prosp",
+    "geom",
+    "centroid"
+   ]
+  },
+  "prod-igr-prosp-epci-grtgaz": {
+   "title": "Indicateur Prospectif de Gaz Renouvelable - Dynamique engagée à la maille EPCI",
+   "records": 653,
+   "modified": "2026-06-06T08:53:17+00:00",
+   "fields": [
+    "epci_code",
+    "nom_departement",
+    "code_departement",
+    "epci_name",
+    "code_region",
+    "nom_region",
+    "nb_id_projet",
+    "export",
+    "geom",
+    "centroid"
+   ]
+  },
+  "capacites-annuelles-d-injection-de-biomethane-reservees-par-departement": {
+   "title": "Capacités d'injection de biométhane réservées par département actuellement inscrites au Registre",
+   "records": 94,
+   "modified": "2026-07-21T13:05:46+00:00",
+   "fields": [
+    "date",
+    "code_region",
+    "region",
+    "code_departement",
+    "departement",
+    "nombre_de_projets",
+    "capacites_des_projets",
+    "geom",
+    "centroid"
+   ]
+  },
+  "registre-biomethane-trimestre": {
+   "title": "Capacités d'injection de biométhane réservées par trimestre",
+   "records": 60,
+   "modified": "2026-09-16T13:05:48+00:00",
+   "fields": [
+    "date",
+    "annee",
+    "trimestre",
+    "numero_trimestre",
+    "nombre_de_projets_methanisation",
+    "capacite_gwh_an_methanisation",
+    "nombre_de_projets_autres_gaz_renouvelables_recuparation",
+    "capacite_gwh_an_autres_gaz_renouvelables_recuperation",
+    "nombre_de_projets_total",
+    "capacite_totale",
+    "nombre_de_projets_natran_methanisation",
+    "capacite_natran_gwh_an_methanisation",
+    "nombre_de_projets_methanisation_en_service",
+    "capacite_gwh_an_methanisation_en_service",
+    "nombre_de_projets_autres_gaz_renouvelables_en_service",
+    "capacite_gwh_an_autres_gaz_renouvelables_en_service",
+    "nombre_de_projets_en_cours",
+    "capacite_gwh_an_en_cours",
+    "nombre_de_projets_partiellement_en_service",
+    "capacite_gwh_an_en_cours_des_projets_partiellement_en_service"
+   ]
+  },
+  "contraintes-region": {
+   "title": "Contraintes résiduelles prospectives sur le RPT à horizon 3 à 5 ans (à décembre 2024)",
+   "records": 407,
+   "modified": "2025-01-09T10:43:39+00:00",
+   "fields": [
+    "region",
+    "ouvrage",
+    "nom_de_l_ouvrage",
+    "puissance_max_de_l_ouvrage",
+    "poste_1",
+    "pourcentage_1",
+    "poste_2",
+    "pourcentage_2",
+    "poste_3",
+    "pourcentage_3",
+    "specificite",
+    "occurrence",
+    "duree",
+    "perennite",
+    "geom",
+    "centroid"
+   ]
+  },
+  "nombre-installation-production-stockage-electricite-31122022": {
+   "title": "Nombre d'installations de production et de stockage d'électricité de moins de 36kW par IRIS (au 31 décembre 2022)",
+   "records": 62206,
+   "modified": "2023-02-21T15:51:47+00:00",
+   "fields": [
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "code_insee_epci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "nbinstallations",
+    "departement_maj"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege-311224": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31/12/2024)",
+   "records": 101097,
+   "modified": "2025-03-03T15:13:04+00:00",
+   "fields": [
+    "idpeps",
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "typestockage",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "puismaxinstalleedischarge",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege-311220": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31 décembre 2020)",
+   "records": 54671,
+   "modified": "2024-10-09T12:45:44+00:00",
+   "fields": [
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable",
+    "capacitereservoir",
+    "hauteurchute",
+    "productible"
+   ]
+  },
+  "nombre-installation-production-stockage-electricite-31122018": {
+   "title": "Nombre d'installations de production et de stockage d'électricité de moins de 36kW par IRIS (au 31 décembre 2018)",
+   "records": 46075,
+   "modified": "2021-04-12T11:07:57+00:00",
+   "fields": [
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "code_insee_epci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "nbinstallations"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege-311217": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31 décembre 2017)",
+   "records": 41237,
+   "modified": "2024-10-09T12:22:57+00:00",
+   "fields": [
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable",
+    "capacitereservoir",
+    "hauteurchute",
+    "productible"
+   ]
+  },
+  "registre-garanties-capacite": {
+   "title": "Registre des transactions de garanties de capacité",
+   "records": 2900,
+   "modified": "2026-08-20T07:32:42+00:00",
+   "fields": [
+    "date_saisie",
+    "type",
+    "annee_livraison",
+    "date_echeance",
+    "type_compte_debit",
+    "type_compte_credit",
+    "quantite",
+    "pugc",
+    "formule_indexation",
+    "statut",
+    "prix_unitaire_eur_gc"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege-311222": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31/12/2022)",
+   "records": 72790,
+   "modified": "2024-10-10T13:32:58+00:00",
+   "fields": [
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "typestockage",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "puismaxinstalleedischarge",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable",
+    "capacitereservoir"
+   ]
+  },
+  "nombre-installation-production-stockage-electricite-31122020": {
+   "title": "Nombre d'installations de production et de stockage d'électricité de moins de 36kW par IRIS (au 31 décembre 2020)",
+   "records": 51215,
+   "modified": "2021-04-09T13:04:32+00:00",
+   "fields": [
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "code_insee_epci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "nbinstallations"
+   ]
+  },
+  "nombre-installation-production-stockage-electricite-31122024": {
+   "title": "Nombre d'installations de production et de stockage d'électricité de moins de 36kW par IRIS (au 31 décembre 2024)",
+   "records": 56162,
+   "modified": "2025-03-04T12:15:39+00:00",
+   "fields": [
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "code_insee_epci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "nbinstallations",
+    "region_maj"
+   ]
+  },
+  "nombre-installation-production-stockage-electricite-31122019": {
+   "title": "Nombre d'installations de production et de stockage d'électricité de moins de 36kW par IRIS (au 31 décembre 2019)",
+   "records": 48551,
+   "modified": "2021-04-12T10:11:14+00:00",
+   "fields": [
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "code_insee_epci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "nbinstallations"
+   ]
+  },
+  "nombre-installation-production-stockage-electricite-3112025": {
+   "title": "Nombre d'installations de production et de stockage d'électricité de moins de 36kW par IRIS (au 31 décembre 2025)",
+   "records": 68866,
+   "modified": "2026-03-11T20:21:14+00:00",
+   "fields": [
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "code_insee_epci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "nbinstallations",
+    "region_maj"
+   ]
+  },
+  "prod-igr-prosp-national-grtgaz": {
+   "title": "Indicateur Prospectif de Gaz Renouvelable - Dynamique engagée à la maille nationale",
+   "records": 1,
+   "modified": "2021-07-13T18:08:23+00:00",
+   "fields": [
+    "nb_id_projet",
+    "igr_prosp"
+   ]
+  },
+  "prod-igr-prosp-dpt-grtgaz": {
+   "title": "Indicateur Prospectif de Gaz Renouvelable - Dynamique engagée à la maille départementale",
+   "records": 90,
+   "modified": "2021-07-13T18:02:49+00:00",
+   "fields": [
+    "dep_code",
+    "dep_name",
+    "code_region",
+    "nom_region",
+    "nb_id_projet",
+    "export",
+    "geom",
+    "centroid"
+   ]
+  },
+  "registre-national-installation-production-electricite-rte-2015": {
+   "title": "Registre 2015 des installations de production raccordées au réseau de transport d'électricité",
+   "records": 889,
+   "modified": "2018-05-15T16:19:43+00:00",
+   "fields": [
+    "nominstallation",
+    "codeinseecommune",
+    "commune",
+    "codeiris",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeinseecommuneimplantation",
+    "codeiriscommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "codnat",
+    "codetensionraccordement",
+    "libelle_tension",
+    "moderaccordement",
+    "codefiliere",
+    "libelle_filiere",
+    "codecombustible",
+    "libelle_combustible",
+    "codescombustiblessecondaires",
+    "libelle_combustible_secondaire",
+    "codetechnologie",
+    "libelle_technologie",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "nbgroupes",
+    "regime",
+    "energiestockable",
+    "capacitereservoir",
+    "hauteurchute",
+    "productible",
+    "debitmaximal",
+    "energie_annuelle_injectee",
+    "energie_annuelle_produite"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege-311218": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31 décembre 2018)",
+   "records": 44598,
+   "modified": "2024-10-09T08:41:12+00:00",
+   "fields": [
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable",
+    "capacitereservoir",
+    "hauteurchute",
+    "productible"
+   ]
+  },
+  "nombre-installation-production-stockage-electricite": {
+   "title": "Nombre d'installations de production et de stockage d'électricité de moins de 36kW par IRIS (au 31 décembre 2023)",
+   "records": 48960,
+   "modified": "2025-01-30T10:32:20+00:00",
+   "fields": [
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "code_insee_epci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "nbinstallations",
+    "region_maj"
+   ]
+  },
+  "registre-national-installation-production-electricite-rte-2016": {
+   "title": "Registre 2016 des installations de production raccordées au réseau de transport d'électricité",
+   "records": 890,
+   "modified": "2021-11-19T07:37:35+00:00",
+   "fields": [
+    "nominstallation",
+    "codeinseecommune",
+    "codeiris",
+    "commune",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeinseecommuneimplantation",
+    "codeiriscommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "codnat",
+    "codetensionraccordement",
+    "libelle_tension",
+    "moderaccordement",
+    "codefiliere",
+    "libelle_filiere",
+    "codecombustible",
+    "libelle_combustible",
+    "codescombustiblessecondaires",
+    "libelle_combustible_secondaire",
+    "codetechnologie",
+    "libelle_technologie",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "nbgroupes",
+    "regime",
+    "energiestockable",
+    "capacitereservoir",
+    "hauteurchute",
+    "productible",
+    "debitmaximal",
+    "energie_annuelle_injectee",
+    "energie_annuelle_produite"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31/08/2026)",
+   "records": 141589,
+   "modified": "2026-10-13T19:24:24+00:00",
+   "fields": [
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "typestockage",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "puismaxinstalleedischarge",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable",
+    "capacitereservoir"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege-311225": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31/12/2025)",
+   "records": 125930,
+   "modified": "2026-03-02T09:53:27+00:00",
+   "fields": [
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "typestockage",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "puismaxinstalleedischarge",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable",
+    "capacitereservoir"
+   ]
+  },
+  "registre-biomethane-region": {
+   "title": "Capacités annuelles d'injection de biométhane réservées par région",
+   "records": 156,
+   "modified": "2019-01-25T13:03:45+00:00",
+   "fields": [
+    "date",
+    "code_insee_region",
+    "region",
+    "nb_sites",
+    "nombre_de_projets_sans_ics",
+    "capacite",
+    "capacite_gwh",
+    "geo_shape_region",
+    "geo_point_region"
+   ]
+  },
+  "nombre-installation-production-stockage-electricite-31122017": {
+   "title": "Nombre d'installations de production et de stockage d'électricité de moins de 36kW par IRIS (au 31 décembre 2017)",
+   "records": 44078,
+   "modified": "2021-04-12T11:55:24+00:00",
+   "fields": [
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "code_insee_epci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "nbinstallations"
+   ]
+  },
+  "nombre-installation-production-stockage-electricite-31122021": {
+   "title": "Nombre d'installations de production et de stockage d'électricité de moins de 36kW par IRIS (au 31 décembre 2021)",
+   "records": 63204,
+   "modified": "2021-04-09T13:04:32+00:00",
+   "fields": [
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "code_insee_epci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "nbinstallations"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege-311223": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31/12/2023)",
+   "records": 84944,
+   "modified": "2024-10-10T08:25:05+00:00",
+   "fields": [
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "typestockage",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "puismaxinstalleedischarge",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable",
+    "capacitereservoir"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege-311219": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31 décembre 2019)",
+   "records": 49043,
+   "modified": "2024-10-09T12:16:44+00:00",
+   "fields": [
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable",
+    "capacitereservoir",
+    "hauteurchute",
+    "productible"
+   ]
+  },
+  "registre-national-installation-production-stockage-electricite-agrege-311221": {
+   "title": "Registre national des installations de production et de stockage d'électricité (au 31/12/2021)",
+   "records": 63410,
+   "modified": "2024-10-09T13:00:36+00:00",
+   "fields": [
+    "nominstallation",
+    "codeeicresourceobject",
+    "codeiris",
+    "codeinseecommune",
+    "commune",
+    "codeepci",
+    "epci",
+    "codedepartement",
+    "departement",
+    "coderegion",
+    "region",
+    "codeiriscommuneimplantation",
+    "codeinseecommuneimplantation",
+    "codes3renr",
+    "dateraccordement",
+    "datederaccordement",
+    "datemiseenservice",
+    "datedebutversion",
+    "postesource",
+    "tensionraccordement",
+    "moderaccordement",
+    "codefiliere",
+    "filiere",
+    "codecombustible",
+    "combustible",
+    "codescombustiblessecondaires",
+    "combustiblessecondaires",
+    "codetechnologie",
+    "technologie",
+    "puismaxinstallee",
+    "puismaxraccharge",
+    "puismaxcharge",
+    "puismaxrac",
+    "nbgroupes",
+    "nbinstallations",
+    "regime",
+    "energiestockable",
+    "capacitereservoir",
+    "hauteurchute",
+    "productible"
+   ]
+  },
+  "bilan-previsionnel-electrique-2019-offre-de-production": {
+   "title": "Bilan prévisionnel électrique 2019 - Offre de production",
+   "records": 7,
+   "modified": "2021-10-04T15:44:58+00:00",
+   "fields": [
+    "scenario",
+    "annee",
+    "nucleaire_gw",
+    "cycles_combines_au_gaz_gw",
+    "charbon_gw",
+    "fioul_lourd_gw",
+    "turbines_a_combustion_gw",
+    "cogenerations_gw",
+    "autres_moyens_thermiques_gw",
+    "hydraulique_gw",
+    "eolien_gw",
+    "photovoltaique_gw",
+    "bioenergies_gw",
+    "energies_marines_gw",
+    "effacements_gw"
+   ]
+  },
+  "eco2mix-regional-cons-def": {
+   "title": "Données éCO2mix régionales consolidées et définitives",
+   "records": 2874816,
+   "modified": "2026-10-07T08:15:32+00:00",
+   "fields": [
+    "code_insee_region",
+    "libelle_region",
+    "nature",
+    "date",
+    "heure",
+    "date_heure",
+    "consommation",
+    "thermique",
+    "nucleaire",
+    "eolien",
+    "solaire",
+    "hydraulique",
+    "pompage",
+    "bioenergies",
+    "ech_physiques",
+    "stockage_batterie",
+    "destockage_batterie",
+    "eolien_terrestre",
+    "eolien_offshore",
+    "tco_thermique",
+    "tch_thermique",
+    "tco_nucleaire",
+    "tch_nucleaire",
+    "tco_eolien",
+    "tch_eolien",
+    "tco_solaire",
+    "tch_solaire",
+    "tco_hydraulique",
+    "tch_hydraulique",
+    "tco_bioenergies",
+    "tch_bioenergies",
+    "column_30"
+   ]
+  },
+  "energies-et-puissances-regionales-liees-au-contraintes": {
+   "title": "Energies et Puissances régionales liées au contraintes (vision à décembre 2024)",
+   "records": 12,
+   "modified": "2025-01-09T16:32:57+00:00",
+   "fields": [
+    "region",
+    "puissance_enr_installee",
+    "puissance_totale_a_compenser",
+    "energie_non_evacuee_moyenne_printemps",
+    "energie_non_evacuee_moyenne_ete",
+    "energie_non_evacuee_moyenne_automne",
+    "energie_non_evacuee_moyenne_hiver"
+   ]
+  },
+  "parc-prod-par-filiere": {
+   "title": "Parc national annuel de production par filière",
+   "records": 19,
+   "modified": "2026-02-25T13:43:22+00:00",
+   "fields": [
+    "annee",
+    "parc_nucleaire",
+    "parc_thermique_fossile",
+    "parc_fioul",
+    "parc_charbon",
+    "parc_gaz",
+    "parc_hydraulique",
+    "parc_solaire",
+    "parc_eolien",
+    "parc_bioenergie"
+   ]
+  },
+  "parc-national-annuel-prod-eolien-solaire": {
+   "title": "Parc national annuel de production éolien et solaire (2001 à 2025)",
+   "records": 25,
+   "modified": "2026-02-25T13:48:08+00:00",
+   "fields": [
+    "annee",
+    "parc_installe_eolien",
+    "parc_installe_solaire"
+   ]
+  },
+  "fc-tc-nationaux-mensuels-eolien-solaire": {
+   "title": "Facteurs de charge et taux de couverture nationaux mensuels éoliens et solaires",
+   "records": 176,
+   "modified": "2026-09-21T13:25:36+00:00",
+   "fields": [
+    "mois",
+    "fc_minimum_eolien",
+    "fc_moyen_eolien",
+    "fc_maximum_eolien",
+    "tc_minimum_eolien",
+    "tc_moyen_eolien",
+    "tc_maximum_eolien",
+    "fc_moyen_solaire",
+    "fc_maximum_solaire",
+    "tc_moyen_solaire",
+    "tc_maximum_solaire"
+   ]
+  },
+  "bilan-previsionnel-electrique-2021-offre-de-production": {
+   "title": "Bilan prévisionnel électrique 2021 - Offre de production",
+   "records": 7,
+   "modified": "2021-10-05T08:28:01+00:00",
+   "fields": [
+    "scenario",
+    "annee",
+    "nucleaire_gw",
+    "cycles_combines_au_gaz_gw",
+    "charbon_gw",
+    "fioul_lourd_gw",
+    "turbines_a_combustion_gw",
+    "cogenerations_gw",
+    "autres_moyens_thermiques_gw",
+    "hydraulique_gw",
+    "eolien_gw",
+    "photovoltaique_gw",
+    "bioenergies_gw",
+    "energies_marines_gw",
+    "effacements_gw"
+   ]
+  },
+  "projets_dev_gh-eur-grtgaz": {
+   "title": "Projets de développement de la gazéification hydrothermale en Europe",
+   "records": 9,
+   "modified": "2023-10-27T13:21:33+00:00",
+   "fields": [
+    "code_pays",
+    "label_en",
+    "label_fr",
+    "developpeur_technologique",
+    "stade_technologique",
+    "status",
+    "annee_de_lancement",
+    "debit_maximal_kg_h",
+    "latitude",
+    "longitude",
+    "coordonnees",
+    "famille_de_la_technologie"
+   ]
+  },
+  "rejets-sf6-par-annee-et-par-type-de-rejets": {
+   "title": "Rejets SF6 de RTE par année et par type de rejets",
+   "records": 63,
+   "modified": "2026-05-18T08:51:45+00:00",
+   "fields": [
+    "annee",
+    "type_de_rejet",
+    "rejets_en_tonnes_de_sf6",
+    "rejets_en_t_eq_co2",
+    "facteur_d_emission_t_eq_co2_tsf6"
+   ]
+  },
+  "masse-valorisation-dechets": {
+   "title": "Masse en tonnes et taux de valorisation des déchets en propre (dangereux et non dangereux) par opérateur",
+   "records": 25,
+   "modified": "2021-05-07T08:44:40+00:00",
+   "fields": [
+    "annee",
+    "operateurs",
+    "masse_dechet_dnd_en_propre_t",
+    "valorisation_dnd_en_propre",
+    "masse_valorisee_dnd_t",
+    "masse_dechet_dd_en_propre_t",
+    "valorisation_dd_en_propre",
+    "masse_valorisee_dd_en_propre_t"
+   ]
+  },
+  "evolutions-regionales-longueurs-circuits-rte": {
+   "title": "Evolutions régionales annuelles des longueurs de circuits du réseau de transport d'électricité (2013 à 2025)",
+   "records": 16380,
+   "modified": "2025-04-07T13:41:15+00:00",
+   "fields": [
+    "annee",
+    "nom_region",
+    "insee_region",
+    "configuration",
+    "niveau_tension_kv",
+    "nature_evolution",
+    "longueur_circuit_km"
+   ]
+  },
+  "installations-regionales-de-biomethane": {
+   "title": "Installations de production biométhane en service par région (au 31 décembre)",
+   "records": 121,
+   "modified": "2026-08-19T15:55:20.782000+00:00",
+   "fields": [
+    "annee",
+    "date",
+    "code_insee_region",
+    "region",
+    "nb_sites",
+    "capacite_maximale_installee_mwh_an",
+    "capacite_maximale_installee_gwh_an",
+    "geo_shape_region",
+    "geo_point_region"
+   ]
+  },
+  "parc-region-annuel-production-filiere": {
+   "title": "Parc régional annuel de production par filière",
+   "records": 234,
+   "modified": "2025-11-10T10:21:07+00:00",
+   "fields": [
+    "annee",
+    "code_insee_region",
+    "region",
+    "parc_nucleaire_mw",
+    "parc_thermique_fossile_mw",
+    "parc_hydraulique_mw",
+    "parc_eolien_mw",
+    "parc_solaire_mw",
+    "parc_bioenergies_mw",
+    "geo_shape_region",
+    "geo_point_region"
+   ]
+  },
+  "sites-rebours-grtgaz": {
+   "title": "Localisation et capacité des sites de rebours en service et en projet",
+   "records": 128,
+   "modified": "2026-08-28T12:35:25+00:00",
+   "fields": [
+    "donnees_rebours_nom_du_projet",
+    "mes_dpi_agora",
+    "horizon_de_saturation",
+    "validation_cre",
+    "capacite_des_reseaux_apres_renforcement_nm3_h",
+    "code_region",
+    "nom_de_la_region",
+    "code_departement",
+    "nom_du_departement",
+    "projet_initial_ou_extension",
+    "operateur_de_transport",
+    "capacite_du_rebours_gwh_an",
+    "nom_commune",
+    "code_commune",
+    "centroid"
+   ]
+  },
+  "courbes-de-production-mensuelles-eolien-solaire-complement-de-remuneration": {
+   "title": "Courbes de production mensuelles Eolien & Solaire (complément de rémunération)",
+   "records": 67295,
+   "modified": "2026-09-17T17:17:10+00:00",
+   "fields": [
+    "date",
+    "heure",
+    "date_heure",
+    "prod_eolienne_mw",
+    "prod_solaire_mw"
+   ]
+  },
+  "bp2017-elec-parc-de-production": {
+   "title": "Bilan prévisionnel électrique 2017 - Offre de production",
+   "records": 12,
+   "modified": "2019-05-27T12:17:41+00:00",
+   "fields": [
+    "scenario",
+    "annee",
+    "nucleaire_gw",
+    "cycles_combines_au_gaz_gw",
+    "charbon_gw",
+    "fioul_lourd_gw",
+    "turbines_a_combustion_gw",
+    "cogenerations_gw",
+    "autres_moyens_thermiques_gw",
+    "hydraulique_gw",
+    "eolien_gw",
+    "photovoltaique_gw",
+    "bioenergies_gw",
+    "energies_marines_gw",
+    "effacements_gw"
+   ]
+  },
+  "points-dinjection-de-biomethane-en-france": {
+   "title": "Points d'injection de méthane renouvelable et bas carbone en France en service",
+   "records": 864,
+   "modified": "2026-10-07T12:16:47+00:00",
+   "fields": [
+    "annee_mes",
+    "nom_du_projet",
+    "site",
+    "commune",
+    "code_commune",
+    "current_code",
+    "coordonnees",
+    "code_epci",
+    "nom_epci",
+    "departement",
+    "region",
+    "date_de_mes",
+    "grx_demandeur",
+    "type_de_reseau",
+    "capacite_de_production_gwh_an",
+    "gestionnaire_de_registre",
+    "ndeg_de_pitd_pitp",
+    "code_dep",
+    "augmentation_prevue",
+    "id_unique_projet",
+    "date_de_fermeture_du_site",
+    "site_ouvert",
+    "procede"
+   ]
+  },
+  "parc-regional-annuel-prod-eolien-solaire": {
+   "title": "Parc régional annuel de production éolien et solaire",
+   "records": 325,
+   "modified": "2026-02-25T12:42:02+00:00",
+   "fields": [
+    "annee",
+    "code_insee_region",
+    "region",
+    "parc_installe_eolien",
+    "parc_installe_solaire",
+    "geo_shape_region",
+    "geo_point_region"
+   ]
+  },
+  "rayonnement-solaire-vitesse-vent-tri-horaires-regionaux": {
+   "title": "Rayonnement solaire global et vitesse du vent à 100 mètres tri-horaires régionaux (depuis janvier 2016)",
+   "records": 405703,
+   "modified": "2018-06-06T16:35:43+00:00",
+   "fields": [
+    "date",
+    "code_insee_region",
+    "region",
+    "uv100",
+    "ssrd03h"
+   ]
+  },
+  "vehicules-gnv": {
+   "title": "Véhicules GNV en circulation en France",
+   "records": 294,
+   "modified": "2018-10-01T06:45:17+00:00",
+   "fields": [
+    "parc_des_vehicules_gnv",
+    "date_anneemois",
+    "datetrimestre",
+    "date_par_trimestre_redo2",
+    "date_par_trimestre_redo3",
+    "mois_full_text",
+    "nombre_de_vehicule"
+   ]
+  },
+  "eco2mix-regional-tr": {
+   "title": "Données éCO2mix régionales temps réel",
+   "records": 52992,
+   "modified": "2026-01-21T09:22:45+00:00",
+   "fields": [
+    "code_insee_region",
+    "libelle_region",
+    "nature",
+    "date",
+    "heure",
+    "date_heure",
+    "consommation",
+    "thermique",
+    "nucleaire",
+    "eolien",
+    "solaire",
+    "hydraulique",
+    "pompage",
+    "bioenergies",
+    "ech_physiques",
+    "stockage_batterie",
+    "destockage_batterie",
+    "tco_thermique",
+    "tch_thermique",
+    "tco_nucleaire",
+    "tch_nucleaire",
+    "tco_eolien",
+    "tch_eolien",
+    "tco_solaire",
+    "tch_solaire",
+    "tco_hydraulique",
+    "tch_hydraulique",
+    "tco_bioenergies",
+    "tch_bioenergies",
+    "column_68"
+   ]
+  },
+  "eco2mix-metropoles-tr": {
+   "title": "Consommation d'électricité des grandes Métropoles françaises temps réel",
+   "records": 5000652,
+   "modified": "2025-11-24T13:17:50+00:00",
+   "fields": [
+    "code_insee_epci",
+    "libelle_metropole",
+    "nature",
+    "date",
+    "heures",
+    "date_heure",
+    "consommation",
+    "production",
+    "echanges_physiques"
+   ]
+  },
+  "eco2mix-national-tr": {
+   "title": "Données éCO2mix nationales temps réel",
+   "records": 4512,
+   "modified": "2026-01-28T09:37:12+00:00",
+   "fields": [
+    "perimetre",
+    "nature",
+    "date",
+    "heure",
+    "date_heure",
+    "consommation",
+    "prevision_j1",
+    "prevision_j",
+    "fioul",
+    "charbon",
+    "gaz",
+    "nucleaire",
+    "eolien",
+    "eolien_terrestre",
+    "eolien_offshore",
+    "solaire",
+    "hydraulique",
+    "pompage",
+    "bioenergies",
+    "ech_physiques",
+    "taux_co2",
+    "ech_comm_angleterre",
+    "ech_comm_espagne",
+    "ech_comm_italie",
+    "ech_comm_suisse",
+    "ech_comm_allemagne_belgique",
+    "fioul_tac",
+    "fioul_cogen",
+    "fioul_autres",
+    "gaz_tac",
+    "gaz_cogen",
+    "gaz_ccg",
+    "gaz_autres",
+    "hydraulique_fil_eau_eclusee",
+    "hydraulique_lacs",
+    "hydraulique_step_turbinage",
+    "bioenergies_dechets",
+    "bioenergies_biomasse",
+    "bioenergies_biogaz",
+    "stockage_batterie"
+   ]
+  },
+  "eco2mix-national-cons-def": {
+   "title": "Données éCO2mix nationales consolidées et définitives",
+   "records": 514272,
+   "modified": "2026-10-06T12:38:44+00:00",
+   "fields": [
+    "perimetre",
+    "nature",
+    "date",
+    "heure",
+    "date_heure",
+    "consommation",
+    "prevision_j1",
+    "prevision_j",
+    "fioul",
+    "charbon",
+    "gaz",
+    "nucleaire",
+    "eolien",
+    "solaire",
+    "hydraulique",
+    "pompage",
+    "bioenergies",
+    "ech_physiques",
+    "taux_co2",
+    "ech_comm_angleterre",
+    "ech_comm_espagne",
+    "ech_comm_italie",
+    "ech_comm_suisse",
+    "ech_comm_allemagne_belgique",
+    "fioul_tac",
+    "fioul_cogen",
+    "fioul_autres",
+    "gaz_tac",
+    "gaz_cogen",
+    "gaz_ccg",
+    "gaz_autres",
+    "hydraulique_fil_eau_eclusee",
+    "hydraulique_lacs",
+    "hydraulique_step_turbinage",
+    "bioenergies_dechets",
+    "bioenergies_biomasse",
+    "bioenergies_biogaz"
+   ]
+  }
+ }
+}
