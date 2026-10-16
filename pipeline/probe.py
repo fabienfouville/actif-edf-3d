@@ -125,14 +125,37 @@ def probe_odre(report):
     report["odre_datasets"] = found
 
 
+def probe_registre(report):
+    ds = "registre-national-installation-production-stockage-electricite-agrege"
+    d = http_json(f"{ODRE}/catalog/datasets/{ds}")
+    report["registre_fields"] = [f["name"] for f in d.get("fields", [])]
+    # installations avec un code EIC (les grands groupes raccordés au réseau de transport)
+    q = urllib.parse.urlencode({"where": "codeeicresourceobject is not null", "limit": 100})
+    rows = http_json(f"{ODRE}/catalog/datasets/{ds}/records?{q}")
+    report["registre_eic_total"] = rows.get("total_count")
+    report["registre_eic_sample"] = rows.get("results", [])[:60]
+    # parcs officiels
+    for pds in ("parc-prod-par-filiere", "parc-regional-annuel-prod-eolien-solaire", "parc-region-annuel-production-filiere"):
+        q = urllib.parse.urlencode({"order_by": "annee desc", "limit": 30})
+        try:
+            r = http_json(f"{ODRE}/catalog/datasets/{pds}/records?{q}")
+            report[pds] = [{k: v for k, v in x.items() if k not in ("geo_shape_region", "geo_point_region")} for x in r.get("results", [])]
+        except Exception as e:
+            report[pds + "_error"] = f"{e}"[:300]
+    try:
+        report["geo_api_test"] = http_json("https://geo.api.gouv.fr/communes/26235?fields=nom,centre,codesPostaux")
+    except Exception as e:
+        report["geo_api_error"] = f"{e}"[:300]
+
+
 def main():
     report = {"genere": now().isoformat()}
-    for fn in (probe_entsoe, probe_odre):
+    for fn in (probe_registre,):
         try:
             fn(report)
         except Exception:
             report[f"{fn.__name__}_crash"] = traceback.format_exc()[-800:]
-    save_json(os.path.join(OUT, "report.json"), report, pretty=True)
+    save_json(os.path.join(OUT, "report2.json"), report, pretty=True)
     print(json.dumps({k: (v if not isinstance(v, (list, dict)) else f"{type(v).__name__}[{len(v)}]") for k, v in report.items()}, ensure_ascii=False, indent=1))
 
 
