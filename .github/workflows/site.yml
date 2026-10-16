@@ -1,0 +1,80 @@
+# Collecte des données publiques toutes les heures, puis publication du site sur GitHub Pages.
+# Prérequis (une fois) : Settings → Pages → Source : « GitHub Actions ».
+# Secrets optionnels : ENTSOE_TOKEN, RTE_CLIENT_ID, RTE_CLIENT_SECRET.
+name: Données et site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Nombre de jours à récupérer (400 pour reprendre l'historique)"
+        default: "3"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tests
+        run: |
+          python -m unittest discover -s tests
+          node --test tests/*.test.mjs
+
+      - name: Collecte des données
+        continue-on-error: true
+        env:
+          ENTSOE_TOKEN: ${{ secrets.ENTSOE_TOKEN }}
+          RTE_CLIENT_ID: ${{ secrets.RTE_CLIENT_ID }}
+          RTE_CLIENT_SECRET: ${{ secrets.RTE_CLIENT_SECRET }}
+        run: python pipeline/update.py --days "${{ inputs.days || '3' }}"
+
+      # L'historique n'est commité qu'une fois par jour (12 h UTC), au premier passage réel
+      # et lors d'un lancement manuel. Les passages horaires ne font que republier le site.
+      - name: Commit des données
+        run: |
+          git config user.name "parc3d-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/series data/meta.json data/live.json
+          if git diff --cached --quiet; then echo "Rien de nouveau."; exit 0; fi
+          first_real=false
+          if grep -q '"mode": "reel"' data/meta.json && ! git show HEAD:data/meta.json | grep -q '"mode": "reel"'; then first_real=true; fi
+          if [ "$(date -u +%H)" = "12" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$first_real" = "true" ]; then
+            git commit -m "Données : mise à jour du $(date -u +%F)"
+            git push
+          else
+            echo "Passage horaire : site republié sans commit."
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

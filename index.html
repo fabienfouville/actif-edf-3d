@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parc Électrique 3D</title>
+<meta name="description" content="Carte 3D interactive du parc de production électrique français : merit order, couverture et valorisation de chaque centrale.">
+<meta name="theme-color" content="#efece6">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="app/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="app/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,700;112,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="app/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="map" aria-label="Maquette 3D des centrales"></div>
+<div class="camctl" role="group" aria-label="Caméra">
+  <button id="c-in" aria-label="Zoomer">+</button><button id="c-out" aria-label="Dézoomer">−</button>
+  <button id="c-rot" aria-label="Tourner la maquette">⟳</button><button id="c-home" aria-label="Vue d'ensemble">⌂</button>
+</div>
+<div id="merit" class="merit" hidden></div>
+
+<header class="top">
+  <div class="brand"><span class="logo" aria-hidden="true">⚡</span><h1>Parc Électrique 3D</h1></div>
+  <div id="live" class="pill" aria-live="polite">Chargement…</div>
+  <nav class="actions">
+    <div class="seg view" role="group" aria-label="Vue">
+      <button id="v-map" aria-pressed="true">Carte</button>
+      <button id="v-merit" aria-pressed="false">Merit order</button>
+    </div>
+    <button id="b-game" class="btn ghost game-btn" aria-label="Jeu et missions"><span class="ring"><i id="lvl">1</i></span><span class="hide-s">Jeu</span></button>
+    <button id="b-hyp" class="btn ghost" aria-label="Hypothèses de calcul">⚙<span class="hide-s"> Hypothèses</span></button>
+    <button id="b-about" class="btn ghost" aria-label="Sources et méthode">?</button>
+  </nav>
+</header>
+
+<div class="chips" id="chips" role="group" aria-label="Filtrer par filière"></div>
+
+<aside id="mix" class="mix" aria-label="Production à l'heure choisie"></aside>
+
+<footer class="timeline">
+  <button id="play" class="play" aria-label="Rejouer la journée">▶</button>
+  <div class="tl-main">
+    <div class="tl-top">
+      <button id="d-prev" class="icon" aria-label="Jour précédent">‹</button>
+      <span id="d-label" class="mono"></span>
+      <button id="d-next" class="icon" aria-label="Jour suivant">›</button>
+      <button id="d-now" class="btn small ghost">Maintenant</button>
+      <span id="h-label" class="mono strong"></span>
+    </div>
+    <div class="tl-track">
+      <div id="tl-area"></div>
+      <input id="hour" type="range" min="0" max="23" step="1" value="0" aria-label="Heure de la journée">
+    </div>
+  </div>
+</footer>
+
+<section id="panel" class="panel" hidden aria-label="Fiche actif"></section>
+<section id="game" class="drawer" hidden aria-label="Jeu"></section>
+<section id="hyp" class="drawer" hidden aria-label="Hypothèses"></section>
+<section id="about" class="drawer" hidden aria-label="Sources et méthode"></section>
+
+<div id="tip" class="tip" hidden></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<div id="loader" class="loader"><div><b>Parc Électrique 3D</b><div class="bar"><i id="load-bar"></i></div><span id="load-msg">Chargement des données…</span></div></div>
+
+<script type="module" src="app/main.js"></script>
+</body>
+</html>

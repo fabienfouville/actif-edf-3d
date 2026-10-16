@@ -1,0 +1,11 @@
+{
+  "name": "Parc Électrique 3D",
+  "short_name": "Parc 3D",
+  "description": "Carte 3D du parc de production électrique français : merit order, couverture, valorisation.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#efece6",
+  "theme_color": "#efece6",
+  "lang": "fr",
+  "icons": [{ "src": "app/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
