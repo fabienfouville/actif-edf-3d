@@ -47,10 +47,12 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
   }
 
   function sourceNote(e) {
-    const realU = e.units.every((u) => u.real);
     if (D.meta.mode === 'demo') return '<span class="tag warn">Données de démonstration</span>';
-    if (realU) return '<span class="tag ok">Production mesurée (RTE, par groupe)</span>';
-    return '<span class="tag">Production modélisée : part du mix national de la filière</span>';
+    const src = { rte: 'RTE Data', entsoe: 'ENTSO-E' }[D.meta.sources?.units?.source] || 'source officielle';
+    const cov = e.units.reduce((s, u) => s + (u.realHours || 0) * u.p_mw, 0) / (e.units.reduce((s, u) => s + u.p_mw, 0) * (D.now + 1));
+    if (cov > 0.95) return `<span class="tag ok">Production mesurée par groupe (${src})</span>`;
+    if (cov > 0.01) return `<span class="tag">Production mesurée (${src}) sur ${fmt(cov * 100)} % des heures, estimée ailleurs</span>`;
+    return '<span class="tag">Production estimée : part du mix national de la filière</span>';
   }
 
   function header(e) {

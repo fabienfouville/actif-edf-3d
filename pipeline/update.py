@@ -17,7 +17,7 @@ from datetime import timedelta
 import demo
 from common import (DATA, MIX_KEYS, SERIES, days_ago, empty_month, hour_floor, iso, load_json, month_key,
                     month_path, month_start, months_between, now, rnd, save_json)
-from sources import eco2mix, energycharts_prices, entsoe_prices, env, match_units, rte_units
+from sources import eco2mix, energycharts_prices, entsoe_prices, entsoe_units, env, match_units, rte_units
 
 
 def catalog():
@@ -95,8 +95,16 @@ def main():
         except Exception as e:
             print("RTE KO :", e)
             status["units"] = {"ok": False, "erreur": str(e)[:200]}
-    else:
-        status["units"] = {"ok": False, "source": None, "note": "Secrets RTE absents : production par groupe modélisée dans le navigateur."}
+    if not units and tok:
+        try:
+            raw, _types = entsoe_units(start, end, tok)
+            units, unmatched = match_units(raw, cat)
+            status["units"] = {"ok": True, "source": "entsoe", "groupes": len(units), "groupes_publies": len(raw)}
+        except Exception as e:
+            print("ENTSO-E par groupe KO :", e)
+            status["units"] = {"ok": False, "erreur": str(e)[:200]}
+    if "units" not in status:
+        status["units"] = {"ok": False, "source": None, "note": "Ni RTE ni ENTSO-E : production par groupe modélisée dans le navigateur."}
 
     # 4. écriture des fichiers mensuels
     if first_real:
@@ -122,7 +130,7 @@ def main():
             if start <= h <= end:
                 def set_u(m, i, uid=uid, v=v):
                     m["units"].setdefault(uid, [None] * m["n"])[i] = rnd(v)
-                    m["sources"]["units"] = "rte"
+                    m["sources"]["units"] = status["units"].get("source") or "rte"
                 put(months, h, set_u)
     for key, m in months.items():
         save_json(month_path(key), m)

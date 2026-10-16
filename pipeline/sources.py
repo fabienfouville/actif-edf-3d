@@ -108,6 +108,41 @@ def energycharts_prices(start, end):
     return hourly_mean(pts)
 
 
+def entsoe_units(start, end, token):
+    """Production réalisée par groupe ≥ 100 MW (ENTSO-E 16.1.A, A73), un appel par jour.
+
+    Renvoie {nom de groupe normalisé: {heure: MW}} et {nom: type de production}.
+    """
+    out, types = {}, {}
+    cur = start.replace(hour=0)
+    while cur < end:
+        stop = cur + timedelta(days=1)
+        q = urllib.parse.urlencode({"securityToken": token, "documentType": "A73", "processType": "A16",
+                                    "in_Domain": FR_EIC, "periodStart": f"{cur:%Y%m%d%H%M}", "periodEnd": f"{stop:%Y%m%d%H%M}"})
+        try:
+            root = _strip_ns(ET.fromstring(http("https://web-api.tp.entsoe.eu/api?" + q, timeout=180)))
+        except Exception as e:  # un jour manquant ne doit pas tout arrêter
+            print(f"  ENTSO-E A73 {cur:%Y-%m-%d} : {e}")
+            cur = stop
+            continue
+        for ts in root.findall("TimeSeries"):
+            name = norm(ts.findtext("MktPSRType/PowerSystemResources/name") or "")
+            if not name:
+                continue
+            types[name] = ts.findtext("MktPSRType/psrType")
+            pts = {}
+            for per in ts.findall("Period"):
+                t0 = parse_iso(per.find("timeInterval/start").text)
+                step = _dur(per.find("resolution").text)
+                for p in per.findall("Point"):
+                    pts[t0 + timedelta(minutes=step * (int(p.find("position").text) - 1))] = float(p.find("quantity").text)
+            out.setdefault(name, {}).update(hourly_mean(pts))
+        cur = stop
+    if not out:
+        raise RuntimeError("ENTSO-E A73 : aucun groupe")
+    return out, types
+
+
 # ---------------------------------------------------------------- RTE production par groupe
 RTE_BASE = "https://digital.iservices.rte-france.com"
 
@@ -179,4 +214,4 @@ def env(name):
     return v or None
 
 
-__all__ = ["eco2mix", "entsoe_prices", "energycharts_prices", "rte_units", "match_units", "env", "hour_floor"]
+__all__ = ["eco2mix", "entsoe_prices", "entsoe_units", "energycharts_prices", "rte_units", "match_units", "env", "hour_floor"]
