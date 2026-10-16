@@ -253,3 +253,9 @@ pre.json .k { color: #1d4ed8; }
 .members button { grid-template-columns: 12px minmax(0, 1fr) auto auto; }
 .members button > span:not(.r) { display: flex; gap: 3px; color: var(--muted); }
 .members button > span .st { width: 8px; height: 8px; }
+.rel { width: 100%; border-collapse: collapse; margin: 4px 0 12px; }
+.rel th { text-align: left; font-weight: 600; color: var(--muted); border-bottom: 1px solid var(--line); padding: 4px 6px 4px 0; }
+.rel td { vertical-align: top; padding: 6px 6px 6px 0; border-bottom: 1px solid var(--line); }
+.rel td:last-child { white-space: nowrap; }
+.rel td:last-child .muted { white-space: normal; }
+.rel .st { display: inline-block; margin-right: 5px; vertical-align: -1px; }

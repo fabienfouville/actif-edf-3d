@@ -46,9 +46,17 @@
   "gaz:diffus": {
    "cmg_fixe": 0,
    "fatal": true,
-   "_note": "Cogénérations sous obligation d'achat : production fatale, preneuse de prix.",
+   "_note": "Cogénérations (sites listés et parc diffus) : production pilotée par la chaleur ou l'obligation d'achat, traitée comme fatale et preneuse de prix.",
    "cout_fixe_kw_an": 30,
    "vie": 30
+  },
+  "gaz:TAC": {
+   "rendement": 0.36,
+   "emission_t_mwh_th": 0.202,
+   "om_var": 6,
+   "cout_fixe_kw_an": 15,
+   "vie": 40,
+   "_note": "Turbine à combustion gaz : pointe."
   },
   "charbon": {
    "rendement": 0.38,

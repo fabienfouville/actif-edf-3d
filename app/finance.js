@@ -7,7 +7,8 @@ const FUEL = { gaz: 'gaz_ttf_eur_mwh', charbon: 'charbon_eur_mwh_th', fioul: 'fi
 
 export function techKey(u) {
   if (u.filiere === 'hydraulique') return `hydraulique:${u.type === 'STEP' ? 'STEP' : u.type === 'lac' ? 'lac' : 'fil'}`;
-  if (u.filiere === 'gaz' && u.diffus) return 'gaz:diffus';
+  if (u.filiere === 'gaz' && (u.diffus || u.type === 'cogénération')) return 'gaz:diffus';
+  if (u.filiere === 'gaz' && u.type === 'TAC') return 'gaz:TAC';
   if (u.filiere === 'eolien' && u.type === 'offshore') return 'eolien:offshore';
   return u.filiere;
 }
@@ -40,7 +41,7 @@ export function srmcParts(u, P) {
 }
 
 const isFatal = (u) => u.filiere === 'eolien' || u.filiere === 'solaire' || (u.filiere === 'hydraulique' && techKey(u) === 'hydraulique:fil')
-  || (u.diffus && (u.filiere === 'gaz' || u.filiere === 'bioenergies'));
+  || (u.diffus && u.filiere === 'bioenergies') || techKey(u) === 'gaz:diffus';
 
 /** Capacité offerte à l'heure h : production pour le fatal, 0 si la tranche est à l'arrêt, sinon la puissance. */
 export { isFatal };
