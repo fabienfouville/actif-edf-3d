@@ -197,14 +197,14 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     <section>
       <h3>Simulateur de couverture <span class="muted">1 an de production</span></h3>
       ${isEdfNuc ? `<div class="seg" role="group" aria-label="Année de livraison">${Object.keys(cov).filter((y) => !y.startsWith('_')).map((y) => `<button data-year="${y}" aria-pressed="${s.annee === y}">${y}</button>`).join('')}</div>
-      <p class="muted small">Part vendue à terme et prix : ${esc(cov._statut)}</p>` : '<p class="muted small">Exemple : vendre une partie de la production à terme pour fixer le prix, le reste au spot.</p>'}
+      <p class="muted small">${esc(cov._statut)} <br>Source : ${esc(cov._source)}</p>` : '<p class="muted small">Exemple : vendre une partie de la production à terme pour fixer le prix, le reste au spot.</p>'}
       ${slider('h-part', 'Vendu à terme', s.part, 0, 1, 0.01, '%')}
       ${slider('h-terme', 'Prix à terme', s.terme, 0, 200, 1, '€/MWh')}
       ${slider('h-spot', 'Prix spot moyen (scénario)', s.spot, -10, 250, 1, '€/MWh')}
       ${slider('h-lf', 'Facteur de charge', s.lf, 0.02, 1, 0.01, '%')}
       ${waterfall(res.items, res.marge)}
       <p class="small">Prix moyen obtenu <b>${fmt(res.prix_moyen, 1)} €/MWh</b> sur ${fmt(vol / 1e6, 2)} TWh. Avec 10 €/MWh de spot en plus, la marge varie de <b>${fmt(up.marge - res.marge, 1)} M€</b> : c'est l'exposition qui reste après couverture.</p>
-      ${isEdfNuc ? `<p class="muted small">VNU : ${esc(D.params.vnu._statut)} Coût complet de référence ${fmt(D.params.vnu.cout_complet_cre, 1)} €/MWh (estimation CRE 2026-2028).</p>` : ''}
+      ${isEdfNuc ? `<p class="muted small">VNU : seuils ${fmt(D.params.vnu.seuil1)} et ${fmt(D.params.vnu.seuil2)} €/MWh, reversement ${fmt(D.params.vnu.taux1 * 100)} % puis ${fmt(D.params.vnu.taux2 * 100)} %. ${esc(D.params.vnu._source)} Coût complet ${fmt(D.params.vnu.cout_complet_cre, 1)} €/MWh : ${esc(D.params.vnu._source_cout_complet)}</p>` : ''}
     </section>`;
   }
 
