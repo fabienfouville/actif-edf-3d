@@ -59,6 +59,11 @@ if __name__ == "__main__":
         raw = {norm(n): {h: v} for n, v in [("SEYSSEL", 30), ("CHAUTAGNE", 60), ("SEYSSEL BIS", 9)]}
         cat = {"tranches": [], "assets": [{"id": "hyd-CNR", "filiere": "hydraulique", "rte": "SEYSSEL", "groupes_entsoe": ["SEYSSEL", "CHAUTAGNE"]}]}
         ser, unmatched = sources.match_units(raw, cat)
-        self.assertEqual(ser["hyd-CNR"][h], 90)
-        self.assertEqual(unmatched, ["SEYSSEL BIS"])
+        self.assertEqual(ser["hyd-CNR"][h], 99)  # SEYSSEL BIS contient la clé
+        self.assertEqual(unmatched, [])
+        raw = {norm(n): {h: v} for n, v in [("BAYET", 300), ("FR GA MORANT1", 100), ("CERNAY", 5)]}
+        cat = {"tranches": [], "assets": [{"id": "gaz-BAY", "filiere": "gaz", "rte": "BAYET", "cles_entsoe": ["BAYET", "MORANT"], "groupes_entsoe": ["BAYET"]}]}
+        ser, unmatched = sources.match_units(raw, cat)
+        self.assertEqual(ser["gaz-BAY"][h], 400)
+        self.assertEqual(unmatched, ["CERNAY"])
 

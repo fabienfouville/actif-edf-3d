@@ -23,6 +23,9 @@
     }
    ],
    "rte": "GRAND MAISON",
+   "cles_entsoe": [
+    "GRAND MAISON"
+   ],
    "groupes_entsoe": [
     "GRAND MAISON 1",
     "GRAND MAISON 10",
@@ -68,6 +71,9 @@
     }
    ],
    "rte": "MONTEZIC",
+   "cles_entsoe": [
+    "MONTEZIC"
+   ],
    "groupes_entsoe": [
     "MONTEZIC 1",
     "MONTEZIC 2",
@@ -105,6 +111,9 @@
     }
    ],
    "rte": "REVIN",
+   "cles_entsoe": [
+    "REVIN"
+   ],
    "groupes_entsoe": [
     "REVIN 1",
     "REVIN 2",
@@ -142,6 +151,9 @@
     }
    ],
    "rte": "SUPER BISSORTE",
+   "cles_entsoe": [
+    "SUPER BISSORTE"
+   ],
    "groupes_entsoe": [
     "SUPER BISSORTE 1",
     "SUPER BISSORTE 2",
@@ -180,6 +192,9 @@
     }
    ],
    "rte": "CHEYLAS",
+   "cles_entsoe": [
+    "CHEYLAS"
+   ],
    "groupes_entsoe": [
     "CHEYLAS 1",
     "CHEYLAS 2"
@@ -215,6 +230,9 @@
     }
    ],
    "rte": "COCHE",
+   "cles_entsoe": [
+    "COCHE"
+   ],
    "groupes_entsoe": [
     "COCHE 5"
    ],
@@ -249,6 +267,9 @@
     }
    ],
    "rte": "BATHIE",
+   "cles_entsoe": [
+    "BATHIE"
+   ],
    "groupes_entsoe": [
     "BATHIE 1",
     "BATHIE 2",
@@ -289,6 +310,9 @@
     }
    ],
    "rte": "POUGET",
+   "cles_entsoe": [
+    "POUGET"
+   ],
    "groupes_entsoe": [
     "POUGET 4"
    ],
@@ -323,6 +347,9 @@
     }
    ],
    "rte": "BROMMAT",
+   "cles_entsoe": [
+    "BROMMAT"
+   ],
    "groupes_entsoe": [
     "BROMMAT 7"
    ],
@@ -357,6 +384,9 @@
     }
    ],
    "rte": "AIGLE",
+   "cles_entsoe": [
+    "AIGLE"
+   ],
    "groupes_entsoe": [
     "AIGLE 6"
    ],
@@ -391,6 +421,9 @@
     }
    ],
    "rte": "VILLARODIN",
+   "cles_entsoe": [
+    "VILLARODIN"
+   ],
    "groupes_entsoe": [
     "VILLARODIN 1",
     "VILLARODIN 2"
@@ -425,6 +458,9 @@
     }
    ],
    "rte": "SISTERON",
+   "cles_entsoe": [
+    "SISTERON"
+   ],
    "groupes_entsoe": [
     "SISTERON 1",
     "SISTERON 2"
@@ -460,6 +496,9 @@
     }
    ],
    "rte": "BORT",
+   "cles_entsoe": [
+    "BORT"
+   ],
    "groupes_entsoe": [
     "BORT 1",
     "BORT 2"
@@ -495,6 +534,9 @@
     }
    ],
    "rte": "CHASTANG",
+   "cles_entsoe": [
+    "CHASTANG"
+   ],
    "groupes_entsoe": [
     "CHASTANG 2",
     "CHASTANG 3"
@@ -530,6 +572,9 @@
     }
    ],
    "rte": "MAREGES",
+   "cles_entsoe": [
+    "MAREGES"
+   ],
    "eic": [
     "17W000000460346Y"
    ],
@@ -561,6 +606,9 @@
     }
    ],
    "rte": "SAINT PIERRE",
+   "cles_entsoe": [
+    "SAINT PIERRE"
+   ],
    "groupes_entsoe": [
     "SAINT-PIERRE"
    ],
@@ -593,6 +641,9 @@
     }
    ],
    "rte": "COMBE D AVRIEUX",
+   "cles_entsoe": [
+    "COMBE D AVRIEUX"
+   ],
    "groupes_entsoe": [
     "COMBE D'AVRIEUX 1"
    ],
@@ -690,6 +741,9 @@
     }
    ],
    "rte": "GENISSIAT",
+   "cles_entsoe": [
+    "GENISSIAT"
+   ],
    "eic": [
     "17W100P100P1594M"
    ],
@@ -721,6 +775,9 @@
     }
    ],
    "rte": "BOLLENE",
+   "cles_entsoe": [
+    "BOLLENE"
+   ],
    "eic": [
     "17W100P100P1268Z"
    ],
@@ -752,6 +809,9 @@
     }
    ],
    "rte": "CHATEAUNEUF DU RHONE",
+   "cles_entsoe": [
+    "CHATEAUNEUF DU RHONE"
+   ],
    "eic": [
     "17W100P100P1485R"
    ],
@@ -783,6 +843,9 @@
     }
    ],
    "rte": "BEAUCAIRE",
+   "cles_entsoe": [
+    "BEAUCAIRE"
+   ],
    "eic": [
     "17W100P100P1330J"
    ],
@@ -814,6 +877,9 @@
     }
    ],
    "rte": "CADEROUSSE",
+   "cles_entsoe": [
+    "CADEROUSSE"
+   ],
    "eic": [
     "17W100P100P13650"
    ],
@@ -845,6 +911,9 @@
     }
    ],
    "rte": "BOURG LES VALENCE",
+   "cles_entsoe": [
+    "BOURG LES VALENCE"
+   ],
    "eic": [
     "17W100P100P13189"
    ],
@@ -876,6 +945,9 @@
     }
    ],
    "rte": "BEAUCHASTEL",
+   "cles_entsoe": [
+    "BEAUCHASTEL"
+   ],
    "eic": [
     "17W100P100P13367"
    ],
@@ -912,6 +984,9 @@
     }
    ],
    "rte": "LOGIS NEUF",
+   "cles_entsoe": [
+    "LOGIS NEUF"
+   ],
    "eic": [
     "17W100P100P1734W",
     "17W100P100P1736S"
@@ -944,6 +1019,9 @@
     }
    ],
    "rte": "AVIGNON",
+   "cles_entsoe": [
+    "AVIGNON"
+   ],
    "eic": [
     "17W100P100P1204O"
    ],
@@ -1030,6 +1108,18 @@
     }
    ],
    "rte": "SEYSSEL",
+   "cles_entsoe": [
+    "SEYSSEL",
+    "CHAUTAGNE",
+    "BRENS",
+    "BREGNIER CORDON",
+    "SAULT BRENAZ",
+    "PIERRE BENITE",
+    "VAUGRIS",
+    "SABLONS",
+    "GERVANS",
+    "SAUVETERRE"
+   ],
    "eic": [
     "17W000001353785Z",
     "17W100P100P1211R",
@@ -1297,6 +1387,9 @@
     }
    ],
    "rte": "MARTIGUES",
+   "cles_entsoe": [
+    "MARTIGUES"
+   ],
    "groupes_entsoe": [
     "MARTIGUES PONTEAU 5",
     "MARTIGUES PONTEAU 6"
@@ -1333,6 +1426,9 @@
     }
    ],
    "rte": "BLENOD",
+   "cles_entsoe": [
+    "BLENOD"
+   ],
    "groupes_entsoe": [
     "BLENOD 5"
    ],
@@ -1367,6 +1463,9 @@
     }
    ],
    "rte": "BOUCHAIN",
+   "cles_entsoe": [
+    "BOUCHAIN"
+   ],
    "groupes_entsoe": [
     "BOUCHAIN 7"
    ],
@@ -1401,6 +1500,9 @@
     }
    ],
    "rte": "DK6",
+   "cles_entsoe": [
+    "DK6"
+   ],
    "groupes_entsoe": [
     "DK6-TG1",
     "DK6-TG2",
@@ -1438,6 +1540,9 @@
     }
    ],
    "rte": "CYCOFOS",
+   "cles_entsoe": [
+    "CYCOFOS"
+   ],
    "groupes_entsoe": [
     "CYCOFOS PL1"
    ],
@@ -1472,6 +1577,9 @@
     }
    ],
    "rte": "COMBIGOLFE",
+   "cles_entsoe": [
+    "COMBIGOLFE"
+   ],
    "groupes_entsoe": [
     "COMBIGOLFE CCG"
    ],
@@ -1511,6 +1619,9 @@
     }
    ],
    "rte": "SPEM",
+   "cles_entsoe": [
+    "SPEM"
+   ],
    "groupes_entsoe": [
     "SPEM CCG"
    ],
@@ -1546,6 +1657,10 @@
     }
    ],
    "rte": "LANDIVISIAU",
+   "cles_entsoe": [
+    "LANDIVISIAU",
+    "COMPAGNIE ELECTRIQUE DE BRETAGNE"
+   ],
    "groupes_entsoe": [
     "COMPAGNIE ELECTRIQUE DE BRETAGNE"
    ],
@@ -1580,6 +1695,9 @@
     }
    ],
    "rte": "PONT SUR SAMBRE",
+   "cles_entsoe": [
+    "PONT SUR SAMBRE"
+   ],
    "groupes_entsoe": [
     "PONT SUR SAMBRE"
    ],
@@ -1614,6 +1732,9 @@
     }
    ],
    "rte": "CROIX DE METZ",
+   "cles_entsoe": [
+    "CROIX DE METZ"
+   ],
    "groupes_entsoe": [
     "CROIX DE METZ"
    ],
@@ -1648,6 +1769,10 @@
     }
    ],
    "rte": "BAYET",
+   "cles_entsoe": [
+    "BAYET",
+    "MORANT"
+   ],
    "groupes_entsoe": [
     "BAYET MORANDES (LES)"
    ],
@@ -1687,6 +1812,9 @@
     }
    ],
    "rte": "SAINT AVOLD",
+   "cles_entsoe": [
+    "SAINT AVOLD"
+   ],
    "groupes_entsoe": [
     "SAINT AVOLD 7",
     "SAINT AVOLD 8"
@@ -1723,6 +1851,9 @@
     }
    ],
    "rte": "GENNEVILLIERS",
+   "cles_entsoe": [
+    "GENNEVILLIERS"
+   ],
    "groupes_entsoe": [
     "GENNEVILLIERS 1"
    ],
@@ -1752,6 +1883,9 @@
    "statut": "en service",
    "note": "Cogénération de la raffinerie de Normandie. Puissance 240 à 260 MW selon les sources (doublons dans ENTSO-E).",
    "rte": "AMFARD",
+   "cles_entsoe": [
+    "AMFARD"
+   ],
    "groupes_entsoe": [
     "COGENERATION NORMANDIE (AMFARD) TRAIN 14",
     "COGENERATION NORMANDIE (AMFARD) TRAIN 15"
@@ -1794,6 +1928,9 @@
     }
    ],
    "rte": "CPCU",
+   "cles_entsoe": [
+    "CPCU"
+   ],
    "groupes_entsoe": [
     "CPCU-CogeVitry–GP",
     "CPCU-StOuen-GP"
@@ -1835,6 +1972,9 @@
     }
    ],
    "rte": "CORDEMAIS",
+   "cles_entsoe": [
+    "CORDEMAIS"
+   ],
    "groupes_entsoe": [
     "CORDEMAIS 4",
     "CORDEMAIS 5"
@@ -1872,6 +2012,9 @@
     }
    ],
    "rte": "EMILE HUCHET",
+   "cles_entsoe": [
+    "EMILE HUCHET"
+   ],
    "groupes_entsoe": [
     "EMILE HUCHET 6"
    ],
@@ -1916,6 +2059,9 @@
     }
    ],
    "rte": "BRENNILIS",
+   "cles_entsoe": [
+    "BRENNILIS"
+   ],
    "groupes_entsoe": [
     "BRENNILIS 3"
    ],
@@ -1957,6 +2103,9 @@
     }
    ],
    "rte": "DIRINON",
+   "cles_entsoe": [
+    "DIRINON"
+   ],
    "eic": [
     "17W100P100P0262F",
     "17W100P100P0264B"
@@ -2000,6 +2149,9 @@
     }
    ],
    "rte": "VAIRES",
+   "cles_entsoe": [
+    "VAIRES"
+   ],
    "groupes_entsoe": [
     "VAIRES 1",
     "VAIRES 2",
@@ -2043,6 +2195,9 @@
     }
    ],
    "rte": "MONTEREAU",
+   "cles_entsoe": [
+    "MONTEREAU"
+   ],
    "groupes_entsoe": [
     "MONTEREAU 5",
     "MONTEREAU 6"
@@ -2084,6 +2239,9 @@
     }
    ],
    "rte": "ARRIGHI",
+   "cles_entsoe": [
+    "ARRIGHI"
+   ],
    "groupes_entsoe": [
     "ARRIGHI 1",
     "ARRIGHI 2"
@@ -2120,6 +2278,9 @@
     }
    ],
    "rte": "BANC DE GUERANDE",
+   "cles_entsoe": [
+    "BANC DE GUERANDE"
+   ],
    "groupes_entsoe": [
     "BANC DE GUERANDE 1",
     "BANC DE GUERANDE 2"
@@ -2155,6 +2316,9 @@
     }
    ],
    "rte": "BAIE DE ST BRIEUC",
+   "cles_entsoe": [
+    "BAIE DE ST BRIEUC"
+   ],
    "groupes_entsoe": [
     "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
     "A2 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC"
@@ -2190,6 +2354,9 @@
     }
    ],
    "rte": "FECAMP",
+   "cles_entsoe": [
+    "FECAMP"
+   ],
    "groupes_entsoe": [
     "FECAMP 1",
     "FECAMP 2"
@@ -2226,6 +2393,9 @@
     }
    ],
    "rte": "VENT DES ILES",
+   "cles_entsoe": [
+    "VENT DES ILES"
+   ],
    "groupes_entsoe": [
     "ADP 01 DE LA FERME EOLIENNE DE VENT-DES-ILES",
     "ADP 02 DE LA FERME EOLIENNE DE VENT-DES-ILES"
@@ -2254,6 +2424,9 @@
    "mise_service": 2026,
    "statut": "mise en service progressive (premiers électrons en juillet 2026)",
    "rte": "RIDENS DE DIEPPE",
+   "cles_entsoe": [
+    "RIDENS DE DIEPPE"
+   ],
    "groupes_entsoe": [
     "ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
     "ADP A2 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE"
@@ -2286,6 +2459,9 @@
     }
    ],
    "rte": "PROVENCE 4",
+   "cles_entsoe": [
+    "PROVENCE 4"
+   ],
    "groupes_entsoe": [
     "PROVENCE 4"
    ],

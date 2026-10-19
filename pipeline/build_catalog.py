@@ -86,6 +86,7 @@ def main():
             verif.setdefault("puissance", "valeur de la carte, non publiée par unité sur ENTSO-E")
         if keys:
             a["rte"] = c["cles"][0]
+            a["cles_entsoe"] = keys
             a["groupes_entsoe"] = sorted({g["nom"] for g in gens}) or None
             a["eic"] = sorted({u["eic"] for u in units}) or None
         if insee and insee in communes and "nom" in communes[insee]:
