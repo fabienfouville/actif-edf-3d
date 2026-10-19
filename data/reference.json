@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-16T20:01:08Z",
+ "genere": "2026-10-19T17:01:00Z",
  "sources": {
   "unites_entsoe": "ok",
   "groupes_entsoe": "ok",
@@ -1180,22 +1180,6 @@
    "registre": "C.ME5T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE CROIX-DE-METZ (CENTRALE)",
    "insee": "54528"
   },
-  "17W000001023725I": {
-   "eic": "17W000001023725I",
-   "nom": "COMPAGNIE ELECTRIQUE DE BRETAGNE",
-   "cle": "COMPAGNIE ELECTRIQUE DE BRETAGNE",
-   "psr": "B04",
-   "registre": "PONANT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE PONANT",
-   "insee": "29105"
-  },
-  "17W000001418626A": {
-   "eic": "17W000001418626A",
-   "nom": "CPCU-CogeVitry–GP",
-   "cle": "CPCU COGEVITRYGP",
-   "psr": "B04",
-   "registre": "GUESDT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GUESDE",
-   "insee": "94081"
-  },
   "17W0000014186456": {
    "eic": "17W0000014186456",
    "nom": "CPCU-StOuen-GP",
@@ -1203,6 +1187,14 @@
    "psr": "B04",
    "registre": "BATELT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE BATELIERS",
    "insee": "93070"
+  },
+  "17W0000014455651": {
+   "eic": "17W0000014455651",
+   "nom": "BANC DE GUERANDE 1",
+   "cle": "BANC DE GUERANDE 1",
+   "psr": "B18",
+   "registre": "B.GUEEA1 - ADP A1 DE LA FERME ÉOLIENNE DE BANC-DE-GUERANDE",
+   "insee": "44184"
   },
   "17W000001445567Y": {
    "eic": "17W000001445567Y",
@@ -1227,6 +1219,22 @@
    "psr": "B18",
    "registre": "H.FALEA2 - ADP A2 DE LA FERME EOLIENNE DE HAUTES - FALAISES",
    "insee": "76259"
+  },
+  "17W000001468589Y": {
+   "eic": "17W000001468589Y",
+   "nom": "COGENERATION NORMANDIE (AMFARD) TRAIN 14",
+   "cle": "COGENERATION NORMANDIE AMFARD TRAIN 14",
+   "psr": "B04",
+   "registre": "AMFART14 - GROUPE 14 DE LA CENTRALE THERMIQUE DE AMFARD",
+   "insee": "76305"
+  },
+  "17W000001468590C": {
+   "eic": "17W000001468590C",
+   "nom": "COGENERATION NORMANDIE (AMFARD) TRAIN 15",
+   "cle": "COGENERATION NORMANDIE AMFARD TRAIN 15",
+   "psr": "B04",
+   "registre": "AMFART15 - GROUPE 15 DE LA CENTRALE THERMIQUE DE AMFARD",
+   "insee": "76305"
   },
   "17W000001637626Q": {
    "eic": "17W000001637626Q",
@@ -1268,402 +1276,6 @@
    "registre": "QUAR5T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE QUARTES",
    "insee": "59467"
   },
-  "17W100P100P00113": {
-   "eic": "17W100P100P00113",
-   "nom": "SAINT AVOLD 8",
-   "cle": "SAINT AVOLD 8",
-   "psr": "B04",
-   "registre": "E.HUCT08 - GROUPE 08 DE LA CENTRALE THERMIQUE DE EMILE-HUCHET",
-   "insee": "57606"
-  },
-  "17W100P100P0017S": {
-   "eic": "17W100P100P0017S",
-   "nom": "CORDEMAIS 4",
-   "cle": "CORDEMAIS 4",
-   "psr": "B05",
-   "registre": "CORD5T04 - GROUPE 04 DE LA CENTRALE THERMIQUE DE CORDEMAIS",
-   "insee": "44045"
-  },
-  "17W100P100P0018Q": {
-   "eic": "17W100P100P0018Q",
-   "nom": "CORDEMAIS 5",
-   "cle": "CORDEMAIS 5",
-   "psr": "B05",
-   "registre": "CORD5T05 - GROUPE 05 DE LA CENTRALE THERMIQUE DE CORDEMAIS",
-   "insee": "44045"
-  },
-  "17W100P100P0032W": {
-   "eic": "17W100P100P0032W",
-   "nom": "ARRIGHI 2",
-   "cle": "ARRIGHI 2",
-   "psr": "B06",
-   "registre": "ARRI5T02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE ARRIGHI (TAC 2)",
-   "insee": "94081"
-  },
-  "17W100P100P0037M": {
-   "eic": "17W100P100P0037M",
-   "nom": "GENNEVILLIERS 1",
-   "cle": "GENNEVILLIERS 1",
-   "psr": "B04",
-   "registre": "GENN3T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GENNEVILLIERS (TURBINE A GAZ)",
-   "insee": "92036"
-  },
-  "17W100P100P0040X": {
-   "eic": "17W100P100P0040X",
-   "nom": "MONTEREAU 5",
-   "cle": "MONTEREAU 5",
-   "psr": "B06",
-   "registre": "MTERET05 - GROUPE 05 DE LA CENTRALE THERMIQUE DE MONTEREAU",
-   "insee": "77494"
-  },
-  "17W100P100P0041V": {
-   "eic": "17W100P100P0041V",
-   "nom": "MONTEREAU 6",
-   "cle": "MONTEREAU 6",
-   "psr": "B06",
-   "registre": "MTERET06 - GROUPE 06 DE LA CENTRALE THERMIQUE DE MONTEREAU",
-   "insee": "77494"
-  },
-  "17W100P100P0046L": {
-   "eic": "17W100P100P0046L",
-   "nom": "VAIRES 1",
-   "cle": "VAIRES 1",
-   "psr": "B06",
-   "registre": "VAIR6T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE VAIRES-SUR-MARNE",
-   "insee": "77479"
-  },
-  "17W100P100P0055K": {
-   "eic": "17W100P100P0055K",
-   "nom": "BROMMAT 7",
-   "cle": "BROMMAT 7",
-   "psr": "B12"
-  },
-  "17W100P100P0056I": {
-   "eic": "17W100P100P0056I",
-   "nom": "CHEYLAS 1",
-   "cle": "CHEYLAS 1",
-   "psr": "B10"
-  },
-  "17W100P100P0057G": {
-   "eic": "17W100P100P0057G",
-   "nom": "CHEYLAS 2",
-   "cle": "CHEYLAS 2",
-   "psr": "B10"
-  },
-  "17W100P100P0063L": {
-   "eic": "17W100P100P0063L",
-   "nom": "GRAND MAISON 3",
-   "cle": "GRAND MAISON 3",
-   "psr": "B10"
-  },
-  "17W100P100P0064J": {
-   "eic": "17W100P100P0064J",
-   "nom": "GRAND MAISON 4",
-   "cle": "GRAND MAISON 4",
-   "psr": "B10"
-  },
-  "17W100P100P0065H": {
-   "eic": "17W100P100P0065H",
-   "nom": "GRAND MAISON 5",
-   "cle": "GRAND MAISON 5",
-   "psr": "B10"
-  },
-  "17W100P100P0066F": {
-   "eic": "17W100P100P0066F",
-   "nom": "GRAND MAISON 6",
-   "cle": "GRAND MAISON 6",
-   "psr": "B10"
-  },
-  "17W100P100P0071M": {
-   "eic": "17W100P100P0071M",
-   "nom": "MONTEZIC 1",
-   "cle": "MONTEZIC 1",
-   "psr": "B10"
-  },
-  "17W100P100P0073I": {
-   "eic": "17W100P100P0073I",
-   "nom": "MONTEZIC 3",
-   "cle": "MONTEZIC 3",
-   "psr": "B10"
-  },
-  "17W100P100P0074G": {
-   "eic": "17W100P100P0074G",
-   "nom": "MONTEZIC 4",
-   "cle": "MONTEZIC 4",
-   "psr": "B10"
-  },
-  "17W100P100P0075E": {
-   "eic": "17W100P100P0075E",
-   "nom": "POUGET 4",
-   "cle": "POUGET 4",
-   "psr": "B12"
-  },
-  "17W100P100P0077A": {
-   "eic": "17W100P100P0077A",
-   "nom": "REVIN 2",
-   "cle": "REVIN 2",
-   "psr": "B10"
-  },
-  "17W100P100P00796": {
-   "eic": "17W100P100P00796",
-   "nom": "REVIN 4",
-   "cle": "REVIN 4",
-   "psr": "B10"
-  },
-  "17W100P100P0082H": {
-   "eic": "17W100P100P0082H",
-   "nom": "SUPER BISSORTE 1",
-   "cle": "SUPER BISSORTE 1",
-   "psr": "B10"
-  },
-  "17W100P100P0083F": {
-   "eic": "17W100P100P0083F",
-   "nom": "SUPER BISSORTE 2",
-   "cle": "SUPER BISSORTE 2",
-   "psr": "B10"
-  },
-  "17W100P100P0084D": {
-   "eic": "17W100P100P0084D",
-   "nom": "SUPER BISSORTE 3",
-   "cle": "SUPER BISSORTE 3",
-   "psr": "B10"
-  },
-  "17W100P100P0085B": {
-   "eic": "17W100P100P0085B",
-   "nom": "SUPER BISSORTE 4",
-   "cle": "SUPER BISSORTE 4",
-   "psr": "B10"
-  },
-  "17W100P100P00893": {
-   "eic": "17W100P100P00893",
-   "nom": "COMBE D'AVRIEUX 1",
-   "cle": "COMBE D AVRIEUX 1",
-   "psr": "B12"
-  },
-  "17W100P100P0090I": {
-   "eic": "17W100P100P0090I",
-   "nom": "BELLEVILLE 1",
-   "cle": "BELLEVILLE 1",
-   "psr": "B14",
-   "registre": "BVIL7N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE BELLEVILLE (BELLEVILLE-SUR-LOIRE)",
-   "insee": "18026"
-  },
-  "17W100P100P0092E": {
-   "eic": "17W100P100P0092E",
-   "nom": "BLAYAIS 1",
-   "cle": "BLAYAIS 1",
-   "psr": "B14",
-   "registre": "BLAYAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)",
-   "insee": "33073"
-  },
-  "17W100P100P0104X": {
-   "eic": "17W100P100P0104X",
-   "nom": "CATTENOM 3",
-   "cle": "CATTENOM 3",
-   "psr": "B14",
-   "registre": "CATTEN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CATTENOM",
-   "insee": "57124"
-  },
-  "17W100P100P0105V": {
-   "eic": "17W100P100P0105V",
-   "nom": "CATTENOM 4",
-   "cle": "CATTENOM 4",
-   "psr": "B14",
-   "registre": "CATTEN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CATTENOM",
-   "insee": "57124"
-  },
-  "17W100P100P01101": {
-   "eic": "17W100P100P01101",
-   "nom": "CHOOZ 1",
-   "cle": "CHOOZ 1",
-   "psr": "B14",
-   "registre": "CHOO2N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CHOOZ B",
-   "insee": "08122"
-  },
-  "17W100P100P0112Y": {
-   "eic": "17W100P100P0112Y",
-   "nom": "CHOOZ 2",
-   "cle": "CHOOZ 2",
-   "psr": "B14",
-   "registre": "CHOO2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CHOOZ B",
-   "insee": "08122"
-  },
-  "17W100P100P0119K": {
-   "eic": "17W100P100P0119K",
-   "nom": "CRUAS 4",
-   "cle": "CRUAS 4",
-   "psr": "B14",
-   "registre": "CRUA5N04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CRUAS",
-   "insee": "07076"
-  },
-  "17W100P100P0123T": {
-   "eic": "17W100P100P0123T",
-   "nom": "DAMPIERRE 4",
-   "cle": "DAMPIERRE 4",
-   "psr": "B14",
-   "registre": "D.BURN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY",
-   "insee": "45122"
-  },
-  "17W100P100P0126N": {
-   "eic": "17W100P100P0126N",
-   "nom": "FLAMANVILLE 1",
-   "cle": "FLAMANVILLE 1",
-   "psr": "B14",
-   "registre": "FLAMAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE",
-   "insee": "50184"
-  },
-  "17W100P100P0129H": {
-   "eic": "17W100P100P0129H",
-   "nom": "GOLFECH 2",
-   "cle": "GOLFECH 2",
-   "psr": "B14",
-   "registre": "GOLF5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE GOLFECH",
-   "insee": "82072"
-  },
-  "17W100P100P0135M": {
-   "eic": "17W100P100P0135M",
-   "nom": "GRAVELINES 5",
-   "cle": "GRAVELINES 5",
-   "psr": "B14",
-   "registre": "GRAV5N05 - GROUPE 05 DE LA CENTRALE NUCLEAIRE DE GRAVELINES",
-   "insee": "59273"
-  },
-  "17W100P100P0137I": {
-   "eic": "17W100P100P0137I",
-   "nom": "NOGENT 1",
-   "cle": "NOGENT 1",
-   "psr": "B14",
-   "registre": "N.SE5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE NOGENT-SUR-SEINE",
-   "insee": "10268"
-  },
-  "17W100P100P0139E": {
-   "eic": "17W100P100P0139E",
-   "nom": "PALUEL 1",
-   "cle": "PALUEL 1",
-   "psr": "B14",
-   "registre": "PALUEN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE PALUEL",
-   "insee": "76493"
-  },
-  "17W100P100P0142P": {
-   "eic": "17W100P100P0142P",
-   "nom": "PALUEL 4",
-   "cle": "PALUEL 4",
-   "psr": "B14",
-   "registre": "PALUEN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE PALUEL",
-   "insee": "76493"
-  },
-  "17W100P100P0148D": {
-   "eic": "17W100P100P0148D",
-   "nom": "ST LAURENT 2",
-   "cle": "ST LAURENT 2",
-   "psr": "B14",
-   "registre": "SSEA2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE ST-LAURENT-DES-EAUX B",
-   "insee": "41220"
-  },
-  "17W100P100P0153K": {
-   "eic": "17W100P100P0153K",
-   "nom": "TRICASTIN 4",
-   "cle": "TRICASTIN 4",
-   "psr": "B14",
-   "registre": "TRICAN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)",
-   "insee": "26324"
-  },
-  "17W100P100P0173E": {
-   "eic": "17W100P100P0173E",
-   "nom": "BLENOD 5",
-   "cle": "BLENOD 5",
-   "psr": "B04"
-  },
-  "17W100P100P0174C": {
-   "eic": "17W100P100P0174C",
-   "nom": "MARTIGUES PONTEAU 5",
-   "cle": "MARTIGUES PONTEAU 5",
-   "psr": "B04"
-  },
-  "17W100P100P0175A": {
-   "eic": "17W100P100P0175A",
-   "nom": "MARTIGUES PONTEAU 6",
-   "cle": "MARTIGUES PONTEAU 6",
-   "psr": "B04"
-  },
-  "17W100P100P01768": {
-   "eic": "17W100P100P01768",
-   "nom": "BOUCHAIN 7",
-   "cle": "BOUCHAIN 7",
-   "psr": "B04",
-   "registre": "BOUCHT07 - GROUPE 07 DE LA CENTRALE THERMIQUE DE BOUCHAIN",
-   "insee": "59092"
-  },
-  "17W100P100P0332K": {
-   "eic": "17W100P100P0332K",
-   "nom": "DK6-TG2",
-   "cle": "DK6 TG2",
-   "psr": "B04",
-   "registre": "BRAEKT21 - GROUPE 21 DE LA CENTRALE THERMIQUE DE BRAEK",
-   "insee": "59271"
-  },
-  "17W100P100P03639": {
-   "eic": "17W100P100P03639",
-   "nom": "FLAMANVILLE 3",
-   "cle": "FLAMANVILLE 3",
-   "psr": "B14",
-   "registre": "FLAMAN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE",
-   "insee": "50184"
-  },
-  "17W100P100P0842Y": {
-   "eic": "17W100P100P0842Y",
-   "nom": "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
-   "cle": "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST BRIEUC",
-   "psr": "B18",
-   "registre": "B.SSBEA1 - ADP A1 DE LA FERME EOLIENNE DE BAIE-DE-ST-BRIEUC",
-   "insee": "22054"
-  },
-  "17W100P100P21629": {
-   "eic": "17W100P100P21629",
-   "nom": "ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
-   "cle": "ADP A1 DE LA FERME EOLIENNE DE RIDENS DE DIEPPE",
-   "psr": "B18",
-   "registre": "R.DIEEA1 - ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
-   "insee": "76618"
-  },
-  "17W100P100P2830V": {
-   "eic": "17W100P100P2830V",
-   "nom": "ADP A2 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
-   "cle": "ADP A2 DE LA FERME EOLIENNE DE RIDENS DE DIEPPE",
-   "psr": "B18"
-  },
-  "17W100P100P3382R": {
-   "eic": "17W100P100P3382R",
-   "nom": "A2 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
-   "cle": "A2 DE PARC EOLIEN EN MER DE LA BAIE DE ST BRIEUC",
-   "psr": "B18",
-   "registre": "B.SSBEA2 - ADP A2 DE LA FERME EOLIENNE DE BAIE-DE-ST-BRIEUC",
-   "insee": "22054"
-  },
-  "17W0000014455651": {
-   "eic": "17W0000014455651",
-   "nom": "BANC DE GUERANDE 1",
-   "cle": "BANC DE GUERANDE 1",
-   "psr": "B18",
-   "registre": "B.GUEEA1 - ADP A1 DE LA FERME ÉOLIENNE DE BANC-DE-GUERANDE",
-   "insee": "44184"
-  },
-  "17W000001468589Y": {
-   "eic": "17W000001468589Y",
-   "nom": "COGENERATION NORMANDIE (AMFARD) TRAIN 14",
-   "cle": "COGENERATION NORMANDIE AMFARD TRAIN 14",
-   "psr": "B04",
-   "registre": "AMFART14 - GROUPE 14 DE LA CENTRALE THERMIQUE DE AMFARD",
-   "insee": "76305"
-  },
-  "17W000001468590C": {
-   "eic": "17W000001468590C",
-   "nom": "COGENERATION NORMANDIE (AMFARD) TRAIN 15",
-   "cle": "COGENERATION NORMANDIE AMFARD TRAIN 15",
-   "psr": "B04",
-   "registre": "AMFART15 - GROUPE 15 DE LA CENTRALE THERMIQUE DE AMFARD",
-   "insee": "76305"
-  },
   "17W100P100P0005Z": {
    "eic": "17W100P100P0005Z",
    "nom": "EMILE HUCHET 6",
@@ -1678,6 +1290,14 @@
    "cle": "SAINT AVOLD 7",
    "psr": "B04",
    "registre": "E.HUCT07 - GROUPE 07 DE LA CENTRALE THERMIQUE DE EMILE-HUCHET",
+   "insee": "57606"
+  },
+  "17W100P100P00113": {
+   "eic": "17W100P100P00113",
+   "nom": "SAINT AVOLD 8",
+   "cle": "SAINT AVOLD 8",
+   "psr": "B04",
+   "registre": "E.HUCT08 - GROUPE 08 DE LA CENTRALE THERMIQUE DE EMILE-HUCHET",
    "insee": "57606"
   },
   "17W100P100P0031Y": {
@@ -1695,6 +1315,22 @@
    "psr": "B06",
    "registre": "BRENNT04 - GROUPE 04 DE LA CENTRALE THERMIQUE DE BRENNILIS",
    "insee": "29018"
+  },
+  "17W100P100P0040X": {
+   "eic": "17W100P100P0040X",
+   "nom": "MONTEREAU 5",
+   "cle": "MONTEREAU 5",
+   "psr": "B06",
+   "registre": "MTERET05 - GROUPE 05 DE LA CENTRALE THERMIQUE DE MONTEREAU",
+   "insee": "77494"
+  },
+  "17W100P100P0046L": {
+   "eic": "17W100P100P0046L",
+   "nom": "VAIRES 1",
+   "cle": "VAIRES 1",
+   "psr": "B06",
+   "registre": "VAIR6T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE VAIRES-SUR-MARNE",
+   "insee": "77479"
   },
   "17W100P100P0047J": {
    "eic": "17W100P100P0047J",
@@ -1742,6 +1378,18 @@
    "cle": "BORT 2",
    "psr": "B12"
   },
+  "17W100P100P0056I": {
+   "eic": "17W100P100P0056I",
+   "nom": "CHEYLAS 1",
+   "cle": "CHEYLAS 1",
+   "psr": "B10"
+  },
+  "17W100P100P0057G": {
+   "eic": "17W100P100P0057G",
+   "nom": "CHEYLAS 2",
+   "cle": "CHEYLAS 2",
+   "psr": "B10"
+  },
   "17W100P100P0058E": {
    "eic": "17W100P100P0058E",
    "nom": "GRAND MAISON 10",
@@ -1772,6 +1420,30 @@
    "cle": "GRAND MAISON 12",
    "psr": "B10"
   },
+  "17W100P100P0063L": {
+   "eic": "17W100P100P0063L",
+   "nom": "GRAND MAISON 3",
+   "cle": "GRAND MAISON 3",
+   "psr": "B10"
+  },
+  "17W100P100P0064J": {
+   "eic": "17W100P100P0064J",
+   "nom": "GRAND MAISON 4",
+   "cle": "GRAND MAISON 4",
+   "psr": "B10"
+  },
+  "17W100P100P0065H": {
+   "eic": "17W100P100P0065H",
+   "nom": "GRAND MAISON 5",
+   "cle": "GRAND MAISON 5",
+   "psr": "B10"
+  },
+  "17W100P100P0066F": {
+   "eic": "17W100P100P0066F",
+   "nom": "GRAND MAISON 6",
+   "cle": "GRAND MAISON 6",
+   "psr": "B10"
+  },
   "17W100P100P0067D": {
    "eic": "17W100P100P0067D",
    "nom": "GRAND MAISON 7",
@@ -1790,11 +1462,35 @@
    "cle": "GRAND MAISON 9",
    "psr": "B10"
   },
+  "17W100P100P0071M": {
+   "eic": "17W100P100P0071M",
+   "nom": "MONTEZIC 1",
+   "cle": "MONTEZIC 1",
+   "psr": "B10"
+  },
   "17W100P100P0072K": {
    "eic": "17W100P100P0072K",
    "nom": "MONTEZIC 2",
    "cle": "MONTEZIC 2",
    "psr": "B10"
+  },
+  "17W100P100P0073I": {
+   "eic": "17W100P100P0073I",
+   "nom": "MONTEZIC 3",
+   "cle": "MONTEZIC 3",
+   "psr": "B10"
+  },
+  "17W100P100P0074G": {
+   "eic": "17W100P100P0074G",
+   "nom": "MONTEZIC 4",
+   "cle": "MONTEZIC 4",
+   "psr": "B10"
+  },
+  "17W100P100P0075E": {
+   "eic": "17W100P100P0075E",
+   "nom": "POUGET 4",
+   "cle": "POUGET 4",
+   "psr": "B12"
   },
   "17W100P100P0076C": {
    "eic": "17W100P100P0076C",
@@ -1802,10 +1498,22 @@
    "cle": "REVIN 1",
    "psr": "B10"
   },
+  "17W100P100P0077A": {
+   "eic": "17W100P100P0077A",
+   "nom": "REVIN 2",
+   "cle": "REVIN 2",
+   "psr": "B10"
+  },
   "17W100P100P00788": {
    "eic": "17W100P100P00788",
    "nom": "REVIN 3",
    "cle": "REVIN 3",
+   "psr": "B10"
+  },
+  "17W100P100P00796": {
+   "eic": "17W100P100P00796",
+   "nom": "REVIN 4",
+   "cle": "REVIN 4",
    "psr": "B10"
   },
   "17W100P100P0080L": {
@@ -1819,6 +1527,30 @@
    "nom": "SISTERON 2",
    "cle": "SISTERON 2",
    "psr": "B12"
+  },
+  "17W100P100P0082H": {
+   "eic": "17W100P100P0082H",
+   "nom": "SUPER BISSORTE 1",
+   "cle": "SUPER BISSORTE 1",
+   "psr": "B10"
+  },
+  "17W100P100P0083F": {
+   "eic": "17W100P100P0083F",
+   "nom": "SUPER BISSORTE 2",
+   "cle": "SUPER BISSORTE 2",
+   "psr": "B10"
+  },
+  "17W100P100P0084D": {
+   "eic": "17W100P100P0084D",
+   "nom": "SUPER BISSORTE 3",
+   "cle": "SUPER BISSORTE 3",
+   "psr": "B10"
+  },
+  "17W100P100P0085B": {
+   "eic": "17W100P100P0085B",
+   "nom": "SUPER BISSORTE 4",
+   "cle": "SUPER BISSORTE 4",
+   "psr": "B10"
   },
   "17W100P100P00869": {
    "eic": "17W100P100P00869",
@@ -1837,6 +1569,14 @@
    "nom": "VILLARODIN 2",
    "cle": "VILLARODIN 2",
    "psr": "B12"
+  },
+  "17W100P100P0090I": {
+   "eic": "17W100P100P0090I",
+   "nom": "BELLEVILLE 1",
+   "cle": "BELLEVILLE 1",
+   "psr": "B14",
+   "registre": "BVIL7N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE BELLEVILLE (BELLEVILLE-SUR-LOIRE)",
+   "insee": "18026"
   },
   "17W100P100P0091G": {
    "eic": "17W100P100P0091G",
@@ -1950,6 +1690,14 @@
    "registre": "CHIN2N04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CHINON B",
    "insee": "37011"
   },
+  "17W100P100P0112Y": {
+   "eic": "17W100P100P0112Y",
+   "nom": "CHOOZ 2",
+   "cle": "CHOOZ 2",
+   "psr": "B14",
+   "registre": "CHOO2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CHOOZ B",
+   "insee": "08122"
+  },
   "17W100P100P0113W": {
    "eic": "17W100P100P0113W",
    "nom": "CIVAUX 1",
@@ -1965,14 +1713,6 @@
    "psr": "B14",
    "registre": "CIVAUN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CIVAUX",
    "insee": "86077"
-  },
-  "17W100P100P0115S": {
-   "eic": "17W100P100P0115S",
-   "nom": "CRUAS 1",
-   "cle": "CRUAS 1",
-   "psr": "B14",
-   "registre": "CRUA5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CRUAS",
-   "insee": "07076"
   },
   "17W100P100P0116Q": {
    "eic": "17W100P100P0116Q",
@@ -2078,6 +1818,14 @@
    "registre": "N.SE5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE NOGENT-SUR-SEINE",
    "insee": "10268"
   },
+  "17W100P100P0139E": {
+   "eic": "17W100P100P0139E",
+   "nom": "PALUEL 1",
+   "cle": "PALUEL 1",
+   "psr": "B14",
+   "registre": "PALUEN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE PALUEL",
+   "insee": "76493"
+  },
   "17W100P100P0140T": {
    "eic": "17W100P100P0140T",
    "nom": "PALUEL 2",
@@ -2158,6 +1906,14 @@
    "registre": "TRICAN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)",
    "insee": "26324"
   },
+  "17W100P100P0153K": {
+   "eic": "17W100P100P0153K",
+   "nom": "TRICASTIN 4",
+   "cle": "TRICASTIN 4",
+   "psr": "B14",
+   "registre": "TRICAN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)",
+   "insee": "26324"
+  },
   "17W100P100P0166B": {
    "eic": "17W100P100P0166B",
    "nom": "SAINT-PIERRE",
@@ -2180,6 +1936,20 @@
    "registre": "G.RIVT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GRANDES-RIVIERES",
    "insee": "44103"
   },
+  "17W100P100P0175A": {
+   "eic": "17W100P100P0175A",
+   "nom": "MARTIGUES PONTEAU 6",
+   "cle": "MARTIGUES PONTEAU 6",
+   "psr": "B04"
+  },
+  "17W100P100P01768": {
+   "eic": "17W100P100P01768",
+   "nom": "BOUCHAIN 7",
+   "cle": "BOUCHAIN 7",
+   "psr": "B04",
+   "registre": "BOUCHT07 - GROUPE 07 DE LA CENTRALE THERMIQUE DE BOUCHAIN",
+   "insee": "59092"
+  },
   "17W100P100P0330O": {
    "eic": "17W100P100P0330O",
    "nom": "DK6-TG1",
@@ -2194,6 +1964,14 @@
    "cle": "DK6 TV1",
    "psr": "B04",
    "registre": "BRAEKT12 - GROUPE 12 DE LA CENTRALE THERMIQUE DE BRAEK",
+   "insee": "59271"
+  },
+  "17W100P100P0332K": {
+   "eic": "17W100P100P0332K",
+   "nom": "DK6-TG2",
+   "cle": "DK6 TG2",
+   "psr": "B04",
+   "registre": "BRAEKT21 - GROUPE 21 DE LA CENTRALE THERMIQUE DE BRAEK",
    "insee": "59271"
   },
   "17W100P100P0333I": {
@@ -2256,11 +2034,233 @@
    "registre": "PROV5TG4 - GROUPE G4 DE LA CENTRALE THERMIQUE DE PROVENCE(EX GARD5)",
    "insee": "13041"
   },
+  "17W100P100P0842Y": {
+   "eic": "17W100P100P0842Y",
+   "nom": "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
+   "cle": "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST BRIEUC",
+   "psr": "B18",
+   "registre": "B.SSBEA1 - ADP A1 DE LA FERME EOLIENNE DE BAIE-DE-ST-BRIEUC",
+   "insee": "22054"
+  },
   "17W100P100P20746": {
    "eic": "17W100P100P20746",
    "nom": "COCHE 5",
    "cle": "COCHE 5",
    "psr": "B10"
+  },
+  "17W100P100P21629": {
+   "eic": "17W100P100P21629",
+   "nom": "ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
+   "cle": "ADP A1 DE LA FERME EOLIENNE DE RIDENS DE DIEPPE",
+   "psr": "B18",
+   "registre": "R.DIEEA1 - ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
+   "insee": "76618"
+  },
+  "17W100P100P3382R": {
+   "eic": "17W100P100P3382R",
+   "nom": "A2 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
+   "cle": "A2 DE PARC EOLIEN EN MER DE LA BAIE DE ST BRIEUC",
+   "psr": "B18",
+   "registre": "B.SSBEA2 - ADP A2 DE LA FERME EOLIENNE DE BAIE-DE-ST-BRIEUC",
+   "insee": "22054"
+  },
+  "17W000001023725I": {
+   "eic": "17W000001023725I",
+   "nom": "COMPAGNIE ELECTRIQUE DE BRETAGNE",
+   "cle": "COMPAGNIE ELECTRIQUE DE BRETAGNE",
+   "psr": "B04",
+   "registre": "PONANT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE PONANT",
+   "insee": "29105"
+  },
+  "17W000001418626A": {
+   "eic": "17W000001418626A",
+   "nom": "CPCU-CogeVitry–GP",
+   "cle": "CPCU COGEVITRYGP",
+   "psr": "B04",
+   "registre": "GUESDT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GUESDE",
+   "insee": "94081"
+  },
+  "17W100P100P0017S": {
+   "eic": "17W100P100P0017S",
+   "nom": "CORDEMAIS 4",
+   "cle": "CORDEMAIS 4",
+   "psr": "B05",
+   "registre": "CORD5T04 - GROUPE 04 DE LA CENTRALE THERMIQUE DE CORDEMAIS",
+   "insee": "44045"
+  },
+  "17W100P100P0018Q": {
+   "eic": "17W100P100P0018Q",
+   "nom": "CORDEMAIS 5",
+   "cle": "CORDEMAIS 5",
+   "psr": "B05",
+   "registre": "CORD5T05 - GROUPE 05 DE LA CENTRALE THERMIQUE DE CORDEMAIS",
+   "insee": "44045"
+  },
+  "17W100P100P0032W": {
+   "eic": "17W100P100P0032W",
+   "nom": "ARRIGHI 2",
+   "cle": "ARRIGHI 2",
+   "psr": "B06",
+   "registre": "ARRI5T02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE ARRIGHI (TAC 2)",
+   "insee": "94081"
+  },
+  "17W100P100P0037M": {
+   "eic": "17W100P100P0037M",
+   "nom": "GENNEVILLIERS 1",
+   "cle": "GENNEVILLIERS 1",
+   "psr": "B04",
+   "registre": "GENN3T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GENNEVILLIERS (TURBINE A GAZ)",
+   "insee": "92036"
+  },
+  "17W100P100P0041V": {
+   "eic": "17W100P100P0041V",
+   "nom": "MONTEREAU 6",
+   "cle": "MONTEREAU 6",
+   "psr": "B06",
+   "registre": "MTERET06 - GROUPE 06 DE LA CENTRALE THERMIQUE DE MONTEREAU",
+   "insee": "77494"
+  },
+  "17W100P100P0055K": {
+   "eic": "17W100P100P0055K",
+   "nom": "BROMMAT 7",
+   "cle": "BROMMAT 7",
+   "psr": "B12"
+  },
+  "17W100P100P00893": {
+   "eic": "17W100P100P00893",
+   "nom": "COMBE D'AVRIEUX 1",
+   "cle": "COMBE D AVRIEUX 1",
+   "psr": "B12"
+  },
+  "17W100P100P0092E": {
+   "eic": "17W100P100P0092E",
+   "nom": "BLAYAIS 1",
+   "cle": "BLAYAIS 1",
+   "psr": "B14",
+   "registre": "BLAYAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)",
+   "insee": "33073"
+  },
+  "17W100P100P0104X": {
+   "eic": "17W100P100P0104X",
+   "nom": "CATTENOM 3",
+   "cle": "CATTENOM 3",
+   "psr": "B14",
+   "registre": "CATTEN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CATTENOM",
+   "insee": "57124"
+  },
+  "17W100P100P0105V": {
+   "eic": "17W100P100P0105V",
+   "nom": "CATTENOM 4",
+   "cle": "CATTENOM 4",
+   "psr": "B14",
+   "registre": "CATTEN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CATTENOM",
+   "insee": "57124"
+  },
+  "17W100P100P01101": {
+   "eic": "17W100P100P01101",
+   "nom": "CHOOZ 1",
+   "cle": "CHOOZ 1",
+   "psr": "B14",
+   "registre": "CHOO2N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CHOOZ B",
+   "insee": "08122"
+  },
+  "17W100P100P0115S": {
+   "eic": "17W100P100P0115S",
+   "nom": "CRUAS 1",
+   "cle": "CRUAS 1",
+   "psr": "B14",
+   "registre": "CRUA5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CRUAS",
+   "insee": "07076"
+  },
+  "17W100P100P0119K": {
+   "eic": "17W100P100P0119K",
+   "nom": "CRUAS 4",
+   "cle": "CRUAS 4",
+   "psr": "B14",
+   "registre": "CRUA5N04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CRUAS",
+   "insee": "07076"
+  },
+  "17W100P100P0123T": {
+   "eic": "17W100P100P0123T",
+   "nom": "DAMPIERRE 4",
+   "cle": "DAMPIERRE 4",
+   "psr": "B14",
+   "registre": "D.BURN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY",
+   "insee": "45122"
+  },
+  "17W100P100P0126N": {
+   "eic": "17W100P100P0126N",
+   "nom": "FLAMANVILLE 1",
+   "cle": "FLAMANVILLE 1",
+   "psr": "B14",
+   "registre": "FLAMAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE",
+   "insee": "50184"
+  },
+  "17W100P100P0129H": {
+   "eic": "17W100P100P0129H",
+   "nom": "GOLFECH 2",
+   "cle": "GOLFECH 2",
+   "psr": "B14",
+   "registre": "GOLF5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE GOLFECH",
+   "insee": "82072"
+  },
+  "17W100P100P0135M": {
+   "eic": "17W100P100P0135M",
+   "nom": "GRAVELINES 5",
+   "cle": "GRAVELINES 5",
+   "psr": "B14",
+   "registre": "GRAV5N05 - GROUPE 05 DE LA CENTRALE NUCLEAIRE DE GRAVELINES",
+   "insee": "59273"
+  },
+  "17W100P100P0137I": {
+   "eic": "17W100P100P0137I",
+   "nom": "NOGENT 1",
+   "cle": "NOGENT 1",
+   "psr": "B14",
+   "registre": "N.SE5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE NOGENT-SUR-SEINE",
+   "insee": "10268"
+  },
+  "17W100P100P0142P": {
+   "eic": "17W100P100P0142P",
+   "nom": "PALUEL 4",
+   "cle": "PALUEL 4",
+   "psr": "B14",
+   "registre": "PALUEN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE PALUEL",
+   "insee": "76493"
+  },
+  "17W100P100P0148D": {
+   "eic": "17W100P100P0148D",
+   "nom": "ST LAURENT 2",
+   "cle": "ST LAURENT 2",
+   "psr": "B14",
+   "registre": "SSEA2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE ST-LAURENT-DES-EAUX B",
+   "insee": "41220"
+  },
+  "17W100P100P0173E": {
+   "eic": "17W100P100P0173E",
+   "nom": "BLENOD 5",
+   "cle": "BLENOD 5",
+   "psr": "B04"
+  },
+  "17W100P100P0174C": {
+   "eic": "17W100P100P0174C",
+   "nom": "MARTIGUES PONTEAU 5",
+   "cle": "MARTIGUES PONTEAU 5",
+   "psr": "B04"
+  },
+  "17W100P100P03639": {
+   "eic": "17W100P100P03639",
+   "nom": "FLAMANVILLE 3",
+   "cle": "FLAMANVILLE 3",
+   "psr": "B14",
+   "registre": "FLAMAN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE",
+   "insee": "50184"
+  },
+  "17W100P100P2830V": {
+   "eic": "17W100P100P2830V",
+   "nom": "ADP A2 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
+   "cle": "ADP A2 DE LA FERME EOLIENNE DE RIDENS DE DIEPPE",
+   "psr": "B18"
   }
  },
  "registre": [

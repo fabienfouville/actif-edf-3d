@@ -1,6 +1,6 @@
 {
  "_doc": "Catalogue des actifs. Généré par pipeline/build_catalog.py depuis ENTSO-E, le registre national (ODRÉ) et data/catalog_map.json. Chaque actif porte ses sources dans « verif ».",
- "genere": "2026-10-16",
+ "genere": "2026-10-19",
  "assets": [
   {
    "id": "hyd-GMA",
@@ -44,7 +44,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 5 km du centre de la commune (Vaujany, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « G.MAIH-CENTRALE HYDRAULIQUE DE GRAND-MAISON-7 »"
    }
   },
@@ -81,7 +81,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Montézic, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « MTEZIH-CENTRALE HYDRAULIQUE DE MONTEZIC-7 »"
    }
   },
@@ -118,7 +118,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Les Mazures, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « REVI5H-CENTRALE HYDRAULIQUE DE REVIN-7 »"
    }
   },
@@ -156,7 +156,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Orelle, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « S.BISH-CENTRALE HYDRAULIQUE DE SUPER-BISSORTE-7 »"
    }
   },
@@ -191,7 +191,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 0 km du centre de la commune (Le Cheylas, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « CHEY6H-CENTRALE HYDRAULIQUE DE CHEYLAS (LE)-7 »"
    }
   },
@@ -225,7 +225,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Grand-Aigueblanche, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « COCHEH-CENTRALE HYDRAULIQUE DE COCHE (LA)-7 »"
    }
   },
@@ -264,7 +264,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (La Bâthie, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « BATHIH-CENTRALE HYDRAULIQUE DE BATHIE (LA)-7 »"
    }
   },
@@ -299,7 +299,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Le Truel, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « POUGEH-CENTRALE HYDRAULIQUE DE POUGET (LE)-6 »"
    }
   },
@@ -333,7 +333,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 6 km du centre de la commune (Brommat, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « BROMMH-CENTRALE HYDRAULIQUE DE BROMMAT-7 »"
    }
   },
@@ -367,7 +367,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Soursac, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « AIGLEH-CENTRALE HYDRAULIQUE DE AIGLE (L )-6 »"
    }
   },
@@ -402,7 +402,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Avrieux, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « VLAROH-CENTRALE HYDRAULIQUE DE VILLARODIN-7 »"
    }
   },
@@ -436,7 +436,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Sisteron, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « SISTEH-CENTRALE HYDRAULIQUE DE SISTERON-6 »"
    }
   },
@@ -471,7 +471,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Bort-les-Orgues, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « BORT H-CENTRALE HYDRAULIQUE DE BORT-6 »"
    }
   },
@@ -506,7 +506,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Saint-Martin-la-Méanne, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « CHASTH-CENTRALE HYDRAULIQUE DE CHASTANG (LE)-6 »"
    }
   },
@@ -537,7 +537,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Liginiac, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « MAREGH-CENTRALE HYDRAULIQUE DE MAREGES-6 »"
    }
   },
@@ -570,7 +570,7 @@
    "verif": {
     "coordonnees": "vérifiées (vérification web du 16/10/2026)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16"
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19"
    }
   },
   {
@@ -603,7 +603,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Avrieux, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « C.AVRH-CENTRALE HYDRAULIQUE DE COMBE D AVRIEUX-6 »"
    }
   },
@@ -697,7 +697,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Injoux-Génissiat, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « GENISH-CENTRALE HYDRAULIQUE DE GENISSIAT-6 »"
    }
   },
@@ -728,7 +728,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Bollène, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « BOLLEH-CENTRALE HYDRAULIQUE DE BOLLENE (SPECIALISE)-6 »"
    }
   },
@@ -759,7 +759,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Châteauneuf-du-Rhône, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « C.RHOH-CENTRALE HYDRAULIQUE DE CHATEAUNEUF-DU-RHONE-6 »"
    }
   },
@@ -790,7 +790,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 6 km du centre de la commune (Beaucaire, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « BXCAIH-CENTRALE HYDRAULIQUE DE BEAUCAIRE-6 »"
    }
   },
@@ -821,7 +821,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Caderousse, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « CADERH-CENTRALE HYDRAULIQUE DE CADEROUSSE-3 »"
    }
   },
@@ -852,7 +852,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Bourg-lès-Valence, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « B.VALH-CENTRALE HYDRAULIQUE DE BOURG-LES-VALENCE-6 »"
    }
   },
@@ -883,7 +883,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Beauchastel, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « BXCHAH-CENTRALE HYDRAULIQUE DE BEAUCHASTEL-6 »"
    }
   },
@@ -920,7 +920,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Les Tourrettes, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « L.NEUH-CENTRALE HYDRAULIQUE DE LOGIS-NEUF-6 »"
    }
   },
@@ -951,7 +951,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 5 km du centre de la commune (Avignon, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « AVIG6H-CENTRALE HYDRAULIQUE DE AVIGNON-6 »"
    }
   },
@@ -1047,7 +1047,7 @@
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16"
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19"
    }
   },
   {
@@ -1309,7 +1309,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Martigues, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « M.PONT61 - GROUPE 61 DE LA CENTRALE THERMIQUE DE MARTIGUES-PONTEAU (TAC) »"
    }
   },
@@ -1343,7 +1343,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Blénod-lès-Pont-à-Mousson, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), « BLENOT51 - GROUPE 51 DE LA CENTRALE THERMIQUE DE BLENOD »"
    }
   },
@@ -1377,7 +1377,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Bouchain, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1414,7 +1414,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Grande-Synthe, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1448,7 +1448,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Fos-sur-Mer, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1482,7 +1482,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Fos-sur-Mer, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1522,7 +1522,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Montoir-de-Bretagne, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1556,7 +1556,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Landivisiau, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1590,7 +1590,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Pont-sur-Sambre, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1624,7 +1624,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Toul, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1658,7 +1658,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Bayet, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1699,7 +1699,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Saint-Avold, geo.api.gouv.fr)",
     "exploitant": "Wikipédia ; rachat par TotalEnergies validé en août 2020",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1733,7 +1733,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Gennevilliers, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1806,7 +1806,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 7 km du centre de la commune (Saint-Ouen-sur-Seine, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1847,7 +1847,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Cordemais, geo.api.gouv.fr)",
     "exploitant": "AEF info, annonce EDF du 28/05/2025",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1882,7 +1882,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Saint-Avold, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1928,7 +1928,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Brennilis, geo.api.gouv.fr)",
     "exploitant": "EDF (message REMIT edf-2026-00041)",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1965,7 +1965,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Dirinon, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -2014,7 +2014,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 0 km du centre de la commune (Vaires-sur-Marne, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -2055,7 +2055,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Vernou-la-Celle-sur-Seine, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -2096,7 +2096,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Vitry-sur-Seine, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -2131,7 +2131,7 @@
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -2166,7 +2166,7 @@
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -2201,7 +2201,7 @@
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -2237,7 +2237,7 @@
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -2296,7 +2296,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Gardanne, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-16",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -2317,7 +2317,7 @@
    "commune": "Belleville-sur-Loire",
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Belleville-sur-Loire, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2340,7 +2340,7 @@
    "commune": "Braud-et-Saint-Louis",
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Braud-et-Saint-Louis, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2363,7 +2363,7 @@
    "commune": "Saint-Vulbas",
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Saint-Vulbas, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2386,7 +2386,7 @@
    "commune": "Cattenom",
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Cattenom, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2409,7 +2409,7 @@
    "commune": "Avoine",
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Avoine, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2430,7 +2430,7 @@
    "commune": "Chooz",
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Chooz, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2451,7 +2451,7 @@
    "commune": "Civaux",
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Civaux, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2474,7 +2474,7 @@
    "commune": "Cruas",
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Cruas, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2497,7 +2497,7 @@
    "commune": "Dampierre-en-Burly",
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Dampierre-en-Burly, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2519,7 +2519,7 @@
    "commune": "Flamanville",
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Flamanville, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2540,7 +2540,7 @@
    "commune": "Golfech",
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Golfech, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2565,7 +2565,7 @@
    "commune": "Gravelines",
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Gravelines, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2586,7 +2586,7 @@
    "commune": "Nogent-sur-Seine",
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Nogent-sur-Seine, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2609,7 +2609,7 @@
    "commune": "Paluel",
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Paluel, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2630,7 +2630,7 @@
    "commune": "Petit-Caux",
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Petit-Caux, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2651,7 +2651,7 @@
    "commune": "Saint-Maurice-l'Exil",
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Saint-Maurice-l'Exil, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2672,7 +2672,7 @@
    "commune": "Saint-Laurent-Nouan",
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Saint-Laurent-Nouan, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
@@ -2695,7 +2695,7 @@
    "commune": "Saint-Paul-Trois-Châteaux",
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Saint-Paul-Trois-Châteaux, geo.api.gouv.fr)",
-    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-16",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
     "commune": "Registre national des installations (ODRÉ)"
    }
   },
