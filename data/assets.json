@@ -1,6 +1,2305 @@
 {
- "_doc": "Catalogue des actifs affichés. Puissances en MW (nettes, indicatives). Les tranches nucléaires détaillées sont dans edf_tranches.json.",
+ "_doc": "Catalogue des actifs. Généré par pipeline/build_catalog.py depuis ENTSO-E, le registre national (ODRÉ) et data/catalog_map.json. Chaque actif porte ses sources dans « verif ».",
+ "genere": "2026-10-19",
  "assets": [
+  {
+   "id": "hyd-GMA",
+   "nom": "Grand'Maison",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.16,
+   "lon": 6.05,
+   "mise_service": 1987,
+   "statut": "en service",
+   "note": "Plus grande STEP de France. Coordonnées de l'usine estimées.",
+   "p_mw": 1714,
+   "unites": [
+    {
+     "nom": "GRAND MAISON 10",
+     "eic": "17W100P100P0058E",
+     "p_mw": 1714
+    }
+   ],
+   "rte": "GRAND MAISON",
+   "groupes_entsoe": [
+    "GRAND MAISON 1",
+    "GRAND MAISON 10",
+    "GRAND MAISON 11",
+    "GRAND MAISON 12",
+    "GRAND MAISON 2",
+    "GRAND MAISON 3",
+    "GRAND MAISON 4",
+    "GRAND MAISON 5",
+    "GRAND MAISON 6",
+    "GRAND MAISON 7",
+    "GRAND MAISON 8",
+    "GRAND MAISON 9"
+   ],
+   "eic": [
+    "17W100P100P0058E"
+   ],
+   "commune": "Vaujany",
+   "verif": {
+    "coordonnees": "relevées à la main, à 5 km du centre de la commune (Vaujany, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « G.MAIH-CENTRALE HYDRAULIQUE DE GRAND-MAISON-7 »"
+   }
+  },
+  {
+   "id": "hyd-MTZ",
+   "nom": "Montézic",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Occitanie",
+   "lat": 44.71,
+   "lon": 2.64,
+   "mise_service": 1982,
+   "statut": "en service",
+   "p_mw": 910,
+   "unites": [
+    {
+     "nom": "MONTEZIC 1",
+     "eic": "17W100P100P0071M",
+     "p_mw": 910
+    }
+   ],
+   "rte": "MONTEZIC",
+   "groupes_entsoe": [
+    "MONTEZIC 1",
+    "MONTEZIC 2",
+    "MONTEZIC 3",
+    "MONTEZIC 4"
+   ],
+   "eic": [
+    "17W100P100P0071M"
+   ],
+   "commune": "Montézic",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Montézic, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « MTEZIH-CENTRALE HYDRAULIQUE DE MONTEZIC-7 »"
+   }
+  },
+  {
+   "id": "hyd-REV",
+   "nom": "Revin",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 49.93,
+   "lon": 4.62,
+   "mise_service": 1976,
+   "statut": "en service",
+   "p_mw": 800,
+   "unites": [
+    {
+     "nom": "REVIN 1",
+     "eic": "17W100P100P0076C",
+     "p_mw": 800
+    }
+   ],
+   "rte": "REVIN",
+   "groupes_entsoe": [
+    "REVIN 1",
+    "REVIN 2",
+    "REVIN 3",
+    "REVIN 4"
+   ],
+   "eic": [
+    "17W100P100P0076C"
+   ],
+   "commune": "Les Mazures",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Les Mazures, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « REVI5H-CENTRALE HYDRAULIQUE DE REVIN-7 »"
+   }
+  },
+  {
+   "id": "hyd-SBI",
+   "nom": "Super-Bissorte",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.2,
+   "lon": 6.53,
+   "mise_service": 1987,
+   "statut": "en service",
+   "p_mw": 742,
+   "unites": [
+    {
+     "nom": "SUPER BISSORTE 1",
+     "eic": "17W100P100P0082H",
+     "p_mw": 742
+    }
+   ],
+   "rte": "SUPER BISSORTE",
+   "groupes_entsoe": [
+    "SUPER BISSORTE 1",
+    "SUPER BISSORTE 2",
+    "SUPER BISSORTE 3",
+    "SUPER BISSORTE 4",
+    "SUPER BISSORTE 5"
+   ],
+   "eic": [
+    "17W100P100P0082H"
+   ],
+   "commune": "Orelle",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Orelle, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « S.BISH-CENTRALE HYDRAULIQUE DE SUPER-BISSORTE-7 »"
+   }
+  },
+  {
+   "id": "hyd-CHE",
+   "nom": "Le Cheylas",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.38,
+   "lon": 6.0,
+   "mise_service": 1979,
+   "statut": "en service",
+   "p_mw": 485,
+   "unites": [
+    {
+     "nom": "CHEYLAS 1",
+     "eic": "17W100P100P0056I",
+     "p_mw": 485
+    }
+   ],
+   "rte": "CHEYLAS",
+   "groupes_entsoe": [
+    "CHEYLAS 1",
+    "CHEYLAS 2"
+   ],
+   "eic": [
+    "17W100P100P0056I"
+   ],
+   "commune": "Le Cheylas",
+   "verif": {
+    "coordonnees": "relevées à la main, à 0 km du centre de la commune (Le Cheylas, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « CHEY6H-CENTRALE HYDRAULIQUE DE CHEYLAS (LE)-7 »"
+   }
+  },
+  {
+   "id": "hyd-COC",
+   "nom": "La Coche",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.496,
+   "lon": 6.513,
+   "mise_service": 1977,
+   "statut": "en service",
+   "p_mw": 384,
+   "unites": [
+    {
+     "nom": "COCHE 5",
+     "eic": "17W100P100P20746",
+     "p_mw": 384
+    }
+   ],
+   "rte": "COCHE",
+   "groupes_entsoe": [
+    "COCHE 5"
+   ],
+   "eic": [
+    "17W100P100P20746"
+   ],
+   "commune": "Grand-Aigueblanche",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Grand-Aigueblanche, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « COCHEH-CENTRALE HYDRAULIQUE DE COCHE (LA)-7 »"
+   }
+  },
+  {
+   "id": "hyd-BAT",
+   "nom": "La Bâthie (Roselend)",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.63,
+   "lon": 6.45,
+   "mise_service": 1961,
+   "statut": "en service",
+   "p_mw": 600,
+   "unites": [
+    {
+     "nom": "BATHIE 1",
+     "eic": "17W100P100P03566",
+     "p_mw": 600
+    }
+   ],
+   "rte": "BATHIE",
+   "groupes_entsoe": [
+    "BATHIE 1",
+    "BATHIE 2",
+    "BATHIE 3",
+    "BATHIE 4",
+    "BATHIE 5",
+    "BATHIE 6"
+   ],
+   "eic": [
+    "17W100P100P03566"
+   ],
+   "commune": "La Bâthie",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (La Bâthie, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « BATHIH-CENTRALE HYDRAULIQUE DE BATHIE (LA)-7 »"
+   }
+  },
+  {
+   "id": "hyd-POU",
+   "nom": "Le Pouget",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Occitanie",
+   "lat": 44.059,
+   "lon": 2.768,
+   "mise_service": 1952,
+   "statut": "en service",
+   "note": "Groupe réversible depuis 1982.",
+   "p_mw": 446,
+   "unites": [
+    {
+     "nom": "POUGET 4",
+     "eic": "17W100P100P0075E",
+     "p_mw": 446
+    }
+   ],
+   "rte": "POUGET",
+   "groupes_entsoe": [
+    "POUGET 4"
+   ],
+   "eic": [
+    "17W100P100P0075E"
+   ],
+   "commune": "Le Truel",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Le Truel, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « POUGEH-CENTRALE HYDRAULIQUE DE POUGET (LE)-6 »"
+   }
+  },
+  {
+   "id": "hyd-BRO",
+   "nom": "Brommat",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Occitanie",
+   "lat": 44.769,
+   "lon": 2.684,
+   "mise_service": 1933,
+   "statut": "en service",
+   "p_mw": 406,
+   "unites": [
+    {
+     "nom": "BROMMAT 7",
+     "eic": "17W100P100P0055K",
+     "p_mw": 406
+    }
+   ],
+   "rte": "BROMMAT",
+   "groupes_entsoe": [
+    "BROMMAT 7"
+   ],
+   "eic": [
+    "17W100P100P0055K"
+   ],
+   "commune": "Brommat",
+   "verif": {
+    "coordonnees": "relevées à la main, à 6 km du centre de la commune (Brommat, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « BROMMH-CENTRALE HYDRAULIQUE DE BROMMAT-7 »"
+   }
+  },
+  {
+   "id": "hyd-AIG",
+   "nom": "L'Aigle",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 45.24,
+   "lon": 2.23,
+   "mise_service": 1945,
+   "statut": "en service",
+   "p_mw": 360,
+   "unites": [
+    {
+     "nom": "AIGLE 6",
+     "eic": "17W100P100P0051S",
+     "p_mw": 360
+    }
+   ],
+   "rte": "AIGLE",
+   "groupes_entsoe": [
+    "AIGLE 6"
+   ],
+   "eic": [
+    "17W100P100P0051S"
+   ],
+   "commune": "Soursac",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Soursac, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « AIGLEH-CENTRALE HYDRAULIQUE DE AIGLE (L )-6 »"
+   }
+  },
+  {
+   "id": "hyd-VIL",
+   "nom": "Villarodin (Mont-Cenis)",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.2,
+   "lon": 6.7,
+   "mise_service": 1968,
+   "statut": "en service",
+   "p_mw": 364,
+   "unites": [
+    {
+     "nom": "VILLARODIN 1",
+     "eic": "17W100P100P00877",
+     "p_mw": 364
+    }
+   ],
+   "rte": "VILLARODIN",
+   "groupes_entsoe": [
+    "VILLARODIN 1",
+    "VILLARODIN 2"
+   ],
+   "eic": [
+    "17W100P100P00877"
+   ],
+   "commune": "Avrieux",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Avrieux, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « VLAROH-CENTRALE HYDRAULIQUE DE VILLARODIN-7 »"
+   }
+  },
+  {
+   "id": "hyd-SIS",
+   "nom": "Sisteron",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 44.17,
+   "lon": 5.95,
+   "statut": "en service",
+   "p_mw": 240,
+   "unites": [
+    {
+     "nom": "SISTERON 1",
+     "eic": "17W100P100P0080L",
+     "p_mw": 240
+    }
+   ],
+   "rte": "SISTERON",
+   "groupes_entsoe": [
+    "SISTERON 1",
+    "SISTERON 2"
+   ],
+   "eic": [
+    "17W100P100P0080L"
+   ],
+   "commune": "Sisteron",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Sisteron, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « SISTEH-CENTRALE HYDRAULIQUE DE SISTERON-6 »"
+   }
+  },
+  {
+   "id": "hyd-BOR",
+   "nom": "Bort-les-Orgues",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 45.4,
+   "lon": 2.5,
+   "mise_service": 1952,
+   "statut": "en service",
+   "p_mw": 235,
+   "unites": [
+    {
+     "nom": "BORT 1",
+     "eic": "17W100P100P0052Q",
+     "p_mw": 235
+    }
+   ],
+   "rte": "BORT",
+   "groupes_entsoe": [
+    "BORT 1",
+    "BORT 2"
+   ],
+   "eic": [
+    "17W100P100P0052Q"
+   ],
+   "commune": "Bort-les-Orgues",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Bort-les-Orgues, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « BORT H-CENTRALE HYDRAULIQUE DE BORT-6 »"
+   }
+  },
+  {
+   "id": "hyd-CHA",
+   "nom": "Le Chastang",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 45.16,
+   "lon": 1.96,
+   "mise_service": 1951,
+   "statut": "en service",
+   "p_mw": 293,
+   "unites": [
+    {
+     "nom": "CHASTANG 2",
+     "eic": "17W100P100P0049F",
+     "p_mw": 293
+    }
+   ],
+   "rte": "CHASTANG",
+   "groupes_entsoe": [
+    "CHASTANG 2",
+    "CHASTANG 3"
+   ],
+   "eic": [
+    "17W100P100P0049F"
+   ],
+   "commune": "Saint-Martin-la-Méanne",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Saint-Martin-la-Méanne, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « CHASTH-CENTRALE HYDRAULIQUE DE CHASTANG (LE)-6 »"
+   }
+  },
+  {
+   "id": "hyd-MAR",
+   "nom": "Marèges",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 45.39,
+   "lon": 2.364,
+   "mise_service": 1935,
+   "statut": "en service",
+   "p_mw": 146,
+   "unites": [
+    {
+     "nom": "FR_MAREGES_G2",
+     "eic": "17W000000460346Y",
+     "p_mw": 146
+    }
+   ],
+   "rte": "MAREGES",
+   "eic": [
+    "17W000000460346Y"
+   ],
+   "commune": "Liginiac",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Liginiac, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « MAREGH-CENTRALE HYDRAULIQUE DE MAREGES-6 »"
+   }
+  },
+  {
+   "id": "hyd-SPC",
+   "nom": "Saint-Pierre-Cognet",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.877,
+   "lon": 5.804,
+   "mise_service": 1957,
+   "statut": "en service",
+   "p_mw": 122,
+   "unites": [
+    {
+     "nom": "SAINT-PIERRE",
+     "eic": "17W100P100P0166B",
+     "p_mw": 122
+    }
+   ],
+   "rte": "SAINT PIERRE",
+   "groupes_entsoe": [
+    "SAINT-PIERRE"
+   ],
+   "eic": [
+    "17W100P100P0166B"
+   ],
+   "verif": {
+    "coordonnees": "vérifiées (vérification web du 16/10/2026)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19"
+   }
+  },
+  {
+   "id": "hyd-CDA",
+   "nom": "Combe d'Avrieux",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.21,
+   "lon": 6.72,
+   "mise_service": 1976,
+   "statut": "en service",
+   "p_mw": 123,
+   "unites": [
+    {
+     "nom": "COMBE D'AVRIEUX 1",
+     "eic": "17W100P100P00893",
+     "p_mw": 123
+    }
+   ],
+   "rte": "COMBE D AVRIEUX",
+   "groupes_entsoe": [
+    "COMBE D'AVRIEUX 1"
+   ],
+   "eic": [
+    "17W100P100P00893"
+   ],
+   "commune": "Avrieux",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Avrieux, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « C.AVRH-CENTRALE HYDRAULIQUE DE COMBE D AVRIEUX-6 »"
+   }
+  },
+  {
+   "id": "hyd-SPO",
+   "nom": "Serre-Ponçon",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 44.47,
+   "lon": 6.27,
+   "p_mw": 370,
+   "mise_service": 1960,
+   "statut": "en service",
+   "note": "Groupes de moins de 100 MW : production non publiée par groupe, estimée.",
+   "commune": "Ubaye-Serre-Ponçon",
+   "verif": {
+    "coordonnees": "relevées à la main, à 5 km du centre de la commune (Ubaye-Serre-Ponçon, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "Registre national des installations (ODRÉ) : S.PONH-CENTRALE HYDRAULIQUE DE SERRE-PONCON-6",
+    "commune": "Registre national des installations (ODRÉ), « S.PONH-CENTRALE HYDRAULIQUE DE SERRE-PONCON-6 »"
+   }
+  },
+  {
+   "id": "hyd-VOU",
+   "nom": "Vouglans",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Bourgogne-Franche-Comté",
+   "lat": 46.4,
+   "lon": 5.67,
+   "p_mw": 285,
+   "mise_service": 1968,
+   "statut": "en service",
+   "note": "Groupes de moins de 100 MW : production estimée.",
+   "commune": "Cernon",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Cernon, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "Registre national des installations (ODRÉ) : VOUGLH-CENTRALE HYDRAULIQUE DE VOUGLANS-6",
+    "commune": "Registre national des installations (ODRÉ), « VOUGLH-CENTRALE HYDRAULIQUE DE VOUGLANS-6 »"
+   }
+  },
+  {
+   "id": "hyd-MON",
+   "nom": "Monteynard",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.96,
+   "lon": 5.69,
+   "p_mw": 366,
+   "mise_service": 1962,
+   "statut": "en service",
+   "note": "Production non publiée par groupe : estimée.",
+   "commune": "Monteynard",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Monteynard, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "Registre national des installations (ODRÉ) : MTEYNH-CENTRALE HYDRAULIQUE DE MONTEYNARD-6",
+    "commune": "Registre national des installations (ODRÉ), « MTEYNH-CENTRALE HYDRAULIQUE DE MONTEYNARD-6 »"
+   }
+  },
+  {
+   "id": "hyd-GEN",
+   "nom": "Génissiat",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 46.05,
+   "lon": 5.81,
+   "mise_service": 1948,
+   "statut": "en service",
+   "p_mw": 398,
+   "unites": [
+    {
+     "nom": "GENISSIAT G1",
+     "eic": "17W100P100P1594M",
+     "p_mw": 398
+    }
+   ],
+   "rte": "GENISSIAT",
+   "eic": [
+    "17W100P100P1594M"
+   ],
+   "commune": "Injoux-Génissiat",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Injoux-Génissiat, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « GENISH-CENTRALE HYDRAULIQUE DE GENISSIAT-6 »"
+   }
+  },
+  {
+   "id": "hyd-DZM",
+   "nom": "Donzère-Mondragon (usine André-Blondel, Bollène)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 44.304,
+   "lon": 4.743,
+   "mise_service": 1952,
+   "statut": "en service",
+   "p_mw": 349,
+   "unites": [
+    {
+     "nom": "BOLLENE G1",
+     "eic": "17W100P100P1268Z",
+     "p_mw": 349
+    }
+   ],
+   "rte": "BOLLENE",
+   "eic": [
+    "17W100P100P1268Z"
+   ],
+   "commune": "Bollène",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Bollène, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « BOLLEH-CENTRALE HYDRAULIQUE DE BOLLENE (SPECIALISE)-6 »"
+   }
+  },
+  {
+   "id": "hyd-CNP",
+   "nom": "Châteauneuf-du-Rhône (usine Henri-Poincaré)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.5,
+   "lon": 4.71,
+   "mise_service": 1957,
+   "statut": "en service",
+   "p_mw": 275,
+   "unites": [
+    {
+     "nom": "CHATEAUNEUF-DU-RHONE G1",
+     "eic": "17W100P100P1485R",
+     "p_mw": 275
+    }
+   ],
+   "rte": "CHATEAUNEUF DU RHONE",
+   "eic": [
+    "17W100P100P1485R"
+   ],
+   "commune": "Châteauneuf-du-Rhône",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Châteauneuf-du-Rhône, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « C.RHOH-CENTRALE HYDRAULIQUE DE CHATEAUNEUF-DU-RHONE-6 »"
+   }
+  },
+  {
+   "id": "hyd-VAL",
+   "nom": "Vallabrègues (usine de Beaucaire)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Occitanie",
+   "lat": 43.82,
+   "lon": 4.64,
+   "mise_service": 1970,
+   "statut": "en service",
+   "p_mw": 210,
+   "unites": [
+    {
+     "nom": "BEAUCAIRE G1",
+     "eic": "17W100P100P1330J",
+     "p_mw": 210
+    }
+   ],
+   "rte": "BEAUCAIRE",
+   "eic": [
+    "17W100P100P1330J"
+   ],
+   "commune": "Beaucaire",
+   "verif": {
+    "coordonnees": "relevées à la main, à 6 km du centre de la commune (Beaucaire, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « BXCAIH-CENTRALE HYDRAULIQUE DE BEAUCAIRE-6 »"
+   }
+  },
+  {
+   "id": "hyd-CAD",
+   "nom": "Caderousse",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 44.1,
+   "lon": 4.72,
+   "mise_service": 1975,
+   "statut": "en service",
+   "p_mw": 187,
+   "unites": [
+    {
+     "nom": "CADEROUSSE G1",
+     "eic": "17W100P100P13650",
+     "p_mw": 187
+    }
+   ],
+   "rte": "CADEROUSSE",
+   "eic": [
+    "17W100P100P13650"
+   ],
+   "commune": "Caderousse",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Caderousse, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « CADERH-CENTRALE HYDRAULIQUE DE CADEROUSSE-3 »"
+   }
+  },
+  {
+   "id": "hyd-BLV",
+   "nom": "Bourg-lès-Valence",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.97,
+   "lon": 4.85,
+   "mise_service": 1968,
+   "statut": "en service",
+   "p_mw": 180,
+   "unites": [
+    {
+     "nom": "BOURG-LES-VALENCE G1",
+     "eic": "17W100P100P13189",
+     "p_mw": 180
+    }
+   ],
+   "rte": "BOURG LES VALENCE",
+   "eic": [
+    "17W100P100P13189"
+   ],
+   "commune": "Bourg-lès-Valence",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Bourg-lès-Valence, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « B.VALH-CENTRALE HYDRAULIQUE DE BOURG-LES-VALENCE-6 »"
+   }
+  },
+  {
+   "id": "hyd-BCH",
+   "nom": "Beauchastel",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.82,
+   "lon": 4.8,
+   "mise_service": 1963,
+   "statut": "en service",
+   "p_mw": 192,
+   "unites": [
+    {
+     "nom": "BEAUCHASTEL G1",
+     "eic": "17W100P100P13367",
+     "p_mw": 192
+    }
+   ],
+   "rte": "BEAUCHASTEL",
+   "eic": [
+    "17W100P100P13367"
+   ],
+   "commune": "Beauchastel",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Beauchastel, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « BXCHAH-CENTRALE HYDRAULIQUE DE BEAUCHASTEL-6 »"
+   }
+  },
+  {
+   "id": "hyd-LGN",
+   "nom": "Le Logis-Neuf",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.64,
+   "lon": 4.77,
+   "mise_service": 1960,
+   "statut": "en service",
+   "p_mw": 192,
+   "unites": [
+    {
+     "nom": "LOGIS-NEUF G1",
+     "eic": "17W100P100P1734W",
+     "p_mw": 128
+    },
+    {
+     "nom": "LOGIS-NEUF G3",
+     "eic": "17W100P100P1736S",
+     "p_mw": 64
+    }
+   ],
+   "rte": "LOGIS NEUF",
+   "eic": [
+    "17W100P100P1734W",
+    "17W100P100P1736S"
+   ],
+   "commune": "Les Tourrettes",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Les Tourrettes, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « L.NEUH-CENTRALE HYDRAULIQUE DE LOGIS-NEUF-6 »"
+   }
+  },
+  {
+   "id": "hyd-AVI",
+   "nom": "Avignon (usine-écluse)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.98,
+   "lon": 4.79,
+   "mise_service": 1973,
+   "statut": "en service",
+   "p_mw": 120,
+   "unites": [
+    {
+     "nom": "AVIGNON G1",
+     "eic": "17W100P100P1204O",
+     "p_mw": 120
+    }
+   ],
+   "rte": "AVIGNON",
+   "eic": [
+    "17W100P100P1204O"
+   ],
+   "commune": "Avignon",
+   "verif": {
+    "coordonnees": "relevées à la main, à 5 km du centre de la commune (Avignon, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « AVIG6H-CENTRALE HYDRAULIQUE DE AVIGNON-6 »"
+   }
+  },
+  {
+   "id": "hyd-CNR",
+   "nom": "Autres usines CNR du Rhône",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.55,
+   "lon": 5.15,
+   "statut": "en service",
+   "note": "Regroupe 10 usines CNR du Haut-Rhône et du Rhône moyen (Seyssel, Chautagne, Brens, Brégnier-Cordon, Sault-Brénaz, Pierre-Bénite, Vaugris, Sablons, Gervans, Sauveterre).",
+   "p_mw": 833,
+   "unites": [
+    {
+     "nom": "BREGNIER-CORDON G1",
+     "eic": "17W100P100P1230N",
+     "p_mw": 70
+    },
+    {
+     "nom": "BRENS G1",
+     "eic": "17W100P100P1288T",
+     "p_mw": 90
+    },
+    {
+     "nom": "CHAUTAGNE G1",
+     "eic": "17W100P100P15262",
+     "p_mw": 90
+    },
+    {
+     "nom": "GERVANS G1",
+     "eic": "17W100P100P16153",
+     "p_mw": 60
+    },
+    {
+     "nom": "GERVANS G3",
+     "eic": "17W100P100P1619W",
+     "p_mw": 60
+    },
+    {
+     "nom": "PIERRE-BENITE G1",
+     "eic": "17W000001353785Z",
+     "p_mw": 80
+    },
+    {
+     "nom": "SABLONS G1",
+     "eic": "17W100P100P19004",
+     "p_mw": 80
+    },
+    {
+     "nom": "SABLONS G3",
+     "eic": "17W100P100P19020",
+     "p_mw": 80
+    },
+    {
+     "nom": "SAULT-BRENAZ G1",
+     "eic": "17W100P100P1929H",
+     "p_mw": 45
+    },
+    {
+     "nom": "SAUVETERRE G1",
+     "eic": "17W100P100P1211R",
+     "p_mw": 66
+    },
+    {
+     "nom": "SEYSSEL G1",
+     "eic": "17W100P100P1932S",
+     "p_mw": 40
+    },
+    {
+     "nom": "VAUGRIS G1",
+     "eic": "17W100P100P2036E",
+     "p_mw": 72
+    }
+   ],
+   "rte": "SEYSSEL",
+   "eic": [
+    "17W000001353785Z",
+    "17W100P100P1211R",
+    "17W100P100P1230N",
+    "17W100P100P1288T",
+    "17W100P100P15262",
+    "17W100P100P16153",
+    "17W100P100P1619W",
+    "17W100P100P19004",
+    "17W100P100P19020",
+    "17W100P100P1929H",
+    "17W100P100P1932S",
+    "17W100P100P2036E"
+   ],
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19"
+   }
+  },
+  {
+   "id": "hyd-KEM",
+   "nom": "Kembs",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 47.68,
+   "lon": 7.5,
+   "p_mw": 151,
+   "mise_service": 1932,
+   "statut": "en service",
+   "note": "Rhin : production non publiée par groupe, estimée.",
+   "commune": "Kembs",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Kembs, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "Registre national des installations (ODRÉ) : KEMBSH-CENTRALE HYDRAULIQUE DE KEMBS-6",
+    "commune": "Registre national des installations (ODRÉ), « KEMBSH-CENTRALE HYDRAULIQUE DE KEMBS-6 »"
+   }
+  },
+  {
+   "id": "hyd-OTT",
+   "nom": "Ottmarsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 47.79,
+   "lon": 7.51,
+   "p_mw": 156,
+   "mise_service": 1952,
+   "statut": "en service",
+   "note": "Rhin : production non publiée par groupe, estimée.",
+   "commune": "Ottmarsheim",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Ottmarsheim, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "Registre national des installations (ODRÉ) : OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-6 + OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-3",
+    "commune": "Registre national des installations (ODRÉ), « OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-6 »"
+   }
+  },
+  {
+   "id": "hyd-MGV",
+   "nom": "Malgovert (Tignes)",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.57,
+   "lon": 6.78,
+   "statut": "en service",
+   "note": "Isère, alimentée par le barrage de Tignes. Production non publiée par groupe : estimée.",
+   "p_mw": 297,
+   "commune": "Séez",
+   "verif": {
+    "coordonnees": "relevées à la main, à 10 km du centre de la commune (Séez, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : MALGOH-CENTRALE HYDRAULIQUE DE MALGOVERT-6",
+    "commune": "Registre national des installations (ODRÉ), « MALGOH-CENTRALE HYDRAULIQUE DE MALGOVERT-6 »"
+   }
+  },
+  {
+   "id": "hyd-SCV",
+   "nom": "Sainte-Croix-du-Verdon",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.76,
+   "lon": 6.19,
+   "statut": "en service",
+   "note": "Verdon. Production non publiée par groupe : estimée.",
+   "p_mw": 132,
+   "commune": "Sainte-Croix-du-Verdon",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Sainte-Croix-du-Verdon, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : SSCROH-CENTRALE HYDRAULIQUE DE STE-CROIX-DU-VERDON-6",
+    "commune": "Registre national des installations (ODRÉ), « SSCROH-CENTRALE HYDRAULIQUE DE STE-CROIX-DU-VERDON-6 »"
+   }
+  },
+  {
+   "id": "hyd-FES",
+   "nom": "Fessenheim (usine hydraulique)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 47.92,
+   "lon": 7.55,
+   "statut": "en service",
+   "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
+   "p_mw": 175,
+   "commune": "Fessenheim",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Fessenheim, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : FESSEH-CENTRALE HYDRAULIQUE DE FESSENHEIM-6",
+    "commune": "Registre national des installations (ODRÉ), « FESSEH-CENTRALE HYDRAULIQUE DE FESSENHEIM-6 »"
+   }
+  },
+  {
+   "id": "hyd-VOG",
+   "nom": "Vogelgrun",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.02,
+   "lon": 7.57,
+   "statut": "en service",
+   "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
+   "p_mw": 140,
+   "commune": "Vogelgrun",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Vogelgrun, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : VOGELH-CENTRALE HYDRAULIQUE DE VOGELGRUN-6",
+    "commune": "Registre national des installations (ODRÉ), « VOGELH-CENTRALE HYDRAULIQUE DE VOGELGRUN-6 »"
+   }
+  },
+  {
+   "id": "hyd-MCK",
+   "nom": "Marckolsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.17,
+   "lon": 7.59,
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "p_mw": 155,
+   "commune": "Marckolsheim",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Marckolsheim, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : MARCKH-CENTRALE HYDRAULIQUE DE MARCKOLSHEIM-6",
+    "commune": "Registre national des installations (ODRÉ), « MARCKH-CENTRALE HYDRAULIQUE DE MARCKOLSHEIM-6 »"
+   }
+  },
+  {
+   "id": "hyd-RHI",
+   "nom": "Rhinau",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.32,
+   "lon": 7.7,
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "p_mw": 125,
+   "commune": "Rhinau",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Rhinau, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : RHINAH-CENTRALE HYDRAULIQUE DE RHINAU-6",
+    "commune": "Registre national des installations (ODRÉ), « RHINAH-CENTRALE HYDRAULIQUE DE RHINAU-6 »"
+   }
+  },
+  {
+   "id": "hyd-GER",
+   "nom": "Gerstheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.38,
+   "lon": 7.73,
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "p_mw": 139,
+   "commune": "Gerstheim",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Gerstheim, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : GERSTH-CENTRALE HYDRAULIQUE DE GERSTHEIM-6",
+    "commune": "Registre national des installations (ODRÉ), « GERSTH-CENTRALE HYDRAULIQUE DE GERSTHEIM-6 »"
+   }
+  },
+  {
+   "id": "hyd-STR",
+   "nom": "Strasbourg",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.55,
+   "lon": 7.8,
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "p_mw": 98,
+   "commune": "Strasbourg",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Strasbourg, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : STRASH-CENTRALE HYDRAULIQUE DE STRASBOURG-6",
+    "commune": "Registre national des installations (ODRÉ), « STRASH-CENTRALE HYDRAULIQUE DE STRASBOURG-6 »"
+   }
+  },
+  {
+   "id": "hyd-GAM",
+   "nom": "Gambsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF / EnBW",
+   "region": "Grand Est",
+   "lat": 48.68,
+   "lon": 7.91,
+   "statut": "en service",
+   "note": "Rhin, co-exploitée EDF / EnBW. Production non publiée par groupe : estimée.",
+   "p_mw": 98,
+   "commune": "Gambsheim",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Gambsheim, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : GAMBSH-CENTRALE HYDRAULIQUE DE GAMBSHEIM-6",
+    "commune": "Registre national des installations (ODRÉ), « GAMBSH-CENTRALE HYDRAULIQUE DE GAMBSHEIM-6 »"
+   }
+  },
+  {
+   "id": "gaz-MAR",
+   "nom": "Martigues (Ponteau)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.4,
+   "lon": 5.03,
+   "mise_service": 2012,
+   "statut": "en service",
+   "p_mw": 930,
+   "unites": [
+    {
+     "nom": "MARTIGUES PONTEAU 5",
+     "eic": "17W100P100P0174C",
+     "p_mw": 465
+    },
+    {
+     "nom": "MARTIGUES PONTEAU 6",
+     "eic": "17W100P100P0175A",
+     "p_mw": 465
+    }
+   ],
+   "rte": "MARTIGUES",
+   "groupes_entsoe": [
+    "MARTIGUES PONTEAU 5",
+    "MARTIGUES PONTEAU 6"
+   ],
+   "eic": [
+    "17W100P100P0174C",
+    "17W100P100P0175A"
+   ],
+   "commune": "Martigues",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Martigues, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « M.PONT61 - GROUPE 61 DE LA CENTRALE THERMIQUE DE MARTIGUES-PONTEAU (TAC) »"
+   }
+  },
+  {
+   "id": "gaz-BLE",
+   "nom": "Blénod",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.88,
+   "lon": 6.06,
+   "mise_service": 2011,
+   "statut": "en service",
+   "p_mw": 427,
+   "unites": [
+    {
+     "nom": "BLENOD 5",
+     "eic": "17W100P100P0173E",
+     "p_mw": 427
+    }
+   ],
+   "rte": "BLENOD",
+   "groupes_entsoe": [
+    "BLENOD 5"
+   ],
+   "eic": [
+    "17W100P100P0173E"
+   ],
+   "commune": "Blénod-lès-Pont-à-Mousson",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Blénod-lès-Pont-à-Mousson, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), « BLENOT51 - GROUPE 51 DE LA CENTRALE THERMIQUE DE BLENOD »"
+   }
+  },
+  {
+   "id": "gaz-BOU",
+   "nom": "Bouchain",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "EDF",
+   "region": "Hauts-de-France",
+   "lat": 50.29,
+   "lon": 3.32,
+   "mise_service": 2016,
+   "statut": "en service",
+   "p_mw": 585,
+   "unites": [
+    {
+     "nom": "BOUCHAIN 7",
+     "eic": "17W100P100P01768",
+     "p_mw": 585
+    }
+   ],
+   "rte": "BOUCHAIN",
+   "groupes_entsoe": [
+    "BOUCHAIN 7"
+   ],
+   "eic": [
+    "17W100P100P01768"
+   ],
+   "commune": "Bouchain",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Bouchain, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-DK6",
+   "nom": "DK6 Dunkerque",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "Engie Flexible Generation France",
+   "region": "Hauts-de-France",
+   "lat": 51.03,
+   "lon": 2.3,
+   "mise_service": 2005,
+   "statut": "en service",
+   "p_mw": 796,
+   "unites": [
+    {
+     "nom": "DK6-TG1",
+     "eic": "17W100P100P0330O",
+     "p_mw": 796
+    }
+   ],
+   "rte": "DK6",
+   "groupes_entsoe": [
+    "DK6-TG1",
+    "DK6-TG2",
+    "DK6-TV1",
+    "DK6-TV2"
+   ],
+   "eic": [
+    "17W100P100P0330O"
+   ],
+   "commune": "Grande-Synthe",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Grande-Synthe, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-CYC",
+   "nom": "Cycofos",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "Engie",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.42,
+   "lon": 4.88,
+   "mise_service": 2010,
+   "statut": "en service",
+   "p_mw": 428,
+   "unites": [
+    {
+     "nom": "CYCOFOS PL1",
+     "eic": "17W100P100P03388",
+     "p_mw": 428
+    }
+   ],
+   "rte": "CYCOFOS",
+   "groupes_entsoe": [
+    "CYCOFOS PL1"
+   ],
+   "eic": [
+    "17W100P100P03388"
+   ],
+   "commune": "Fos-sur-Mer",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Fos-sur-Mer, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-CBG",
+   "nom": "Combigolfe",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "Engie",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.44,
+   "lon": 4.85,
+   "mise_service": 2010,
+   "statut": "en service",
+   "p_mw": 425,
+   "unites": [
+    {
+     "nom": "COMBIGOLFE CCG",
+     "eic": "17W100P100P01679",
+     "p_mw": 425
+    }
+   ],
+   "rte": "COMBIGOLFE",
+   "groupes_entsoe": [
+    "COMBIGOLFE CCG"
+   ],
+   "eic": [
+    "17W100P100P01679"
+   ],
+   "commune": "Fos-sur-Mer",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Fos-sur-Mer, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-MTO",
+   "nom": "Montoir-de-Bretagne (SPEM)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "Engie",
+   "region": "Pays de la Loire",
+   "lat": 47.32,
+   "lon": -2.15,
+   "mise_service": 2010,
+   "statut": "en service",
+   "p_mw": 480,
+   "unites": [
+    {
+     "nom": "SPEM CCG",
+     "eic": "17W100P100P0171I",
+     "p_mw": 435
+    },
+    {
+     "nom": "SPEM pointe",
+     "eic": "17W100P100P0336C",
+     "p_mw": 45
+    }
+   ],
+   "rte": "SPEM",
+   "groupes_entsoe": [
+    "SPEM CCG"
+   ],
+   "eic": [
+    "17W100P100P0171I",
+    "17W100P100P0336C"
+   ],
+   "commune": "Montoir-de-Bretagne",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Montoir-de-Bretagne, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-LDV",
+   "nom": "Landivisiau",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Bretagne",
+   "lat": 48.51,
+   "lon": -4.05,
+   "mise_service": 2022,
+   "statut": "en service",
+   "p_mw": 446,
+   "unites": [
+    {
+     "nom": "FR_LANDIVISIAUGU",
+     "eic": "17W000001023725I",
+     "p_mw": 446
+    }
+   ],
+   "rte": "LANDIVISIAU",
+   "groupes_entsoe": [
+    "COMPAGNIE ELECTRIQUE DE BRETAGNE"
+   ],
+   "eic": [
+    "17W000001023725I"
+   ],
+   "commune": "Landivisiau",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Landivisiau, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-PSS",
+   "nom": "Pont-sur-Sambre",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Hauts-de-France",
+   "lat": 50.22,
+   "lon": 3.85,
+   "mise_service": 2009,
+   "statut": "en service",
+   "p_mw": 445,
+   "unites": [
+    {
+     "nom": "Pont-sur-Sambre",
+     "eic": "17W100P100P00016",
+     "p_mw": 445
+    }
+   ],
+   "rte": "PONT SUR SAMBRE",
+   "groupes_entsoe": [
+    "PONT SUR SAMBRE"
+   ],
+   "eic": [
+    "17W100P100P00016"
+   ],
+   "commune": "Pont-sur-Sambre",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Pont-sur-Sambre, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-TOU",
+   "nom": "Toul (Croix-de-Metz)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Grand Est",
+   "lat": 48.68,
+   "lon": 5.89,
+   "mise_service": 2013,
+   "statut": "en service",
+   "p_mw": 445,
+   "unites": [
+    {
+     "nom": "Croix-de-Metz",
+     "eic": "17W100P100P00123",
+     "p_mw": 445
+    }
+   ],
+   "rte": "CROIX DE METZ",
+   "groupes_entsoe": [
+    "CROIX DE METZ"
+   ],
+   "eic": [
+    "17W100P100P00123"
+   ],
+   "commune": "Toul",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Toul, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-BAY",
+   "nom": "Bayet (Morant)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 46.25,
+   "lon": 3.27,
+   "mise_service": 2011,
+   "statut": "en service",
+   "p_mw": 420,
+   "unites": [
+    {
+     "nom": "FR-GA-MORANT1",
+     "eic": "17W100P100P00122",
+     "p_mw": 420
+    }
+   ],
+   "rte": "BAYET",
+   "groupes_entsoe": [
+    "BAYET MORANDES (LES)"
+   ],
+   "eic": [
+    "17W100P100P00122"
+   ],
+   "commune": "Bayet",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Bayet, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-EHU",
+   "nom": "Émile-Huchet 7-8 (Saint-Avold)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Grand Est",
+   "lat": 49.15,
+   "lon": 6.71,
+   "mise_service": 2010,
+   "statut": "en service",
+   "p_mw": 892,
+   "unites": [
+    {
+     "nom": "Saint_Avold_7",
+     "eic": "17W100P100P00105",
+     "p_mw": 446
+    },
+    {
+     "nom": "Saint_Avold_8",
+     "eic": "17W100P100P00113",
+     "p_mw": 446
+    }
+   ],
+   "rte": "SAINT AVOLD",
+   "groupes_entsoe": [
+    "SAINT AVOLD 7",
+    "SAINT AVOLD 8"
+   ],
+   "eic": [
+    "17W100P100P00105",
+    "17W100P100P00113"
+   ],
+   "commune": "Saint-Avold",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Saint-Avold, geo.api.gouv.fr)",
+    "exploitant": "Wikipédia ; rachat par TotalEnergies validé en août 2020",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-GEN",
+   "nom": "Gennevilliers TAC",
+   "filiere": "gaz",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Île-de-France",
+   "lat": 48.937,
+   "lon": 2.318,
+   "mise_service": 1992,
+   "statut": "en service",
+   "p_mw": 203,
+   "unites": [
+    {
+     "nom": "GENNEVILLIERS 1",
+     "eic": "17W100P100P0037M",
+     "p_mw": 203
+    }
+   ],
+   "rte": "GENNEVILLIERS",
+   "groupes_entsoe": [
+    "GENNEVILLIERS 1"
+   ],
+   "eic": [
+    "17W100P100P0037M"
+   ],
+   "commune": "Gennevilliers",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Gennevilliers, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-AMF",
+   "nom": "Amfard (Gonfreville-l'Orcher)",
+   "filiere": "gaz",
+   "type": "cogénération",
+   "exploitant": "Cofiva",
+   "region": "Normandie",
+   "lat": 49.48,
+   "lon": 0.23,
+   "p_mw": 260,
+   "p_mw_manuel": true,
+   "mise_service": 2004,
+   "statut": "en service",
+   "note": "Cogénération de la raffinerie de Normandie. Puissance 240 à 260 MW selon les sources (doublons dans ENTSO-E).",
+   "rte": "AMFARD",
+   "groupes_entsoe": [
+    "COGENERATION NORMANDIE (AMFARD) TRAIN 14",
+    "COGENERATION NORMANDIE (AMFARD) TRAIN 15"
+   ],
+   "eic": [
+    "17W000001468589Y",
+    "17W100P100P03477",
+    "17W100P100P03485"
+   ],
+   "commune": "Gonfreville-l'Orcher",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Gonfreville-l'Orcher, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "valeur de la carte, non publiée par unité sur ENTSO-E",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "gaz-CPCU",
+   "nom": "Cogénérations CPCU (Saint-Ouen, Vitry)",
+   "filiere": "gaz",
+   "type": "cogénération",
+   "exploitant": "CPCU",
+   "region": "Île-de-France",
+   "lat": 48.85,
+   "lon": 2.36,
+   "statut": "en service",
+   "note": "Chaleur urbaine de Paris : production surtout pilotée par le besoin de chaleur.",
+   "p_mw": 251,
+   "unites": [
+    {
+     "nom": "CPCU-CogeVitry–GP",
+     "eic": "17W000001418626A",
+     "p_mw": 125
+    },
+    {
+     "nom": "CPCU-StOuen-GP",
+     "eic": "17W0000014186456",
+     "p_mw": 126
+    }
+   ],
+   "rte": "CPCU",
+   "groupes_entsoe": [
+    "CPCU-CogeVitry–GP",
+    "CPCU-StOuen-GP"
+   ],
+   "eic": [
+    "17W000001418626A",
+    "17W0000014186456"
+   ],
+   "commune": "Saint-Ouen-sur-Seine",
+   "verif": {
+    "coordonnees": "relevées à la main, à 7 km du centre de la commune (Saint-Ouen-sur-Seine, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "cha-COR",
+   "nom": "Cordemais",
+   "filiere": "charbon",
+   "type": "charbon",
+   "exploitant": "EDF",
+   "region": "Pays de la Loire",
+   "lat": 47.28,
+   "lon": -1.88,
+   "mise_service": 1983,
+   "statut": "en service, arrêt définitif prévu le 31/03/2027",
+   "p_mw": 1160,
+   "unites": [
+    {
+     "nom": "CORDEMAIS 4",
+     "eic": "17W100P100P0017S",
+     "p_mw": 580
+    },
+    {
+     "nom": "CORDEMAIS 5",
+     "eic": "17W100P100P0018Q",
+     "p_mw": 580
+    }
+   ],
+   "rte": "CORDEMAIS",
+   "groupes_entsoe": [
+    "CORDEMAIS 4",
+    "CORDEMAIS 5"
+   ],
+   "eic": [
+    "17W100P100P0017S",
+    "17W100P100P0018Q"
+   ],
+   "commune": "Cordemais",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Cordemais, geo.api.gouv.fr)",
+    "exploitant": "AEF info, annonce EDF du 28/05/2025",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "cha-EHU",
+   "nom": "Émile-Huchet 6 (Saint-Avold)",
+   "filiere": "charbon",
+   "type": "charbon",
+   "exploitant": "GazelEnergie",
+   "region": "Grand Est",
+   "lat": 49.15,
+   "lon": 6.71,
+   "mise_service": 1981,
+   "statut": "en service (mécanisme de capacité hiver 2026-27), conversion au gaz envisagée",
+   "note": "Seule autre tranche charbon en service en France avec Cordemais.",
+   "p_mw": 595,
+   "unites": [
+    {
+     "nom": "EMILE HUCHET 6",
+     "eic": "17W100P100P0005Z",
+     "p_mw": 595
+    }
+   ],
+   "rte": "EMILE HUCHET",
+   "groupes_entsoe": [
+    "EMILE HUCHET 6"
+   ],
+   "eic": [
+    "17W100P100P0005Z"
+   ],
+   "commune": "Saint-Avold",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Saint-Avold, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "fio-BRE",
+   "nom": "Brennilis TAC",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Bretagne",
+   "lat": 48.36,
+   "lon": -3.87,
+   "mise_service": 1980,
+   "statut": "en service",
+   "p_mw": 304,
+   "unites": [
+    {
+     "nom": "BRENNILIS 1",
+     "eic": "17W100P100P02578",
+     "p_mw": 85
+    },
+    {
+     "nom": "BRENNILIS 2",
+     "eic": "17W100P100P02594",
+     "p_mw": 85
+    },
+    {
+     "nom": "BRENNILIS 3",
+     "eic": "17W100P100P0033U",
+     "p_mw": 134
+    }
+   ],
+   "rte": "BRENNILIS",
+   "groupes_entsoe": [
+    "BRENNILIS 3"
+   ],
+   "eic": [
+    "17W100P100P0033U",
+    "17W100P100P02578",
+    "17W100P100P02594"
+   ],
+   "commune": "Brennilis",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Brennilis, geo.api.gouv.fr)",
+    "exploitant": "EDF (message REMIT edf-2026-00041)",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "fio-DIR",
+   "nom": "Dirinon TAC",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Bretagne",
+   "lat": 48.4,
+   "lon": -4.27,
+   "mise_service": 1981,
+   "statut": "en service",
+   "p_mw": 170,
+   "unites": [
+    {
+     "nom": "DIRINON 1",
+     "eic": "17W100P100P0262F",
+     "p_mw": 85
+    },
+    {
+     "nom": "DIRINON 2",
+     "eic": "17W100P100P0264B",
+     "p_mw": 85
+    }
+   ],
+   "rte": "DIRINON",
+   "eic": [
+    "17W100P100P0262F",
+    "17W100P100P0264B"
+   ],
+   "commune": "Dirinon",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Dirinon, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "fio-VAI",
+   "nom": "Vaires-sur-Marne TAC",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Île-de-France",
+   "lat": 48.87,
+   "lon": 2.64,
+   "mise_service": 2008,
+   "statut": "en service",
+   "note": "Fonctionne au fioul ; conversion au gaz / biométhane à l'étude (appel d'offres 2026).",
+   "p_mw": 542,
+   "unites": [
+    {
+     "nom": "VAIRES 1",
+     "eic": "17W100P100P0046L",
+     "p_mw": 181
+    },
+    {
+     "nom": "VAIRES 2",
+     "eic": "17W100P100P0047J",
+     "p_mw": 179
+    },
+    {
+     "nom": "VAIRES 3",
+     "eic": "17W100P100P0048H",
+     "p_mw": 182
+    }
+   ],
+   "rte": "VAIRES",
+   "groupes_entsoe": [
+    "VAIRES 1",
+    "VAIRES 2",
+    "VAIRES 3"
+   ],
+   "eic": [
+    "17W100P100P0046L",
+    "17W100P100P0047J",
+    "17W100P100P0048H"
+   ],
+   "commune": "Vaires-sur-Marne",
+   "verif": {
+    "coordonnees": "relevées à la main, à 0 km du centre de la commune (Vaires-sur-Marne, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "fio-MTR",
+   "nom": "Montereau TAC (Vernou-la-Celle)",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Île-de-France",
+   "lat": 48.39,
+   "lon": 2.86,
+   "mise_service": 2010,
+   "statut": "en service",
+   "p_mw": 350,
+   "unites": [
+    {
+     "nom": "MONTEREAU 5",
+     "eic": "17W100P100P0040X",
+     "p_mw": 175
+    },
+    {
+     "nom": "MONTEREAU 6",
+     "eic": "17W100P100P0041V",
+     "p_mw": 175
+    }
+   ],
+   "rte": "MONTEREAU",
+   "groupes_entsoe": [
+    "MONTEREAU 5",
+    "MONTEREAU 6"
+   ],
+   "eic": [
+    "17W100P100P0040X",
+    "17W100P100P0041V"
+   ],
+   "commune": "Vernou-la-Celle-sur-Seine",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Vernou-la-Celle-sur-Seine, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "fio-ARR",
+   "nom": "Arrighi TAC (Vitry-sur-Seine)",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Île-de-France",
+   "lat": 48.786,
+   "lon": 2.412,
+   "mise_service": 1997,
+   "statut": "en service",
+   "p_mw": 254,
+   "unites": [
+    {
+     "nom": "ARRIGHI 1",
+     "eic": "17W100P100P0031Y",
+     "p_mw": 125
+    },
+    {
+     "nom": "ARRIGHI 2",
+     "eic": "17W100P100P0032W",
+     "p_mw": 129
+    }
+   ],
+   "rte": "ARRIGHI",
+   "groupes_entsoe": [
+    "ARRIGHI 1",
+    "ARRIGHI 2"
+   ],
+   "eic": [
+    "17W100P100P0031Y",
+    "17W100P100P0032W"
+   ],
+   "commune": "Vitry-sur-Seine",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Vitry-sur-Seine, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "eol-SNZ",
+   "nom": "Parc éolien en mer de Saint-Nazaire",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "EDF Renouvelables / Enbridge / CPP Investments",
+   "region": "Pays de la Loire",
+   "lat": 47.15,
+   "lon": -2.52,
+   "mise_service": 2022,
+   "statut": "en service",
+   "p_mw": 480,
+   "unites": [
+    {
+     "nom": "BANC DE GUERANDE 1",
+     "eic": "17W0000014455651",
+     "p_mw": 480
+    }
+   ],
+   "rte": "BANC DE GUERANDE",
+   "groupes_entsoe": [
+    "BANC DE GUERANDE 1",
+    "BANC DE GUERANDE 2"
+   ],
+   "eic": [
+    "17W0000014455651"
+   ],
+   "commune": "Saint-Nazaire",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "eol-SBR",
+   "nom": "Parc éolien en mer de Saint-Brieuc",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "Ailes Marines (Iberdrola)",
+   "region": "Bretagne",
+   "lat": 48.85,
+   "lon": -2.55,
+   "mise_service": 2024,
+   "statut": "en service",
+   "p_mw": 496,
+   "unites": [
+    {
+     "nom": "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
+     "eic": "17W100P100P0842Y",
+     "p_mw": 496
+    }
+   ],
+   "rte": "BAIE DE ST BRIEUC",
+   "groupes_entsoe": [
+    "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
+    "A2 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC"
+   ],
+   "eic": [
+    "17W100P100P0842Y"
+   ],
+   "commune": "Erquy",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "eol-FEC",
+   "nom": "Parc éolien en mer de Fécamp",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "EDF Renouvelables / Enbridge / CPP Investments / Skyborn",
+   "region": "Normandie",
+   "lat": 49.87,
+   "lon": 0.25,
+   "mise_service": 2024,
+   "statut": "en service",
+   "p_mw": 497,
+   "unites": [
+    {
+     "nom": "FECAMP 1",
+     "eic": "17W000001445569U",
+     "p_mw": 497
+    }
+   ],
+   "rte": "FECAMP",
+   "groupes_entsoe": [
+    "FECAMP 1",
+    "FECAMP 2"
+   ],
+   "eic": [
+    "17W000001445569U"
+   ],
+   "commune": "Fécamp",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "eol-YEU",
+   "nom": "Parc éolien en mer d'Yeu-Noirmoutier",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "Ocean Winds, Sumitomo, Banque des Territoires, Vendée Énergie",
+   "region": "Pays de la Loire",
+   "lat": 46.85,
+   "lon": -2.5,
+   "mise_service": 2026,
+   "statut": "en service",
+   "note": "Mis en service à 100 % le 29/04/2026. Raccordé à La Barre-de-Monts (registre national).",
+   "p_mw": 500,
+   "unites": [
+    {
+     "nom": "ADP 01 DE LA FERME EOLIENNE DE VENT-DES-ILES",
+     "eic": "17W000002144986W",
+     "p_mw": 500
+    }
+   ],
+   "rte": "VENT DES ILES",
+   "groupes_entsoe": [
+    "ADP 01 DE LA FERME EOLIENNE DE VENT-DES-ILES",
+    "ADP 02 DE LA FERME EOLIENNE DE VENT-DES-ILES"
+   ],
+   "eic": [
+    "17W000002144986W"
+   ],
+   "commune": "La Barre-de-Monts",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "eol-DTR",
+   "nom": "Parc éolien en mer de Dieppe-Le Tréport",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "Ocean Winds, Sumitomo, Banque des Territoires",
+   "region": "Normandie",
+   "lat": 50.08,
+   "lon": 1.2,
+   "p_mw": 248,
+   "mise_service": 2026,
+   "statut": "mise en service progressive (premiers électrons en juillet 2026)",
+   "rte": "RIDENS DE DIEPPE",
+   "groupes_entsoe": [
+    "ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
+    "ADP A2 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE"
+   ],
+   "commune": "Petit-Caux",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "Registre national des installations (ODRÉ) : R.DIEEA1 - ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
+  {
+   "id": "bio-GAR",
+   "nom": "Provence 4 Biomasse (Gardanne)",
+   "filiere": "bioenergies",
+   "type": "biomasse",
+   "exploitant": "GazelEnergie",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.45,
+   "lon": 5.47,
+   "mise_service": 2018,
+   "statut": "en service (redémarrée fin 2025)",
+   "p_mw": 150,
+   "unites": [
+    {
+     "nom": "PROVENCE 4",
+     "eic": "17W100P100P03655",
+     "p_mw": 150
+    }
+   ],
+   "rte": "PROVENCE 4",
+   "groupes_entsoe": [
+    "PROVENCE 4"
+   ],
+   "eic": [
+    "17W100P100P03655"
+   ],
+   "commune": "Gardanne",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Gardanne, geo.api.gouv.fr)",
+    "exploitant": "vérification web du 16/10/2026",
+    "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+   }
+  },
   {
    "id": "nuc-BEL",
    "nom": "Belleville",
@@ -14,7 +2313,13 @@
    "tranches": [
     "BEL1",
     "BEL2"
-   ]
+   ],
+   "commune": "Belleville-sur-Loire",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Belleville-sur-Loire, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-BLA",
@@ -31,7 +2336,13 @@
     "BLA2",
     "BLA3",
     "BLA4"
-   ]
+   ],
+   "commune": "Braud-et-Saint-Louis",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Braud-et-Saint-Louis, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-BUG",
@@ -48,7 +2359,13 @@
     "BUG3",
     "BUG4",
     "BUG5"
-   ]
+   ],
+   "commune": "Saint-Vulbas",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Saint-Vulbas, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-CAT",
@@ -65,7 +2382,13 @@
     "CAT2",
     "CAT3",
     "CAT4"
-   ]
+   ],
+   "commune": "Cattenom",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Cattenom, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-CHI",
@@ -82,7 +2405,13 @@
     "CHI2",
     "CHI3",
     "CHI4"
-   ]
+   ],
+   "commune": "Avoine",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Avoine, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-CHO",
@@ -97,7 +2426,13 @@
    "tranches": [
     "CHO1",
     "CHO2"
-   ]
+   ],
+   "commune": "Chooz",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Chooz, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-CIV",
@@ -112,7 +2447,13 @@
    "tranches": [
     "CIV1",
     "CIV2"
-   ]
+   ],
+   "commune": "Civaux",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Civaux, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-CRU",
@@ -129,7 +2470,13 @@
     "CRU2",
     "CRU3",
     "CRU4"
-   ]
+   ],
+   "commune": "Cruas",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Cruas, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-DAM",
@@ -146,7 +2493,13 @@
     "DAM2",
     "DAM3",
     "DAM4"
-   ]
+   ],
+   "commune": "Dampierre-en-Burly",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Dampierre-en-Burly, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-FLA",
@@ -157,12 +2510,18 @@
    "region": "Normandie",
    "lat": 49.54,
    "lon": -1.88,
-   "p_mw": 4260,
+   "p_mw": 4280,
    "tranches": [
     "FLA1",
     "FLA2",
     "FLA3"
-   ]
+   ],
+   "commune": "Flamanville",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Flamanville, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-GOL",
@@ -177,7 +2536,13 @@
    "tranches": [
     "GOL1",
     "GOL2"
-   ]
+   ],
+   "commune": "Golfech",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Golfech, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-GRA",
@@ -196,7 +2561,13 @@
     "GRA4",
     "GRA5",
     "GRA6"
-   ]
+   ],
+   "commune": "Gravelines",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Gravelines, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-NOG",
@@ -211,7 +2582,13 @@
    "tranches": [
     "NOG1",
     "NOG2"
-   ]
+   ],
+   "commune": "Nogent-sur-Seine",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Nogent-sur-Seine, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-PAL",
@@ -228,7 +2605,13 @@
     "PAL2",
     "PAL3",
     "PAL4"
-   ]
+   ],
+   "commune": "Paluel",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Paluel, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-PEN",
@@ -243,7 +2626,13 @@
    "tranches": [
     "PEN1",
     "PEN2"
-   ]
+   ],
+   "commune": "Petit-Caux",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Petit-Caux, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-SAL",
@@ -258,7 +2647,13 @@
    "tranches": [
     "SAL1",
     "SAL2"
-   ]
+   ],
+   "commune": "Saint-Maurice-l'Exil",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Saint-Maurice-l'Exil, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-SLB",
@@ -273,7 +2668,13 @@
    "tranches": [
     "SLB1",
     "SLB2"
-   ]
+   ],
+   "commune": "Saint-Laurent-Nouan",
+   "verif": {
+    "coordonnees": "relevées à la main, à 4 km du centre de la commune (Saint-Laurent-Nouan, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "nuc-TRI",
@@ -290,463 +2691,13 @@
     "TRI2",
     "TRI3",
     "TRI4"
-   ]
-  },
-  {
-   "id": "hyd-GMA",
-   "nom": "Grand'Maison",
-   "filiere": "hydraulique",
-   "type": "STEP",
-   "exploitant": "EDF",
-   "region": "Auvergne-Rhône-Alpes",
-   "lat": 45.2,
-   "lon": 6.12,
-   "p_mw": 1800,
-   "mise_service": 1987,
-   "rte": "GRAND MAISON"
-  },
-  {
-   "id": "hyd-MTZ",
-   "nom": "Montézic",
-   "filiere": "hydraulique",
-   "type": "STEP",
-   "exploitant": "EDF",
-   "region": "Occitanie",
-   "lat": 44.71,
-   "lon": 2.64,
-   "p_mw": 910,
-   "mise_service": 1982,
-   "rte": "MONTEZIC"
-  },
-  {
-   "id": "hyd-REV",
-   "nom": "Revin",
-   "filiere": "hydraulique",
-   "type": "STEP",
-   "exploitant": "EDF",
-   "region": "Grand Est",
-   "lat": 49.93,
-   "lon": 4.62,
-   "p_mw": 800,
-   "mise_service": 1976,
-   "rte": "REVIN"
-  },
-  {
-   "id": "hyd-SBI",
-   "nom": "Super-Bissorte",
-   "filiere": "hydraulique",
-   "type": "STEP",
-   "exploitant": "EDF",
-   "region": "Auvergne-Rhône-Alpes",
-   "lat": 45.22,
-   "lon": 6.48,
-   "p_mw": 730,
-   "mise_service": 1987,
-   "rte": "BISSORTE"
-  },
-  {
-   "id": "hyd-BAT",
-   "nom": "La Bâthie (Roselend)",
-   "filiere": "hydraulique",
-   "type": "lac",
-   "exploitant": "EDF",
-   "region": "Auvergne-Rhône-Alpes",
-   "lat": 45.63,
-   "lon": 6.45,
-   "p_mw": 546,
-   "mise_service": 1961,
-   "rte": "BATHIE"
-  },
-  {
-   "id": "hyd-SPO",
-   "nom": "Serre-Ponçon",
-   "filiere": "hydraulique",
-   "type": "lac",
-   "exploitant": "EDF",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "lat": 44.47,
-   "lon": 6.35,
-   "p_mw": 380,
-   "mise_service": 1960,
-   "rte": "SERRE PONCON"
-  },
-  {
-   "id": "hyd-BOR",
-   "nom": "Bort-les-Orgues",
-   "filiere": "hydraulique",
-   "type": "lac",
-   "exploitant": "EDF",
-   "region": "Nouvelle-Aquitaine",
-   "lat": 45.4,
-   "lon": 2.5,
-   "p_mw": 240,
-   "mise_service": 1952,
-   "rte": "BORT"
-  },
-  {
-   "id": "hyd-VOU",
-   "nom": "Vouglans",
-   "filiere": "hydraulique",
-   "type": "lac",
-   "exploitant": "EDF",
-   "region": "Bourgogne-Franche-Comté",
-   "lat": 46.4,
-   "lon": 5.67,
-   "p_mw": 285,
-   "mise_service": 1968,
-   "rte": "VOUGLANS"
-  },
-  {
-   "id": "hyd-CHA",
-   "nom": "Le Chastang",
-   "filiere": "hydraulique",
-   "type": "lac",
-   "exploitant": "EDF",
-   "region": "Nouvelle-Aquitaine",
-   "lat": 45.16,
-   "lon": 1.96,
-   "p_mw": 290,
-   "mise_service": 1951,
-   "rte": "CHASTANG"
-  },
-  {
-   "id": "hyd-GEN",
-   "nom": "Génissiat",
-   "filiere": "hydraulique",
-   "type": "fil",
-   "exploitant": "CNR",
-   "region": "Auvergne-Rhône-Alpes",
-   "lat": 46.05,
-   "lon": 5.81,
-   "p_mw": 420,
-   "mise_service": 1948,
-   "rte": "GENISSIAT"
-  },
-  {
-   "id": "hyd-DZM",
-   "nom": "Donzère-Mondragon",
-   "filiere": "hydraulique",
-   "type": "fil",
-   "exploitant": "CNR",
-   "region": "Auvergne-Rhône-Alpes",
-   "lat": 44.29,
-   "lon": 4.74,
-   "p_mw": 354,
-   "mise_service": 1952,
-   "rte": "BOLLENE"
-  },
-  {
-   "id": "hyd-VAL",
-   "nom": "Vallabrègues",
-   "filiere": "hydraulique",
-   "type": "fil",
-   "exploitant": "CNR",
-   "region": "Occitanie",
-   "lat": 43.86,
-   "lon": 4.62,
-   "p_mw": 210,
-   "mise_service": 1970,
-   "rte": "VALLABREGUES"
-  },
-  {
-   "id": "hyd-KEM",
-   "nom": "Kembs",
-   "filiere": "hydraulique",
-   "type": "fil",
-   "exploitant": "EDF",
-   "region": "Grand Est",
-   "lat": 47.68,
-   "lon": 7.5,
-   "p_mw": 160,
-   "mise_service": 1932,
-   "rte": "KEMBS"
-  },
-  {
-   "id": "hyd-OTT",
-   "nom": "Ottmarsheim",
-   "filiere": "hydraulique",
-   "type": "fil",
-   "exploitant": "EDF",
-   "region": "Grand Est",
-   "lat": 47.79,
-   "lon": 7.51,
-   "p_mw": 156,
-   "mise_service": 1952,
-   "rte": "OTTMARSHEIM"
-  },
-  {
-   "id": "gaz-MAR",
-   "nom": "Martigues",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "EDF",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "lat": 43.4,
-   "lon": 5.03,
-   "p_mw": 930,
-   "mise_service": 2012,
-   "rte": "MARTIGUES"
-  },
-  {
-   "id": "gaz-BLE",
-   "nom": "Blénod",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "EDF",
-   "region": "Grand Est",
-   "lat": 48.88,
-   "lon": 6.06,
-   "p_mw": 430,
-   "mise_service": 2011,
-   "rte": "BLENOD"
-  },
-  {
-   "id": "gaz-BOU",
-   "nom": "Bouchain",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "EDF",
-   "region": "Hauts-de-France",
-   "lat": 50.29,
-   "lon": 3.32,
-   "p_mw": 605,
-   "mise_service": 2016,
-   "rte": "BOUCHAIN"
-  },
-  {
-   "id": "gaz-DK6",
-   "nom": "DK6 Dunkerque",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "Engie",
-   "region": "Hauts-de-France",
-   "lat": 51.03,
-   "lon": 2.3,
-   "p_mw": 790,
-   "mise_service": 2005,
-   "rte": "DK6"
-  },
-  {
-   "id": "gaz-CYC",
-   "nom": "Cycofos",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "Engie",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "lat": 43.42,
-   "lon": 4.88,
-   "p_mw": 490,
-   "mise_service": 2010,
-   "rte": "CYCOFOS"
-  },
-  {
-   "id": "gaz-CBG",
-   "nom": "Combigolfe",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "Engie",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "lat": 43.44,
-   "lon": 4.85,
-   "p_mw": 435,
-   "mise_service": 2010,
-   "rte": "COMBIGOLFE"
-  },
-  {
-   "id": "gaz-MTO",
-   "nom": "Montoir-de-Bretagne",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "Engie",
-   "region": "Pays de la Loire",
-   "lat": 47.32,
-   "lon": -2.15,
-   "p_mw": 435,
-   "mise_service": 2010,
-   "rte": "MONTOIR"
-  },
-  {
-   "id": "gaz-LDV",
-   "nom": "Landivisiau",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "TotalEnergies",
-   "region": "Bretagne",
-   "lat": 48.51,
-   "lon": -4.05,
-   "p_mw": 446,
-   "mise_service": 2022,
-   "rte": "LANDIVISIAU"
-  },
-  {
-   "id": "gaz-PSS",
-   "nom": "Pont-sur-Sambre",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "TotalEnergies",
-   "region": "Hauts-de-France",
-   "lat": 50.22,
-   "lon": 3.85,
-   "p_mw": 412,
-   "mise_service": 2009,
-   "rte": "PONT SUR SAMBRE"
-  },
-  {
-   "id": "gaz-TOU",
-   "nom": "Toul",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "TotalEnergies",
-   "region": "Grand Est",
-   "lat": 48.68,
-   "lon": 5.89,
-   "p_mw": 413,
-   "mise_service": 2013,
-   "rte": "TOUL"
-  },
-  {
-   "id": "gaz-BAY",
-   "nom": "Bayet",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "TotalEnergies",
-   "region": "Auvergne-Rhône-Alpes",
-   "lat": 46.25,
-   "lon": 3.27,
-   "p_mw": 408,
-   "mise_service": 2011,
-   "rte": "BAYET"
-  },
-  {
-   "id": "gaz-EHU",
-   "nom": "Émile-Huchet 7-8 (Saint-Avold)",
-   "filiere": "gaz",
-   "type": "CCG",
-   "exploitant": "GazelEnergie",
-   "region": "Grand Est",
-   "lat": 49.15,
-   "lon": 6.71,
-   "p_mw": 860,
-   "mise_service": 2010,
-   "rte": "EMILE HUCHET"
-  },
-  {
-   "id": "cha-COR",
-   "nom": "Cordemais",
-   "filiere": "charbon",
-   "type": "charbon",
-   "exploitant": "EDF",
-   "region": "Pays de la Loire",
-   "lat": 47.28,
-   "lon": -1.88,
-   "p_mw": 1160,
-   "mise_service": 1983,
-   "rte": "CORDEMAIS",
-   "note": "Fermeture annoncée à l'horizon 2027."
-  },
-  {
-   "id": "fio-BRE",
-   "nom": "Brennilis TAC",
-   "filiere": "fioul",
-   "type": "TAC",
-   "exploitant": "EDF",
-   "region": "Bretagne",
-   "lat": 48.36,
-   "lon": -3.87,
-   "p_mw": 295,
-   "mise_service": 1980,
-   "rte": "BRENNILIS"
-  },
-  {
-   "id": "fio-VAI",
-   "nom": "Vaires-sur-Marne TAC",
-   "filiere": "fioul",
-   "type": "TAC",
-   "exploitant": "EDF",
-   "region": "Île-de-France",
-   "lat": 48.87,
-   "lon": 2.64,
-   "p_mw": 555,
-   "mise_service": 2008,
-   "rte": "VAIRES"
-  },
-  {
-   "id": "eol-SNZ",
-   "nom": "Parc éolien en mer de Saint-Nazaire",
-   "filiere": "eolien",
-   "type": "offshore",
-   "exploitant": "EDF Renouvelables / Enbridge",
-   "region": "Pays de la Loire",
-   "lat": 47.15,
-   "lon": -2.52,
-   "p_mw": 480,
-   "mise_service": 2022,
-   "rte": "SAINT NAZAIRE"
-  },
-  {
-   "id": "eol-SBR",
-   "nom": "Parc éolien en mer de Saint-Brieuc",
-   "filiere": "eolien",
-   "type": "offshore",
-   "exploitant": "Ailes Marines (Iberdrola)",
-   "region": "Bretagne",
-   "lat": 48.85,
-   "lon": -2.55,
-   "p_mw": 496,
-   "mise_service": 2024,
-   "rte": "SAINT BRIEUC"
-  },
-  {
-   "id": "eol-FEC",
-   "nom": "Parc éolien en mer de Fécamp",
-   "filiere": "eolien",
-   "type": "offshore",
-   "exploitant": "EDF Renouvelables / Enbridge / wpd",
-   "region": "Normandie",
-   "lat": 49.9,
-   "lon": 0.1,
-   "p_mw": 497,
-   "mise_service": 2024,
-   "rte": "FECAMP"
-  },
-  {
-   "id": "eol-COU",
-   "nom": "Parc éolien en mer du Calvados",
-   "filiere": "eolien",
-   "type": "offshore",
-   "exploitant": "EDF Renouvelables",
-   "region": "Normandie",
-   "lat": 49.45,
-   "lon": -0.46,
-   "p_mw": 448,
-   "mise_service": 2025,
-   "rte": "COURSEULLES"
-  },
-  {
-   "id": "eol-YEU",
-   "nom": "Parc éolien en mer d'Yeu-Noirmoutier",
-   "filiere": "eolien",
-   "type": "offshore",
-   "exploitant": "Ocean Winds",
-   "region": "Pays de la Loire",
-   "lat": 46.85,
-   "lon": -2.5,
-   "p_mw": 496,
-   "mise_service": 2025,
-   "rte": "YEU"
-  },
-  {
-   "id": "bio-GAR",
-   "nom": "Provence 4 Biomasse (Gardanne)",
-   "filiere": "bioenergies",
-   "type": "biomasse",
-   "exploitant": "GazelEnergie",
-   "region": "Provence-Alpes-Côte d'Azur",
-   "lat": 43.45,
-   "lon": 5.47,
-   "p_mw": 150,
-   "mise_service": 2018,
-   "rte": "PROVENCE 4"
+   ],
+   "commune": "Saint-Paul-Trois-Châteaux",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Saint-Paul-Trois-Châteaux, geo.api.gouv.fr)",
+    "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
+    "commune": "Registre national des installations (ODRÉ)"
+   }
   },
   {
    "id": "eol-RHDF",
@@ -757,8 +2708,11 @@
    "region": "Hauts-de-France",
    "lat": 50.09,
    "lon": 2.4,
-   "p_mw": 6300,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 6594,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RHDF",
@@ -769,8 +2723,11 @@
    "region": "Hauts-de-France",
    "lat": 49.85,
    "lon": 3.16,
-   "p_mw": 800,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1052,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RNOR",
@@ -781,8 +2738,11 @@
    "region": "Normandie",
    "lat": 49.24,
    "lon": -0.27,
-   "p_mw": 1000,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1168,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025, moins 497 MW en mer listés à part"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RNOR",
@@ -793,8 +2753,11 @@
    "region": "Normandie",
    "lat": 49.0,
    "lon": 0.49,
-   "p_mw": 600,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 620,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RIDF",
@@ -805,8 +2768,11 @@
    "region": "Île-de-France",
    "lat": 48.82,
    "lon": 2.12,
-   "p_mw": 100,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 140,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RIDF",
@@ -817,8 +2783,11 @@
    "region": "Île-de-France",
    "lat": 48.58,
    "lon": 2.88,
-   "p_mw": 600,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 523,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RGES",
@@ -829,8 +2798,11 @@
    "region": "Grand Est",
    "lat": 48.82,
    "lon": 5.22,
-   "p_mw": 4600,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 5166,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RGES",
@@ -841,8 +2813,11 @@
    "region": "Grand Est",
    "lat": 48.58,
    "lon": 5.98,
-   "p_mw": 2000,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 2602,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RBRE",
@@ -853,8 +2828,11 @@
    "region": "Bretagne",
    "lat": 48.27,
    "lon": -3.23,
-   "p_mw": 1300,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1487,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025, moins 496 MW en mer listés à part"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RBRE",
@@ -865,8 +2843,11 @@
    "region": "Bretagne",
    "lat": 48.03,
    "lon": -2.47,
-   "p_mw": 800,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1061,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RPDL",
@@ -877,8 +2858,11 @@
    "region": "Pays de la Loire",
    "lat": 47.52,
    "lon": -1.18,
-   "p_mw": 1300,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1870,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025, moins 480 MW en mer listés à part"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RPDL",
@@ -889,8 +2873,11 @@
    "region": "Pays de la Loire",
    "lat": 47.28,
    "lon": -0.42,
-   "p_mw": 1600,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 2160,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RCVL",
@@ -901,8 +2888,11 @@
    "region": "Centre-Val de Loire",
    "lat": 47.62,
    "lon": 1.32,
-   "p_mw": 1600,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1817,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RCVL",
@@ -913,8 +2903,11 @@
    "region": "Centre-Val de Loire",
    "lat": 47.38,
    "lon": 2.08,
-   "p_mw": 1200,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1919,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RBFC",
@@ -925,8 +2918,11 @@
    "region": "Bourgogne-Franche-Comté",
    "lat": 47.32,
    "lon": 4.42,
-   "p_mw": 1100,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1193,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RBFC",
@@ -937,8 +2933,11 @@
    "region": "Bourgogne-Franche-Comté",
    "lat": 47.08,
    "lon": 5.18,
-   "p_mw": 1000,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1608,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RNAQ",
@@ -949,8 +2948,11 @@
    "region": "Nouvelle-Aquitaine",
    "lat": 45.32,
    "lon": -0.18,
-   "p_mw": 2000,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 2152,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RNAQ",
@@ -961,8 +2963,11 @@
    "region": "Nouvelle-Aquitaine",
    "lat": 45.08,
    "lon": 0.58,
-   "p_mw": 5500,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 6782,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RARA",
@@ -973,8 +2978,11 @@
    "region": "Auvergne-Rhône-Alpes",
    "lat": 45.62,
    "lon": 4.12,
-   "p_mw": 700,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 785,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RARA",
@@ -985,8 +2993,11 @@
    "region": "Auvergne-Rhône-Alpes",
    "lat": 45.38,
    "lon": 4.88,
-   "p_mw": 3200,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 3836,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-ROCC",
@@ -997,8 +3008,11 @@
    "region": "Occitanie",
    "lat": 43.82,
    "lon": 1.82,
-   "p_mw": 1900,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 1793,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-ROCC",
@@ -1009,8 +3023,11 @@
    "region": "Occitanie",
    "lat": 43.58,
    "lon": 2.58,
-   "p_mw": 4500,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 5147,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RPAC",
@@ -1021,8 +3038,11 @@
    "region": "Provence-Alpes-Côte d'Azur",
    "lat": 44.07,
    "lon": 5.72,
-   "p_mw": 100,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 122,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RPAC",
@@ -1033,8 +3053,11 @@
    "region": "Provence-Alpes-Côte d'Azur",
    "lat": 43.83,
    "lon": 6.48,
-   "p_mw": 2600,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 2849,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "eol-RCOR",
@@ -1045,8 +3068,11 @@
    "region": "Corse",
    "lat": 42.27,
    "lon": 8.72,
-   "p_mw": 20,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 30,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   },
   {
    "id": "sol-RCOR",
@@ -1057,8 +3083,11 @@
    "region": "Corse",
    "lat": 42.03,
    "lon": 9.48,
-   "p_mw": 200,
-   "note": "Agrégat régional, puissance indicative."
+   "p_mw": 277,
+   "verif": {
+    "puissance": "ODRÉ, parc régional annuel éolien et solaire, fin 2025"
+   },
+   "note": "Agrégat régional : parc installé fin 2025 (ODRÉ)."
   }
  ]
 }

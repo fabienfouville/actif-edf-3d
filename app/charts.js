@@ -37,7 +37,7 @@ export function heatmap(cells, { w = 340, labels = [] } = {}) {
 
 /** Courbes. series = [{v:[], color, label, area?, dash?}]. */
 export function lines(series, { w = 340, h = 120, yLabel = '', xLabels = [], zero = false, marker = null } = {}) {
-  const all = series.flatMap((s) => s.v.filter((x) => x != null && !Number.isNaN(x)));
+  const all = series.flatMap((s) => [...s.v, ...(s.band ? s.band.flat() : [])].filter((x) => x != null && !Number.isNaN(x)));
   if (!all.length) return '<p class="muted">Pas de données.</p>';
   let min = Math.min(...all), max = Math.max(...all);
   if (zero) min = Math.min(0, min);
@@ -50,6 +50,10 @@ export function lines(series, { w = 340, h = 120, yLabel = '', xLabels = [], zer
   if (yLabel) s += `<text x="${pad.l}" y="${pad.t - 1}" class="ax">${esc(yLabel)}</text>`;
   xLabels.forEach(([i, lab]) => { s += `<text x="${X(i)}" y="${h - 3}" class="ax" text-anchor="middle">${esc(lab)}</text>`; });
   for (const se of series) {
+    if (se.band) { // enveloppe min/max
+      const [lo, hi] = se.band;
+      s += `<path d="M${hi.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join('L')}L${lo.map((v, i) => [i, v]).reverse().map(([i, v]) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join('L')}Z" fill="${se.color}" opacity=".14"/>`;
+    }
     const pts = se.v.map((v, i) => (v == null || Number.isNaN(v) ? null : [X(i), Y(v)]));
     let d = '', open = false;
     pts.forEach((p) => { if (!p) { open = false; return; } d += (open ? 'L' : 'M') + p[0].toFixed(1) + ',' + p[1].toFixed(1); open = true; });

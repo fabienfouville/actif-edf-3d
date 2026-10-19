@@ -17,7 +17,7 @@ from datetime import timedelta
 import demo
 from common import (DATA, MIX_KEYS, SERIES, days_ago, empty_month, hour_floor, iso, load_json, month_key,
                     month_path, month_start, months_between, now, rnd, save_json)
-from sources import eco2mix, energycharts_prices, entsoe_prices, env, match_units, rte_units
+from sources import eco2mix, energycharts_prices, entsoe_prices, entsoe_units, env, match_units, rte_units
 
 
 def catalog():
@@ -52,6 +52,9 @@ def main():
     first_real = meta.get("mode") != "reel"
     days = max(args.days, 400 if first_real else 0)
     start, end = days_ago(days), hour_floor(now())
+    # tant que la production par groupe n'a jamais été récupérée, on reprend tout son historique
+    units_ok_before = bool((meta.get("sources") or {}).get("units", {}).get("ok"))
+    ustart = start if units_ok_before else days_ago(max(days, 400))
     print(f"Fenêtre {iso(start)} → {iso(end)} ({days} j)")
     status = {}
 
@@ -89,14 +92,22 @@ def main():
     cid, sec = env("RTE_CLIENT_ID"), env("RTE_CLIENT_SECRET")
     if cid and sec:
         try:
-            raw, _types = rte_units(start, end, cid, sec)
+            raw, _types = rte_units(ustart, end, cid, sec)
             units, unmatched = match_units(raw, cat)
             status["units"] = {"ok": True, "source": "rte", "groupes": len(units)}
         except Exception as e:
             print("RTE KO :", e)
             status["units"] = {"ok": False, "erreur": str(e)[:200]}
-    else:
-        status["units"] = {"ok": False, "source": None, "note": "Secrets RTE absents : production par groupe modélisée dans le navigateur."}
+    if not units and tok:
+        try:
+            raw, _types = entsoe_units(ustart, end, tok)
+            units, unmatched = match_units(raw, cat)
+            status["units"] = {"ok": True, "source": "entsoe", "groupes": len(units), "groupes_publies": len(raw)}
+        except Exception as e:
+            print("ENTSO-E par groupe KO :", e)
+            status["units"] = {"ok": False, "erreur": str(e)[:200]}
+    if "units" not in status:
+        status["units"] = {"ok": False, "source": None, "note": "Ni RTE ni ENTSO-E : production par groupe modélisée dans le navigateur."}
 
     # 4. écriture des fichiers mensuels
     if first_real:
@@ -119,10 +130,10 @@ def main():
             put(months, h, set_p)
     for uid, ser in units.items():
         for h, v in ser.items():
-            if start <= h <= end:
+            if ustart <= h <= end:
                 def set_u(m, i, uid=uid, v=v):
                     m["units"].setdefault(uid, [None] * m["n"])[i] = rnd(v)
-                    m["sources"]["units"] = "rte"
+                    m["sources"]["units"] = status["units"].get("source") or "rte"
                 put(months, h, set_u)
     for key, m in months.items():
         save_json(month_path(key), m)

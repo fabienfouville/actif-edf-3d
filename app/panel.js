@@ -1,7 +1,9 @@
-// Fiche actif : 4 onglets (Merit, Couverture, Valo, JSON) et liste des tranches.
+// Fiche actif : 6 onglets (Merit, Prévision, Pricing, Couverture, Valo, JSON) et liste des tranches.
 import { bars, col, fmt, heatmap as heatSvg, lines, tornadoChart, waterfall } from './charts.js';
 import { dcf, heatmap, hedge, kpis, marginalSeries, rankSeries, srmc, srmcParts, tech, tornado } from './finance.js';
 import { hourDate } from './data.js';
+import { mcAt, parisMidnight } from './forward.js';
+import { CONSTRAINTS, exportJson, methodOf, parseScenarios, priceIt } from './pricing.js';
 import { icon } from './icons.js';
 
 const LBL = { nucleaire: 'Nucléaire', hydraulique: 'Hydraulique', gaz: 'Gaz', charbon: 'Charbon', fioul: 'Fioul', eolien: 'Éolien', solaire: 'Solaire', bioenergies: 'Bioénergies' };
@@ -10,9 +12,18 @@ const dShort = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short'
 const dMonth = new Intl.DateTimeFormat('fr-FR', { month: 'short', timeZone: 'Europe/Paris' });
 const dFull = new Intl.DateTimeFormat('fr-FR', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Paris' });
 
+/** « AAAA-MM-JJTHH:MM » à l'heure de Paris → instant UTC. */
+function parisLocalToUtc(s) {
+  const [d, t = '00:00'] = s.split('T'), [y, m, dd] = d.split('-').map(Number), [hh, mm] = t.split(':').map(Number);
+  return parisMidnight(y, m - 1, dd) + (hh * 60 + (mm || 0)) * 60e3;
+}
+
 export function createPanel(el, D, { onClose, onPick, emit }) {
   let ent = null, tab = 'merit', hour = D.now;
   const sim = {};   // réglages des curseurs, par entité
+  const fwdSt = { from: '2026-11', to: '2027-12', mo: '2027-01' };
+  const px = {};    // formulaire de pricing, par entité
+  let scen = null, lastPrice = null;
 
   /** Entité affichée : une tranche, ou un site/actif (somme de ses unités). */
   function entity(id) {
@@ -47,10 +58,12 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
   }
 
   function sourceNote(e) {
-    const realU = e.units.every((u) => u.real);
     if (D.meta.mode === 'demo') return '<span class="tag warn">Données de démonstration</span>';
-    if (realU) return '<span class="tag ok">Production mesurée (RTE, par groupe)</span>';
-    return '<span class="tag">Production modélisée : part du mix national de la filière</span>';
+    const src = { rte: 'RTE Data', entsoe: 'ENTSO-E' }[D.meta.sources?.units?.source] || 'source officielle';
+    const cov = e.units.reduce((s, u) => s + (u.realHours || 0) * u.p_mw, 0) / (e.units.reduce((s, u) => s + u.p_mw, 0) * (D.now + 1));
+    if (cov > 0.95) return `<span class="tag ok">Production mesurée par groupe (${src})</span>`;
+    if (cov > 0.01) return `<span class="tag">Production mesurée (${src}) sur ${fmt(cov * 100)} % des heures, estimée ailleurs</span>`;
+    return '<span class="tag">Production estimée : part du mix national de la filière</span>';
   }
 
   function header(e) {
@@ -58,7 +71,7 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     const nSites = e.fil ? new Set(e.units.map((x) => x.mapId).filter(Boolean)).size : 0;
     const bits = e.fil
       ? [u.filiere === 'nucleaire' ? `${e.units.length} tranches · ${nSites} sites` : `${nSites} centrales ou parcs suivis`, `${fmt(u.p_mw / 1000, 1)} GW installés`, u.exploitant]
-      : [LBL[u.filiere], u.type && u.type !== 'diffus' ? u.type : null, u.palier, `${fmt(u.p_mw)} MW`, u.exploitant, a.region];
+      : [LBL[u.filiere], u.type && u.type !== 'diffus' ? u.type : null, u.palier, `${fmt(u.p_mw)} MW`, u.exploitant, a.commune, a.region];
     const crumb = u.tranche ? `<button class="crumb" data-pick="${u.mapId}">← ${esc(e.asset?.nom)}</button>`
       : !e.fil ? `<button class="crumb" data-pick="fil-${u.filiere}">← Parc ${esc(LBL[u.filiere].toLowerCase())}</button>` : '';
     const now = e.prod[hour];
@@ -68,9 +81,10 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
       <div class="p-title">${icon(u.filiere, 34)}<h2>${esc(e.nom)}</h2></div>
       <p class="p-sub mono">${bits.filter(Boolean).map(esc).join(' · ')}</p>
       <p class="p-now"><span>${dFull.format(hourDate(D, hour))}</span> <b>${e.fil ? `${fmt(now / 1000, 1)} GW` : `${fmt(now)} MW`}</b> <span class="muted">soit ${fmt(now / u.p_mw * 100)} % · CMg ${fmt(e.cmg)} €/MWh</span></p>
+      ${a.statut && a.statut !== 'en service' ? `<p class="tag warn">${esc(a.statut)}</p>` : ''}
       ${a.note ? `<p class="muted small">${esc(a.note)}</p>` : ''}
     </div>
-    <div class="tabs" role="tablist">${[['merit', 'Merit'], ['hedge', 'Couverture'], ['valo', 'Valo'], ['json', 'JSON']]
+    <div class="tabs" role="tablist">${[['merit', 'Merit'], ['fwd', 'Prévision'], ['price', 'Pricing'], ['hedge', 'Couverture'], ['valo', 'Valo'], ['json', 'JSON']]
       .map(([k, l]) => `<button role="tab" aria-selected="${k === tab}" data-tab="${k}">${l}</button>`).join('')}</div>`;
   }
 
@@ -195,14 +209,14 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     <section>
       <h3>Simulateur de couverture <span class="muted">1 an de production</span></h3>
       ${isEdfNuc ? `<div class="seg" role="group" aria-label="Année de livraison">${Object.keys(cov).filter((y) => !y.startsWith('_')).map((y) => `<button data-year="${y}" aria-pressed="${s.annee === y}">${y}</button>`).join('')}</div>
-      <p class="muted small">Part vendue à terme et prix : ${esc(cov._statut)}</p>` : '<p class="muted small">Exemple : vendre une partie de la production à terme pour fixer le prix, le reste au spot.</p>'}
+      <p class="muted small">${esc(cov._statut)} <br>Source : ${esc(cov._source)}</p>` : '<p class="muted small">Exemple : vendre une partie de la production à terme pour fixer le prix, le reste au spot.</p>'}
       ${slider('h-part', 'Vendu à terme', s.part, 0, 1, 0.01, '%')}
       ${slider('h-terme', 'Prix à terme', s.terme, 0, 200, 1, '€/MWh')}
       ${slider('h-spot', 'Prix spot moyen (scénario)', s.spot, -10, 250, 1, '€/MWh')}
       ${slider('h-lf', 'Facteur de charge', s.lf, 0.02, 1, 0.01, '%')}
       ${waterfall(res.items, res.marge)}
       <p class="small">Prix moyen obtenu <b>${fmt(res.prix_moyen, 1)} €/MWh</b> sur ${fmt(vol / 1e6, 2)} TWh. Avec 10 €/MWh de spot en plus, la marge varie de <b>${fmt(up.marge - res.marge, 1)} M€</b> : c'est l'exposition qui reste après couverture.</p>
-      ${isEdfNuc ? `<p class="muted small">VNU : ${esc(D.params.vnu._statut)} Coût complet de référence ${fmt(D.params.vnu.cout_complet_cre, 1)} €/MWh (estimation CRE 2026-2028).</p>` : ''}
+      ${isEdfNuc ? `<p class="muted small">VNU : seuils ${fmt(D.params.vnu.seuil1)} et ${fmt(D.params.vnu.seuil2)} €/MWh, reversement ${fmt(D.params.vnu.taux1 * 100)} % puis ${fmt(D.params.vnu.taux2 * 100)} %. ${esc(D.params.vnu._source)} Coût complet ${fmt(D.params.vnu.cout_complet_cre, 1)} €/MWh : ${esc(D.params.vnu._source_cout_complet)}</p>` : ''}
     </section>`;
   }
 
@@ -240,6 +254,141 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     </section>`;
   }
 
+
+  // ---------------------------------------------------------------- prévision (HPFC)
+  const MOIS = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+  const monthRange = (k0, k1) => {
+    const F = D.FWD, a = F.months.findIndex((o) => o.k === k0), b = F.months.findIndex((o) => o.k === k1);
+    let i0 = -1, i1 = -1;
+    for (let i = 0; i < F.n; i++) { const mi = F.MI[i]; if (mi >= a && i0 < 0) i0 = i; if (mi <= b) i1 = i + 1; }
+    return [i0, i1];
+  };
+  /** Unité de référence (techno) de l'entité, ou null pour un agrégat de filière. */
+  const refUnit = (e) => (e.fil ? null : e.units[0]);
+  const cmLabel = (u) => (u.filiere === 'hydraulique' && u.type !== 'fil' ? "valeur de l'eau (hypothèse)" : 'coût marginal');
+
+  function tabFwd(e) {
+    const F = D.FWD, u = refUnit(e) || { ...e.u, type: e.u.filiere === 'gaz' ? 'CCG' : null };
+    const opts = (sel) => F.months.map((o) => `<option value="${o.k}" ${o.k === sel ? 'selected' : ''}>${MOIS[o.m]} ${o.y}</option>`).join('');
+    const [i0, i1] = monthRange(fwdSt.from, fwdSt.to);
+    if (!(i1 > i0)) return `<section>${fwdForm(opts)}<p class="muted">Choisis une fin postérieure au début.</p></section>`;
+    const days = [], lo = [], hi = [], cms = [], xl = [];
+    let itm = 0, intr = 0, n = 0;
+    const every = Math.max(1, Math.ceil((F.MI[i1 - 1] - F.MI[i0] + 1) / 5));
+    for (let i = i0; i < i1;) {
+      const d0 = i; let s = 0, mn = Infinity, mx = -Infinity, cs = 0, c = 0;
+      do {
+        const v = F.F[i], m = mcAt(u, i, D.params, F); s += v; mn = Math.min(mn, v); mx = Math.max(mx, v); cs += m; c++;
+        n++; if (v > m) { itm++; intr += v - m; } i++;
+      } while (i < i1 && F.HR[i] !== 0);
+      days.push(s / c); lo.push(mn); hi.push(mx); cms.push(cs / c);
+      const o = F.months[F.MI[d0]];
+      if ((d0 === i0 || F.MI[d0] !== F.MI[d0 - 1]) && (F.MI[d0] - F.MI[i0]) % every === 0) xl.push([days.length - 1, `${MOIS[o.m].replace('.', '')} ${String(o.y).slice(2)}`]);
+    }
+    // forme journalière du mois choisi
+    const [j0, j1] = monthRange(fwdSt.mo, fwdSt.mo);
+    const wd = new Array(24).fill(0), we = new Array(24).fill(0), cw = new Array(24).fill(0), ce = new Array(24).fill(0);
+    for (let i = j0; i < j1; i++) { const h = F.HR[i]; if (F.WE[i]) { we[h] += F.F[i]; ce[h]++; } else { wd[h] += F.F[i]; cw[h]++; } }
+    const cm = mcAt(u, j0, D.params, F), mo = F.months.find((o) => o.k === fwdSt.mo);
+    const edited = (k) => { const a = D.market0.electricite[k], b = D.market.electricite[k]; return a && b && (a.base !== b.base || a.pointe !== b.pointe); };
+    const st = (k) => (F.flags[k] ? `<span class="tag">${F.flags[k]}</span>` : edited(k) ? '<span class="tag warn">saisi</span>' : '<span class="tag ok">EEX 15/10</span>');
+    const rows = Object.keys(D.market.electricite).filter((k) => !k.startsWith('_')).concat(Object.keys(F.flags).filter((k) => !D.market.electricite[k]));
+    const chk = Object.fromEntries(F.check.map((c) => [c.produit, c]));
+    return `<section>${fwdForm(opts)}
+      ${lines([{ v: days, band: [lo, hi], color: 'var(--accent)' }, { v: cms, color: col(e.u.filiere), dash: true }], { yLabel: `€/MWh · jour (pointillé : ${cmLabel(u)})`, xLabels: xl, h: 150 })}
+      <div class="kgrid"><div><span>Base de la période</span><b>${fmt(days.reduce((a, b) => a + b, 0) / days.length, 1)} €</b></div>
+        <div><span>Heures où le prix couvre le CMg</span><b>${fmt(itm / n * 100)} %</b></div>
+        ${e.fil || !methodOf(u) ? '' : `<div><span>Valeur intrinsèque</span><b>${fmtE(intr * e.u.p_mw)}</b><small>Σ (F − CMg)⁺ × ${fmt(e.u.p_mw)} MW</small></div>`}
+        <div><span>Spot 30 derniers jours</span><b>${fmt(F.m30, 1)} €</b><small>proxy nov.-déc. 26</small></div></div>
+    </section>
+    <section><h3>Forme journalière prévue · ${MOIS[mo.m]} ${mo.y}</h3>
+      ${lines([{ v: wd.map((v, h) => v / cw[h]), color: 'var(--accent)' }, { v: we.map((v, h) => v / ce[h]), color: 'var(--muted)', dash: true }, { v: new Array(24).fill(cm), color: col(e.u.filiere), dash: true }],
+        { yLabel: '€/MWh · trait : semaine, pointillé gris : week-end', xLabels: [[0, '0 h'], [6, '6 h'], [12, '12 h'], [18, '18 h'], [23, '23 h']], h: 120 })}
+    </section>
+    <section><h3>Produits utilisés et contrôle de la courbe</h3>
+      <table class="rel small"><thead><tr><th>Produit</th><th>Base</th><th>Pointe</th><th>Courbe (base / pointe)</th><th>Statut</th></tr></thead><tbody>
+      ${rows.map((k) => { const v = F.pw[k], c = chk[k];
+        return `<tr><td><b>${k}</b></td><td class="mono">${v ? fmt(v.b, 2) : '–'}</td><td class="mono">${v?.p != null ? fmt(v.p, 2) : '–'}</td><td class="mono">${c ? `${fmt(c.base_courbe, 2)} / ${c.pointe_courbe != null ? fmt(c.pointe_courbe, 2) : '–'}` : '–'}</td><td>${v ? st(k) : '<span class="tag warn">proxy spot 30 j</span>'}</td></tr>`; }).join('')}
+      </tbody></table>
+      <p class="muted small">Courbe horaire (HPFC) de novembre 2026 à décembre 2029, à l'heure de Paris (changements d'heure compris). Niveaux tirés des seuls produits liquides : Cal-27/28/29 et Q1 à Q3-27, Q4-27 déduit par arbitrage. Saisonnalité mensuelle standard, forme horaire estimée sur ${fmt((D.now + 1) / 24)} jours de spot réel (ENTSO-E), puis calage exact base et pointe de chaque produit. Gaz : PEG du mois. Produits modifiables dans Hypothèses.</p>
+    </section>`;
+  }
+  function fwdForm(opts) {
+    return `<div class="form3"><label>Début<select data-fwd="from">${opts(fwdSt.from)}</select></label><label>Fin<select data-fwd="to">${opts(fwdSt.to)}</select></label><label>Mois (forme)<select data-fwd="mo">${opts(fwdSt.mo)}</select></label></div>`;
+  }
+  const fmtE = (x) => { if (x == null || Number.isNaN(x)) return '–'; const a = Math.abs(x); return a >= 1e6 ? `${fmt(x / 1e6, 2)} M€` : a >= 1e3 ? `${fmt(x / 1e3, 1)} k€` : `${fmt(x)} €`; };
+
+  // ---------------------------------------------------------------- pricing de contraintes
+  /** Unités pricables de l'entité : tranches, ou groupes ENTSO-E d'une centrale. */
+  function pricingUnits(e) {
+    if (e.fil) return [];
+    if (e.u.tranche) return [{ id: e.u.id, nom: e.u.nom, p_mw: e.u.p_mw }];
+    if (e.units.some((x) => x.tranche)) return e.units.filter((x) => x.tranche).map((x) => ({ id: x.id, nom: x.nom, p_mw: x.p_mw }));
+    const us = e.asset?.unites;
+    return us?.length ? us.map((x) => ({ id: x.nom, nom: x.nom, p_mw: x.p_mw })) : [{ id: e.id, nom: e.nom, p_mw: e.u.p_mw }];
+  }
+  const parcRev = (y) => D.market.revenu_parc_nucleaire[y] ?? D.FWD.pw[`Cal-${String(y).slice(2)}`]?.b ?? null;
+  const vnu = () => ({ s1: D.params.vnu.seuil1, s2: D.params.vnu.seuil2, t1: D.params.vnu.taux1, t2: D.params.vnu.taux2 });
+  function pxState(e) {
+    const u = refUnit(e), all = pricingUnits(e);
+    const pm = D.market.pmin_pct, tk = u.filiere === 'gaz' && u.type === 'TAC' ? 'gaz:TAC' : u.filiere;
+    return px[e.id] || (px[e.id] = { c: 'int', from: '2027-01-01', to: '2027-01-31', sel: all.map((x) => x.id), pminPct: pm[tk] ?? 40, lim: Math.round(e.u.p_mw / 2), hourly: false });
+  }
+  function tabPrice(e) {
+    if (e.fil) return '<section><p>Le pricing se fait sur une centrale ou une tranche. Ouvre un site depuis la liste ci-dessous ou la recherche.</p></section>' + membersList(e);
+    const u = refUnit(e), m = methodOf(u);
+    if (!m) {
+      const why = u.filiere === 'hydraulique' && u.type === 'fil' ? "Fil de l'eau : coût = production fatale perdue × prix ; il faut un débit de référence."
+        : u.filiere === 'hydraulique' ? "Hydro à réservoir ou STEP : la valeur dépend du stock et de la valeur d'usage de l'eau (cotes, apports). Pas de méthode déterministe simple sans le modèle de gestion du stock."
+          : 'Production fatale (éolien, solaire, cogénération) : la contrainte se valorise au prix capté perdu, méthode à définir.';
+      return `<section><div class="result"><b>Méthode de pricing à définir</b><p class="muted small">${why} La courbe forward et l'historique restent disponibles dans les autres onglets.</p></div></section>`;
+    }
+    const st = pxState(e), all = pricingUnits(e);
+    return `<section>
+      <p class="muted small">${m === 'deterministic_nuclear_vnu' ? 'Nucléaire : pricing déterministe sur la courbe, valeur marginale après VNU (seuils ' + vnu().s1 + ' et ' + vnu().s2 + ' €/MWh).' : 'Thermique : valeur intrinsèque horaire sur la courbe (en marche si F > CMg). Démarrages et durées minimales : à traiter dans Astral / M2F avec l\'export ci-dessous.'}</p>
+      <div class="form3">
+        <label>Contrainte<select data-px="c">${Object.entries(CONSTRAINTS).map(([k, l]) => `<option value="${k}" ${k === st.c ? 'selected' : ''}>${l}</option>`).join('')}</select></label>
+        <label>Pmin (% de Pn)<input data-px="pminPct" type="number" min="0" max="100" step="1" value="${st.pminPct}"></label>
+        ${st.c === 'lim' ? `<label>Limite X (MW)<input data-px="lim" type="number" min="0" step="10" value="${st.lim}"></label>` : ''}
+        <label>Du<input data-px="from" type="date" min="2026-11-01" max="2029-12-31" value="${st.from}"></label>
+        <label>Au (inclus)<input data-px="to" type="date" min="2026-11-01" max="2029-12-31" value="${st.to}"></label>
+      </div>
+      <div class="units">${all.map((x) => `<label class="unit"><input type="checkbox" data-pxu="${esc(x.id)}" ${st.sel.includes(x.id) ? 'checked' : ''}> ${esc(x.nom)} · ${fmt(x.p_mw)} MW</label>`).join('')}</div>
+      <div class="px-row"><button class="btn" data-act="price">Pricer</button>
+        <label class="btn ghost small">Importer des scénarios (JSON)<input type="file" accept=".json,application/json" data-act="scen" hidden></label>
+        <span class="muted small">${scen ? `${scen.paths.length} trajectoires chargées` : 'Sans scénarios : intrinsèque seul'}</span></div>
+      <div id="px-out">${lastPrice && lastPrice.id === e.id ? priceResult(e, st, lastPrice.r) : ''}</div>
+    </section>`;
+  }
+  function priceResult(e, st, r) {
+    if (r.err) return `<p class="tag warn">${esc(r.err)}</p>`;
+    const nuc = r.method === 'deterministic_nuclear_vnu', ms = Object.keys(r.byM);
+    const years = [...new Set(ms.map((k) => k.slice(0, 4)))];
+    const j = JSON.stringify(exportJson({ asset: e.asset || { id: e.id, nom: e.nom, exploitant: e.u.exploitant }, u: refUnit(e), st: { ...st, units: chosen(e, st) }, r,
+      ctx: { params: D.params, FWD: D.FWD, vnu: vnu() }, market: D.market, hourly: st.hourly }), null, 1);
+    return `<div class="result">
+      <span class="muted small">${CONSTRAINTS[st.c]} · ${fmt(r.Pn)} MW (Pmin ${fmt(r.Pmin)} MW) · ${fmt(r.n)} h · ${nuc ? 'déterministe nucléaire + VNU' : 'intrinsèque horaire'}</span>
+      <div class="big">${fmtE(r.cost)}</div>
+      <span class="small">${r.cost >= 0 ? 'Coût pour EDF (manque à gagner)' : 'Gain pour EDF'} · ${r.mwh ? fmt(r.cost / r.mwh, 2) : '–'} €/MWh contraint · ${fmt(r.mwh / 1e3, 1)} GWh déplacés · ${fmt(r.itm / r.n * 100)} % d'heures où F > CMg</span>
+      ${nuc ? `<p class="small">Avant VNU : ${fmtE(r.costGross)}. Revenu du parc retenu : ${years.map((y) => `${y} ${fmt(parcRev(+y), 1)}`).join(' · ')} €/MWh (seuils ${vnu().s1} / ${vnu().s2}).</p>` : ''}
+      ${r.ext ? `<p class="small">${r.ext.n ? `Scénarios (${r.ext.n} trajectoires complètes) : <b>${fmtE(r.ext.mean)}</b> · extrinsèque ${fmtE(r.ext.extrinseque)}` : 'Les scénarios importés ne couvrent pas toute la période.'}</p>` : ''}
+    </div>
+    ${(() => { const big = Math.max(...ms.map((k) => Math.abs(r.byM[k]))) >= 1e6, d = big ? 1e6 : 1e3;
+      return bars(ms.map((k) => ({ k: MOIS[+k.slice(5) - 1].slice(0, 3), v: r.byM[k] / d, color: col(e.u.filiere) })), { unit: `${big ? 'M€' : 'k€'} par mois` }); })()}
+    <h3>Export vers Astral / M2F</h3>
+    <label class="small"><input type="checkbox" data-px="hourly" ${st.hourly ? 'checked' : ''}> inclure la courbe horaire (F et CMg)</label>
+    <pre class="json" tabindex="0">${esc(j)}</pre>
+    <div class="px-row"><button class="btn small" data-act="copy-px">Copier le JSON</button></div>`;
+  }
+  const chosen = (e, st) => pricingUnits(e).filter((x) => st.sel.includes(x.id));
+  function runPricing() {
+    const e = ent, st = pxState(e);
+    const r = priceIt({ ...st, units: chosen(e, st) }, { u: refUnit(e), P: D.params, FWD: D.FWD, vnu: vnu(), parcRev, scen });
+    lastPrice = { id: e.id, r };
+    emit('price', e);
+    render();
+  }
+
   function jsonOf(e) {
     const [h0, h1] = window12();
     const k = kpis(e.u, e.prod, D.price, e.cmg, h0, h1, marg(), D.units);
@@ -248,13 +397,16 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     const lastMonth = D.meta.mois[D.meta.mois.length - 1];
     return {
       id: e.id, nom: e.nom, filiere: e.u.filiere, type: e.u.type, exploitant: e.u.exploitant, region: e.asset?.region ?? e.u.region,
-      p_mw: e.u.p_mw, geo: e.asset ? [e.asset.lat, e.asset.lon] : null,
+      p_mw: e.u.p_mw, geo: e.asset ? [e.asset.lat, e.asset.lon] : null, commune: e.asset?.commune,
+      mise_service: e.asset?.mise_service, statut: e.asset?.statut, eic: (e.u.tranche?.eic ? [e.u.tranche.eic] : e.asset?.eic) || undefined,
+      groupes_entsoe: e.asset?.groupes_entsoe,
       tranches: e.u.tranche ? undefined : e.units.filter((u) => u.tranche).map((u) => ({ id: u.id, palier: u.palier, p_net_mw: u.p_mw, couplage: u.couplage })),
       tranche: e.u.tranche || undefined,
       cmg_eur_mwh: r(e.cmg, 1), cmg_detail: srmcParts(e.u, D.params).map((p) => ({ [p.k]: r(p.v, 1) })),
       heure_affichee: { t: hourDate(D, hour).toISOString(), production_mw: r(e.prod[hour], 0), prix_spot: r(D.price[hour], 1) },
       kpi_12_mois: Object.fromEntries(Object.entries(k).map(([kk, v]) => [kk, r(v, 3)])),
       simulation: s,
+      sources_verifiees: (e.u.tranche?.verif || e.asset?.verif) ?? undefined,
       donnees: { mode: D.meta.mode, production: e.units.every((u) => u.real) ? 'mesurée' : 'modélisée', genere: D.meta.genere },
       fichiers: ['data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/meta.json', `data/series/${lastMonth}.json`],
     };
@@ -273,7 +425,7 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
 
   function render() {
     if (!ent) return;
-    const body = { merit: tabMerit, hedge: tabHedge, valo: tabValo, json: tabJson }[tab](ent);
+    const body = { merit: tabMerit, fwd: tabFwd, price: tabPrice, hedge: tabHedge, valo: tabValo, json: tabJson }[tab](ent);
     const scroll = el.querySelector('.p-body')?.scrollTop || 0;
     el.innerHTML = header(ent) + `<div class="p-body">${body}</div>`;
     el.querySelector('.p-body').scrollTop = scroll;
@@ -291,11 +443,40 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
       Object.assign(s, { annee: t.dataset.year, part: c.part, terme: c.prix });
       render(); return;
     }
+    if (t.dataset.act === 'price') return runPricing();
+    if (t.dataset.act === 'copy-px') {
+      const pre = t.closest('#px-out').querySelector('pre.json');
+      navigator.clipboard?.writeText(pre.textContent).then(() => { t.textContent = 'Copié'; }, () => {
+        const sel = getSelection(), r = document.createRange(); r.selectNodeContents(pre); sel.removeAllRanges(); sel.addRange(r);
+      });
+      return;
+    }
     if (t.hasAttribute('data-copy')) {
       const txt = JSON.stringify(jsonOf(ent), null, 2);
       navigator.clipboard?.writeText(txt).then(() => { t.textContent = 'Copié'; }, () => {
         const sel = getSelection(), r = document.createRange(); r.selectNodeContents(el.querySelector('pre.json')); sel.removeAllRanges(); sel.addRange(r);
       });
+    }
+  });
+  el.addEventListener('change', (ev) => {
+    const i = ev.target;
+    if (!ent) return;
+    if (i.dataset.fwd) { fwdSt[i.dataset.fwd] = i.value; render(); return; }
+    if (i.dataset.act === 'scen' && i.files?.[0]) {
+      i.files[0].text().then((txt) => {
+        try { scen = parseScenarios(JSON.parse(txt), parisLocalToUtc); emit('toast', `${scen.paths.length} trajectoires chargées`); }
+        catch (err) { emit('toast', err.message || 'Fichier de scénarios illisible'); }
+        render();
+      });
+      return;
+    }
+    const st = ent && !ent.fil && px[ent.id];
+    if (!st) return;
+    if (i.dataset.pxu) { st.sel = i.checked ? [...new Set([...st.sel, i.dataset.pxu])] : st.sel.filter((x) => x !== i.dataset.pxu); return; }
+    if (i.dataset.px === 'hourly') { st.hourly = i.checked; render(); return; }
+    if (i.dataset.px) {
+      st[i.dataset.px] = i.type === 'number' ? +i.value : i.value;
+      if (i.dataset.px === 'c') render();
     }
   });
   el.addEventListener('input', (ev) => {

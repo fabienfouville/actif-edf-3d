@@ -1,0 +1,1802 @@
+{
+ "_doc": "Liste des centrales affichées, clés de rapprochement avec les groupes ENTSO-E (noms normalisés) et champs vérifiés à la main. Lue par pipeline/build_catalog.py.",
+ "exclues": {
+  "eol-COU": "Parc éolien en mer du Calvados (Courseulles) : en construction, production attendue à l'été 2027.",
+  "cha-PRO5": "Provence 5 (Gardanne, charbon) : fermée."
+ },
+ "centrales": [
+  {
+   "id": "hyd-GMA",
+   "nom": "Grand'Maison",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.16,
+   "lon": 6.05,
+   "cles": [
+    "GRAND MAISON"
+   ],
+   "mise_service": 1987,
+   "statut": "en service",
+   "note": "Plus grande STEP de France. Coordonnées de l'usine estimées.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-MTZ",
+   "nom": "Montézic",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Occitanie",
+   "lat": 44.71,
+   "lon": 2.64,
+   "cles": [
+    "MONTEZIC"
+   ],
+   "mise_service": 1982,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-REV",
+   "nom": "Revin",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 49.93,
+   "lon": 4.62,
+   "cles": [
+    "REVIN"
+   ],
+   "mise_service": 1976,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-SBI",
+   "nom": "Super-Bissorte",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.2,
+   "lon": 6.53,
+   "cles": [
+    "SUPER BISSORTE"
+   ],
+   "mise_service": 1987,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-CHE",
+   "nom": "Le Cheylas",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.38,
+   "lon": 6.0,
+   "cles": [
+    "CHEYLAS"
+   ],
+   "mise_service": 1979,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "vérifiées (vérification web du 16/10/2026)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-COC",
+   "nom": "La Coche",
+   "filiere": "hydraulique",
+   "type": "STEP",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.496,
+   "lon": 6.513,
+   "cles": [
+    "COCHE"
+   ],
+   "mise_service": 1977,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "vérifiées (vérification web du 16/10/2026)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-BAT",
+   "nom": "La Bâthie (Roselend)",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.63,
+   "lon": 6.45,
+   "cles": [
+    "BATHIE"
+   ],
+   "mise_service": 1961,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-POU",
+   "nom": "Le Pouget",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Occitanie",
+   "lat": 44.059,
+   "lon": 2.768,
+   "cles": [
+    "POUGET"
+   ],
+   "mise_service": 1952,
+   "statut": "en service",
+   "note": "Groupe réversible depuis 1982.",
+   "verif": {
+    "coordonnees": "vérifiées (vérification web du 16/10/2026)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-BRO",
+   "nom": "Brommat",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Occitanie",
+   "lat": 44.769,
+   "lon": 2.684,
+   "cles": [
+    "BROMMAT"
+   ],
+   "mise_service": 1933,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "vérifiées (vérification web du 16/10/2026)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-AIG",
+   "nom": "L'Aigle",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 45.24,
+   "lon": 2.23,
+   "cles": [
+    "AIGLE"
+   ],
+   "mise_service": 1945,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-VIL",
+   "nom": "Villarodin (Mont-Cenis)",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.2,
+   "lon": 6.7,
+   "cles": [
+    "VILLARODIN"
+   ],
+   "mise_service": 1968,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-SIS",
+   "nom": "Sisteron",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 44.17,
+   "lon": 5.95,
+   "cles": [
+    "SISTERON"
+   ],
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-BOR",
+   "nom": "Bort-les-Orgues",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 45.4,
+   "lon": 2.5,
+   "cles": [
+    "BORT"
+   ],
+   "mise_service": 1952,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-CHA",
+   "nom": "Le Chastang",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 45.16,
+   "lon": 1.96,
+   "cles": [
+    "CHASTANG"
+   ],
+   "mise_service": 1951,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-MAR",
+   "nom": "Marèges",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Nouvelle-Aquitaine",
+   "lat": 45.39,
+   "lon": 2.364,
+   "cles": [
+    "MAREGES"
+   ],
+   "mise_service": 1935,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "vérifiées (vérification web du 16/10/2026)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-SPC",
+   "nom": "Saint-Pierre-Cognet",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.877,
+   "lon": 5.804,
+   "cles": [
+    "SAINT PIERRE"
+   ],
+   "mise_service": 1957,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "vérifiées (vérification web du 16/10/2026)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-CDA",
+   "nom": "Combe d'Avrieux",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.21,
+   "lon": 6.72,
+   "cles": [
+    "COMBE D AVRIEUX"
+   ],
+   "mise_service": 1976,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-SPO",
+   "nom": "Serre-Ponçon",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 44.47,
+   "lon": 6.27,
+   "cles": [],
+   "p_mw": 380,
+   "mise_service": 1960,
+   "statut": "en service",
+   "note": "Groupes de moins de 100 MW : production non publiée par groupe, estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-VOU",
+   "nom": "Vouglans",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Bourgogne-Franche-Comté",
+   "lat": 46.4,
+   "lon": 5.67,
+   "cles": [],
+   "p_mw": 285,
+   "mise_service": 1968,
+   "statut": "en service",
+   "note": "Groupes de moins de 100 MW : production estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-MON",
+   "nom": "Monteynard",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.96,
+   "lon": 5.69,
+   "cles": [],
+   "p_mw": 366,
+   "mise_service": 1962,
+   "statut": "en service",
+   "note": "Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-GEN",
+   "nom": "Génissiat",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 46.05,
+   "lon": 5.81,
+   "cles": [
+    "GENISSIAT"
+   ],
+   "mise_service": 1948,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-DZM",
+   "nom": "Donzère-Mondragon (usine André-Blondel, Bollène)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 44.304,
+   "lon": 4.743,
+   "cles": [
+    "BOLLENE"
+   ],
+   "mise_service": 1952,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "vérifiées (vérification web du 16/10/2026)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-CNP",
+   "nom": "Châteauneuf-du-Rhône (usine Henri-Poincaré)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.5,
+   "lon": 4.71,
+   "cles": [
+    "CHATEAUNEUF DU RHONE"
+   ],
+   "mise_service": 1957,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-VAL",
+   "nom": "Vallabrègues (usine de Beaucaire)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Occitanie",
+   "lat": 43.82,
+   "lon": 4.64,
+   "cles": [
+    "BEAUCAIRE"
+   ],
+   "mise_service": 1970,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "vérifiées (vérification web du 16/10/2026)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-CAD",
+   "nom": "Caderousse",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 44.1,
+   "lon": 4.72,
+   "cles": [
+    "CADEROUSSE"
+   ],
+   "mise_service": 1975,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-BLV",
+   "nom": "Bourg-lès-Valence",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.97,
+   "lon": 4.85,
+   "cles": [
+    "BOURG LES VALENCE"
+   ],
+   "mise_service": 1968,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-BCH",
+   "nom": "Beauchastel",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.82,
+   "lon": 4.8,
+   "cles": [
+    "BEAUCHASTEL"
+   ],
+   "mise_service": 1963,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-LGN",
+   "nom": "Le Logis-Neuf",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 44.64,
+   "lon": 4.77,
+   "cles": [
+    "LOGIS NEUF"
+   ],
+   "mise_service": 1960,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-AVI",
+   "nom": "Avignon (usine-écluse)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.98,
+   "lon": 4.79,
+   "cles": [
+    "AVIGNON"
+   ],
+   "mise_service": 1973,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-CNR",
+   "nom": "Autres usines CNR du Rhône",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "CNR",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.55,
+   "lon": 5.15,
+   "cles": [
+    "SEYSSEL",
+    "CHAUTAGNE",
+    "BRENS",
+    "BREGNIER CORDON",
+    "SAULT BRENAZ",
+    "PIERRE BENITE",
+    "VAUGRIS",
+    "SABLONS",
+    "GERVANS",
+    "SAUVETERRE"
+   ],
+   "statut": "en service",
+   "note": "Regroupe 10 usines CNR du Haut-Rhône et du Rhône moyen (Seyssel, Chautagne, Brens, Brégnier-Cordon, Sault-Brénaz, Pierre-Bénite, Vaugris, Sablons, Gervans, Sauveterre).",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "hyd-KEM",
+   "nom": "Kembs",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 47.68,
+   "lon": 7.5,
+   "cles": [],
+   "p_mw": 160,
+   "mise_service": 1932,
+   "statut": "en service",
+   "note": "Rhin : production non publiée par groupe, estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   },
+   "cles_registre": [
+    "KEMBS"
+   ]
+  },
+  {
+   "id": "hyd-OTT",
+   "nom": "Ottmarsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 47.79,
+   "lon": 7.51,
+   "cles": [],
+   "p_mw": 156,
+   "mise_service": 1952,
+   "statut": "en service",
+   "note": "Rhin : production non publiée par groupe, estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   },
+   "cles_registre": [
+    "OTTMARSHEIM"
+   ]
+  },
+  {
+   "id": "hyd-MGV",
+   "nom": "Malgovert (Tignes)",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.57,
+   "lon": 6.78,
+   "cles": [],
+   "cles_registre": [
+    "MALGOVERT"
+   ],
+   "statut": "en service",
+   "note": "Isère, alimentée par le barrage de Tignes. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-SCV",
+   "nom": "Sainte-Croix-du-Verdon",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.76,
+   "lon": 6.19,
+   "cles": [],
+   "cles_registre": [
+    "STE CROIX DU VERDON"
+   ],
+   "statut": "en service",
+   "note": "Verdon. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-FES",
+   "nom": "Fessenheim (usine hydraulique)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 47.92,
+   "lon": 7.55,
+   "cles": [],
+   "cles_registre": [
+    "FESSENHEIM"
+   ],
+   "statut": "en service",
+   "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-VOG",
+   "nom": "Vogelgrun",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.02,
+   "lon": 7.57,
+   "cles": [],
+   "cles_registre": [
+    "VOGELGRUN"
+   ],
+   "statut": "en service",
+   "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-MCK",
+   "nom": "Marckolsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.17,
+   "lon": 7.59,
+   "cles": [],
+   "cles_registre": [
+    "MARCKOLSHEIM"
+   ],
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-RHI",
+   "nom": "Rhinau",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.32,
+   "lon": 7.7,
+   "cles": [],
+   "cles_registre": [
+    "RHINAU"
+   ],
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-GER",
+   "nom": "Gerstheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.38,
+   "lon": 7.73,
+   "cles": [],
+   "cles_registre": [
+    "GERSTHEIM"
+   ],
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-STR",
+   "nom": "Strasbourg",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.55,
+   "lon": 7.8,
+   "cles": [],
+   "cles_registre": [
+    "STRASBOURG"
+   ],
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-GAM",
+   "nom": "Gambsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF / EnBW",
+   "region": "Grand Est",
+   "lat": 48.68,
+   "lon": 7.91,
+   "cles": [],
+   "cles_registre": [
+    "GAMBSHEIM"
+   ],
+   "statut": "en service",
+   "note": "Rhin, co-exploitée EDF / EnBW. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "gaz-MAR",
+   "nom": "Martigues (Ponteau)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.4,
+   "lon": 5.03,
+   "cles": [
+    "MARTIGUES"
+   ],
+   "mise_service": 2012,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-BLE",
+   "nom": "Blénod",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.88,
+   "lon": 6.06,
+   "cles": [
+    "BLENOD"
+   ],
+   "mise_service": 2011,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-BOU",
+   "nom": "Bouchain",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "EDF",
+   "region": "Hauts-de-France",
+   "lat": 50.29,
+   "lon": 3.32,
+   "cles": [
+    "BOUCHAIN"
+   ],
+   "mise_service": 2016,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-DK6",
+   "nom": "DK6 Dunkerque",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "Engie Flexible Generation France",
+   "region": "Hauts-de-France",
+   "lat": 51.03,
+   "lon": 2.3,
+   "cles": [
+    "DK6"
+   ],
+   "mise_service": 2005,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-CYC",
+   "nom": "Cycofos",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "Engie",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.42,
+   "lon": 4.88,
+   "cles": [
+    "CYCOFOS"
+   ],
+   "mise_service": 2010,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-CBG",
+   "nom": "Combigolfe",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "Engie",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.44,
+   "lon": 4.85,
+   "cles": [
+    "COMBIGOLFE"
+   ],
+   "mise_service": 2010,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-MTO",
+   "nom": "Montoir-de-Bretagne (SPEM)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "Engie",
+   "region": "Pays de la Loire",
+   "lat": 47.32,
+   "lon": -2.15,
+   "cles": [
+    "SPEM"
+   ],
+   "mise_service": 2010,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-LDV",
+   "nom": "Landivisiau",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Bretagne",
+   "lat": 48.51,
+   "lon": -4.05,
+   "cles": [
+    "LANDIVISIAU",
+    "COMPAGNIE ELECTRIQUE DE BRETAGNE"
+   ],
+   "mise_service": 2022,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-PSS",
+   "nom": "Pont-sur-Sambre",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Hauts-de-France",
+   "lat": 50.22,
+   "lon": 3.85,
+   "cles": [
+    "PONT SUR SAMBRE"
+   ],
+   "mise_service": 2009,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-TOU",
+   "nom": "Toul (Croix-de-Metz)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Grand Est",
+   "lat": 48.68,
+   "lon": 5.89,
+   "cles": [
+    "CROIX DE METZ"
+   ],
+   "mise_service": 2013,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-BAY",
+   "nom": "Bayet (Morant)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 46.25,
+   "lon": 3.27,
+   "cles": [
+    "BAYET",
+    "MORANT"
+   ],
+   "mise_service": 2011,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-EHU",
+   "nom": "Émile-Huchet 7-8 (Saint-Avold)",
+   "filiere": "gaz",
+   "type": "CCG",
+   "exploitant": "TotalEnergies",
+   "region": "Grand Est",
+   "lat": 49.15,
+   "lon": 6.71,
+   "cles": [
+    "SAINT AVOLD"
+   ],
+   "mise_service": 2010,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Wikipédia ; rachat par TotalEnergies validé en août 2020"
+   }
+  },
+  {
+   "id": "gaz-GEN",
+   "nom": "Gennevilliers TAC",
+   "filiere": "gaz",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Île-de-France",
+   "lat": 48.937,
+   "lon": 2.318,
+   "cles": [
+    "GENNEVILLIERS"
+   ],
+   "mise_service": 1992,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-AMF",
+   "nom": "Amfard (Gonfreville-l'Orcher)",
+   "filiere": "gaz",
+   "type": "cogénération",
+   "exploitant": "Cofiva",
+   "region": "Normandie",
+   "lat": 49.48,
+   "lon": 0.23,
+   "cles": [
+    "AMFARD"
+   ],
+   "p_mw": 260,
+   "p_mw_manuel": true,
+   "mise_service": 2004,
+   "statut": "en service",
+   "note": "Cogénération de la raffinerie de Normandie. Puissance 240 à 260 MW selon les sources (doublons dans ENTSO-E).",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "gaz-CPCU",
+   "nom": "Cogénérations CPCU (Saint-Ouen, Vitry)",
+   "filiere": "gaz",
+   "type": "cogénération",
+   "exploitant": "CPCU",
+   "region": "Île-de-France",
+   "lat": 48.85,
+   "lon": 2.36,
+   "cles": [
+    "CPCU"
+   ],
+   "statut": "en service",
+   "note": "Chaleur urbaine de Paris : production surtout pilotée par le besoin de chaleur.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "cha-COR",
+   "nom": "Cordemais",
+   "filiere": "charbon",
+   "type": "charbon",
+   "exploitant": "EDF",
+   "region": "Pays de la Loire",
+   "lat": 47.28,
+   "lon": -1.88,
+   "cles": [
+    "CORDEMAIS"
+   ],
+   "mise_service": 1983,
+   "statut": "en service, arrêt définitif prévu le 31/03/2027",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "AEF info, annonce EDF du 28/05/2025"
+   }
+  },
+  {
+   "id": "cha-EHU",
+   "nom": "Émile-Huchet 6 (Saint-Avold)",
+   "filiere": "charbon",
+   "type": "charbon",
+   "exploitant": "GazelEnergie",
+   "region": "Grand Est",
+   "lat": 49.15,
+   "lon": 6.71,
+   "cles": [
+    "EMILE HUCHET"
+   ],
+   "mise_service": 1981,
+   "statut": "en service (mécanisme de capacité hiver 2026-27), conversion au gaz envisagée",
+   "note": "Seule autre tranche charbon en service en France avec Cordemais.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "fio-BRE",
+   "nom": "Brennilis TAC",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Bretagne",
+   "lat": 48.36,
+   "lon": -3.87,
+   "cles": [
+    "BRENNILIS"
+   ],
+   "mise_service": 1980,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "EDF (message REMIT edf-2026-00041)"
+   }
+  },
+  {
+   "id": "fio-DIR",
+   "nom": "Dirinon TAC",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Bretagne",
+   "lat": 48.4,
+   "lon": -4.27,
+   "cles": [
+    "DIRINON"
+   ],
+   "mise_service": 1981,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "fio-VAI",
+   "nom": "Vaires-sur-Marne TAC",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Île-de-France",
+   "lat": 48.87,
+   "lon": 2.64,
+   "cles": [
+    "VAIRES"
+   ],
+   "mise_service": 2008,
+   "statut": "en service",
+   "note": "Fonctionne au fioul ; conversion au gaz / biométhane à l'étude (appel d'offres 2026).",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "fio-MTR",
+   "nom": "Montereau TAC (Vernou-la-Celle)",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Île-de-France",
+   "lat": 48.39,
+   "lon": 2.86,
+   "cles": [
+    "MONTEREAU"
+   ],
+   "mise_service": 2010,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "fio-ARR",
+   "nom": "Arrighi TAC (Vitry-sur-Seine)",
+   "filiere": "fioul",
+   "type": "TAC",
+   "exploitant": "EDF",
+   "region": "Île-de-France",
+   "lat": 48.786,
+   "lon": 2.412,
+   "cles": [
+    "ARRIGHI"
+   ],
+   "mise_service": 1997,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "eol-SNZ",
+   "nom": "Parc éolien en mer de Saint-Nazaire",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "EDF Renouvelables / Enbridge / CPP Investments",
+   "region": "Pays de la Loire",
+   "lat": 47.15,
+   "lon": -2.52,
+   "cles": [
+    "BANC DE GUERANDE"
+   ],
+   "mise_service": 2022,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "eol-SBR",
+   "nom": "Parc éolien en mer de Saint-Brieuc",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "Ailes Marines (Iberdrola)",
+   "region": "Bretagne",
+   "lat": 48.85,
+   "lon": -2.55,
+   "cles": [
+    "BAIE DE ST BRIEUC"
+   ],
+   "mise_service": 2024,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "eol-FEC",
+   "nom": "Parc éolien en mer de Fécamp",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "EDF Renouvelables / Enbridge / CPP Investments / Skyborn",
+   "region": "Normandie",
+   "lat": 49.87,
+   "lon": 0.25,
+   "cles": [
+    "FECAMP"
+   ],
+   "mise_service": 2024,
+   "statut": "en service",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "eol-YEU",
+   "nom": "Parc éolien en mer d'Yeu-Noirmoutier",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "Ocean Winds, Sumitomo, Banque des Territoires, Vendée Énergie",
+   "region": "Pays de la Loire",
+   "lat": 46.85,
+   "lon": -2.5,
+   "cles": [
+    "VENT DES ILES"
+   ],
+   "mise_service": 2026,
+   "statut": "en service",
+   "note": "Mis en service à 100 % le 29/04/2026. Raccordé à La Barre-de-Monts (registre national).",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "eol-DTR",
+   "nom": "Parc éolien en mer de Dieppe-Le Tréport",
+   "filiere": "eolien",
+   "type": "offshore",
+   "exploitant": "Ocean Winds, Sumitomo, Banque des Territoires",
+   "region": "Normandie",
+   "lat": 50.08,
+   "lon": 1.2,
+   "cles": [
+    "RIDENS DE DIEPPE"
+   ],
+   "p_mw": 496,
+   "mise_service": 2026,
+   "statut": "mise en service progressive (premiers électrons en juillet 2026)",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  },
+  {
+   "id": "bio-GAR",
+   "nom": "Provence 4 Biomasse (Gardanne)",
+   "filiere": "bioenergies",
+   "type": "biomasse",
+   "exploitant": "GazelEnergie",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.45,
+   "lon": 5.47,
+   "cles": [
+    "PROVENCE 4"
+   ],
+   "mise_service": 2018,
+   "statut": "en service (redémarrée fin 2025)",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "vérification web du 16/10/2026"
+   }
+  }
+ ],
+ "nucleaire": [
+  {
+   "code": "BEL",
+   "nom": "Belleville",
+   "cle": "BELLEVILLE",
+   "reg": "CVL",
+   "lat": 47.51,
+   "lon": 2.87,
+   "palier": "P'4",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1987
+    ],
+    [
+     2,
+     1988
+    ]
+   ]
+  },
+  {
+   "code": "BLA",
+   "nom": "Blayais",
+   "cle": "BLAYAIS",
+   "reg": "NAQ",
+   "lat": 45.26,
+   "lon": -0.69,
+   "palier": "CP1",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1981
+    ],
+    [
+     2,
+     1982
+    ],
+    [
+     3,
+     1983
+    ],
+    [
+     4,
+     1983
+    ]
+   ]
+  },
+  {
+   "code": "BUG",
+   "nom": "Bugey",
+   "cle": "BUGEY",
+   "reg": "ARA",
+   "lat": 45.8,
+   "lon": 5.27,
+   "palier": "CP0",
+   "paliers": {},
+   "tranches": [
+    [
+     2,
+     1978
+    ],
+    [
+     3,
+     1978
+    ],
+    [
+     4,
+     1979
+    ],
+    [
+     5,
+     1979
+    ]
+   ]
+  },
+  {
+   "code": "CAT",
+   "nom": "Cattenom",
+   "cle": "CATTENOM",
+   "reg": "GES",
+   "lat": 49.41,
+   "lon": 6.22,
+   "palier": "P'4",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1986
+    ],
+    [
+     2,
+     1987
+    ],
+    [
+     3,
+     1990
+    ],
+    [
+     4,
+     1991
+    ]
+   ]
+  },
+  {
+   "code": "CHI",
+   "nom": "Chinon",
+   "cle": "CHINON",
+   "reg": "CVL",
+   "lat": 47.23,
+   "lon": 0.17,
+   "palier": "CP2",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1982
+    ],
+    [
+     2,
+     1983
+    ],
+    [
+     3,
+     1986
+    ],
+    [
+     4,
+     1987
+    ]
+   ]
+  },
+  {
+   "code": "CHO",
+   "nom": "Chooz",
+   "cle": "CHOOZ",
+   "reg": "GES",
+   "lat": 50.09,
+   "lon": 4.79,
+   "palier": "N4",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1996
+    ],
+    [
+     2,
+     1997
+    ]
+   ]
+  },
+  {
+   "code": "CIV",
+   "nom": "Civaux",
+   "cle": "CIVAUX",
+   "reg": "NAQ",
+   "lat": 46.46,
+   "lon": 0.65,
+   "palier": "N4",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1997
+    ],
+    [
+     2,
+     1999
+    ]
+   ]
+  },
+  {
+   "code": "CRU",
+   "nom": "Cruas",
+   "cle": "CRUAS",
+   "reg": "ARA",
+   "lat": 44.63,
+   "lon": 4.76,
+   "palier": "CP2",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1983
+    ],
+    [
+     2,
+     1984
+    ],
+    [
+     3,
+     1984
+    ],
+    [
+     4,
+     1984
+    ]
+   ]
+  },
+  {
+   "code": "DAM",
+   "nom": "Dampierre",
+   "cle": "DAMPIERRE",
+   "reg": "CVL",
+   "lat": 47.73,
+   "lon": 2.52,
+   "palier": "CP1",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1980
+    ],
+    [
+     2,
+     1980
+    ],
+    [
+     3,
+     1981
+    ],
+    [
+     4,
+     1981
+    ]
+   ]
+  },
+  {
+   "code": "FLA",
+   "nom": "Flamanville",
+   "cle": "FLAMANVILLE",
+   "reg": "NOR",
+   "lat": 49.54,
+   "lon": -1.88,
+   "palier": "P4",
+   "paliers": {
+    "3": "EPR"
+   },
+   "tranches": [
+    [
+     1,
+     1985
+    ],
+    [
+     2,
+     1986
+    ],
+    [
+     3,
+     2024
+    ]
+   ]
+  },
+  {
+   "code": "GOL",
+   "nom": "Golfech",
+   "cle": "GOLFECH",
+   "reg": "OCC",
+   "lat": 44.11,
+   "lon": 0.85,
+   "palier": "P'4",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1990
+    ],
+    [
+     2,
+     1993
+    ]
+   ]
+  },
+  {
+   "code": "GRA",
+   "nom": "Gravelines",
+   "cle": "GRAVELINES",
+   "reg": "HDF",
+   "lat": 51.01,
+   "lon": 2.14,
+   "palier": "CP1",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1980
+    ],
+    [
+     2,
+     1980
+    ],
+    [
+     3,
+     1980
+    ],
+    [
+     4,
+     1981
+    ],
+    [
+     5,
+     1984
+    ],
+    [
+     6,
+     1985
+    ]
+   ]
+  },
+  {
+   "code": "NOG",
+   "nom": "Nogent",
+   "cle": "NOGENT",
+   "reg": "GES",
+   "lat": 48.52,
+   "lon": 3.52,
+   "palier": "P'4",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1987
+    ],
+    [
+     2,
+     1988
+    ]
+   ]
+  },
+  {
+   "code": "PAL",
+   "nom": "Paluel",
+   "cle": "PALUEL",
+   "reg": "NOR",
+   "lat": 49.86,
+   "lon": 0.63,
+   "palier": "P4",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1984
+    ],
+    [
+     2,
+     1984
+    ],
+    [
+     3,
+     1985
+    ],
+    [
+     4,
+     1986
+    ]
+   ]
+  },
+  {
+   "code": "PEN",
+   "nom": "Penly",
+   "cle": "PENLY",
+   "reg": "NOR",
+   "lat": 49.98,
+   "lon": 1.21,
+   "palier": "P'4",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1990
+    ],
+    [
+     2,
+     1992
+    ]
+   ]
+  },
+  {
+   "code": "SAL",
+   "nom": "Saint-Alban",
+   "cle": "ST ALBAN",
+   "reg": "ARA",
+   "lat": 45.4,
+   "lon": 4.76,
+   "palier": "P4",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1985
+    ],
+    [
+     2,
+     1986
+    ]
+   ]
+  },
+  {
+   "code": "SLB",
+   "nom": "Saint-Laurent",
+   "cle": "ST LAURENT",
+   "reg": "CVL",
+   "lat": 47.72,
+   "lon": 1.58,
+   "palier": "CP2",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1981
+    ],
+    [
+     2,
+     1981
+    ]
+   ]
+  },
+  {
+   "code": "TRI",
+   "nom": "Tricastin",
+   "cle": "TRICASTIN",
+   "reg": "ARA",
+   "lat": 44.33,
+   "lon": 4.73,
+   "palier": "CP1",
+   "paliers": {},
+   "tranches": [
+    [
+     1,
+     1980
+    ],
+    [
+     2,
+     1980
+    ],
+    [
+     3,
+     1981
+    ],
+    [
+     4,
+     1981
+    ]
+   ]
+  }
+ ]
+}

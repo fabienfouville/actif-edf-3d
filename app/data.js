@@ -1,5 +1,6 @@
 // Chargement des JSON et construction des séries horaires (réelles ou modélisées).
 import { srmc } from './finance.js';
+import { buildHPFC } from './forward.js';
 
 const get = async (path) => {
   const r = await fetch(path, { cache: 'no-cache' });
@@ -10,8 +11,8 @@ const get = async (path) => {
 const MIX = ['consommation', 'nucleaire', 'hydraulique', 'gaz', 'charbon', 'fioul', 'eolien', 'solaire', 'bioenergies', 'pompage', 'ech_physiques'];
 
 export async function loadAll(onProgress = () => {}) {
-  const [assetsF, tranchesF, params, meta, regions] = await Promise.all(
-    ['data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/meta.json', 'data/geo/regions.json'].map(get));
+  const [assetsF, tranchesF, params, meta, regions, market] = await Promise.all(
+    ['data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/meta.json', 'data/geo/regions.json', 'data/market.json'].map(get));
   const live = await get('data/live.json').catch(() => null);
   const keys = (meta.mois || []).slice(-13);
   let done = 0;
@@ -41,13 +42,38 @@ export async function loadAll(onProgress = () => {}) {
   let now = H - 1;
   while (now > 0 && Number.isNaN(mix.nucleaire[now])) now--;
 
-  const D = { params, meta, live, regions, t0, H, now, price, mix, real, sources: srcs };
+  const D = { params, meta, live, regions, market, t0, H, now, price, mix, real, sources: srcs };
   D.assets = assetsF.assets;
   D.tranches = tranchesF.tranches;
   buildUnits(D);
   buildProduction(D);
   recomputeCosts(D);
+  D.market0 = JSON.parse(JSON.stringify(market)); // valeurs publiées, avant réglages
+  applyMarketEdits(D);
+  rebuildForward(D);
   return D;
+}
+
+const MKT_KEY = 'parc3d.market.v1';
+/** Réglages de marché saisis par l'utilisateur (navigateur seulement). */
+function applyMarketEdits(D) {
+  try {
+    const saved = JSON.parse(localStorage.getItem(MKT_KEY) || 'null');
+    if (saved && saved.asof === D.market.asof) {
+      for (const [k, v] of Object.entries(saved.electricite || {})) if (D.market.electricite[k]) Object.assign(D.market.electricite[k], v);
+      Object.assign(D.market.revenu_parc_nucleaire, saved.revenu_parc_nucleaire || {});
+    }
+  } catch { /* stockage indisponible : valeurs par défaut */ }
+}
+export function saveMarketEdits(D) {
+  try {
+    const e = Object.fromEntries(Object.entries(D.market.electricite).filter(([k]) => !k.startsWith('_')).map(([k, v]) => [k, { base: v.base, pointe: v.pointe }]));
+    localStorage.setItem(MKT_KEY, JSON.stringify({ asof: D.market.asof, electricite: e, revenu_parc_nucleaire: D.market.revenu_parc_nucleaire }));
+  } catch { /* ignoré */ }
+}
+/** Courbe forward horaire, forme estimée sur les prix spot réels chargés. */
+export function rebuildForward(D) {
+  D.FWD = buildHPFC(D.market, { t0: D.t0, prices: D.price });
 }
 
 /** Une « unité » = une ligne du merit order : chaque tranche nucléaire, chaque autre actif, plus des blocs diffus. */
@@ -93,29 +119,34 @@ function buildUnits(D) {
  */
 function buildProduction(D) {
   const { H, units, mix, real } = D;
-  D.prod = units.map((u) => real[u.id] ? Float32Array.from(real[u.id], (v) => (Number.isNaN(v) ? 0 : Math.max(0, v))) : new Float32Array(H));
+  D.prod = units.map(() => new Float32Array(H));
   const byF = {};
   for (const u of units) (byF[u.filiere] ||= []).push(u);
+  for (const u of units) u.realHours = 0;
   for (const [f, us] of Object.entries(byF)) {
-    const known = us.filter((u) => u.real), unknown = us.filter((u) => !u.real);
-    if (!unknown.length || !mix[f]) continue;
-    const fil = unknown.filter((u) => f === 'hydraulique' && u.type === 'fil');
-    const other = unknown.filter((u) => !fil.includes(u));
-    const capFil = fil.reduce((s, u) => s + u.p_mw, 0), capOther = other.reduce((s, u) => s + u.p_mw, 0);
+    const isFil = (u) => f === 'hydraulique' && u.type === 'fil';
     for (let h = 0; h < H; h++) {
-      let rest = mix[f][h];
-      if (Number.isNaN(rest)) continue;
-      for (const u of known) rest -= D.prod[u.idx][h];
-      rest = Math.max(0, rest);
-      let toFil = 0;
-      if (capFil) {
-        toFil = Math.min(rest, capFil * 0.6);
-        for (const u of fil) D.prod[u.idx][h] = toFil * u.p_mw / capFil;
+      // heure par heure : les groupes mesurés gardent leur valeur, les autres se partagent le reste du mix
+      let rest = mix[f] ? mix[f][h] : NaN;
+      let capFil = 0, capOther = 0;
+      for (const u of us) {
+        const v = real[u.id] ? real[u.id][h] : NaN;
+        if (!Number.isNaN(v)) { D.prod[u.idx][h] = Math.max(0, v); rest -= Math.max(0, v); u.realHours++; }
+        else if (isFil(u)) capFil += u.p_mw; else capOther += u.p_mw;
       }
+      if (Number.isNaN(rest)) continue;
+      rest = Math.max(0, rest);
+      const toFil = capFil ? Math.min(rest, capFil * 0.6) : 0;
       const r2 = rest - toFil;
-      if (capOther) for (const u of other) D.prod[u.idx][h] = Math.min(u.p_mw, r2 * u.p_mw / capOther);
+      for (const u of us) {
+        if (real[u.id] && !Number.isNaN(real[u.id][h])) continue;
+        if (isFil(u)) D.prod[u.idx][h] = toFil * u.p_mw / capFil;
+        else if (capOther) D.prod[u.idx][h] = Math.min(u.p_mw, r2 * u.p_mw / capOther);
+      }
     }
   }
+  // « mesurée » si la série réelle couvre au moins la moitié de l'historique chargé
+  for (const u of units) u.real = u.realHours > 0.5 * (D.now + 1);
   D.siteProd = (mapId, h) => (D.byMap[mapId] || []).reduce((s, u) => s + D.prod[u.idx][h], 0);
   // une maquette par filière : production et puissance de tout le parc de la filière
   D.byFil = {};

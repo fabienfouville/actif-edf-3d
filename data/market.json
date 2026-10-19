@@ -1,0 +1,91 @@
+{
+ "_doc": "Produits forward utilisés pour la courbe horaire (HPFC) et le pricing des contraintes. Valeurs éditables dans l'app (panneau Hypothèses). Base et pointe en €/MWh ; pointe = jours ouvrés 8 h-20 h, heure de Paris.",
+ "asof": "2026-10-15",
+ "_source": "EEX, clôture du 15/10/2026, relevés publiés par Selectra le 16/10/2026 (prix de l'électricité et du gaz). Reprise de Parc EDF Command (équipe Prix & Produits).",
+ "electricite": {
+  "Nov-26": {
+   "base": null,
+   "pointe": null,
+   "_statut": "pas de cotation relevée : proxy = moyenne du spot sur les 30 derniers jours"
+  },
+  "Dec-26": {
+   "base": null,
+   "pointe": null,
+   "_statut": "pas de cotation relevée : proxy = moyenne du spot sur les 30 derniers jours"
+  },
+  "Q1-27": {
+   "base": 166.42,
+   "pointe": 187.38
+  },
+  "Q2-27": {
+   "base": 69.21,
+   "pointe": 57.25
+  },
+  "Q3-27": {
+   "base": 85.5,
+   "pointe": 73.22
+  },
+  "Cal-27": {
+   "base": 107.77,
+   "pointe": 115.64
+  },
+  "Cal-28": {
+   "base": 66.03,
+   "pointe": 78.0
+  },
+  "Cal-29": {
+   "base": 59.88,
+   "pointe": 73.0
+  }
+ },
+ "gaz_peg": {
+  "_doc": "PEG €/MWh PCS. Mois, puis trimestres, puis calendaires : la courbe prend le produit le plus fin disponible.",
+  "2026-11": 84.8,
+  "2026-12": 85.2,
+  "2027-01": 85.31,
+  "2027-02": 84.94,
+  "2027-03": 82.84,
+  "2027-04": 71.86,
+  "2027-05": 66.46,
+  "Q2-27": 67.49,
+  "Q3-27": 63.39,
+  "Q4-27": 61.01,
+  "Q1-28": 58.22,
+  "Q2-28": 39.85,
+  "Q3-28": 37.16,
+  "Cal-28": 43.31,
+  "Cal-29": 32.01
+ },
+ "saisonnalite": {
+  "_doc": "Facteurs mensuels (janvier → décembre) pour répartir un trimestre ou un calendaire sur ses mois. Gabarit standard, hypothèse.",
+  "mois": [
+   1.32,
+   1.18,
+   0.98,
+   0.78,
+   0.68,
+   0.76,
+   0.88,
+   0.84,
+   0.95,
+   1.05,
+   1.22,
+   1.36
+  ]
+ },
+ "revenu_parc_nucleaire": {
+  "_doc": "Revenu moyen du parc nucléaire EDF par année, qui fixe la tranche VNU applicable. 2026 et 2027 : estimation CRE ; au-delà : Cal base de l'année, par défaut.",
+  "2026": 66.1,
+  "2027": 63.82,
+  "2028": null,
+  "2029": null
+ },
+ "pmin_pct": {
+  "_doc": "Pmin par défaut en % de Pn, ordres de grandeur (Parc EDF Command), modifiables dans l'onglet Pricing.",
+  "nucleaire": 25,
+  "gaz": 40,
+  "gaz:TAC": 60,
+  "charbon": 40,
+  "fioul": 60
+ }
+}

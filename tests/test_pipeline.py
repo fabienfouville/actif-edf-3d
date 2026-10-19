@@ -53,3 +53,12 @@ class Pipeline(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_rapprochement_groupes_exacts(self):
+        h = datetime(2026, 10, 14, 0, tzinfo=UTC)
+        raw = {norm(n): {h: v} for n, v in [("SEYSSEL", 30), ("CHAUTAGNE", 60), ("SEYSSEL BIS", 9)]}
+        cat = {"tranches": [], "assets": [{"id": "hyd-CNR", "filiere": "hydraulique", "rte": "SEYSSEL", "groupes_entsoe": ["SEYSSEL", "CHAUTAGNE"]}]}
+        ser, unmatched = sources.match_units(raw, cat)
+        self.assertEqual(ser["hyd-CNR"][h], 90)
+        self.assertEqual(unmatched, ["SEYSSEL BIS"])
+

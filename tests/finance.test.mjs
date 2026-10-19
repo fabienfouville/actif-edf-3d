@@ -1,7 +1,7 @@
 // node --test tests/
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { srmc, stack, hedge, dcf, tornado, kpis } from '../app/finance.js';
+import { srmc, stack, hedge, dcf, tornado, kpis, isFatal } from '../app/finance.js';
 import { readFileSync } from 'node:fs';
 
 const P = JSON.parse(readFileSync(new URL('../data/params.json', import.meta.url)));
@@ -63,4 +63,20 @@ test('indicateurs : facteur de charge et prix capté', () => {
   assert.equal(k.facteur_charge, 150 / 400);
   assert.equal(k.prix_capte.toFixed(4), ((100 * 100 + 50 * 60) / 150).toFixed(4));
   assert.equal(k.part_heures_en_marge, 1);
+});
+
+test('cogénération fatale, TAC gaz plus chère qu\'un CCG', () => {
+  assert.equal(isFatal({ filiere: 'gaz', type: 'cogénération' }), true);
+  assert.equal(srmc({ filiere: 'gaz', type: 'cogénération' }, P), 0);
+  assert.equal(isFatal({ filiere: 'gaz', type: 'TAC' }), false);
+  assert.ok(srmc({ filiere: 'gaz', type: 'TAC' }, P) > srmc({ filiere: 'gaz', type: 'CCG' }, P));
+});
+
+test('catalogue : éolien en mer non compté deux fois, 57 tranches', () => {
+  const A = JSON.parse(readFileSync(new URL('../data/assets.json', import.meta.url))).assets;
+  const T = JSON.parse(readFileSync(new URL('../data/edf_tranches.json', import.meta.url))).tranches;
+  const eol = A.filter((a) => a.filiere === 'eolien' && !(a.type === 'offshore' && a.mise_service > 2025)).reduce((s, a) => s + a.p_mw, 0);
+  assert.ok(Math.abs(eol - P.capacite_nationale_mw.eolien) < 300, `éolien listé ${eol} MW`);
+  assert.equal(T.length, 57);
+  assert.equal(new Set(A.map((a) => a.id)).size, A.length);
 });

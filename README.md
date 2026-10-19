@@ -8,9 +8,11 @@ couverte, ce qu'elle vaut, et le JSON qui alimente chaque chiffre.
   et la fiche liste les sites et tranches. Frise en bas pour changer d'heure et rejouer une journée.
 - **Merit order** : un bouton fait s'envoler les colonnes, qui se rangent par coût marginal croissant.
   Ligne de production, prix du modèle, prix spot réel, centrale marginale.
-- **Fiche actif** : onglets *Merit* (carte heure × semaine, place dans l'escalier), *Couverture*
-  (prix capté, simulateur vente à terme / spot / VNU), *Valo* (VAN, sensibilités), *JSON*. Liste des
-  57 tranches EDF par site.
+- **Fiche actif** : onglets *Merit* (carte heure × semaine, place dans l'escalier), *Prévision*
+  (courbe forward horaire, forme journalière, contrôle produit par produit), *Pricing* (interruption,
+  Pmin, must-run, Pmax, limitation ; export JSON pour Astral / M2F), *Couverture* (prix capté,
+  simulateur vente à terme / spot / VNU), *Valo* (VAN, sensibilités), *JSON*. Liste des 57 tranches EDF par site.
+- **Recherche** : barre en haut à gauche (raccourci `/`) sur les centrales, tranches, communes et exploitants.
 - **Jeu** : XP, niveaux, badges, missions du jour, quiz « qui fixe le prix ? », dispatcher, pari sur le
   prix de demain. La progression reste dans le navigateur.
 
@@ -22,6 +24,8 @@ Le plan de départ et les maquettes sont dans [`docs/plan.html`](docs/plan.html)
 index.html            page unique, aucune étape de build
 app/                  modules JavaScript natifs + CSS (MapLibre GL chargé depuis un CDN)
   finance.js          calculs purs : coût marginal, merit order, indicateurs, couverture, VAN
+  forward.js          courbe forward horaire (HPFC), heure de Paris, coût marginal à terme
+  pricing.js          pricing des contraintes, VNU, scénarios, export JSON Astral / M2F
   data.js             chargement des JSON, production par unité (mesurée ou modélisée)
   scene.js            carte 3D        merit.js   vue merit order
   panel.js            fiche actif     game.js    couche de jeu      charts.js  graphiques SVG
@@ -29,6 +33,7 @@ data/
   assets.json         catalogue des actifs (coordonnées, puissance, exploitant)
   edf_tranches.json   57 réacteurs EDF
   params.json         hypothèses : combustibles, CO2, rendements, couverture EDF, VNU, WACC
+  market.json         produits forward élec (base, pointe) et gaz PEG, revenu du parc, Pmin par défaut
   meta.json           état des sources et liste des mois disponibles
   live.json           48 dernières heures au pas de 15 min
   series/AAAA-MM.json séries horaires : prix, mix national, production par groupe
@@ -87,3 +92,35 @@ npm test && python3 -m unittest discover -s tests
 Le merit order est un modèle simplifié : il empile les capacités françaises par coût marginal et ignore
 le couplage avec les pays voisins, les contraintes de démarrage et la gestion des stocks hydrauliques.
 La couverture et la valorisation sont des ordres de grandeur pédagogiques, pas une évaluation financière.
+
+## Prévision et pricing (fusion de Parc EDF Command)
+
+Besoin de départ : pricer des interruptions ou des impositions à Pmin / Pmax sur des centrales EDF.
+Règle de méthode : thermique hors nucléaire → intrinsèque ici, extrinsèque dans Astral + M2F ;
+nucléaire → déterministe avec le VNU ; hydraulique et production fatale → méthode à définir.
+
+**Courbe forward horaire** (`app/forward.js`, `buildHPFC`), de novembre 2026 à décembre 2029 :
+
+1. produits liquides seulement (`data/market.json`) : Cal-27/28/29, Q1 à Q3-27 ; Q4-27 déduit par
+   arbitrage Cal-27 − Q1..Q3, en base et en pointe, pondéré en heures ;
+2. niveau mensuel : trimestre ou calendaire réparti par une saisonnalité mensuelle standard ;
+   nov. et déc. 26 sans cotation → spot moyen des 30 derniers jours ;
+3. forme horaire par mois × (semaine, week-end), estimée sur le spot réel ENTSO-E du site ;
+4. recalage additif de chaque mois, puis calage exact base et pointe de chaque produit
+   (vérifié par `tests/forward.test.mjs` et affiché dans l'onglet Prévision).
+
+Toute la courbe est à l'heure de Paris : pointe = jours ouvrés 8 h-20 h locales, changements d'heure
+compris (2027 = 8 760 h, 2028 = 8 784 h).
+
+**Pricing** (`app/pricing.js`, `priceIt`) : Σ horaire (production de référence − production
+contrainte) × valeur du MWh. Thermique : en marche si F > CMg, CMg avec le gaz PEG du mois.
+Nucléaire : référence = Pn si F ≥ CMg, sinon Pmin ; valeur marginale après VNU selon le revenu du
+parc de l'année (2026 et 2027 : estimation CRE ; ensuite Cal base, modifiable) :
+
+- bande 1 (s1 < R ≤ s2) : F − 50 % × (F − s1) ;
+- bande 2 (R > s2) : F − 50 % × (s2 − s1) − 90 % × (F − s2).
+
+Import de scénarios : `{"start": "2027-01-01T00:00", "paths": [[€/MWh horaires], …]}` (heure de Paris
+si pas de fuseau) → moyenne sur les trajectoires et extrinsèque. Export : JSON `parc3d.pricing/1`
+(actif, unités, contrainte, période, méthode, résultat avant/après VNU, produits, combustibles, et en
+option la courbe horaire F et CMg).
