@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-16T17:06:52Z",
+ "genere": "2026-10-19T23:24:32Z",
  "mode": "reel",
  "mois": [
   "2025-09",
@@ -21,20 +21,31 @@
   "mix": {
    "ok": true,
    "source": "eco2mix",
-   "heures": 9616
+   "heures": 95
   },
   "prix": {
    "ok": true,
    "source": "entsoe",
-   "heures": 9648
+   "heures": 96
   },
   "units": {
-   "ok": false,
-   "source": null,
-   "note": "Secrets RTE absents : production par groupe modélisée dans le navigateur."
+   "ok": true,
+   "source": "entsoe",
+   "groupes": 101,
+   "groupes_publies": 159
   }
  },
- "rte_non_apparies": [],
+ "rte_non_apparies": [
+  "AMFARD14",
+  "AMFARD15",
+  "BESS AFD7 BARBAN SAUCATS 1",
+  "BRENNILIS 1",
+  "BRENNILIS 2",
+  "CERNAY",
+  "CLAUD1TB",
+  "FR GA MORANT1",
+  "FR LANDIVISIAUGU"
+ ],
  "licences": {
   "eco2mix": "RTE éCO2mix via ODRÉ, Licence Ouverte Etalab 2.0",
   "entsoe": "ENTSO-E Transparency Platform, réutilisation avec attribution",
