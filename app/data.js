@@ -1,5 +1,6 @@
 // Chargement des JSON et construction des séries horaires (réelles ou modélisées).
 import { srmc } from './finance.js';
+import { buildHPFC } from './forward.js';
 
 const get = async (path) => {
   const r = await fetch(path, { cache: 'no-cache' });
@@ -10,8 +11,8 @@ const get = async (path) => {
 const MIX = ['consommation', 'nucleaire', 'hydraulique', 'gaz', 'charbon', 'fioul', 'eolien', 'solaire', 'bioenergies', 'pompage', 'ech_physiques'];
 
 export async function loadAll(onProgress = () => {}) {
-  const [assetsF, tranchesF, params, meta, regions] = await Promise.all(
-    ['data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/meta.json', 'data/geo/regions.json'].map(get));
+  const [assetsF, tranchesF, params, meta, regions, market] = await Promise.all(
+    ['data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/meta.json', 'data/geo/regions.json', 'data/market.json'].map(get));
   const live = await get('data/live.json').catch(() => null);
   const keys = (meta.mois || []).slice(-13);
   let done = 0;
@@ -41,13 +42,38 @@ export async function loadAll(onProgress = () => {}) {
   let now = H - 1;
   while (now > 0 && Number.isNaN(mix.nucleaire[now])) now--;
 
-  const D = { params, meta, live, regions, t0, H, now, price, mix, real, sources: srcs };
+  const D = { params, meta, live, regions, market, t0, H, now, price, mix, real, sources: srcs };
   D.assets = assetsF.assets;
   D.tranches = tranchesF.tranches;
   buildUnits(D);
   buildProduction(D);
   recomputeCosts(D);
+  D.market0 = JSON.parse(JSON.stringify(market)); // valeurs publiées, avant réglages
+  applyMarketEdits(D);
+  rebuildForward(D);
   return D;
+}
+
+const MKT_KEY = 'parc3d.market.v1';
+/** Réglages de marché saisis par l'utilisateur (navigateur seulement). */
+function applyMarketEdits(D) {
+  try {
+    const saved = JSON.parse(localStorage.getItem(MKT_KEY) || 'null');
+    if (saved && saved.asof === D.market.asof) {
+      for (const [k, v] of Object.entries(saved.electricite || {})) if (D.market.electricite[k]) Object.assign(D.market.electricite[k], v);
+      Object.assign(D.market.revenu_parc_nucleaire, saved.revenu_parc_nucleaire || {});
+    }
+  } catch { /* stockage indisponible : valeurs par défaut */ }
+}
+export function saveMarketEdits(D) {
+  try {
+    const e = Object.fromEntries(Object.entries(D.market.electricite).filter(([k]) => !k.startsWith('_')).map(([k, v]) => [k, { base: v.base, pointe: v.pointe }]));
+    localStorage.setItem(MKT_KEY, JSON.stringify({ asof: D.market.asof, electricite: e, revenu_parc_nucleaire: D.market.revenu_parc_nucleaire }));
+  } catch { /* ignoré */ }
+}
+/** Courbe forward horaire, forme estimée sur les prix spot réels chargés. */
+export function rebuildForward(D) {
+  D.FWD = buildHPFC(D.market, { t0: D.t0, prices: D.price });
 }
 
 /** Une « unité » = une ligne du merit order : chaque tranche nucléaire, chaque autre actif, plus des blocs diffus. */

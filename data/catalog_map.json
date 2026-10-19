@@ -602,7 +602,10 @@
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026"
-   }
+   },
+   "cles_registre": [
+    "KEMBS"
+   ]
   },
   {
    "id": "hyd-OTT",
@@ -621,6 +624,189 @@
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026"
+   },
+   "cles_registre": [
+    "OTTMARSHEIM"
+   ]
+  },
+  {
+   "id": "hyd-MGV",
+   "nom": "Malgovert (Tignes)",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.57,
+   "lon": 6.78,
+   "cles": [],
+   "cles_registre": [
+    "MALGOVERT"
+   ],
+   "statut": "en service",
+   "note": "Isère, alimentée par le barrage de Tignes. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-SCV",
+   "nom": "Sainte-Croix-du-Verdon",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.76,
+   "lon": 6.19,
+   "cles": [],
+   "cles_registre": [
+    "STE CROIX DU VERDON"
+   ],
+   "statut": "en service",
+   "note": "Verdon. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-FES",
+   "nom": "Fessenheim (usine hydraulique)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 47.92,
+   "lon": 7.55,
+   "cles": [],
+   "cles_registre": [
+    "FESSENHEIM"
+   ],
+   "statut": "en service",
+   "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-VOG",
+   "nom": "Vogelgrun",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.02,
+   "lon": 7.57,
+   "cles": [],
+   "cles_registre": [
+    "VOGELGRUN"
+   ],
+   "statut": "en service",
+   "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-MCK",
+   "nom": "Marckolsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.17,
+   "lon": 7.59,
+   "cles": [],
+   "cles_registre": [
+    "MARCKOLSHEIM"
+   ],
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-RHI",
+   "nom": "Rhinau",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.32,
+   "lon": 7.7,
+   "cles": [],
+   "cles_registre": [
+    "RHINAU"
+   ],
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-GER",
+   "nom": "Gerstheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.38,
+   "lon": 7.73,
+   "cles": [],
+   "cles_registre": [
+    "GERSTHEIM"
+   ],
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-STR",
+   "nom": "Strasbourg",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.55,
+   "lon": 7.8,
+   "cles": [],
+   "cles_registre": [
+    "STRASBOURG"
+   ],
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
+   }
+  },
+  {
+   "id": "hyd-GAM",
+   "nom": "Gambsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF / EnBW",
+   "region": "Grand Est",
+   "lat": 48.68,
+   "lon": 7.91,
+   "cles": [],
+   "cles_registre": [
+    "GAMBSHEIM"
+   ],
+   "statut": "en service",
+   "note": "Rhin, co-exploitée EDF / EnBW. Production non publiée par groupe : estimée.",
+   "verif": {
+    "coordonnees": "approximatives (à ±0,05° environ)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer"
    }
   },
   {

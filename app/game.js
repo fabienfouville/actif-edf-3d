@@ -18,6 +18,8 @@ const BADGES = [
   { id: 'oracle', nom: 'Oracle', desc: 'Prédire un prix spot à 10 €/MWh près.' },
   { id: 'dispatcher', nom: 'Dispatcher', desc: 'Faire 90 points ou plus au dispatcher.' },
   { id: 'quiz5', nom: 'Œil du marché', desc: '5 bonnes réponses au quiz.' },
+  { id: 'atomiste', nom: 'Atomiste', desc: 'Pricer une contrainte sur une tranche nucléaire.' },
+  { id: 'pricer', nom: 'Pricer', desc: 'Pricer 3 centrales différentes.' },
 ];
 const MISSIONS = [
   { id: 'm-nuc3', txt: 'Ouvre 3 sites nucléaires', test: (s) => s.day.nuc >= 3, xp: 60 },
@@ -29,6 +31,7 @@ const MISSIONS = [
   { id: 'm-replay', txt: 'Rejoue une journée avec ▶', test: (s) => s.day.play >= 1, xp: 40 },
   { id: 'm-pari', txt: 'Parie sur le prix de demain 19 h', test: (s) => s.day.bet >= 1, xp: 40 },
   { id: 'm-ren', txt: 'Ouvre un parc éolien en mer', test: (s) => s.day.offshore >= 1, xp: 40 },
+  { id: 'm-price', txt: 'Price une contrainte (interruption, Pmin, Pmax)', test: (s) => s.day.price >= 1, xp: 60 },
 ];
 
 function load() {
@@ -102,6 +105,13 @@ export function createGame(el, D, { stackAt, toast }) {
       else if (type === 'tab' && data === 'json') { s.day.json++; badge('analyste'); }
       else if (type === 'hedge') { if (!s.day.hedge++) badge('couvreur'); }
       else if (type === 'play') s.day.play++;
+      else if (type === 'price') {
+        const e = data; s.priced = s.priced || [];
+        s.day.price = (s.day.price || 0) + 1;
+        if (!s.priced.includes(e.id)) { s.priced.push(e.id); gain(30, `dossier pricé : ${e.nom}`); }
+        if (e.u.filiere === 'nucleaire') badge('atomiste');
+        if (s.priced.length >= 3) badge('pricer');
+      }
       checkMissions(); save(); listeners.forEach((f) => f());
     },
     resolveBets,

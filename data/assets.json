@@ -15,6 +15,13 @@
    "statut": "en service",
    "note": "Plus grande STEP de France. Coordonnées de l'usine estimées.",
    "p_mw": 1714,
+   "unites": [
+    {
+     "nom": "GRAND MAISON 10",
+     "eic": "17W100P100P0058E",
+     "p_mw": 1714
+    }
+   ],
    "rte": "GRAND MAISON",
    "groupes_entsoe": [
     "GRAND MAISON 1",
@@ -53,6 +60,13 @@
    "mise_service": 1982,
    "statut": "en service",
    "p_mw": 910,
+   "unites": [
+    {
+     "nom": "MONTEZIC 1",
+     "eic": "17W100P100P0071M",
+     "p_mw": 910
+    }
+   ],
    "rte": "MONTEZIC",
    "groupes_entsoe": [
     "MONTEZIC 1",
@@ -83,6 +97,13 @@
    "mise_service": 1976,
    "statut": "en service",
    "p_mw": 800,
+   "unites": [
+    {
+     "nom": "REVIN 1",
+     "eic": "17W100P100P0076C",
+     "p_mw": 800
+    }
+   ],
    "rte": "REVIN",
    "groupes_entsoe": [
     "REVIN 1",
@@ -113,6 +134,13 @@
    "mise_service": 1987,
    "statut": "en service",
    "p_mw": 742,
+   "unites": [
+    {
+     "nom": "SUPER BISSORTE 1",
+     "eic": "17W100P100P0082H",
+     "p_mw": 742
+    }
+   ],
    "rte": "SUPER BISSORTE",
    "groupes_entsoe": [
     "SUPER BISSORTE 1",
@@ -144,6 +172,13 @@
    "mise_service": 1979,
    "statut": "en service",
    "p_mw": 485,
+   "unites": [
+    {
+     "nom": "CHEYLAS 1",
+     "eic": "17W100P100P0056I",
+     "p_mw": 485
+    }
+   ],
    "rte": "CHEYLAS",
    "groupes_entsoe": [
     "CHEYLAS 1",
@@ -172,6 +207,13 @@
    "mise_service": 1977,
    "statut": "en service",
    "p_mw": 384,
+   "unites": [
+    {
+     "nom": "COCHE 5",
+     "eic": "17W100P100P20746",
+     "p_mw": 384
+    }
+   ],
    "rte": "COCHE",
    "groupes_entsoe": [
     "COCHE 5"
@@ -199,6 +241,13 @@
    "mise_service": 1961,
    "statut": "en service",
    "p_mw": 600,
+   "unites": [
+    {
+     "nom": "BATHIE 1",
+     "eic": "17W100P100P03566",
+     "p_mw": 600
+    }
+   ],
    "rte": "BATHIE",
    "groupes_entsoe": [
     "BATHIE 1",
@@ -232,6 +281,13 @@
    "statut": "en service",
    "note": "Groupe réversible depuis 1982.",
    "p_mw": 446,
+   "unites": [
+    {
+     "nom": "POUGET 4",
+     "eic": "17W100P100P0075E",
+     "p_mw": 446
+    }
+   ],
    "rte": "POUGET",
    "groupes_entsoe": [
     "POUGET 4"
@@ -259,6 +315,13 @@
    "mise_service": 1933,
    "statut": "en service",
    "p_mw": 406,
+   "unites": [
+    {
+     "nom": "BROMMAT 7",
+     "eic": "17W100P100P0055K",
+     "p_mw": 406
+    }
+   ],
    "rte": "BROMMAT",
    "groupes_entsoe": [
     "BROMMAT 7"
@@ -286,6 +349,13 @@
    "mise_service": 1945,
    "statut": "en service",
    "p_mw": 360,
+   "unites": [
+    {
+     "nom": "AIGLE 6",
+     "eic": "17W100P100P0051S",
+     "p_mw": 360
+    }
+   ],
    "rte": "AIGLE",
    "groupes_entsoe": [
     "AIGLE 6"
@@ -313,6 +383,13 @@
    "mise_service": 1968,
    "statut": "en service",
    "p_mw": 364,
+   "unites": [
+    {
+     "nom": "VILLARODIN 1",
+     "eic": "17W100P100P00877",
+     "p_mw": 364
+    }
+   ],
    "rte": "VILLARODIN",
    "groupes_entsoe": [
     "VILLARODIN 1",
@@ -340,6 +417,13 @@
    "lon": 5.95,
    "statut": "en service",
    "p_mw": 240,
+   "unites": [
+    {
+     "nom": "SISTERON 1",
+     "eic": "17W100P100P0080L",
+     "p_mw": 240
+    }
+   ],
    "rte": "SISTERON",
    "groupes_entsoe": [
     "SISTERON 1",
@@ -368,6 +452,13 @@
    "mise_service": 1952,
    "statut": "en service",
    "p_mw": 235,
+   "unites": [
+    {
+     "nom": "BORT 1",
+     "eic": "17W100P100P0052Q",
+     "p_mw": 235
+    }
+   ],
    "rte": "BORT",
    "groupes_entsoe": [
     "BORT 1",
@@ -396,6 +487,13 @@
    "mise_service": 1951,
    "statut": "en service",
    "p_mw": 293,
+   "unites": [
+    {
+     "nom": "CHASTANG 2",
+     "eic": "17W100P100P0049F",
+     "p_mw": 293
+    }
+   ],
    "rte": "CHASTANG",
    "groupes_entsoe": [
     "CHASTANG 2",
@@ -424,6 +522,13 @@
    "mise_service": 1935,
    "statut": "en service",
    "p_mw": 146,
+   "unites": [
+    {
+     "nom": "FR_MAREGES_G2",
+     "eic": "17W000000460346Y",
+     "p_mw": 146
+    }
+   ],
    "rte": "MAREGES",
    "eic": [
     "17W000000460346Y"
@@ -448,6 +553,13 @@
    "mise_service": 1957,
    "statut": "en service",
    "p_mw": 122,
+   "unites": [
+    {
+     "nom": "SAINT-PIERRE",
+     "eic": "17W100P100P0166B",
+     "p_mw": 122
+    }
+   ],
    "rte": "SAINT PIERRE",
    "groupes_entsoe": [
     "SAINT-PIERRE"
@@ -473,6 +585,13 @@
    "mise_service": 1976,
    "statut": "en service",
    "p_mw": 123,
+   "unites": [
+    {
+     "nom": "COMBE D'AVRIEUX 1",
+     "eic": "17W100P100P00893",
+     "p_mw": 123
+    }
+   ],
    "rte": "COMBE D AVRIEUX",
    "groupes_entsoe": [
     "COMBE D'AVRIEUX 1"
@@ -497,7 +616,7 @@
    "region": "Provence-Alpes-Côte d'Azur",
    "lat": 44.47,
    "lon": 6.27,
-   "p_mw": 380,
+   "p_mw": 370,
    "mise_service": 1960,
    "statut": "en service",
    "note": "Groupes de moins de 100 MW : production non publiée par groupe, estimée.",
@@ -505,7 +624,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 5 km du centre de la commune (Ubaye-Serre-Ponçon, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "valeur de la carte, non publiée par unité sur ENTSO-E",
+    "puissance": "Registre national des installations (ODRÉ) : S.PONH-CENTRALE HYDRAULIQUE DE SERRE-PONCON-6",
     "commune": "Registre national des installations (ODRÉ), « S.PONH-CENTRALE HYDRAULIQUE DE SERRE-PONCON-6 »"
    }
   },
@@ -526,7 +645,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Cernon, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "valeur de la carte, non publiée par unité sur ENTSO-E",
+    "puissance": "Registre national des installations (ODRÉ) : VOUGLH-CENTRALE HYDRAULIQUE DE VOUGLANS-6",
     "commune": "Registre national des installations (ODRÉ), « VOUGLH-CENTRALE HYDRAULIQUE DE VOUGLANS-6 »"
    }
   },
@@ -547,7 +666,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Monteynard, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "valeur de la carte, non publiée par unité sur ENTSO-E",
+    "puissance": "Registre national des installations (ODRÉ) : MTEYNH-CENTRALE HYDRAULIQUE DE MONTEYNARD-6",
     "commune": "Registre national des installations (ODRÉ), « MTEYNH-CENTRALE HYDRAULIQUE DE MONTEYNARD-6 »"
    }
   },
@@ -563,6 +682,13 @@
    "mise_service": 1948,
    "statut": "en service",
    "p_mw": 398,
+   "unites": [
+    {
+     "nom": "GENISSIAT G1",
+     "eic": "17W100P100P1594M",
+     "p_mw": 398
+    }
+   ],
    "rte": "GENISSIAT",
    "eic": [
     "17W100P100P1594M"
@@ -587,6 +713,13 @@
    "mise_service": 1952,
    "statut": "en service",
    "p_mw": 349,
+   "unites": [
+    {
+     "nom": "BOLLENE G1",
+     "eic": "17W100P100P1268Z",
+     "p_mw": 349
+    }
+   ],
    "rte": "BOLLENE",
    "eic": [
     "17W100P100P1268Z"
@@ -611,6 +744,13 @@
    "mise_service": 1957,
    "statut": "en service",
    "p_mw": 275,
+   "unites": [
+    {
+     "nom": "CHATEAUNEUF-DU-RHONE G1",
+     "eic": "17W100P100P1485R",
+     "p_mw": 275
+    }
+   ],
    "rte": "CHATEAUNEUF DU RHONE",
    "eic": [
     "17W100P100P1485R"
@@ -635,6 +775,13 @@
    "mise_service": 1970,
    "statut": "en service",
    "p_mw": 210,
+   "unites": [
+    {
+     "nom": "BEAUCAIRE G1",
+     "eic": "17W100P100P1330J",
+     "p_mw": 210
+    }
+   ],
    "rte": "BEAUCAIRE",
    "eic": [
     "17W100P100P1330J"
@@ -659,6 +806,13 @@
    "mise_service": 1975,
    "statut": "en service",
    "p_mw": 187,
+   "unites": [
+    {
+     "nom": "CADEROUSSE G1",
+     "eic": "17W100P100P13650",
+     "p_mw": 187
+    }
+   ],
    "rte": "CADEROUSSE",
    "eic": [
     "17W100P100P13650"
@@ -683,6 +837,13 @@
    "mise_service": 1968,
    "statut": "en service",
    "p_mw": 180,
+   "unites": [
+    {
+     "nom": "BOURG-LES-VALENCE G1",
+     "eic": "17W100P100P13189",
+     "p_mw": 180
+    }
+   ],
    "rte": "BOURG LES VALENCE",
    "eic": [
     "17W100P100P13189"
@@ -707,6 +868,13 @@
    "mise_service": 1963,
    "statut": "en service",
    "p_mw": 192,
+   "unites": [
+    {
+     "nom": "BEAUCHASTEL G1",
+     "eic": "17W100P100P13367",
+     "p_mw": 192
+    }
+   ],
    "rte": "BEAUCHASTEL",
    "eic": [
     "17W100P100P13367"
@@ -731,6 +899,18 @@
    "mise_service": 1960,
    "statut": "en service",
    "p_mw": 192,
+   "unites": [
+    {
+     "nom": "LOGIS-NEUF G1",
+     "eic": "17W100P100P1734W",
+     "p_mw": 128
+    },
+    {
+     "nom": "LOGIS-NEUF G3",
+     "eic": "17W100P100P1736S",
+     "p_mw": 64
+    }
+   ],
    "rte": "LOGIS NEUF",
    "eic": [
     "17W100P100P1734W",
@@ -756,6 +936,13 @@
    "mise_service": 1973,
    "statut": "en service",
    "p_mw": 120,
+   "unites": [
+    {
+     "nom": "AVIGNON G1",
+     "eic": "17W100P100P1204O",
+     "p_mw": 120
+    }
+   ],
    "rte": "AVIGNON",
    "eic": [
     "17W100P100P1204O"
@@ -780,6 +967,68 @@
    "statut": "en service",
    "note": "Regroupe 10 usines CNR du Haut-Rhône et du Rhône moyen (Seyssel, Chautagne, Brens, Brégnier-Cordon, Sault-Brénaz, Pierre-Bénite, Vaugris, Sablons, Gervans, Sauveterre).",
    "p_mw": 833,
+   "unites": [
+    {
+     "nom": "BREGNIER-CORDON G1",
+     "eic": "17W100P100P1230N",
+     "p_mw": 70
+    },
+    {
+     "nom": "BRENS G1",
+     "eic": "17W100P100P1288T",
+     "p_mw": 90
+    },
+    {
+     "nom": "CHAUTAGNE G1",
+     "eic": "17W100P100P15262",
+     "p_mw": 90
+    },
+    {
+     "nom": "GERVANS G1",
+     "eic": "17W100P100P16153",
+     "p_mw": 60
+    },
+    {
+     "nom": "GERVANS G3",
+     "eic": "17W100P100P1619W",
+     "p_mw": 60
+    },
+    {
+     "nom": "PIERRE-BENITE G1",
+     "eic": "17W000001353785Z",
+     "p_mw": 80
+    },
+    {
+     "nom": "SABLONS G1",
+     "eic": "17W100P100P19004",
+     "p_mw": 80
+    },
+    {
+     "nom": "SABLONS G3",
+     "eic": "17W100P100P19020",
+     "p_mw": 80
+    },
+    {
+     "nom": "SAULT-BRENAZ G1",
+     "eic": "17W100P100P1929H",
+     "p_mw": 45
+    },
+    {
+     "nom": "SAUVETERRE G1",
+     "eic": "17W100P100P1211R",
+     "p_mw": 66
+    },
+    {
+     "nom": "SEYSSEL G1",
+     "eic": "17W100P100P1932S",
+     "p_mw": 40
+    },
+    {
+     "nom": "VAUGRIS G1",
+     "eic": "17W100P100P2036E",
+     "p_mw": 72
+    }
+   ],
    "rte": "SEYSSEL",
    "eic": [
     "17W000001353785Z",
@@ -810,7 +1059,7 @@
    "region": "Grand Est",
    "lat": 47.68,
    "lon": 7.5,
-   "p_mw": 160,
+   "p_mw": 151,
    "mise_service": 1932,
    "statut": "en service",
    "note": "Rhin : production non publiée par groupe, estimée.",
@@ -818,7 +1067,7 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Kembs, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "valeur de la carte, non publiée par unité sur ENTSO-E",
+    "puissance": "Registre national des installations (ODRÉ) : KEMBSH-CENTRALE HYDRAULIQUE DE KEMBS-6",
     "commune": "Registre national des installations (ODRÉ), « KEMBSH-CENTRALE HYDRAULIQUE DE KEMBS-6 »"
    }
   },
@@ -839,8 +1088,188 @@
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Ottmarsheim, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "valeur de la carte, non publiée par unité sur ENTSO-E",
+    "puissance": "Registre national des installations (ODRÉ) : OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-6 + OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-3",
     "commune": "Registre national des installations (ODRÉ), « OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-6 »"
+   }
+  },
+  {
+   "id": "hyd-MGV",
+   "nom": "Malgovert (Tignes)",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Auvergne-Rhône-Alpes",
+   "lat": 45.57,
+   "lon": 6.78,
+   "statut": "en service",
+   "note": "Isère, alimentée par le barrage de Tignes. Production non publiée par groupe : estimée.",
+   "p_mw": 297,
+   "commune": "Séez",
+   "verif": {
+    "coordonnees": "relevées à la main, à 10 km du centre de la commune (Séez, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : MALGOH-CENTRALE HYDRAULIQUE DE MALGOVERT-6",
+    "commune": "Registre national des installations (ODRÉ), « MALGOH-CENTRALE HYDRAULIQUE DE MALGOVERT-6 »"
+   }
+  },
+  {
+   "id": "hyd-SCV",
+   "nom": "Sainte-Croix-du-Verdon",
+   "filiere": "hydraulique",
+   "type": "lac",
+   "exploitant": "EDF",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "lat": 43.76,
+   "lon": 6.19,
+   "statut": "en service",
+   "note": "Verdon. Production non publiée par groupe : estimée.",
+   "p_mw": 132,
+   "commune": "Sainte-Croix-du-Verdon",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Sainte-Croix-du-Verdon, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : SSCROH-CENTRALE HYDRAULIQUE DE STE-CROIX-DU-VERDON-6",
+    "commune": "Registre national des installations (ODRÉ), « SSCROH-CENTRALE HYDRAULIQUE DE STE-CROIX-DU-VERDON-6 »"
+   }
+  },
+  {
+   "id": "hyd-FES",
+   "nom": "Fessenheim (usine hydraulique)",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 47.92,
+   "lon": 7.55,
+   "statut": "en service",
+   "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
+   "p_mw": 175,
+   "commune": "Fessenheim",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Fessenheim, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : FESSEH-CENTRALE HYDRAULIQUE DE FESSENHEIM-6",
+    "commune": "Registre national des installations (ODRÉ), « FESSEH-CENTRALE HYDRAULIQUE DE FESSENHEIM-6 »"
+   }
+  },
+  {
+   "id": "hyd-VOG",
+   "nom": "Vogelgrun",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.02,
+   "lon": 7.57,
+   "statut": "en service",
+   "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
+   "p_mw": 140,
+   "commune": "Vogelgrun",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Vogelgrun, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : VOGELH-CENTRALE HYDRAULIQUE DE VOGELGRUN-6",
+    "commune": "Registre national des installations (ODRÉ), « VOGELH-CENTRALE HYDRAULIQUE DE VOGELGRUN-6 »"
+   }
+  },
+  {
+   "id": "hyd-MCK",
+   "nom": "Marckolsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.17,
+   "lon": 7.59,
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "p_mw": 155,
+   "commune": "Marckolsheim",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Marckolsheim, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : MARCKH-CENTRALE HYDRAULIQUE DE MARCKOLSHEIM-6",
+    "commune": "Registre national des installations (ODRÉ), « MARCKH-CENTRALE HYDRAULIQUE DE MARCKOLSHEIM-6 »"
+   }
+  },
+  {
+   "id": "hyd-RHI",
+   "nom": "Rhinau",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.32,
+   "lon": 7.7,
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "p_mw": 125,
+   "commune": "Rhinau",
+   "verif": {
+    "coordonnees": "relevées à la main, à 1 km du centre de la commune (Rhinau, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : RHINAH-CENTRALE HYDRAULIQUE DE RHINAU-6",
+    "commune": "Registre national des installations (ODRÉ), « RHINAH-CENTRALE HYDRAULIQUE DE RHINAU-6 »"
+   }
+  },
+  {
+   "id": "hyd-GER",
+   "nom": "Gerstheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.38,
+   "lon": 7.73,
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "p_mw": 139,
+   "commune": "Gerstheim",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Gerstheim, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : GERSTH-CENTRALE HYDRAULIQUE DE GERSTHEIM-6",
+    "commune": "Registre national des installations (ODRÉ), « GERSTH-CENTRALE HYDRAULIQUE DE GERSTHEIM-6 »"
+   }
+  },
+  {
+   "id": "hyd-STR",
+   "nom": "Strasbourg",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF",
+   "region": "Grand Est",
+   "lat": 48.55,
+   "lon": 7.8,
+   "statut": "en service",
+   "note": "Rhin. Production non publiée par groupe : estimée.",
+   "p_mw": 98,
+   "commune": "Strasbourg",
+   "verif": {
+    "coordonnees": "relevées à la main, à 3 km du centre de la commune (Strasbourg, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : STRASH-CENTRALE HYDRAULIQUE DE STRASBOURG-6",
+    "commune": "Registre national des installations (ODRÉ), « STRASH-CENTRALE HYDRAULIQUE DE STRASBOURG-6 »"
+   }
+  },
+  {
+   "id": "hyd-GAM",
+   "nom": "Gambsheim",
+   "filiere": "hydraulique",
+   "type": "fil",
+   "exploitant": "EDF / EnBW",
+   "region": "Grand Est",
+   "lat": 48.68,
+   "lon": 7.91,
+   "statut": "en service",
+   "note": "Rhin, co-exploitée EDF / EnBW. Production non publiée par groupe : estimée.",
+   "p_mw": 98,
+   "commune": "Gambsheim",
+   "verif": {
+    "coordonnees": "relevées à la main, à 2 km du centre de la commune (Gambsheim, geo.api.gouv.fr)",
+    "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
+    "puissance": "Registre national des installations (ODRÉ) : GAMBSH-CENTRALE HYDRAULIQUE DE GAMBSHEIM-6",
+    "commune": "Registre national des installations (ODRÉ), « GAMBSH-CENTRALE HYDRAULIQUE DE GAMBSHEIM-6 »"
    }
   },
   {
@@ -855,6 +1284,18 @@
    "mise_service": 2012,
    "statut": "en service",
    "p_mw": 930,
+   "unites": [
+    {
+     "nom": "MARTIGUES PONTEAU 5",
+     "eic": "17W100P100P0174C",
+     "p_mw": 465
+    },
+    {
+     "nom": "MARTIGUES PONTEAU 6",
+     "eic": "17W100P100P0175A",
+     "p_mw": 465
+    }
+   ],
    "rte": "MARTIGUES",
    "groupes_entsoe": [
     "MARTIGUES PONTEAU 5",
@@ -884,6 +1325,13 @@
    "mise_service": 2011,
    "statut": "en service",
    "p_mw": 427,
+   "unites": [
+    {
+     "nom": "BLENOD 5",
+     "eic": "17W100P100P0173E",
+     "p_mw": 427
+    }
+   ],
    "rte": "BLENOD",
    "groupes_entsoe": [
     "BLENOD 5"
@@ -911,6 +1359,13 @@
    "mise_service": 2016,
    "statut": "en service",
    "p_mw": 585,
+   "unites": [
+    {
+     "nom": "BOUCHAIN 7",
+     "eic": "17W100P100P01768",
+     "p_mw": 585
+    }
+   ],
    "rte": "BOUCHAIN",
    "groupes_entsoe": [
     "BOUCHAIN 7"
@@ -938,6 +1393,13 @@
    "mise_service": 2005,
    "statut": "en service",
    "p_mw": 796,
+   "unites": [
+    {
+     "nom": "DK6-TG1",
+     "eic": "17W100P100P0330O",
+     "p_mw": 796
+    }
+   ],
    "rte": "DK6",
    "groupes_entsoe": [
     "DK6-TG1",
@@ -968,6 +1430,13 @@
    "mise_service": 2010,
    "statut": "en service",
    "p_mw": 428,
+   "unites": [
+    {
+     "nom": "CYCOFOS PL1",
+     "eic": "17W100P100P03388",
+     "p_mw": 428
+    }
+   ],
    "rte": "CYCOFOS",
    "groupes_entsoe": [
     "CYCOFOS PL1"
@@ -995,6 +1464,13 @@
    "mise_service": 2010,
    "statut": "en service",
    "p_mw": 425,
+   "unites": [
+    {
+     "nom": "COMBIGOLFE CCG",
+     "eic": "17W100P100P01679",
+     "p_mw": 425
+    }
+   ],
    "rte": "COMBIGOLFE",
    "groupes_entsoe": [
     "COMBIGOLFE CCG"
@@ -1022,6 +1498,18 @@
    "mise_service": 2010,
    "statut": "en service",
    "p_mw": 480,
+   "unites": [
+    {
+     "nom": "SPEM CCG",
+     "eic": "17W100P100P0171I",
+     "p_mw": 435
+    },
+    {
+     "nom": "SPEM pointe",
+     "eic": "17W100P100P0336C",
+     "p_mw": 45
+    }
+   ],
    "rte": "SPEM",
    "groupes_entsoe": [
     "SPEM CCG"
@@ -1050,6 +1538,13 @@
    "mise_service": 2022,
    "statut": "en service",
    "p_mw": 446,
+   "unites": [
+    {
+     "nom": "FR_LANDIVISIAUGU",
+     "eic": "17W000001023725I",
+     "p_mw": 446
+    }
+   ],
    "rte": "LANDIVISIAU",
    "groupes_entsoe": [
     "COMPAGNIE ELECTRIQUE DE BRETAGNE"
@@ -1077,6 +1572,13 @@
    "mise_service": 2009,
    "statut": "en service",
    "p_mw": 445,
+   "unites": [
+    {
+     "nom": "Pont-sur-Sambre",
+     "eic": "17W100P100P00016",
+     "p_mw": 445
+    }
+   ],
    "rte": "PONT SUR SAMBRE",
    "groupes_entsoe": [
     "PONT SUR SAMBRE"
@@ -1104,6 +1606,13 @@
    "mise_service": 2013,
    "statut": "en service",
    "p_mw": 445,
+   "unites": [
+    {
+     "nom": "Croix-de-Metz",
+     "eic": "17W100P100P00123",
+     "p_mw": 445
+    }
+   ],
    "rte": "CROIX DE METZ",
    "groupes_entsoe": [
     "CROIX DE METZ"
@@ -1131,6 +1640,13 @@
    "mise_service": 2011,
    "statut": "en service",
    "p_mw": 420,
+   "unites": [
+    {
+     "nom": "FR-GA-MORANT1",
+     "eic": "17W100P100P00122",
+     "p_mw": 420
+    }
+   ],
    "rte": "BAYET",
    "groupes_entsoe": [
     "BAYET MORANDES (LES)"
@@ -1158,6 +1674,18 @@
    "mise_service": 2010,
    "statut": "en service",
    "p_mw": 892,
+   "unites": [
+    {
+     "nom": "Saint_Avold_7",
+     "eic": "17W100P100P00105",
+     "p_mw": 446
+    },
+    {
+     "nom": "Saint_Avold_8",
+     "eic": "17W100P100P00113",
+     "p_mw": 446
+    }
+   ],
    "rte": "SAINT AVOLD",
    "groupes_entsoe": [
     "SAINT AVOLD 7",
@@ -1187,6 +1715,13 @@
    "mise_service": 1992,
    "statut": "en service",
    "p_mw": 203,
+   "unites": [
+    {
+     "nom": "GENNEVILLIERS 1",
+     "eic": "17W100P100P0037M",
+     "p_mw": 203
+    }
+   ],
    "rte": "GENNEVILLIERS",
    "groupes_entsoe": [
     "GENNEVILLIERS 1"
@@ -1246,6 +1781,18 @@
    "statut": "en service",
    "note": "Chaleur urbaine de Paris : production surtout pilotée par le besoin de chaleur.",
    "p_mw": 251,
+   "unites": [
+    {
+     "nom": "CPCU-CogeVitry–GP",
+     "eic": "17W000001418626A",
+     "p_mw": 125
+    },
+    {
+     "nom": "CPCU-StOuen-GP",
+     "eic": "17W0000014186456",
+     "p_mw": 126
+    }
+   ],
    "rte": "CPCU",
    "groupes_entsoe": [
     "CPCU-CogeVitry–GP",
@@ -1275,6 +1822,18 @@
    "mise_service": 1983,
    "statut": "en service, arrêt définitif prévu le 31/03/2027",
    "p_mw": 1160,
+   "unites": [
+    {
+     "nom": "CORDEMAIS 4",
+     "eic": "17W100P100P0017S",
+     "p_mw": 580
+    },
+    {
+     "nom": "CORDEMAIS 5",
+     "eic": "17W100P100P0018Q",
+     "p_mw": 580
+    }
+   ],
    "rte": "CORDEMAIS",
    "groupes_entsoe": [
     "CORDEMAIS 4",
@@ -1305,6 +1864,13 @@
    "statut": "en service (mécanisme de capacité hiver 2026-27), conversion au gaz envisagée",
    "note": "Seule autre tranche charbon en service en France avec Cordemais.",
    "p_mw": 595,
+   "unites": [
+    {
+     "nom": "EMILE HUCHET 6",
+     "eic": "17W100P100P0005Z",
+     "p_mw": 595
+    }
+   ],
    "rte": "EMILE HUCHET",
    "groupes_entsoe": [
     "EMILE HUCHET 6"
@@ -1332,6 +1898,23 @@
    "mise_service": 1980,
    "statut": "en service",
    "p_mw": 304,
+   "unites": [
+    {
+     "nom": "BRENNILIS 1",
+     "eic": "17W100P100P02578",
+     "p_mw": 85
+    },
+    {
+     "nom": "BRENNILIS 2",
+     "eic": "17W100P100P02594",
+     "p_mw": 85
+    },
+    {
+     "nom": "BRENNILIS 3",
+     "eic": "17W100P100P0033U",
+     "p_mw": 134
+    }
+   ],
    "rte": "BRENNILIS",
    "groupes_entsoe": [
     "BRENNILIS 3"
@@ -1361,6 +1944,18 @@
    "mise_service": 1981,
    "statut": "en service",
    "p_mw": 170,
+   "unites": [
+    {
+     "nom": "DIRINON 1",
+     "eic": "17W100P100P0262F",
+     "p_mw": 85
+    },
+    {
+     "nom": "DIRINON 2",
+     "eic": "17W100P100P0264B",
+     "p_mw": 85
+    }
+   ],
    "rte": "DIRINON",
    "eic": [
     "17W100P100P0262F",
@@ -1387,6 +1982,23 @@
    "statut": "en service",
    "note": "Fonctionne au fioul ; conversion au gaz / biométhane à l'étude (appel d'offres 2026).",
    "p_mw": 542,
+   "unites": [
+    {
+     "nom": "VAIRES 1",
+     "eic": "17W100P100P0046L",
+     "p_mw": 181
+    },
+    {
+     "nom": "VAIRES 2",
+     "eic": "17W100P100P0047J",
+     "p_mw": 179
+    },
+    {
+     "nom": "VAIRES 3",
+     "eic": "17W100P100P0048H",
+     "p_mw": 182
+    }
+   ],
    "rte": "VAIRES",
    "groupes_entsoe": [
     "VAIRES 1",
@@ -1418,6 +2030,18 @@
    "mise_service": 2010,
    "statut": "en service",
    "p_mw": 350,
+   "unites": [
+    {
+     "nom": "MONTEREAU 5",
+     "eic": "17W100P100P0040X",
+     "p_mw": 175
+    },
+    {
+     "nom": "MONTEREAU 6",
+     "eic": "17W100P100P0041V",
+     "p_mw": 175
+    }
+   ],
    "rte": "MONTEREAU",
    "groupes_entsoe": [
     "MONTEREAU 5",
@@ -1447,6 +2071,18 @@
    "mise_service": 1997,
    "statut": "en service",
    "p_mw": 254,
+   "unites": [
+    {
+     "nom": "ARRIGHI 1",
+     "eic": "17W100P100P0031Y",
+     "p_mw": 125
+    },
+    {
+     "nom": "ARRIGHI 2",
+     "eic": "17W100P100P0032W",
+     "p_mw": 129
+    }
+   ],
    "rte": "ARRIGHI",
    "groupes_entsoe": [
     "ARRIGHI 1",
@@ -1476,6 +2112,13 @@
    "mise_service": 2022,
    "statut": "en service",
    "p_mw": 480,
+   "unites": [
+    {
+     "nom": "BANC DE GUERANDE 1",
+     "eic": "17W0000014455651",
+     "p_mw": 480
+    }
+   ],
    "rte": "BANC DE GUERANDE",
    "groupes_entsoe": [
     "BANC DE GUERANDE 1",
@@ -1504,6 +2147,13 @@
    "mise_service": 2024,
    "statut": "en service",
    "p_mw": 496,
+   "unites": [
+    {
+     "nom": "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
+     "eic": "17W100P100P0842Y",
+     "p_mw": 496
+    }
+   ],
    "rte": "BAIE DE ST BRIEUC",
    "groupes_entsoe": [
     "A1 DE PARC EOLIEN EN MER DE LA BAIE DE ST-BRIEUC",
@@ -1532,6 +2182,13 @@
    "mise_service": 2024,
    "statut": "en service",
    "p_mw": 497,
+   "unites": [
+    {
+     "nom": "FECAMP 1",
+     "eic": "17W000001445569U",
+     "p_mw": 497
+    }
+   ],
    "rte": "FECAMP",
    "groupes_entsoe": [
     "FECAMP 1",
@@ -1561,6 +2218,13 @@
    "statut": "en service",
    "note": "Mis en service à 100 % le 29/04/2026. Raccordé à La Barre-de-Monts (registre national).",
    "p_mw": 500,
+   "unites": [
+    {
+     "nom": "ADP 01 DE LA FERME EOLIENNE DE VENT-DES-ILES",
+     "eic": "17W000002144986W",
+     "p_mw": 500
+    }
+   ],
    "rte": "VENT DES ILES",
    "groupes_entsoe": [
     "ADP 01 DE LA FERME EOLIENNE DE VENT-DES-ILES",
@@ -1586,7 +2250,7 @@
    "region": "Normandie",
    "lat": 50.08,
    "lon": 1.2,
-   "p_mw": 496,
+   "p_mw": 248,
    "mise_service": 2026,
    "statut": "mise en service progressive (premiers électrons en juillet 2026)",
    "rte": "RIDENS DE DIEPPE",
@@ -1598,7 +2262,7 @@
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
-    "puissance": "valeur de la carte, non publiée par unité sur ENTSO-E",
+    "puissance": "Registre national des installations (ODRÉ) : R.DIEEA1 - ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
     "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
    }
   },
@@ -1614,6 +2278,13 @@
    "mise_service": 2018,
    "statut": "en service (redémarrée fin 2025)",
    "p_mw": 150,
+   "unites": [
+    {
+     "nom": "PROVENCE 4",
+     "eic": "17W100P100P03655",
+     "p_mw": 150
+    }
+   ],
    "rte": "PROVENCE 4",
    "groupes_entsoe": [
     "PROVENCE 4"

@@ -48,12 +48,13 @@ def main():
     fam = {"hydraulique": "Hydraulique", "gaz": "Thermique non renouvelable", "charbon": "Thermique non renouvelable",
            "fioul": "Thermique non renouvelable", "eolien": "Eolien", "solaire": "Solaire", "bioenergies": "Bioénergies"}
 
+    def registre_rows(keys, filiere):
+        return [r for r in ref["registre"] if r.get("filiere") == fam.get(filiere) and r.get("commune")
+                and any(f"DE {k}" in norm(r.get("nominstallation") or "") for k in keys)]
+
     def registre_by_name(keys, filiere):
-        for r in ref["registre"]:
-            n = norm(r.get("nominstallation") or "")
-            if r.get("filiere") == fam.get(filiere) and r.get("commune") and any(f"DE {k}" in n for k in keys):
-                return r
-        return None
+        rows = registre_rows(keys, filiere)
+        return rows[0] if rows else None
 
     def check_position(a, verif, insee):
         """Écart entre la position de la carte et le centre de la commune d'implantation (geo.api.gouv.fr)."""
@@ -69,11 +70,18 @@ def main():
     for c in cmap["centrales"]:
         keys = [norm(k) for k in c.get("cles", [])]
         units, gens, insee = official(keys, [norm(x) for x in c.get("exclure", [])]) if keys else ([], [], None)
-        a = {k: v for k, v in c.items() if k not in ("cles", "exclure", "verif")}
+        a = {k: v for k, v in c.items() if k not in ("cles", "cles_registre", "exclure", "verif")}
         verif = dict(c.get("verif", {}))
+        rkeys = [norm(k) for k in c.get("cles_registre", [])] or keys or [norm(c["nom"].split(" (")[0])]
+        rrows = registre_rows(rkeys, c["filiere"]) if len(rkeys) <= 2 else []
         if units and not c.get("p_mw_manuel"):
             a["p_mw"] = round(sum(u["p_mw"] for u in units))
+            a["unites"] = [{"nom": u["nom_entsoe"], "eic": u["eic"], "p_mw": round(u["p_mw"])} for u in sorted(units, key=lambda u: u["nom_entsoe"])]
             verif["puissance"] = f"ENTSO-E 14.1.B (puissance installée par unité), relevé du {date_ref}"
+        elif rrows and not c.get("p_mw_manuel"):
+            # groupes de moins de 100 MW, absents d'ENTSO-E : puissance du registre national
+            a["p_mw"] = round(sum(float(r.get("puismaxinstallee") or 0) for r in rrows) / 1000)
+            verif["puissance"] = "Registre national des installations (ODRÉ) : " + " + ".join(r["nominstallation"] for r in rrows)
         elif "p_mw" in a:
             verif.setdefault("puissance", "valeur de la carte, non publiée par unité sur ENTSO-E")
         if keys:
@@ -83,9 +91,9 @@ def main():
         if insee and insee in communes and "nom" in communes[insee]:
             a["commune"] = communes[insee]["nom"]
             verif["commune"] = f"Registre national des installations (ODRÉ), code EIC rapproché"
-        elif len(keys) <= 2:
+        elif rrows:
             # le registre code l'hydraulique avec un autre EIC qu'ENTSO-E : rapprochement par le nom de l'installation
-            r = registre_by_name(keys or [norm(c["nom"].split(" (")[0])], c["filiere"])
+            r = rrows[0]
             if r:
                 insee = r.get("codeinseecommuneimplantation") or r.get("codeinseecommune")
                 a["commune"] = communes.get(insee, {}).get("nom") or r["commune"]
