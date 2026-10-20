@@ -44,11 +44,30 @@
     "17W100P100P0058E"
    ],
    "commune": "Vaujany",
+   "registre": {
+    "installations": [
+     "G.MAIH-CENTRALE HYDRAULIQUE DE GRAND-MAISON-7"
+    ],
+    "eic": [
+     "17W100P100P02756"
+    ],
+    "nb_groupes": 12,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1690.0,
+    "e_injectee_12m_mwh": 2122730,
+    "facteur_charge_12m": 0.143
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 5 km du centre de la commune (Vaujany, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « G.MAIH-CENTRALE HYDRAULIQUE DE GRAND-MAISON-7 »"
+    "commune": "Registre national des installations (ODRÉ), « G.MAIH-CENTRALE HYDRAULIQUE DE GRAND-MAISON-7 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -84,11 +103,30 @@
     "17W100P100P0071M"
    ],
    "commune": "Montézic",
+   "registre": {
+    "installations": [
+     "MTEZIH-CENTRALE HYDRAULIQUE DE MONTEZIC-7"
+    ],
+    "eic": [
+     "17W100P100P02772"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 1822435,
+    "facteur_charge_12m": 0.229
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Montézic, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « MTEZIH-CENTRALE HYDRAULIQUE DE MONTEZIC-7 »"
+    "commune": "Registre national des installations (ODRÉ), « MTEZIH-CENTRALE HYDRAULIQUE DE MONTEZIC-7 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -124,11 +162,30 @@
     "17W100P100P0076C"
    ],
    "commune": "Les Mazures",
+   "registre": {
+    "installations": [
+     "REVI5H-CENTRALE HYDRAULIQUE DE REVIN-7"
+    ],
+    "eic": [
+     "17W100P100P02780"
+    ],
+    "nb_groupes": 5,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 808.0,
+    "e_injectee_12m_mwh": 1026275,
+    "facteur_charge_12m": 0.145
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Les Mazures, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « REVI5H-CENTRALE HYDRAULIQUE DE REVIN-7 »"
+    "commune": "Registre national des installations (ODRÉ), « REVI5H-CENTRALE HYDRAULIQUE DE REVIN-7 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -165,11 +222,30 @@
     "17W100P100P0082H"
    ],
    "commune": "Orelle",
+   "registre": {
+    "installations": [
+     "S.BISH-CENTRALE HYDRAULIQUE DE SUPER-BISSORTE-7"
+    ],
+    "eic": [
+     "17W100P100P02764"
+    ],
+    "nb_groupes": 5,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 742.3,
+    "e_injectee_12m_mwh": 657270,
+    "facteur_charge_12m": 0.101
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Orelle, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « S.BISH-CENTRALE HYDRAULIQUE DE SUPER-BISSORTE-7 »"
+    "commune": "Registre national des installations (ODRÉ), « S.BISH-CENTRALE HYDRAULIQUE DE SUPER-BISSORTE-7 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -203,11 +279,30 @@
     "17W100P100P0056I"
    ],
    "commune": "Le Cheylas",
+   "registre": {
+    "installations": [
+     "CHEY6H-CENTRALE HYDRAULIQUE DE CHEYLAS (LE)-7"
+    ],
+    "eic": [
+     "17W100P100P0273A"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 485.0,
+    "e_injectee_12m_mwh": 823707,
+    "facteur_charge_12m": 0.194
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 0 km du centre de la commune (Le Cheylas, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « CHEY6H-CENTRALE HYDRAULIQUE DE CHEYLAS (LE)-7 »"
+    "commune": "Registre national des installations (ODRÉ), « CHEY6H-CENTRALE HYDRAULIQUE DE CHEYLAS (LE)-7 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -240,11 +335,30 @@
     "17W100P100P20746"
    ],
    "commune": "Grand-Aigueblanche",
+   "registre": {
+    "installations": [
+     "COCHEH-CENTRALE HYDRAULIQUE DE COCHE (LA)-7"
+    ],
+    "eic": [
+     "17W100P100P02748"
+    ],
+    "nb_groupes": 5,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 384.0,
+    "e_injectee_12m_mwh": 442388,
+    "facteur_charge_12m": 0.132
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Grand-Aigueblanche, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « COCHEH-CENTRALE HYDRAULIQUE DE COCHE (LA)-7 »"
+    "commune": "Registre national des installations (ODRÉ), « COCHEH-CENTRALE HYDRAULIQUE DE COCHE (LA)-7 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -282,11 +396,32 @@
     "17W100P100P03566"
    ],
    "commune": "La Bâthie",
+   "registre": {
+    "installations": [
+     "BATHIH-CENTRALE HYDRAULIQUE DE BATHIE (LA)-7",
+     "BATHIH-CENTRALE HYDRAULIQUE DE BATHIE (LA)-6"
+    ],
+    "eic": [
+     "17W000000012851W",
+     "17W000000012975E"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 546.0,
+    "e_injectee_12m_mwh": 997078,
+    "facteur_charge_12m": 0.208
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (La Bâthie, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « BATHIH-CENTRALE HYDRAULIQUE DE BATHIE (LA)-7 »"
+    "commune": "Registre national des installations (ODRÉ), « BATHIH-CENTRALE HYDRAULIQUE DE BATHIE (LA)-7 »",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -320,11 +455,30 @@
     "17W100P100P0075E"
    ],
    "commune": "Le Truel",
+   "registre": {
+    "installations": [
+     "POUGEH-CENTRALE HYDRAULIQUE DE POUGET (LE)-6"
+    ],
+    "eic": [
+     "17W100P100P0290A"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 446.9,
+    "e_injectee_12m_mwh": 361923,
+    "facteur_charge_12m": 0.092
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Le Truel, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « POUGEH-CENTRALE HYDRAULIQUE DE POUGET (LE)-6 »"
+    "commune": "Registre national des installations (ODRÉ), « POUGEH-CENTRALE HYDRAULIQUE DE POUGET (LE)-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -357,11 +511,32 @@
     "17W100P100P0055K"
    ],
    "commune": "Brommat",
+   "registre": {
+    "installations": [
+     "BROMMH-CENTRALE HYDRAULIQUE DE BROMMAT-7",
+     "BROMMH-CENTRALE HYDRAULIQUE DE BROMMAT-6"
+    ],
+    "eic": [
+     "17W000000012816Y",
+     "17W000000012953O"
+    ],
+    "nb_groupes": 7,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 406.0,
+    "e_injectee_12m_mwh": 926103,
+    "facteur_charge_12m": 0.26
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 6 km du centre de la commune (Brommat, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « BROMMH-CENTRALE HYDRAULIQUE DE BROMMAT-7 »"
+    "commune": "Registre national des installations (ODRÉ), « BROMMH-CENTRALE HYDRAULIQUE DE BROMMAT-7 »",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -394,11 +569,30 @@
     "17W100P100P0051S"
    ],
    "commune": "Soursac",
+   "registre": {
+    "installations": [
+     "AIGLEH-CENTRALE HYDRAULIQUE DE AIGLE (L )-6"
+    ],
+    "eic": [
+     "17W100P100P0279Z"
+    ],
+    "nb_groupes": 5,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 360.0,
+    "e_injectee_12m_mwh": 431327,
+    "facteur_charge_12m": 0.137
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Soursac, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « AIGLEH-CENTRALE HYDRAULIQUE DE AIGLE (L )-6 »"
+    "commune": "Registre national des installations (ODRÉ), « AIGLEH-CENTRALE HYDRAULIQUE DE AIGLE (L )-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -432,11 +626,30 @@
     "17W100P100P00877"
    ],
    "commune": "Avrieux",
+   "registre": {
+    "installations": [
+     "VLAROH-CENTRALE HYDRAULIQUE DE VILLARODIN-7"
+    ],
+    "eic": [
+     "17W100P100P0300X"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 357.0,
+    "e_injectee_12m_mwh": 555351,
+    "facteur_charge_12m": 0.178
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Avrieux, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « VLAROH-CENTRALE HYDRAULIQUE DE VILLARODIN-7 »"
+    "commune": "Registre national des installations (ODRÉ), « VLAROH-CENTRALE HYDRAULIQUE DE VILLARODIN-7 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -469,11 +682,30 @@
     "17W100P100P0080L"
    ],
    "commune": "Sisteron",
+   "registre": {
+    "installations": [
+     "SISTEH-CENTRALE HYDRAULIQUE DE SISTERON-6"
+    ],
+    "eic": [
+     "17W100P100P02942"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 214.0,
+    "e_injectee_12m_mwh": 708560,
+    "facteur_charge_12m": 0.378
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Sisteron, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « SISTEH-CENTRALE HYDRAULIQUE DE SISTERON-6 »"
+    "commune": "Registre national des installations (ODRÉ), « SISTEH-CENTRALE HYDRAULIQUE DE SISTERON-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -507,11 +739,30 @@
     "17W100P100P0052Q"
    ],
    "commune": "Bort-les-Orgues",
+   "registre": {
+    "installations": [
+     "BORT H-CENTRALE HYDRAULIQUE DE BORT-6"
+    ],
+    "eic": [
+     "17W100P100P0281B"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 232.2,
+    "e_injectee_12m_mwh": 258389,
+    "facteur_charge_12m": 0.127
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Bort-les-Orgues, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « BORT H-CENTRALE HYDRAULIQUE DE BORT-6 »"
+    "commune": "Registre national des installations (ODRÉ), « BORT H-CENTRALE HYDRAULIQUE DE BORT-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -545,11 +796,30 @@
     "17W100P100P0049F"
    ],
    "commune": "Saint-Martin-la-Méanne",
+   "registre": {
+    "installations": [
+     "CHASTH-CENTRALE HYDRAULIQUE DE CHASTANG (LE)-6"
+    ],
+    "eic": [
+     "17W100P100P0302T"
+    ],
+    "nb_groupes": 5,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 293.0,
+    "e_injectee_12m_mwh": 477270,
+    "facteur_charge_12m": 0.186
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Saint-Martin-la-Méanne, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « CHASTH-CENTRALE HYDRAULIQUE DE CHASTANG (LE)-6 »"
+    "commune": "Registre national des installations (ODRÉ), « CHASTH-CENTRALE HYDRAULIQUE DE CHASTANG (LE)-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -579,11 +849,30 @@
     "17W000000460346Y"
    ],
    "commune": "Liginiac",
+   "registre": {
+    "installations": [
+     "MAREGH-CENTRALE HYDRAULIQUE DE MAREGES-6"
+    ],
+    "eic": [
+     "17W100P100P0328B"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 146.0,
+    "e_injectee_12m_mwh": 122975,
+    "facteur_charge_12m": 0.096
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Liginiac, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « MAREGH-CENTRALE HYDRAULIQUE DE MAREGES-6 »"
+    "commune": "Registre national des installations (ODRÉ), « MAREGH-CENTRALE HYDRAULIQUE DE MAREGES-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -651,11 +940,30 @@
     "17W100P100P00893"
    ],
    "commune": "Avrieux",
+   "registre": {
+    "installations": [
+     "C.AVRH-CENTRALE HYDRAULIQUE DE COMBE D AVRIEUX-6"
+    ],
+    "eic": [
+     "17W100P100P02837"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 122.0,
+    "e_injectee_12m_mwh": 165148,
+    "facteur_charge_12m": 0.155
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Avrieux, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « C.AVRH-CENTRALE HYDRAULIQUE DE COMBE D AVRIEUX-6 »"
+    "commune": "Registre national des installations (ODRÉ), « C.AVRH-CENTRALE HYDRAULIQUE DE COMBE D AVRIEUX-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -672,11 +980,30 @@
    "statut": "en service",
    "note": "Groupes de moins de 100 MW : production non publiée par groupe, estimée.",
    "commune": "Ubaye-Serre-Ponçon",
+   "registre": {
+    "installations": [
+     "S.PONH-CENTRALE HYDRAULIQUE DE SERRE-PONCON-6"
+    ],
+    "eic": [
+     "17W100P100P02926"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 370.0,
+    "e_injectee_12m_mwh": 615774,
+    "facteur_charge_12m": 0.19
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 5 km du centre de la commune (Ubaye-Serre-Ponçon, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "Registre national des installations (ODRÉ) : S.PONH-CENTRALE HYDRAULIQUE DE SERRE-PONCON-6",
-    "commune": "Registre national des installations (ODRÉ), « S.PONH-CENTRALE HYDRAULIQUE DE SERRE-PONCON-6 »"
+    "commune": "Registre national des installations (ODRÉ), « S.PONH-CENTRALE HYDRAULIQUE DE SERRE-PONCON-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -693,11 +1020,30 @@
    "statut": "en service",
    "note": "Groupes de moins de 100 MW : production estimée.",
    "commune": "Cernon",
+   "registre": {
+    "installations": [
+     "VOUGLH-CENTRALE HYDRAULIQUE DE VOUGLANS-6"
+    ],
+    "eic": [
+     "17W100P100P0301V"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 285.0,
+    "e_injectee_12m_mwh": 298204,
+    "facteur_charge_12m": 0.119
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Cernon, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "Registre national des installations (ODRÉ) : VOUGLH-CENTRALE HYDRAULIQUE DE VOUGLANS-6",
-    "commune": "Registre national des installations (ODRÉ), « VOUGLH-CENTRALE HYDRAULIQUE DE VOUGLANS-6 »"
+    "commune": "Registre national des installations (ODRÉ), « VOUGLH-CENTRALE HYDRAULIQUE DE VOUGLANS-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -714,11 +1060,30 @@
    "statut": "en service",
    "note": "Production non publiée par groupe : estimée.",
    "commune": "Monteynard",
+   "registre": {
+    "installations": [
+     "MTEYNH-CENTRALE HYDRAULIQUE DE MONTEYNARD-6"
+    ],
+    "eic": [
+     "17W100P100P02861"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 366.0,
+    "e_injectee_12m_mwh": 454192,
+    "facteur_charge_12m": 0.142
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Monteynard, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "Registre national des installations (ODRÉ) : MTEYNH-CENTRALE HYDRAULIQUE DE MONTEYNARD-6",
-    "commune": "Registre national des installations (ODRÉ), « MTEYNH-CENTRALE HYDRAULIQUE DE MONTEYNARD-6 »"
+    "commune": "Registre national des installations (ODRÉ), « MTEYNH-CENTRALE HYDRAULIQUE DE MONTEYNARD-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -748,11 +1113,30 @@
     "17W100P100P1594M"
    ],
    "commune": "Injoux-Génissiat",
+   "registre": {
+    "installations": [
+     "GENISH-CENTRALE HYDRAULIQUE DE GENISSIAT-6"
+    ],
+    "eic": [
+     "17W100P100P0319C"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 405.0,
+    "e_injectee_12m_mwh": 1502550,
+    "facteur_charge_12m": 0.424
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Injoux-Génissiat, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « GENISH-CENTRALE HYDRAULIQUE DE GENISSIAT-6 »"
+    "commune": "Registre national des installations (ODRÉ), « GENISH-CENTRALE HYDRAULIQUE DE GENISSIAT-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -782,11 +1166,30 @@
     "17W100P100P1268Z"
    ],
    "commune": "Bollène",
+   "registre": {
+    "installations": [
+     "BOLLEH-CENTRALE HYDRAULIQUE DE BOLLENE (SPECIALISE)-6"
+    ],
+    "eic": [
+     "17W100P100P0324J"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 345.0,
+    "e_injectee_12m_mwh": 1691179,
+    "facteur_charge_12m": 0.56
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Bollène, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « BOLLEH-CENTRALE HYDRAULIQUE DE BOLLENE (SPECIALISE)-6 »"
+    "commune": "Registre national des installations (ODRÉ), « BOLLEH-CENTRALE HYDRAULIQUE DE BOLLENE (SPECIALISE)-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -816,11 +1219,30 @@
     "17W100P100P1485R"
    ],
    "commune": "Châteauneuf-du-Rhône",
+   "registre": {
+    "installations": [
+     "C.RHOH-CENTRALE HYDRAULIQUE DE CHATEAUNEUF-DU-RHONE-6"
+    ],
+    "eic": [
+     "17W100P100P0323L"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 285.0,
+    "e_injectee_12m_mwh": 1323713,
+    "facteur_charge_12m": 0.53
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Châteauneuf-du-Rhône, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « C.RHOH-CENTRALE HYDRAULIQUE DE CHATEAUNEUF-DU-RHONE-6 »"
+    "commune": "Registre national des installations (ODRÉ), « C.RHOH-CENTRALE HYDRAULIQUE DE CHATEAUNEUF-DU-RHONE-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -850,11 +1272,30 @@
     "17W100P100P1330J"
    ],
    "commune": "Beaucaire",
+   "registre": {
+    "installations": [
+     "BXCAIH-CENTRALE HYDRAULIQUE DE BEAUCAIRE-6"
+    ],
+    "eic": [
+     "17W100P100P0327D"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 210.0,
+    "e_injectee_12m_mwh": 1061414,
+    "facteur_charge_12m": 0.577
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 6 km du centre de la commune (Beaucaire, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « BXCAIH-CENTRALE HYDRAULIQUE DE BEAUCAIRE-6 »"
+    "commune": "Registre national des installations (ODRÉ), « BXCAIH-CENTRALE HYDRAULIQUE DE BEAUCAIRE-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -884,11 +1325,30 @@
     "17W100P100P13650"
    ],
    "commune": "Caderousse",
+   "registre": {
+    "installations": [
+     "CADERH-CENTRALE HYDRAULIQUE DE CADEROUSSE-3"
+    ],
+    "eic": [
+     "17W100P100P0325H"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 156.0,
+    "e_injectee_12m_mwh": 527216,
+    "facteur_charge_12m": 0.386
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Caderousse, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « CADERH-CENTRALE HYDRAULIQUE DE CADEROUSSE-3 »"
+    "commune": "Registre national des installations (ODRÉ), « CADERH-CENTRALE HYDRAULIQUE DE CADEROUSSE-3 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -918,11 +1378,30 @@
     "17W100P100P13189"
    ],
    "commune": "Bourg-lès-Valence",
+   "registre": {
+    "installations": [
+     "B.VALH-CENTRALE HYDRAULIQUE DE BOURG-LES-VALENCE-6"
+    ],
+    "eic": [
+     "17W100P100P0320R"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 186.0,
+    "e_injectee_12m_mwh": 892880,
+    "facteur_charge_12m": 0.548
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Bourg-lès-Valence, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « B.VALH-CENTRALE HYDRAULIQUE DE BOURG-LES-VALENCE-6 »"
+    "commune": "Registre national des installations (ODRÉ), « B.VALH-CENTRALE HYDRAULIQUE DE BOURG-LES-VALENCE-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -952,11 +1431,30 @@
     "17W100P100P13367"
    ],
    "commune": "Beauchastel",
+   "registre": {
+    "installations": [
+     "BXCHAH-CENTRALE HYDRAULIQUE DE BEAUCHASTEL-6"
+    ],
+    "eic": [
+     "17W000000012863P"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 222.0,
+    "e_injectee_12m_mwh": 982738,
+    "facteur_charge_12m": 0.505
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Beauchastel, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « BXCHAH-CENTRALE HYDRAULIQUE DE BEAUCHASTEL-6 »"
+    "commune": "Registre national des installations (ODRÉ), « BXCHAH-CENTRALE HYDRAULIQUE DE BEAUCHASTEL-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -992,11 +1490,32 @@
     "17W100P100P1736S"
    ],
    "commune": "Les Tourrettes",
+   "registre": {
+    "installations": [
+     "L.NEUH-CENTRALE HYDRAULIQUE DE LOGIS-NEUF-6",
+     "L.NEUH-CENTRALE HYDRAULIQUE DE LOGIS-NEUF-3"
+    ],
+    "eic": [
+     "17W000000012684P",
+     "17W000000012745V"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 210.0,
+    "e_injectee_12m_mwh": 981637,
+    "facteur_charge_12m": 0.534
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Les Tourrettes, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « L.NEUH-CENTRALE HYDRAULIQUE DE LOGIS-NEUF-6 »"
+    "commune": "Registre national des installations (ODRÉ), « L.NEUH-CENTRALE HYDRAULIQUE DE LOGIS-NEUF-6 »",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -1026,11 +1545,30 @@
     "17W100P100P1204O"
    ],
    "commune": "Avignon",
+   "registre": {
+    "installations": [
+     "AVIG6H-CENTRALE HYDRAULIQUE DE AVIGNON-6"
+    ],
+    "eic": [
+     "17W100P100P0326F"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 110.0,
+    "e_injectee_12m_mwh": 425254,
+    "facteur_charge_12m": 0.441
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 5 km du centre de la commune (Avignon, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « AVIG6H-CENTRALE HYDRAULIQUE DE AVIGNON-6 »"
+    "commune": "Registre national des installations (ODRÉ), « AVIG6H-CENTRALE HYDRAULIQUE DE AVIGNON-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1154,11 +1692,30 @@
    "statut": "en service",
    "note": "Rhin : production non publiée par groupe, estimée.",
    "commune": "Kembs",
+   "registre": {
+    "installations": [
+     "KEMBSH-CENTRALE HYDRAULIQUE DE KEMBS-6"
+    ],
+    "eic": [
+     "17W100P100P0307J"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 151.1,
+    "e_injectee_12m_mwh": 662211,
+    "facteur_charge_12m": 0.5
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Kembs, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "Registre national des installations (ODRÉ) : KEMBSH-CENTRALE HYDRAULIQUE DE KEMBS-6",
-    "commune": "Registre national des installations (ODRÉ), « KEMBSH-CENTRALE HYDRAULIQUE DE KEMBS-6 »"
+    "commune": "Registre national des installations (ODRÉ), « KEMBSH-CENTRALE HYDRAULIQUE DE KEMBS-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1175,11 +1732,32 @@
    "statut": "en service",
    "note": "Rhin : production non publiée par groupe, estimée.",
    "commune": "Ottmarsheim",
+   "registre": {
+    "installations": [
+     "OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-6",
+     "OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-3"
+    ],
+    "eic": [
+     "17W000000012648T",
+     "17W000000012942T"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 156.0,
+    "e_injectee_12m_mwh": 696161,
+    "facteur_charge_12m": 0.509
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Ottmarsheim, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "Registre national des installations (ODRÉ) : OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-6 + OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-3",
-    "commune": "Registre national des installations (ODRÉ), « OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-6 »"
+    "commune": "Registre national des installations (ODRÉ), « OTTMAH-CENTRALE HYDRAULIQUE DE OTTMARSHEIM-6 »",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -1195,11 +1773,30 @@
    "note": "Isère, alimentée par le barrage de Tignes. Production non publiée par groupe : estimée.",
    "p_mw": 297,
    "commune": "Séez",
+   "registre": {
+    "installations": [
+     "MALGOH-CENTRALE HYDRAULIQUE DE MALGOVERT-6"
+    ],
+    "eic": [
+     "17W100P100P02853"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 297.0,
+    "e_injectee_12m_mwh": 639138,
+    "facteur_charge_12m": 0.246
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 10 km du centre de la commune (Séez, geo.api.gouv.fr)",
     "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
     "puissance": "Registre national des installations (ODRÉ) : MALGOH-CENTRALE HYDRAULIQUE DE MALGOVERT-6",
-    "commune": "Registre national des installations (ODRÉ), « MALGOH-CENTRALE HYDRAULIQUE DE MALGOVERT-6 »"
+    "commune": "Registre national des installations (ODRÉ), « MALGOH-CENTRALE HYDRAULIQUE DE MALGOVERT-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1215,11 +1812,30 @@
    "note": "Verdon. Production non publiée par groupe : estimée.",
    "p_mw": 132,
    "commune": "Sainte-Croix-du-Verdon",
+   "registre": {
+    "installations": [
+     "SSCROH-CENTRALE HYDRAULIQUE DE STE-CROIX-DU-VERDON-6"
+    ],
+    "eic": [
+     "17W100P100P0297X"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 132.3,
+    "e_injectee_12m_mwh": 151524,
+    "facteur_charge_12m": 0.131
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Sainte-Croix-du-Verdon, geo.api.gouv.fr)",
     "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
     "puissance": "Registre national des installations (ODRÉ) : SSCROH-CENTRALE HYDRAULIQUE DE STE-CROIX-DU-VERDON-6",
-    "commune": "Registre national des installations (ODRÉ), « SSCROH-CENTRALE HYDRAULIQUE DE STE-CROIX-DU-VERDON-6 »"
+    "commune": "Registre national des installations (ODRÉ), « SSCROH-CENTRALE HYDRAULIQUE DE STE-CROIX-DU-VERDON-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1235,11 +1851,30 @@
    "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
    "p_mw": 175,
    "commune": "Fessenheim",
+   "registre": {
+    "installations": [
+     "FESSEH-CENTRALE HYDRAULIQUE DE FESSENHEIM-6"
+    ],
+    "eic": [
+     "17W100P100P0303R"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 175.0,
+    "e_injectee_12m_mwh": 719937,
+    "facteur_charge_12m": 0.47
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Fessenheim, geo.api.gouv.fr)",
     "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
     "puissance": "Registre national des installations (ODRÉ) : FESSEH-CENTRALE HYDRAULIQUE DE FESSENHEIM-6",
-    "commune": "Registre national des installations (ODRÉ), « FESSEH-CENTRALE HYDRAULIQUE DE FESSENHEIM-6 »"
+    "commune": "Registre national des installations (ODRÉ), « FESSEH-CENTRALE HYDRAULIQUE DE FESSENHEIM-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1255,11 +1890,30 @@
    "note": "Rhin, Grand Canal d'Alsace. Production non publiée par groupe : estimée.",
    "p_mw": 140,
    "commune": "Vogelgrun",
+   "registre": {
+    "installations": [
+     "VOGELH-CENTRALE HYDRAULIQUE DE VOGELGRUN-6"
+    ],
+    "eic": [
+     "17W100P100P0311S"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 140.5,
+    "e_injectee_12m_mwh": 571492,
+    "facteur_charge_12m": 0.464
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Vogelgrun, geo.api.gouv.fr)",
     "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
     "puissance": "Registre national des installations (ODRÉ) : VOGELH-CENTRALE HYDRAULIQUE DE VOGELGRUN-6",
-    "commune": "Registre national des installations (ODRÉ), « VOGELH-CENTRALE HYDRAULIQUE DE VOGELGRUN-6 »"
+    "commune": "Registre national des installations (ODRÉ), « VOGELH-CENTRALE HYDRAULIQUE DE VOGELGRUN-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1275,11 +1929,30 @@
    "note": "Rhin. Production non publiée par groupe : estimée.",
    "p_mw": 155,
    "commune": "Marckolsheim",
+   "registre": {
+    "installations": [
+     "MARCKH-CENTRALE HYDRAULIQUE DE MARCKOLSHEIM-6"
+    ],
+    "eic": [
+     "17W100P100P0305N"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 155.0,
+    "e_injectee_12m_mwh": 656142,
+    "facteur_charge_12m": 0.483
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Marckolsheim, geo.api.gouv.fr)",
     "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
     "puissance": "Registre national des installations (ODRÉ) : MARCKH-CENTRALE HYDRAULIQUE DE MARCKOLSHEIM-6",
-    "commune": "Registre national des installations (ODRÉ), « MARCKH-CENTRALE HYDRAULIQUE DE MARCKOLSHEIM-6 »"
+    "commune": "Registre national des installations (ODRÉ), « MARCKH-CENTRALE HYDRAULIQUE DE MARCKOLSHEIM-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1295,11 +1968,30 @@
    "note": "Rhin. Production non publiée par groupe : estimée.",
    "p_mw": 125,
    "commune": "Rhinau",
+   "registre": {
+    "installations": [
+     "RHINAH-CENTRALE HYDRAULIQUE DE RHINAU-6"
+    ],
+    "eic": [
+     "17W000000012043Q"
+    ],
+    "nb_groupes": 3,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 125.2,
+    "e_injectee_12m_mwh": 489694,
+    "facteur_charge_12m": 0.446
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Rhinau, geo.api.gouv.fr)",
     "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
     "puissance": "Registre national des installations (ODRÉ) : RHINAH-CENTRALE HYDRAULIQUE DE RHINAU-6",
-    "commune": "Registre national des installations (ODRÉ), « RHINAH-CENTRALE HYDRAULIQUE DE RHINAU-6 »"
+    "commune": "Registre national des installations (ODRÉ), « RHINAH-CENTRALE HYDRAULIQUE DE RHINAU-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1315,11 +2007,30 @@
    "note": "Rhin. Production non publiée par groupe : estimée.",
    "p_mw": 139,
    "commune": "Gerstheim",
+   "registre": {
+    "installations": [
+     "GERSTH-CENTRALE HYDRAULIQUE DE GERSTHEIM-6"
+    ],
+    "eic": [
+     "17W000000012511J"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 139.4,
+    "e_injectee_12m_mwh": 596398,
+    "facteur_charge_12m": 0.488
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Gerstheim, geo.api.gouv.fr)",
     "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
     "puissance": "Registre national des installations (ODRÉ) : GERSTH-CENTRALE HYDRAULIQUE DE GERSTHEIM-6",
-    "commune": "Registre national des installations (ODRÉ), « GERSTH-CENTRALE HYDRAULIQUE DE GERSTHEIM-6 »"
+    "commune": "Registre national des installations (ODRÉ), « GERSTH-CENTRALE HYDRAULIQUE DE GERSTHEIM-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1335,11 +2046,30 @@
    "note": "Rhin. Production non publiée par groupe : estimée.",
    "p_mw": 98,
    "commune": "Strasbourg",
+   "registre": {
+    "installations": [
+     "STRASH-CENTRALE HYDRAULIQUE DE STRASBOURG-6"
+    ],
+    "eic": [
+     "17W0000000119401"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 98.0,
+    "e_injectee_12m_mwh": 446910,
+    "facteur_charge_12m": 0.521
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Strasbourg, geo.api.gouv.fr)",
     "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
     "puissance": "Registre national des installations (ODRÉ) : STRASH-CENTRALE HYDRAULIQUE DE STRASBOURG-6",
-    "commune": "Registre national des installations (ODRÉ), « STRASH-CENTRALE HYDRAULIQUE DE STRASBOURG-6 »"
+    "commune": "Registre national des installations (ODRÉ), « STRASH-CENTRALE HYDRAULIQUE DE STRASBOURG-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1355,11 +2085,30 @@
    "note": "Rhin, co-exploitée EDF / EnBW. Production non publiée par groupe : estimée.",
    "p_mw": 98,
    "commune": "Gambsheim",
+   "registre": {
+    "installations": [
+     "GAMBSH-CENTRALE HYDRAULIQUE DE GAMBSHEIM-6"
+    ],
+    "eic": [
+     "17W000000012478S"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 98.0,
+    "e_injectee_12m_mwh": 491070,
+    "facteur_charge_12m": 0.572
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Gambsheim, geo.api.gouv.fr)",
     "exploitant": "Parc EDF Command (équipe Prix & Produits), à confirmer",
     "puissance": "Registre national des installations (ODRÉ) : GAMBSH-CENTRALE HYDRAULIQUE DE GAMBSHEIM-6",
-    "commune": "Registre national des installations (ODRÉ), « GAMBSH-CENTRALE HYDRAULIQUE DE GAMBSHEIM-6 »"
+    "commune": "Registre national des installations (ODRÉ), « GAMBSH-CENTRALE HYDRAULIQUE DE GAMBSHEIM-6 »",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1399,11 +2148,36 @@
     "17W100P100P0175A"
    ],
    "commune": "Martigues",
+   "registre": {
+    "installations": [
+     "M.PONT61 - GROUPE 61 DE LA CENTRALE THERMIQUE DE MARTIGUES-PONTEAU (TAC)",
+     "M.PONT51 - GROUPE 51 DE LA CENTRALE THERMIQUE DE MARTIGUES-PONTEAU (TAC)",
+     "M.PONT52 - GROUPE 52 DE LA CENTRALE THERMIQUE DE MARTIGUES-PONTEAU (TAV)",
+     "M.PONT62 - GROUPE 62 DE LA CENTRALE THERMIQUE DE MARTIGUES-PONTEAU (TAV)"
+    ],
+    "eic": [
+     "17W100P100P2114K",
+     "17W100P100P2115I",
+     "17W100P100P2116G",
+     "17W100P100P2117E"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 990.0,
+    "e_injectee_12m_mwh": 999693,
+    "facteur_charge_12m": 0.115
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Martigues, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « M.PONT61 - GROUPE 61 DE LA CENTRALE THERMIQUE DE MARTIGUES-PONTEAU (TAC) »"
+    "commune": "Registre national des installations (ODRÉ), « M.PONT61 - GROUPE 61 DE LA CENTRALE THERMIQUE DE MARTIGUES-PONTEAU (TAC) »",
+    "registre": "Registre national des installations (ODRÉ), 4 installation(s)"
    }
   },
   {
@@ -1436,11 +2210,32 @@
     "17W100P100P0173E"
    ],
    "commune": "Blénod-lès-Pont-à-Mousson",
+   "registre": {
+    "installations": [
+     "BLENOT51 - GROUPE 51 DE LA CENTRALE THERMIQUE DE BLENOD",
+     "BLENOT52 - GROUPE 52 DE LA CENTRALE THERMIQUE DE BLENOD"
+    ],
+    "eic": [
+     "17W100P100P04740",
+     "17W100P100P2608W"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 450.5,
+    "e_injectee_12m_mwh": 717770,
+    "facteur_charge_12m": 0.182
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Blénod-lès-Pont-à-Mousson, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), « BLENOT51 - GROUPE 51 DE LA CENTRALE THERMIQUE DE BLENOD »"
+    "commune": "Registre national des installations (ODRÉ), « BLENOT51 - GROUPE 51 DE LA CENTRALE THERMIQUE DE BLENOD »",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -1473,11 +2268,35 @@
     "17W100P100P01768"
    ],
    "commune": "Bouchain",
+   "registre": {
+    "installations": [
+     "BOUCHT07 - GROUPE 07 DE LA CENTRALE THERMIQUE DE BOUCHAIN",
+     "BOUCHT02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE BOUCHAIN",
+     "BOUCHT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE BOUCHAIN"
+    ],
+    "eic": [
+     "17W000000012237D",
+     "17W000000012843V",
+     "17W100P100P01768"
+    ],
+    "nb_groupes": 3,
+    "regime": [
+     "En retrait provisoire",
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1063.0,
+    "e_injectee_12m_mwh": 1413527,
+    "facteur_charge_12m": 0.152
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Bouchain, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 3 installation(s)"
    }
   },
   {
@@ -1513,11 +2332,30 @@
     "17W100P100P0330O"
    ],
    "commune": "Grande-Synthe",
+   "registre": {
+    "installations": [
+     "BRAEKT11 - GROUPE 11 DE LA CENTRALE THERMIQUE DE BRAEK"
+    ],
+    "eic": [
+     "17W100P100P0330O"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 165.0,
+    "e_injectee_12m_mwh": 74473,
+    "facteur_charge_12m": 0.052
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Grande-Synthe, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1550,11 +2388,30 @@
     "17W100P100P03388"
    ],
    "commune": "Fos-sur-Mer",
+   "registre": {
+    "installations": [
+     "RICHIT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE RICHIER"
+    ],
+    "eic": [
+     "17W100P100P03388"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 451.0,
+    "e_injectee_12m_mwh": 172141,
+    "facteur_charge_12m": 0.044
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Fos-sur-Mer, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1587,11 +2444,30 @@
     "17W100P100P01679"
    ],
    "commune": "Fos-sur-Mer",
+   "registre": {
+    "installations": [
+     "GRACIT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GRACIEUSE (LA)"
+    ],
+    "eic": [
+     "17W100P100P01679"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 453.0,
+    "e_injectee_12m_mwh": 605636,
+    "facteur_charge_12m": 0.153
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Fos-sur-Mer, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1630,11 +2506,30 @@
     "17W100P100P0336C"
    ],
    "commune": "Montoir-de-Bretagne",
+   "registre": {
+    "installations": [
+     "G.RIVT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GRANDES-RIVIERES"
+    ],
+    "eic": [
+     "17W100P100P0171I"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 446.0,
+    "e_injectee_12m_mwh": 615447,
+    "facteur_charge_12m": 0.158
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Montoir-de-Bretagne, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1668,11 +2563,30 @@
     "17W000001023725I"
    ],
    "commune": "Landivisiau",
+   "registre": {
+    "installations": [
+     "PONANT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE PONANT"
+    ],
+    "eic": [
+     "17W000001023725I"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 446.0,
+    "e_injectee_12m_mwh": 803005,
+    "facteur_charge_12m": 0.206
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Landivisiau, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1705,11 +2619,30 @@
     "17W100P100P00016"
    ],
    "commune": "Pont-sur-Sambre",
+   "registre": {
+    "installations": [
+     "QUAR5T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE QUARTES"
+    ],
+    "eic": [
+     "17W100P100P00016"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 450.0,
+    "e_injectee_12m_mwh": 755738,
+    "facteur_charge_12m": 0.192
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Pont-sur-Sambre, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1742,11 +2675,30 @@
     "17W100P100P00123"
    ],
    "commune": "Toul",
+   "registre": {
+    "installations": [
+     "C.ME5T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE CROIX-DE-METZ (CENTRALE)"
+    ],
+    "eic": [
+     "17W000000918406Y"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 440.0,
+    "e_injectee_12m_mwh": 529441,
+    "facteur_charge_12m": 0.137
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Toul, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1824,11 +2776,32 @@
     "17W100P100P00113"
    ],
    "commune": "Saint-Avold",
+   "registre": {
+    "installations": [
+     "E.HUCT07 - GROUPE 07 DE LA CENTRALE THERMIQUE DE EMILE-HUCHET",
+     "E.HUCT08 - GROUPE 08 DE LA CENTRALE THERMIQUE DE EMILE-HUCHET"
+    ],
+    "eic": [
+     "17W100P100P00105",
+     "17W100P100P00113"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 867.8,
+    "e_injectee_12m_mwh": 1243780,
+    "facteur_charge_12m": 0.164
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Saint-Avold, geo.api.gouv.fr)",
     "exploitant": "Wikipédia ; rachat par TotalEnergies validé en août 2020",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -1861,11 +2834,30 @@
     "17W100P100P0037M"
    ],
    "commune": "Gennevilliers",
+   "registre": {
+    "installations": [
+     "GENN3T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GENNEVILLIERS (TURBINE A GAZ)"
+    ],
+    "eic": [
+     "17W100P100P0037M"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 240.7,
+    "e_injectee_12m_mwh": 28988,
+    "facteur_charge_12m": 0.014
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Gennevilliers, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -1896,11 +2888,32 @@
     "17W100P100P03485"
    ],
    "commune": "Gonfreville-l'Orcher",
+   "registre": {
+    "installations": [
+     "AMFART14 - GROUPE 14 DE LA CENTRALE THERMIQUE DE AMFARD",
+     "AMFART15 - GROUPE 15 DE LA CENTRALE THERMIQUE DE AMFARD"
+    ],
+    "eic": [
+     "17W000001468589Y",
+     "17W000001468590C"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 250.0,
+    "e_injectee_12m_mwh": 649231,
+    "facteur_charge_12m": 0.296
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Gonfreville-l'Orcher, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "valeur de la carte, non publiée par unité sur ENTSO-E",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -1940,11 +2953,32 @@
     "17W0000014186456"
    ],
    "commune": "Saint-Ouen-sur-Seine",
+   "registre": {
+    "installations": [
+     "BATELT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE BATELIERS",
+     "GUESDT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE GUESDE"
+    ],
+    "eic": [
+     "17W000001418626A",
+     "17W0000014186456"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 220.0,
+    "e_injectee_12m_mwh": 169570,
+    "facteur_charge_12m": 0.088
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 7 km du centre de la commune (Saint-Ouen-sur-Seine, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -1984,11 +3018,32 @@
     "17W100P100P0018Q"
    ],
    "commune": "Cordemais",
+   "registre": {
+    "installations": [
+     "CORD5T04 - GROUPE 04 DE LA CENTRALE THERMIQUE DE CORDEMAIS",
+     "CORD5T05 - GROUPE 05 DE LA CENTRALE THERMIQUE DE CORDEMAIS"
+    ],
+    "eic": [
+     "17W100P100P0017S",
+     "17W100P100P0018Q"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1160.0,
+    "e_injectee_12m_mwh": 374447,
+    "facteur_charge_12m": 0.037
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Cordemais, geo.api.gouv.fr)",
     "exploitant": "AEF info, annonce EDF du 28/05/2025",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -2022,11 +3077,34 @@
     "17W100P100P0005Z"
    ],
    "commune": "Saint-Avold",
+   "registre": {
+    "installations": [
+     "E.HUCT06 - GROUPE 06 DE LA CENTRALE THERMIQUE DE EMILE-HUCHET",
+     "E.HUCT07 - GROUPE 07 DE LA CENTRALE THERMIQUE DE EMILE-HUCHET",
+     "E.HUCT08 - GROUPE 08 DE LA CENTRALE THERMIQUE DE EMILE-HUCHET"
+    ],
+    "eic": [
+     "17W100P100P0005Z",
+     "17W100P100P00105",
+     "17W100P100P00113"
+    ],
+    "nb_groupes": 3,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1467.8,
+    "e_injectee_12m_mwh": 1315964,
+    "facteur_charge_12m": 0.102
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Saint-Avold, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 3 installation(s)"
    }
   },
   {
@@ -2071,11 +3149,34 @@
     "17W100P100P02594"
    ],
    "commune": "Brennilis",
+   "registre": {
+    "installations": [
+     "BRENNT03 - GROUPE 03 DE LA CENTRALE THERMIQUE DE BRENNILIS",
+     "BRENNT04 - GROUPE 04 DE LA CENTRALE THERMIQUE DE BRENNILIS",
+     "BRENNT02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE BRENNILIS"
+    ],
+    "eic": [
+     "17W100P100P0033U",
+     "17W100P100P02578",
+     "17W100P100P02594"
+    ],
+    "nb_groupes": 3,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 309.0,
+    "e_injectee_12m_mwh": 49449,
+    "facteur_charge_12m": 0.018
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Brennilis, geo.api.gouv.fr)",
     "exploitant": "EDF (message REMIT edf-2026-00041)",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 3 installation(s)"
    }
   },
   {
@@ -2111,11 +3212,32 @@
     "17W100P100P0264B"
    ],
    "commune": "Dirinon",
+   "registre": {
+    "installations": [
+     "DIRINT01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE DIRINON",
+     "DIRINT02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE DIRINON"
+    ],
+    "eic": [
+     "17W100P100P0262F",
+     "17W100P100P0264B"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 184.0,
+    "e_injectee_12m_mwh": 24021,
+    "facteur_charge_12m": 0.015
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Dirinon, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -2163,11 +3285,34 @@
     "17W100P100P0048H"
    ],
    "commune": "Vaires-sur-Marne",
+   "registre": {
+    "installations": [
+     "VAIR6T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE VAIRES-SUR-MARNE",
+     "VAIR6T02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE VAIRES-SUR-MARNE",
+     "VAIR6T03 - GROUPE 03 DE LA CENTRALE THERMIQUE DE VAIRES-SUR-MARNE"
+    ],
+    "eic": [
+     "17W100P100P0046L",
+     "17W100P100P0047J",
+     "17W100P100P0048H"
+    ],
+    "nb_groupes": 3,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 600.0,
+    "e_injectee_12m_mwh": 110118,
+    "facteur_charge_12m": 0.021
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 0 km du centre de la commune (Vaires-sur-Marne, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 3 installation(s)"
    }
   },
   {
@@ -2207,11 +3352,32 @@
     "17W100P100P0041V"
    ],
    "commune": "Vernou-la-Celle-sur-Seine",
+   "registre": {
+    "installations": [
+     "MTERET05 - GROUPE 05 DE LA CENTRALE THERMIQUE DE MONTEREAU",
+     "MTERET06 - GROUPE 06 DE LA CENTRALE THERMIQUE DE MONTEREAU"
+    ],
+    "eic": [
+     "17W100P100P0040X",
+     "17W100P100P0041V"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 400.0,
+    "e_injectee_12m_mwh": 156855,
+    "facteur_charge_12m": 0.045
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Vernou-la-Celle-sur-Seine, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -2251,11 +3417,32 @@
     "17W100P100P0032W"
    ],
    "commune": "Vitry-sur-Seine",
+   "registre": {
+    "installations": [
+     "ARRI5T01 - GROUPE 01 DE LA CENTRALE THERMIQUE DE ARRIGHI (TAC 1)",
+     "ARRI5T02 - GROUPE 02 DE LA CENTRALE THERMIQUE DE ARRIGHI (TAC 2)"
+    ],
+    "eic": [
+     "17W100P100P0031Y",
+     "17W100P100P0032W"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 250.0,
+    "e_injectee_12m_mwh": 65842,
+    "facteur_charge_12m": 0.03
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Vitry-sur-Seine, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -2289,11 +3476,32 @@
     "17W0000014455651"
    ],
    "commune": "Saint-Nazaire",
+   "registre": {
+    "installations": [
+     "B.GUEEA1 - ADP A1 DE LA FERME ÉOLIENNE DE BANC-DE-GUERANDE",
+     "B.GUEEA2 - ADP A2 DE LA FERME ÉOLIENNE DE BANC-DE-GUERANDE"
+    ],
+    "eic": [
+     "17W0000014455651",
+     "17W000001445567Y"
+    ],
+    "nb_groupes": 80,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 480.0,
+    "e_injectee_12m_mwh": 1477450,
+    "facteur_charge_12m": 0.351
+   },
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -2327,11 +3535,32 @@
     "17W100P100P0842Y"
    ],
    "commune": "Erquy",
+   "registre": {
+    "installations": [
+     "B.SSBEA1 - ADP A1 DE LA FERME EOLIENNE DE BAIE-DE-ST-BRIEUC",
+     "B.SSBEA2 - ADP A2 DE LA FERME EOLIENNE DE BAIE-DE-ST-BRIEUC"
+    ],
+    "eic": [
+     "17W100P100P0842Y",
+     "17W100P100P3382R"
+    ],
+    "nb_groupes": 62,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 496.0,
+    "e_injectee_12m_mwh": 1834408,
+    "facteur_charge_12m": 0.422
+   },
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -2365,11 +3594,30 @@
     "17W000001445569U"
    ],
    "commune": "Fécamp",
+   "registre": {
+    "installations": [
+     "H.FALEA1 - ADP A1 DE LA FERME EOLIENNE DE HAUTES - FALAISES"
+    ],
+    "eic": [
+     "17W000001445569U"
+    ],
+    "nb_groupes": 35,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 245.0,
+    "e_injectee_12m_mwh": 951013,
+    "facteur_charge_12m": 0.443
+   },
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -2404,11 +3652,32 @@
     "17W000002144986W"
    ],
    "commune": "La Barre-de-Monts",
+   "registre": {
+    "installations": [
+     "V.ILEE01 - ADP 01 DE LA FERME EOLIENNE DE VENT-DES-ILES",
+     "V.ILEE02 - ADP 02 DE LA FERME EOLIENNE DE VENT-DES-ILES"
+    ],
+    "eic": [
+     "17W000002144986W",
+     "17W000002144987U"
+    ],
+    "nb_groupes": 61,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 500.0,
+    "e_injectee_12m_mwh": 1491675,
+    "facteur_charge_12m": 0.341
+   },
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 2 installation(s)"
    }
   },
   {
@@ -2432,11 +3701,30 @@
     "ADP A2 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE"
    ],
    "commune": "Petit-Caux",
+   "registre": {
+    "installations": [
+     "R.DIEEA1 - ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE"
+    ],
+    "eic": [
+     "17W100P100P21629"
+    ],
+    "nb_groupes": 31,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 248.0,
+    "e_injectee_12m_mwh": 10936,
+    "facteur_charge_12m": 0.005
+   },
    "verif": {
     "coordonnees": "approximatives (à ±0,05° environ)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "Registre national des installations (ODRÉ) : R.DIEEA1 - ADP A1 DE LA FERME EOLIENNE DE RIDENS-DE-DIEPPE",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -2469,11 +3757,30 @@
     "17W100P100P03655"
    ],
    "commune": "Gardanne",
+   "registre": {
+    "installations": [
+     "PROV5TG4 - GROUPE G4 DE LA CENTRALE THERMIQUE DE PROVENCE(EX GARD5)"
+    ],
+    "eic": [
+     "17W100P100P03655"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 150.0,
+    "e_injectee_12m_mwh": 431467,
+    "facteur_charge_12m": 0.328
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Gardanne, geo.api.gouv.fr)",
     "exploitant": "vérification web du 16/10/2026",
     "puissance": "ENTSO-E 14.1.B (puissance installée par unité), relevé du 2026-10-19",
-    "commune": "Registre national des installations (ODRÉ), code EIC rapproché"
+    "commune": "Registre national des installations (ODRÉ), code EIC rapproché",
+    "registre": "Registre national des installations (ODRÉ), 1 installation(s)"
    }
   },
   {
@@ -2491,6 +3798,26 @@
     "BEL2"
    ],
    "commune": "Belleville-sur-Loire",
+   "registre": {
+    "installations": [
+     "BVIL7N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE BELLEVILLE (BELLEVILLE-SUR-LOIRE)",
+     "BVIL7N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE BELLEVILLE (BELLEVILLE-SUR-LOIRE)"
+    ],
+    "eic": [
+     "17W100P100P0090I",
+     "17W100P100P0091G"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 2620.0,
+    "e_injectee_12m_mwh": 14829948,
+    "facteur_charge_12m": 0.646
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Belleville-sur-Loire, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2514,6 +3841,30 @@
     "BLA4"
    ],
    "commune": "Braud-et-Saint-Louis",
+   "registre": {
+    "installations": [
+     "BLAYAN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)",
+     "BLAYAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)",
+     "BLAYAN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)",
+     "BLAYAN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)"
+    ],
+    "eic": [
+     "17W100P100P0092E",
+     "17W100P100P0093C",
+     "17W100P100P0094A",
+     "17W100P100P00958"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 3640.0,
+    "e_injectee_12m_mwh": 22159630,
+    "facteur_charge_12m": 0.695
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Braud-et-Saint-Louis, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2537,6 +3888,30 @@
     "BUG5"
    ],
    "commune": "Saint-Vulbas",
+   "registre": {
+    "installations": [
+     "BUGEYN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE BUGEY (LE)",
+     "BUGEYN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE BUGEY (LE)",
+     "BUGEYN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE BUGEY (LE)",
+     "BUGEYN05 - GROUPE 05 DE LA CENTRALE NUCLEAIRE DE BUGEY (LE)"
+    ],
+    "eic": [
+     "17W100P100P00966",
+     "17W100P100P00974",
+     "17W100P100P00982",
+     "17W100P100P01004"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 3580.0,
+    "e_injectee_12m_mwh": 21788348,
+    "facteur_charge_12m": 0.695
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Saint-Vulbas, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2560,6 +3935,30 @@
     "CAT4"
    ],
    "commune": "Cattenom",
+   "registre": {
+    "installations": [
+     "CATTEN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CATTENOM",
+     "CATTEN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CATTENOM",
+     "CATTEN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CATTENOM",
+     "CATTEN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CATTENOM"
+    ],
+    "eic": [
+     "17W100P100P01012",
+     "17W100P100P0103Z",
+     "17W100P100P0104X",
+     "17W100P100P0105V"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 5200.0,
+    "e_injectee_12m_mwh": 29551287,
+    "facteur_charge_12m": 0.649
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Cattenom, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2583,6 +3982,30 @@
     "CHI4"
    ],
    "commune": "Avoine",
+   "registre": {
+    "installations": [
+     "CHIN2N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CHINON B",
+     "CHIN2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CHINON B",
+     "CHIN2N03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CHINON B",
+     "CHIN2N04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CHINON B"
+    ],
+    "eic": [
+     "17W100P100P0106T",
+     "17W100P100P0107R",
+     "17W100P100P0108P",
+     "17W100P100P0109N"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 3620.0,
+    "e_injectee_12m_mwh": 22518274,
+    "facteur_charge_12m": 0.71
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Avoine, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2604,6 +4027,26 @@
     "CHO2"
    ],
    "commune": "Chooz",
+   "registre": {
+    "installations": [
+     "CHOO2N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CHOOZ B",
+     "CHOO2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CHOOZ B"
+    ],
+    "eic": [
+     "17W100P100P01101",
+     "17W100P100P0112Y"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 3000.0,
+    "e_injectee_12m_mwh": 12024719,
+    "facteur_charge_12m": 0.458
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Chooz, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2625,6 +4068,26 @@
     "CIV2"
    ],
    "commune": "Civaux",
+   "registre": {
+    "installations": [
+     "CIVAUN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CIVAUX",
+     "CIVAUN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CIVAUX"
+    ],
+    "eic": [
+     "17W100P100P0113W",
+     "17W100P100P0114U"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 2990.0,
+    "e_injectee_12m_mwh": 21146491,
+    "facteur_charge_12m": 0.807
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Civaux, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2648,6 +4111,30 @@
     "CRU4"
    ],
    "commune": "Cruas",
+   "registre": {
+    "installations": [
+     "CRUA5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CRUAS",
+     "CRUA5N03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CRUAS",
+     "CRUA5N04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CRUAS",
+     "CRUA5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CRUAS"
+    ],
+    "eic": [
+     "17W100P100P0115S",
+     "17W100P100P0116Q",
+     "17W100P100P0118M",
+     "17W100P100P0119K"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 3660.0,
+    "e_injectee_12m_mwh": 23438559,
+    "facteur_charge_12m": 0.731
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Cruas, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2671,6 +4158,30 @@
     "DAM4"
    ],
    "commune": "Dampierre-en-Burly",
+   "registre": {
+    "installations": [
+     "D.BURN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY",
+     "D.BURN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY",
+     "D.BURN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY",
+     "D.BURN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY"
+    ],
+    "eic": [
+     "17W100P100P0120Z",
+     "17W100P100P0121X",
+     "17W100P100P0122V",
+     "17W100P100P0123T"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 3560.0,
+    "e_injectee_12m_mwh": 23350337,
+    "facteur_charge_12m": 0.749
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Dampierre-en-Burly, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2693,6 +4204,28 @@
     "FLA3"
    ],
    "commune": "Flamanville",
+   "registre": {
+    "installations": [
+     "FLAMAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE",
+     "FLAMAN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE",
+     "FLAMAN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE"
+    ],
+    "eic": [
+     "17W100P100P0126N",
+     "17W100P100P0127L",
+     "17W100P100P03639"
+    ],
+    "nb_groupes": 3,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 4280.0,
+    "e_injectee_12m_mwh": 22222401,
+    "facteur_charge_12m": 0.593
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Flamanville, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2714,6 +4247,26 @@
     "GOL2"
    ],
    "commune": "Golfech",
+   "registre": {
+    "installations": [
+     "GOLF5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE GOLFECH",
+     "GOLF5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE GOLFECH"
+    ],
+    "eic": [
+     "17W100P100P0128J",
+     "17W100P100P0129H"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 2620.0,
+    "e_injectee_12m_mwh": 11553060,
+    "facteur_charge_12m": 0.503
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Golfech, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2739,6 +4292,34 @@
     "GRA6"
    ],
    "commune": "Gravelines",
+   "registre": {
+    "installations": [
+     "GRAV5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE GRAVELINES",
+     "GRAV5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE GRAVELINES",
+     "GRAV5N03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE GRAVELINES",
+     "GRAV5N04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE GRAVELINES",
+     "GRAV5N05 - GROUPE 05 DE LA CENTRALE NUCLEAIRE DE GRAVELINES",
+     "GRAV5N06 - GROUPE 06 DE LA CENTRALE NUCLEAIRE DE GRAVELINES"
+    ],
+    "eic": [
+     "17W100P100P0130W",
+     "17W100P100P0131U",
+     "17W100P100P0132S",
+     "17W100P100P0133Q",
+     "17W100P100P0135M",
+     "17W100P100P0136K"
+    ],
+    "nb_groupes": 6,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 5460.0,
+    "e_injectee_12m_mwh": 33365868,
+    "facteur_charge_12m": 0.698
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 1 km du centre de la commune (Gravelines, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2760,6 +4341,26 @@
     "NOG2"
    ],
    "commune": "Nogent-sur-Seine",
+   "registre": {
+    "installations": [
+     "N.SE5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE NOGENT-SUR-SEINE",
+     "N.SE5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE NOGENT-SUR-SEINE"
+    ],
+    "eic": [
+     "17W100P100P0137I",
+     "17W100P100P0138G"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 2620.0,
+    "e_injectee_12m_mwh": 18873551,
+    "facteur_charge_12m": 0.822
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Nogent-sur-Seine, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2783,6 +4384,30 @@
     "PAL4"
    ],
    "commune": "Paluel",
+   "registre": {
+    "installations": [
+     "PALUEN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE PALUEL",
+     "PALUEN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE PALUEL",
+     "PALUEN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE PALUEL",
+     "PALUEN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE PALUEL"
+    ],
+    "eic": [
+     "17W100P100P0139E",
+     "17W100P100P0140T",
+     "17W100P100P0141R",
+     "17W100P100P0142P"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 5320.0,
+    "e_injectee_12m_mwh": 32528023,
+    "facteur_charge_12m": 0.698
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Paluel, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2804,6 +4429,26 @@
     "PEN2"
    ],
    "commune": "Petit-Caux",
+   "registre": {
+    "installations": [
+     "PENLYN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE PENLY",
+     "PENLYN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE PENLY"
+    ],
+    "eic": [
+     "17W100P100P0143N",
+     "17W100P100P0144L"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 2660.0,
+    "e_injectee_12m_mwh": 19120203,
+    "facteur_charge_12m": 0.821
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Petit-Caux, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2825,6 +4470,26 @@
     "SAL2"
    ],
    "commune": "Saint-Maurice-l'Exil",
+   "registre": {
+    "installations": [
+     "SSAL7N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE ST-ALBAN-ST-MAURICE",
+     "SSAL7N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE ST-ALBAN-ST-MAURICE"
+    ],
+    "eic": [
+     "17W100P100P0145J",
+     "17W100P100P0146H"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 2670.0,
+    "e_injectee_12m_mwh": 15236640,
+    "facteur_charge_12m": 0.651
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 2 km du centre de la commune (Saint-Maurice-l'Exil, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2846,6 +4511,26 @@
     "SLB2"
    ],
    "commune": "Saint-Laurent-Nouan",
+   "registre": {
+    "installations": [
+     "SSEA2N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE ST-LAURENT-DES-EAUX B",
+     "SSEA2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE ST-LAURENT-DES-EAUX B"
+    ],
+    "eic": [
+     "17W100P100P0147F",
+     "17W100P100P0148D"
+    ],
+    "nb_groupes": 2,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1830.0,
+    "e_injectee_12m_mwh": 12203244,
+    "facteur_charge_12m": 0.761
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 4 km du centre de la commune (Saint-Laurent-Nouan, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",
@@ -2869,6 +4554,30 @@
     "TRI4"
    ],
    "commune": "Saint-Paul-Trois-Châteaux",
+   "registre": {
+    "installations": [
+     "TRICAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)",
+     "TRICAN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)",
+     "TRICAN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)",
+     "TRICAN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)"
+    ],
+    "eic": [
+     "17W100P100P0149B",
+     "17W100P100P0150Q",
+     "17W100P100P0152M",
+     "17W100P100P0153K"
+    ],
+    "nb_groupes": 4,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 3660.0,
+    "e_injectee_12m_mwh": 23005147,
+    "facteur_charge_12m": 0.718
+   },
    "verif": {
     "coordonnees": "relevées à la main, à 3 km du centre de la commune (Saint-Paul-Trois-Châteaux, geo.api.gouv.fr)",
     "puissance": "somme des tranches, ENTSO-E 14.1.B, relevé du 2026-10-19",

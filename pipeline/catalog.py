@@ -61,7 +61,8 @@ def units_a73():
 def registre(min_kw=50000):
     fields = ("nominstallation,codeeicresourceobject,commune,codeinseecommune,codeinseecommuneimplantation,region,"
               "codefiliere,filiere,technologie,combustible,datemiseenservice_date,puismaxinstallee,nbgroupes,regime,gestionnaire,"
-              "energieannuelleglissanteinjectee")
+              "energieannuelleglissanteinjectee,energieannuelleglissanteproduite,postesource,tensionraccordement,codes3renr,"
+              "puismaxcharge,energiestockable,capacitereservoir,hauteurchute,productible,debitmaximal,datederaccordement")
     rows, offset = [], 0
     while True:
         q = urllib.parse.urlencode({"where": f"maxpuis >= {min_kw}", "select": fields, "limit": 100, "offset": offset,

@@ -46,6 +46,16 @@ jobs:
           RTE_CLIENT_SECRET: ${{ secrets.RTE_CLIENT_SECRET }}
         run: python pipeline/update.py --days "${{ inputs.days || '3' }}"
 
+      # Indisponibilités ENTSO-E une fois par jour (12 h UTC), réseau RTE le lundi ; tout de suite si le fichier manque.
+      - name: Indisponibilités et réseau
+        continue-on-error: true
+        env:
+          ENTSOE_TOKEN: ${{ secrets.ENTSOE_TOKEN }}
+        run: |
+          h=$(date -u +%H); d=$(date -u +%u)
+          if [ "$h" = "12" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ ! -f data/indispos.json ]; then python pipeline/indispos.py; fi
+          if { [ "$d" = "1" ] && [ "$h" = "12" ]; } || [ ! -f data/grid.json ]; then python pipeline/reseau.py; fi
+
       # L'historique n'est commité qu'une fois par jour (12 h UTC), au premier passage réel
       # et lors d'un lancement manuel. Les passages horaires ne font que republier le site.
       - name: Commit des données
@@ -53,6 +63,7 @@ jobs:
           git config user.name "parc3d-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/series data/meta.json data/live.json
+          for f in data/indispos.json data/grid.json; do if [ -f "$f" ]; then git add "$f"; fi; done
           if git diff --cached --quiet; then echo "Rien de nouveau."; exit 0; fi
           # premier passage réel, ou première récupération de la production par groupe : on commite tout de suite
           new_source=$(python3 -c "import json,subprocess as sp; a=json.load(open('data/meta.json')); b=json.loads(sp.run(['git','show','HEAD:data/meta.json'],capture_output=True,text=True).stdout or '{}'); ok=lambda m,k: bool((m.get('sources') or {}).get(k,{}).get('ok')) if isinstance((m.get('sources') or {}).get(k),dict) else False; print('true' if a.get('mode')!=b.get('mode') or ok(a,'units')!=ok(b,'units') else 'false')")

@@ -131,6 +131,34 @@ export function createScene(el, D, { onPick, onHover }) {
     scene.add(root);
   }
 
+  // ---------------------------------------------------------------- réseau HT (RTE, ODRÉ), masqué par défaut
+  let gridObj = null;
+  function buildGrid() {
+    const segs = { 400: [], 225: [] };
+    for (const l of D.grid?.lignes || []) {
+      const arr = segs[l.kv]; if (!arr) continue;
+      for (let i = 0; i < l.c.length - 1; i++) {
+        const [x1, z1] = toXZ(...l.c[i]), [x2, z2] = toXZ(...l.c[i + 1]);
+        arr.push(x1, TOP + 0.05, z1, x2, TOP + 0.05, z2);
+      }
+    }
+    const g = new THREE.Group();
+    for (const [kv, col, op] of [[225, '#3aa17e', 0.55], [400, '#d6453d', 0.85]]) {
+      if (!segs[kv].length) continue;
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.Float32BufferAttribute(segs[kv], 3));
+      g.add(new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: op })));
+    }
+    const pts = (D.grid?.postes || []).filter((p) => p.kv >= 400);
+    if (pts.length) {
+      const pg = new THREE.CylinderGeometry(0.14, 0.14, 0.12, 8), pm = new THREE.MeshBasicMaterial({ color: '#d6453d' });
+      const inst = new THREE.InstancedMesh(pg, pm, pts.length), m4 = new THREE.Matrix4();
+      pts.forEach((p, i) => { const [x, z] = toXZ(p.lon, p.lat); m4.makeTranslation(x, TOP + 0.08, z); inst.setMatrixAt(i, m4); });
+      g.add(inst);
+    }
+    return g;
+  }
+
   // ---------------------------------------------------------------- caméra
   const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 1000);
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -384,5 +412,9 @@ export function createScene(el, D, { onPick, onHover }) {
     project(lon, lat) { const [x, z] = toXZ(lon, lat); return screenOf(x, TOP + 1, z); },
     projectFiliere(f) { const st = sites.find((s) => s.f === f); return st ? screenOf(st.x, TOP + 2 * st.s, st.z) : { x: el.clientWidth / 2, y: el.clientHeight }; },
     resize,
+    showGrid(on) {
+      if (on && !gridObj) { gridObj = buildGrid(); scene.add(gridObj); }
+      if (gridObj) gridObj.visible = on;
+    },
   };
 }

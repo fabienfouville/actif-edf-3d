@@ -54,6 +54,11 @@ async function boot() {
   $('#c-out').addEventListener('click', () => scene.zoom(1 / 1.35));
   $('#c-rot').addEventListener('click', () => scene.rotate(Math.PI / 4));
   $('#c-home').addEventListener('click', () => scene.home());
+  if (D.grid?.lignes?.length) {
+    const b = $('#c-grid');
+    b.hidden = false;
+    b.addEventListener('click', () => { const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', String(on)); scene.showGrid(on); });
+  }
   const merit = createMerit($('#merit'), D, {
     project: (u) => scene.projectFiliere(u.filiere),
     onPick: pick,
