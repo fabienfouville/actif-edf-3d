@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-20T08:39:58Z",
+ "genere": "2026-10-20T08:47:56Z",
  "candidats": {
   "aerien": [
    "postes-electriques-rte",
@@ -500,5 +500,9 @@
   "geometries": {
    "null": 1238
   }
+ },
+ "osm": {
+  "lignes": 4572,
+  "postes": 234
  }
 }
