@@ -10,6 +10,7 @@ import json
 import os
 import re
 import urllib.parse
+from collections import Counter
 
 from common import DATA, ROOT, http_json, iso, now, save_json
 
@@ -53,6 +54,8 @@ def simplify(coords, step=0.01):
 def lines_of(geom):
     if not geom:
         return []
+    if geom.get("type") == "Feature":
+        geom = geom.get("geometry") or {}
     if geom["type"] == "LineString":
         return [geom["coordinates"]]
     if geom["type"] == "MultiLineString":
@@ -90,12 +93,20 @@ def main():
             continue
         tfield = next((n for n, _ in cands[ds]["champs"] if "tension" in n.lower()), None)
         try:
-            gj = geo_export(ds)
+            gj = geo_export(ds, f'{tfield} in ("400kV", "225kV")' if tfield else None)
         except Exception as e:  # noqa: BLE001
             report[f"erreur_{ds}"] = str(e)[:300]
             continue
-        report[f"exemple_{ds}"] = (gj.get("features") or [{}])[0].get("properties")
-        for f in gj.get("features", []):
+        feats = gj.get("features", [])
+        report[f"exemple_{ds}"] = (feats or [{}])[0].get("properties")
+        report[f"stats_{ds}"] = {
+            "features": len(feats),
+            "geometries": dict(Counter((f.get("geometry") or {}).get("type") for f in feats)),
+            "tensions": dict(Counter((f.get("properties") or {}).get(tfield) for f in feats).most_common(8)),
+            "geometrie_exemple": json.dumps((feats or [{}])[0].get("geometry"))[:300],
+            "cles_feature": sorted((feats or [{}])[0].keys()),
+        }
+        for f in feats:
             t = kv((f.get("properties") or {}).get(tfield)) if tfield else None
             if t not in (400, 225):
                 continue
@@ -105,8 +116,10 @@ def main():
                     lignes.append({"kv": t, "c": s, "s": "souterrain" if ds == ds_sout else "aerien"})
     if ds_post:
         try:
-            gj = geo_export(ds_post)
+            gj = geo_export(ds_post, 'tension in ("400kV", "225kV")')
             report["exemple_postes"] = (gj.get("features") or [{}])[0].get("properties")
+            report["stats_postes"] = {"features": len(gj.get("features", [])),
+                                      "geometries": dict(Counter((f.get("geometry") or {}).get("type") for f in gj.get("features", [])))}
             for f in gj.get("features", []):
                 p, g = f.get("properties") or {}, f.get("geometry") or {}
                 tv = max([kv(v) or 0 for k, v in p.items() if "tension" in k.lower()] or [0])

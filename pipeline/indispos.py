@@ -15,7 +15,7 @@ import xml.etree.ElementTree as ET
 import zipfile
 from datetime import timedelta
 
-from common import DATA, days_ago, http, iso, load_json, now, save_json
+from common import DATA, days_ago, http, iso, load_json, norm, now, save_json
 from sources import FR_EIC, _strip_ns, env
 
 API = "https://web-api.tp.entsoe.eu/api"
@@ -98,18 +98,31 @@ def main():
             last[k] = e
     events = [e for e in last.values() if e["statut"] not in ("A09", "A13") and e["debut"] and e["fin"] and e["eic"]]
     # rattachement aux tranches et aux centrales par l'EIC des groupes
-    by_eic = {}
+    by_eic, by_name, keys = {}, {}, []
     for t in load_json(f"{DATA}/edf_tranches.json")["tranches"]:
         if t.get("eic"):
             by_eic[t["eic"]] = t["id"]
+        by_name[norm(t["rte"])] = t["id"]
     for a in load_json(f"{DATA}/assets.json")["assets"]:
         for u in a.get("unites") or []:
             by_eic.setdefault(u["eic"], a["id"])
+        if a["filiere"] != "nucleaire":
+            keys += [(norm(k), a["id"]) for k in a.get("cles_entsoe") or []]
+    keys.sort(key=lambda kv: -len(kv[0]))  # la clé la plus longue d'abord
+
+    def match(e):
+        """Code EIC d'abord ; sinon nom du groupe (les groupes < 100 MW n'ont pas d'EIC au catalogue)."""
+        if e["eic"] in by_eic:
+            return by_eic[e["eic"]]
+        n = norm(e["nom"] or "")
+        return by_name.get(n) or next((i for k, i in keys if k and k in n), None)
+
     par_id, hors = {}, {}
     for e in sorted(events, key=lambda e: e["debut"]):
         ev = {k: e[k] for k in ("debut", "fin", "type", "dispo_mw", "pn", "motif", "nom")}
-        if e["eic"] in by_eic:
-            par_id.setdefault(by_eic[e["eic"]], []).append(ev)
+        i = match(e)
+        if i:
+            par_id.setdefault(i, []).append(ev)
         else:
             hors[e["nom"] or e["eic"]] = hors.get(e["nom"] or e["eic"], 0) + 1
     save_json(f"{DATA}/indispos.json", {
