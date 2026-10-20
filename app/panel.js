@@ -266,6 +266,8 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     const ids = e.u.tranche ? [e.u.id] : [...new Set([e.id, ...e.units.map((u) => u.id)])];
     return ids.flatMap((id) => (P[id] || []).map((ev) => ({ ...ev, id })));
   }
+  /** Motif REMIT : première langue seulement, tronqué. */
+  const shortReason = (m) => { const t = m.split(/-{5,}/)[0].trim(); return t.length > 140 ? `${t.slice(0, 137)}…` : t; };
   const dDay = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: '2-digit', timeZone: 'Europe/Paris' });
   function outagesSection(e) {
     if (!D.indispos || e.fil) return '';
@@ -289,7 +291,7 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     const next = evs.filter((v) => Date.parse(v.fin) > now).sort((a, b) => a.debut.localeCompare(b.debut)).slice(0, 6);
     return `<section><h3>Indisponibilités déclarées <span class="muted">ENTSO-E (REMIT)</span></h3>
       ${evs.length ? `<p class="muted small">Barres bleues : arrêts planifiés ; rouges : fortuits. Plus la barre est opaque, plus la puissance perdue est grande. Survol : détail.</p>${svg}
-      ${next.length ? `<ul class="files small">${next.map((v) => `<li><b>${esc(v.nom || v.id)}</b> · ${v.type} · ${dDay.format(Date.parse(v.debut))} → ${dDay.format(Date.parse(v.fin))} · reste ${fmt(v.dispo_mw)} MW${v.motif ? ` · <span class="muted">${esc(v.motif)}</span>` : ''}</li>`).join('')}</ul>` : '<p class="muted small">Aucune indisponibilité en cours ou annoncée.</p>'}`
+      ${next.length ? `<ul class="files small">${next.map((v) => `<li><b>${esc(v.nom || v.id)}</b> · ${v.type} · ${dDay.format(Date.parse(v.debut))} → ${dDay.format(Date.parse(v.fin))} · reste ${fmt(v.dispo_mw)} MW${v.motif ? ` · <span class="muted">${esc(shortReason(v.motif))}</span>` : ''}</li>`).join('')}</ul>` : '<p class="muted small">Aucune indisponibilité en cours ou annoncée.</p>'}`
         : '<p class="muted small">Aucune indisponibilité déclarée sur la période (ou groupe non publié sur ENTSO-E).</p>'}
     </section>`;
   }

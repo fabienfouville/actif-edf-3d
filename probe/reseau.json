@@ -1,0 +1,504 @@
+{
+ "genere": "2026-10-20T08:39:58Z",
+ "candidats": {
+  "aerien": [
+   "postes-electriques-rte",
+   "lignes-souterraines-rte-nv",
+   "lignes-aeriennes-rte-nv"
+  ],
+  "souterrain": [
+   "lignes-souterraines-rte-nv",
+   "lignes-aeriennes-rte-nv"
+  ],
+  "postes": [
+   "contraintes-region",
+   "postes-electriques-rte",
+   "energies-et-puissances-regionales-liees-au-contraintes",
+   "lignes-souterraines-rte-nv",
+   "lignes-aeriennes-rte-nv",
+   "rejets-sf6-par-annee-et-par-type-de-rejets",
+   "consommation-quotidienne-brute-regionale",
+   "postes-electriques-region-tension",
+   "courbes-de-production-mensuelles-eolien-solaire-complement-de-remuneration"
+  ]
+ },
+ "jeux": {
+  "postes-electriques-rte": {
+   "champs": [
+    [
+     "code_poste",
+     "text"
+    ],
+    [
+     "nom_poste",
+     "text"
+    ],
+    [
+     "fonction",
+     "text"
+    ],
+    [
+     "etat",
+     "text"
+    ],
+    [
+     "tension",
+     "text"
+    ],
+    [
+     "departement",
+     "text"
+    ]
+   ],
+   "lignes": 5042
+  },
+  "lignes-souterraines-rte-nv": {
+   "champs": [
+    [
+     "type_ouvrage",
+     "text"
+    ],
+    [
+     "code_ligne",
+     "text"
+    ],
+    [
+     "nom_ouvrage_1",
+     "text"
+    ],
+    [
+     "etat",
+     "text"
+    ],
+    [
+     "tension",
+     "text"
+    ],
+    [
+     "nombre_circuit",
+     "text"
+    ],
+    [
+     "identification_2",
+     "text"
+    ],
+    [
+     "nom_ouvrage_2",
+     "text"
+    ],
+    [
+     "identification_3",
+     "text"
+    ],
+    [
+     "nom_ouvrage_3",
+     "text"
+    ],
+    [
+     "identification_4",
+     "text"
+    ],
+    [
+     "nom_ouvrage_4",
+     "text"
+    ],
+    [
+     "identification_5",
+     "text"
+    ],
+    [
+     "nom_ouvrage_5",
+     "text"
+    ]
+   ],
+   "lignes": 3825
+  },
+  "lignes-aeriennes-rte-nv": {
+   "champs": [
+    [
+     "type_ouvrage",
+     "text"
+    ],
+    [
+     "code_ligne",
+     "text"
+    ],
+    [
+     "nom_ligne",
+     "text"
+    ],
+    [
+     "etat",
+     "text"
+    ],
+    [
+     "tension",
+     "text"
+    ],
+    [
+     "source",
+     "text"
+    ],
+    [
+     "nombre_circuit",
+     "text"
+    ],
+    [
+     "identification_2",
+     "text"
+    ],
+    [
+     "nom_ouvrage_2",
+     "text"
+    ],
+    [
+     "identification_3",
+     "text"
+    ],
+    [
+     "nom_ouvrage_3",
+     "text"
+    ],
+    [
+     "identification_4",
+     "text"
+    ],
+    [
+     "nom_ouvrage_4",
+     "text"
+    ],
+    [
+     "identification_5",
+     "text"
+    ],
+    [
+     "nom_ouvrage_5",
+     "text"
+    ]
+   ],
+   "lignes": 9221
+  },
+  "contraintes-region": {
+   "champs": [
+    [
+     "region",
+     "text"
+    ],
+    [
+     "ouvrage",
+     "text"
+    ],
+    [
+     "nom_de_l_ouvrage",
+     "text"
+    ],
+    [
+     "puissance_max_de_l_ouvrage",
+     "double"
+    ],
+    [
+     "poste_1",
+     "text"
+    ],
+    [
+     "pourcentage_1",
+     "double"
+    ],
+    [
+     "poste_2",
+     "text"
+    ],
+    [
+     "pourcentage_2",
+     "double"
+    ],
+    [
+     "poste_3",
+     "text"
+    ],
+    [
+     "pourcentage_3",
+     "double"
+    ],
+    [
+     "specificite",
+     "text"
+    ],
+    [
+     "occurrence",
+     "text"
+    ],
+    [
+     "duree",
+     "text"
+    ],
+    [
+     "perennite",
+     "text"
+    ],
+    [
+     "geom",
+     "geo_shape"
+    ],
+    [
+     "centroid",
+     "geo_point_2d"
+    ]
+   ],
+   "lignes": 407
+  },
+  "energies-et-puissances-regionales-liees-au-contraintes": {
+   "champs": [
+    [
+     "region",
+     "text"
+    ],
+    [
+     "puissance_enr_installee",
+     "double"
+    ],
+    [
+     "puissance_totale_a_compenser",
+     "double"
+    ],
+    [
+     "energie_non_evacuee_moyenne_printemps",
+     "double"
+    ],
+    [
+     "energie_non_evacuee_moyenne_ete",
+     "double"
+    ],
+    [
+     "energie_non_evacuee_moyenne_automne",
+     "double"
+    ],
+    [
+     "energie_non_evacuee_moyenne_hiver",
+     "double"
+    ]
+   ],
+   "lignes": 12
+  },
+  "rejets-sf6-par-annee-et-par-type-de-rejets": {
+   "champs": [
+    [
+     "annee",
+     "date"
+    ],
+    [
+     "type_de_rejet",
+     "text"
+    ],
+    [
+     "rejets_en_tonnes_de_sf6",
+     "double"
+    ],
+    [
+     "rejets_en_t_eq_co2",
+     "int"
+    ],
+    [
+     "facteur_d_emission_t_eq_co2_tsf6",
+     "int"
+    ]
+   ],
+   "lignes": 63
+  },
+  "consommation-quotidienne-brute-regionale": {
+   "champs": [
+    [
+     "date_heure",
+     "datetime"
+    ],
+    [
+     "date",
+     "date"
+    ],
+    [
+     "heure",
+     "text"
+    ],
+    [
+     "code_insee_region",
+     "text"
+    ],
+    [
+     "region",
+     "text"
+    ],
+    [
+     "consommation_brute_gaz_grtgaz",
+     "int"
+    ],
+    [
+     "statut_grtgaz",
+     "text"
+    ],
+    [
+     "consommation_brute_gaz_terega",
+     "int"
+    ],
+    [
+     "statut_terega",
+     "text"
+    ],
+    [
+     "consommation_brute_gaz_totale",
+     "int"
+    ],
+    [
+     "consommation_brute_electricite_rte",
+     "int"
+    ],
+    [
+     "statut_rte",
+     "text"
+    ],
+    [
+     "consommation_brute_totale",
+     "int"
+    ],
+    [
+     "flag_ignore",
+     "text"
+    ]
+   ],
+   "lignes": 2874807
+  },
+  "postes-electriques-region-tension": {
+   "champs": [
+    [
+     "annee",
+     "date"
+    ],
+    [
+     "insee_region",
+     "int"
+    ],
+    [
+     "nom_region",
+     "text"
+    ],
+    [
+     "niveau_tension",
+     "int"
+    ],
+    [
+     "nb_postes",
+     "int"
+    ]
+   ],
+   "lignes": 1080
+  },
+  "courbes-de-production-mensuelles-eolien-solaire-complement-de-remuneration": {
+   "champs": [
+    [
+     "date",
+     "date"
+    ],
+    [
+     "heure",
+     "text"
+    ],
+    [
+     "date_heure",
+     "datetime"
+    ],
+    [
+     "prod_eolienne_mw",
+     "int"
+    ],
+    [
+     "prod_solaire_mw",
+     "int"
+    ]
+   ],
+   "lignes": 70175
+  }
+ },
+ "choisis": {
+  "aerien": "lignes-aeriennes-rte-nv",
+  "souterrain": "lignes-souterraines-rte-nv",
+  "postes": "postes-electriques-rte"
+ },
+ "exemple_lignes-aeriennes-rte-nv": {
+  "type_ouvrage": "AERIEN",
+  "code_ligne": "FARRAL61GRANZ",
+  "nom_ligne": "LIAISON 225kV N0 1 FARRADIERE (LA)-GRANZAY",
+  "etat": "EN EXPLOITATION",
+  "tension": "225kV",
+  "source": "RTE",
+  "nombre_circuit": "1",
+  "identification_2": null,
+  "nom_ouvrage_2": null,
+  "identification_3": null,
+  "nom_ouvrage_3": null,
+  "identification_4": null,
+  "nom_ouvrage_4": null,
+  "identification_5": null,
+  "nom_ouvrage_5": null
+ },
+ "stats_lignes-aeriennes-rte-nv": {
+  "features": 2597,
+  "geometries": {
+   "null": 2597
+  },
+  "tensions": {
+   "225kV": 1957,
+   "400kV": 640
+  },
+  "geometrie_exemple": "null",
+  "cles_feature": [
+   "geometry",
+   "properties",
+   "type"
+  ]
+ },
+ "exemple_lignes-souterraines-rte-nv": {
+  "type_ouvrage": "SOUTERRAIN",
+  "code_ligne": "CHEVIL61VLEJU",
+  "nom_ouvrage_1": "LIAISON 225kV N0 1 CHEVILLY-VILLEJUST",
+  "etat": "EN EXPLOITATION",
+  "tension": "225kV",
+  "nombre_circuit": "1",
+  "identification_2": null,
+  "nom_ouvrage_2": null,
+  "identification_3": null,
+  "nom_ouvrage_3": null,
+  "identification_4": null,
+  "nom_ouvrage_4": null,
+  "identification_5": null,
+  "nom_ouvrage_5": null
+ },
+ "stats_lignes-souterraines-rte-nv": {
+  "features": 773,
+  "geometries": {
+   "null": 773
+  },
+  "tensions": {
+   "225kV": 755,
+   "400kV": 18
+  },
+  "geometrie_exemple": "null",
+  "cles_feature": [
+   "geometry",
+   "properties",
+   "type"
+  ]
+ },
+ "exemple_postes": {
+  "code_poste": "1CLAM",
+  "nom_poste": "CLAMART",
+  "fonction": "Poste de transformation",
+  "etat": "EN EXPLOITATION",
+  "tension": "225kV",
+  "departement": "Hauts-de-Seine"
+ },
+ "stats_postes": {
+  "features": 1238,
+  "geometries": {
+   "null": 1238
+  }
+ }
+}

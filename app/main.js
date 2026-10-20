@@ -57,6 +57,7 @@ async function boot() {
   if (D.grid?.lignes?.length) {
     const b = $('#c-grid');
     b.hidden = false;
+    b.title = `Réseau 400 et 225 kV · ${D.grid.source || 'RTE'}`;
     b.addEventListener('click', () => { const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', String(on)); scene.showGrid(on); });
   }
   const merit = createMerit($('#merit'), D, {
@@ -341,7 +342,7 @@ async function boot() {
       <p class="small">Quand un groupe n'est pas publié heure par heure (moins de 100 MW, ou donnée manquante), sa production est estimée comme une part du mix national de sa filière. Les prix du gaz, du CO2 et la part couverte d'EDF sont des hypothèses réglables. La valorisation est un ordre de grandeur pédagogique, pas une évaluation financière.</p>
       <h3>Données brutes</h3>
       <ul class="files">${['data/meta.json', 'data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/market.json', 'data/live.json'].map((f) => `<li><a class="mono" href="${f}" target="_blank" rel="noopener">${f}</a></li>`).join('')}</ul>
-      ${m.licences ? `<h3>Licences</h3><ul class="files small">${Object.values(m.licences).map((l) => `<li>${l}</li>`).join('')}</ul>` : ''}
+      ${m.licences ? `<h3>Licences</h3><ul class="files small">${Object.values(m.licences).map((l) => `<li>${l}</li>`).join('')}${D.grid?.source ? `<li>Réseau haute tension : ${D.grid.source}</li>` : ''}</ul>` : ''}
       <p class="small muted">Fond de carte : régions IGN / INSEE (Licence Ouverte). Code : <a href="https://github.com/fabienfouville/actif-edf-3d" target="_blank" rel="noopener">github.com/fabienfouville/actif-edf-3d</a></p></div>`;
   }
 
