@@ -107,7 +107,7 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
       return row(a.id, a.nom, D.siteProd(a.id, hour), a.p_mw, extra);
     }).join('') + diffus.map((u) => row(u.id, u.nom, D.prod[u.idx][hour], u.p_mw, 'petites installations')).join('');
     const title = f === 'nucleaire' ? `Les ${sites.length} sites et leurs ${e.units.length} tranches` : 'Ce que regroupe cette maquette';
-    return `<section><h3>${title}</h3><p class="muted small">Une seule maquette représente toute la filière. Ouvre un site pour sa fiche détaillée.</p><ul class="tranches members">${items}</ul></section>`;
+    return `<section><h3>${title}</h3><p class="muted small">Sur la carte, la filière s'est éclatée en ses sites réels, posés à leur vraie position. Clique un site, sur la carte ou dans la liste, pour sa fiche.</p><ul class="tranches members">${items}</ul></section>`;
   }
 
   function tranchesList(e) {
