@@ -13,6 +13,24 @@
    "fin_vie_hyp": 2047,
    "rte": "BELLEVILLE 1",
    "eic": "17W100P100P0090I",
+   "registre": {
+    "installations": [
+     "BVIL7N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE BELLEVILLE (BELLEVILLE-SUR-LOIRE)"
+    ],
+    "eic": [
+     "17W100P100P0090I"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1310.0,
+    "e_injectee_12m_mwh": 8525196,
+    "facteur_charge_12m": 0.743
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -30,6 +48,24 @@
    "fin_vie_hyp": 2048,
    "rte": "BELLEVILLE 2",
    "eic": "17W100P100P0091G",
+   "registre": {
+    "installations": [
+     "BVIL7N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE BELLEVILLE (BELLEVILLE-SUR-LOIRE)"
+    ],
+    "eic": [
+     "17W100P100P0091G"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1310.0,
+    "e_injectee_12m_mwh": 6304752,
+    "facteur_charge_12m": 0.549
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -47,6 +83,24 @@
    "fin_vie_hyp": 2041,
    "rte": "BLAYAIS 1",
    "eic": "17W100P100P0092E",
+   "registre": {
+    "installations": [
+     "BLAYAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)"
+    ],
+    "eic": [
+     "17W100P100P0092E"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 6225858,
+    "facteur_charge_12m": 0.781
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -64,6 +118,24 @@
    "fin_vie_hyp": 2042,
    "rte": "BLAYAIS 2",
    "eic": "17W100P100P0093C",
+   "registre": {
+    "installations": [
+     "BLAYAN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)"
+    ],
+    "eic": [
+     "17W100P100P0093C"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 5629457,
+    "facteur_charge_12m": 0.706
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -81,6 +153,24 @@
    "fin_vie_hyp": 2043,
    "rte": "BLAYAIS 3",
    "eic": "17W100P100P0094A",
+   "registre": {
+    "installations": [
+     "BLAYAN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)"
+    ],
+    "eic": [
+     "17W100P100P0094A"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 5228513,
+    "facteur_charge_12m": 0.656
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -98,6 +188,24 @@
    "fin_vie_hyp": 2043,
    "rte": "BLAYAIS 4",
    "eic": "17W100P100P00958",
+   "registre": {
+    "installations": [
+     "BLAYAN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE BLAYAIS (LE)"
+    ],
+    "eic": [
+     "17W100P100P00958"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 5075802,
+    "facteur_charge_12m": 0.637
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -115,6 +223,24 @@
    "fin_vie_hyp": 2038,
    "rte": "BUGEY 2",
    "eic": "17W100P100P00966",
+   "registre": {
+    "installations": [
+     "BUGEYN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE BUGEY (LE)"
+    ],
+    "eic": [
+     "17W100P100P00966"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 5067756,
+    "facteur_charge_12m": 0.636
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -132,6 +258,24 @@
    "fin_vie_hyp": 2038,
    "rte": "BUGEY 3",
    "eic": "17W100P100P00974",
+   "registre": {
+    "installations": [
+     "BUGEYN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE BUGEY (LE)"
+    ],
+    "eic": [
+     "17W100P100P00974"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 5295273,
+    "facteur_charge_12m": 0.664
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -149,6 +293,24 @@
    "fin_vie_hyp": 2039,
    "rte": "BUGEY 4",
    "eic": "17W100P100P00982",
+   "registre": {
+    "installations": [
+     "BUGEYN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE BUGEY (LE)"
+    ],
+    "eic": [
+     "17W100P100P00982"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 880.0,
+    "e_injectee_12m_mwh": 5199597,
+    "facteur_charge_12m": 0.675
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -166,6 +328,24 @@
    "fin_vie_hyp": 2039,
    "rte": "BUGEY 5",
    "eic": "17W100P100P01004",
+   "registre": {
+    "installations": [
+     "BUGEYN05 - GROUPE 05 DE LA CENTRALE NUCLEAIRE DE BUGEY (LE)"
+    ],
+    "eic": [
+     "17W100P100P01004"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 880.0,
+    "e_injectee_12m_mwh": 6225723,
+    "facteur_charge_12m": 0.808
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -183,6 +363,24 @@
    "fin_vie_hyp": 2046,
    "rte": "CATTENOM 1",
    "eic": "17W100P100P01012",
+   "registre": {
+    "installations": [
+     "CATTEN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CATTENOM"
+    ],
+    "eic": [
+     "17W100P100P01012"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1300.0,
+    "e_injectee_12m_mwh": 7931605,
+    "facteur_charge_12m": 0.696
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -200,6 +398,24 @@
    "fin_vie_hyp": 2047,
    "rte": "CATTENOM 2",
    "eic": "17W100P100P0103Z",
+   "registre": {
+    "installations": [
+     "CATTEN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CATTENOM"
+    ],
+    "eic": [
+     "17W100P100P0103Z"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1300.0,
+    "e_injectee_12m_mwh": 6886103,
+    "facteur_charge_12m": 0.605
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -217,6 +433,24 @@
    "fin_vie_hyp": 2050,
    "rte": "CATTENOM 3",
    "eic": "17W100P100P0104X",
+   "registre": {
+    "installations": [
+     "CATTEN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CATTENOM"
+    ],
+    "eic": [
+     "17W100P100P0104X"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1300.0,
+    "e_injectee_12m_mwh": 10412857,
+    "facteur_charge_12m": 0.914
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -234,6 +468,24 @@
    "fin_vie_hyp": 2051,
    "rte": "CATTENOM 4",
    "eic": "17W100P100P0105V",
+   "registre": {
+    "installations": [
+     "CATTEN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CATTENOM"
+    ],
+    "eic": [
+     "17W100P100P0105V"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1300.0,
+    "e_injectee_12m_mwh": 4320722,
+    "facteur_charge_12m": 0.379
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -251,6 +503,24 @@
    "fin_vie_hyp": 2042,
    "rte": "CHINON 1",
    "eic": "17W100P100P0106T",
+   "registre": {
+    "installations": [
+     "CHIN2N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CHINON B"
+    ],
+    "eic": [
+     "17W100P100P0106T"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 905.0,
+    "e_injectee_12m_mwh": 6172543,
+    "facteur_charge_12m": 0.779
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -268,6 +538,24 @@
    "fin_vie_hyp": 2043,
    "rte": "CHINON 2",
    "eic": "17W100P100P0107R",
+   "registre": {
+    "installations": [
+     "CHIN2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CHINON B"
+    ],
+    "eic": [
+     "17W100P100P0107R"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 905.0,
+    "e_injectee_12m_mwh": 5597076,
+    "facteur_charge_12m": 0.706
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -285,6 +573,24 @@
    "fin_vie_hyp": 2046,
    "rte": "CHINON 3",
    "eic": "17W100P100P0108P",
+   "registre": {
+    "installations": [
+     "CHIN2N03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CHINON B"
+    ],
+    "eic": [
+     "17W100P100P0108P"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 905.0,
+    "e_injectee_12m_mwh": 5045203,
+    "facteur_charge_12m": 0.636
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -302,6 +608,24 @@
    "fin_vie_hyp": 2047,
    "rte": "CHINON 4",
    "eic": "17W100P100P0109N",
+   "registre": {
+    "installations": [
+     "CHIN2N04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CHINON B"
+    ],
+    "eic": [
+     "17W100P100P0109N"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 905.0,
+    "e_injectee_12m_mwh": 5703452,
+    "facteur_charge_12m": 0.719
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -319,6 +643,24 @@
    "fin_vie_hyp": 2056,
    "rte": "CHOOZ 1",
    "eic": "17W100P100P01101",
+   "registre": {
+    "installations": [
+     "CHOO2N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CHOOZ B"
+    ],
+    "eic": [
+     "17W100P100P01101"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1500.0,
+    "e_injectee_12m_mwh": 5583382,
+    "facteur_charge_12m": 0.425
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -336,6 +678,24 @@
    "fin_vie_hyp": 2057,
    "rte": "CHOOZ 2",
    "eic": "17W100P100P0112Y",
+   "registre": {
+    "installations": [
+     "CHOO2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CHOOZ B"
+    ],
+    "eic": [
+     "17W100P100P0112Y"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1500.0,
+    "e_injectee_12m_mwh": 6441337,
+    "facteur_charge_12m": 0.49
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -353,6 +713,24 @@
    "fin_vie_hyp": 2057,
    "rte": "CIVAUX 1",
    "eic": "17W100P100P0113W",
+   "registre": {
+    "installations": [
+     "CIVAUN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CIVAUX"
+    ],
+    "eic": [
+     "17W100P100P0113W"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1495.0,
+    "e_injectee_12m_mwh": 9889814,
+    "facteur_charge_12m": 0.755
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -370,6 +748,24 @@
    "fin_vie_hyp": 2059,
    "rte": "CIVAUX 2",
    "eic": "17W100P100P0114U",
+   "registre": {
+    "installations": [
+     "CIVAUN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CIVAUX"
+    ],
+    "eic": [
+     "17W100P100P0114U"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1495.0,
+    "e_injectee_12m_mwh": 11256677,
+    "facteur_charge_12m": 0.86
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -387,6 +783,24 @@
    "fin_vie_hyp": 2043,
    "rte": "CRUAS 1",
    "eic": "17W100P100P0115S",
+   "registre": {
+    "installations": [
+     "CRUA5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE CRUAS"
+    ],
+    "eic": [
+     "17W100P100P0115S"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 4952184,
+    "facteur_charge_12m": 0.618
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -404,6 +818,24 @@
    "fin_vie_hyp": 2044,
    "rte": "CRUAS 2",
    "eic": "17W100P100P0116Q",
+   "registre": {
+    "installations": [
+     "CRUA5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE CRUAS"
+    ],
+    "eic": [
+     "17W100P100P0116Q"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 6828757,
+    "facteur_charge_12m": 0.852
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -421,6 +853,24 @@
    "fin_vie_hyp": 2044,
    "rte": "CRUAS 3",
    "eic": "17W100P100P0118M",
+   "registre": {
+    "installations": [
+     "CRUA5N03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE CRUAS"
+    ],
+    "eic": [
+     "17W100P100P0118M"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 5734245,
+    "facteur_charge_12m": 0.715
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -438,6 +888,24 @@
    "fin_vie_hyp": 2044,
    "rte": "CRUAS 4",
    "eic": "17W100P100P0119K",
+   "registre": {
+    "installations": [
+     "CRUA5N04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE CRUAS"
+    ],
+    "eic": [
+     "17W100P100P0119K"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 5923372,
+    "facteur_charge_12m": 0.739
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -455,6 +923,24 @@
    "fin_vie_hyp": 2040,
    "rte": "DAMPIERRE 1",
    "eic": "17W100P100P0120Z",
+   "registre": {
+    "installations": [
+     "D.BURN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY"
+    ],
+    "eic": [
+     "17W100P100P0120Z"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 890.0,
+    "e_injectee_12m_mwh": 5030303,
+    "facteur_charge_12m": 0.645
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -472,6 +958,24 @@
    "fin_vie_hyp": 2040,
    "rte": "DAMPIERRE 2",
    "eic": "17W100P100P0121X",
+   "registre": {
+    "installations": [
+     "D.BURN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY"
+    ],
+    "eic": [
+     "17W100P100P0121X"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 890.0,
+    "e_injectee_12m_mwh": 5664896,
+    "facteur_charge_12m": 0.727
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -489,6 +993,24 @@
    "fin_vie_hyp": 2041,
    "rte": "DAMPIERRE 3",
    "eic": "17W100P100P0122V",
+   "registre": {
+    "installations": [
+     "D.BURN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY"
+    ],
+    "eic": [
+     "17W100P100P0122V"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 890.0,
+    "e_injectee_12m_mwh": 6639538,
+    "facteur_charge_12m": 0.852
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -506,6 +1028,24 @@
    "fin_vie_hyp": 2041,
    "rte": "DAMPIERRE 4",
    "eic": "17W100P100P0123T",
+   "registre": {
+    "installations": [
+     "D.BURN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE DAMPIERRE-EN-BURLY"
+    ],
+    "eic": [
+     "17W100P100P0123T"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 890.0,
+    "e_injectee_12m_mwh": 6015599,
+    "facteur_charge_12m": 0.772
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -523,6 +1063,24 @@
    "fin_vie_hyp": 2045,
    "rte": "FLAMANVILLE 1",
    "eic": "17W100P100P0126N",
+   "registre": {
+    "installations": [
+     "FLAMAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE"
+    ],
+    "eic": [
+     "17W100P100P0126N"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1330.0,
+    "e_injectee_12m_mwh": 8985425,
+    "facteur_charge_12m": 0.771
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -540,6 +1098,24 @@
    "fin_vie_hyp": 2046,
    "rte": "FLAMANVILLE 2",
    "eic": "17W100P100P0127L",
+   "registre": {
+    "installations": [
+     "FLAMAN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE"
+    ],
+    "eic": [
+     "17W100P100P0127L"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1330.0,
+    "e_injectee_12m_mwh": 4632903,
+    "facteur_charge_12m": 0.398
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -557,6 +1133,24 @@
    "fin_vie_hyp": 2084,
    "rte": "FLAMANVILLE 3",
    "eic": "17W100P100P03639",
+   "registre": {
+    "installations": [
+     "FLAMAN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE FLAMANVILLE"
+    ],
+    "eic": [
+     "17W100P100P03639"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1620.0,
+    "e_injectee_12m_mwh": 8604074,
+    "facteur_charge_12m": 0.606
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -574,6 +1168,24 @@
    "fin_vie_hyp": 2050,
    "rte": "GOLFECH 1",
    "eic": "17W100P100P0128J",
+   "registre": {
+    "installations": [
+     "GOLF5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE GOLFECH"
+    ],
+    "eic": [
+     "17W100P100P0128J"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1310.0,
+    "e_injectee_12m_mwh": 7027602,
+    "facteur_charge_12m": 0.612
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -591,6 +1203,24 @@
    "fin_vie_hyp": 2053,
    "rte": "GOLFECH 2",
    "eic": "17W100P100P0129H",
+   "registre": {
+    "installations": [
+     "GOLF5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE GOLFECH"
+    ],
+    "eic": [
+     "17W100P100P0129H"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1310.0,
+    "e_injectee_12m_mwh": 4525458,
+    "facteur_charge_12m": 0.394
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -608,6 +1238,24 @@
    "fin_vie_hyp": 2040,
    "rte": "GRAVELINES 1",
    "eic": "17W100P100P0130W",
+   "registre": {
+    "installations": [
+     "GRAV5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE GRAVELINES"
+    ],
+    "eic": [
+     "17W100P100P0130W"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 3611959,
+    "facteur_charge_12m": 0.453
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -625,6 +1273,24 @@
    "fin_vie_hyp": 2040,
    "rte": "GRAVELINES 2",
    "eic": "17W100P100P0131U",
+   "registre": {
+    "installations": [
+     "GRAV5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE GRAVELINES"
+    ],
+    "eic": [
+     "17W100P100P0131U"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 6057022,
+    "facteur_charge_12m": 0.76
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -642,6 +1308,24 @@
    "fin_vie_hyp": 2040,
    "rte": "GRAVELINES 3",
    "eic": "17W100P100P0132S",
+   "registre": {
+    "installations": [
+     "GRAV5N03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE GRAVELINES"
+    ],
+    "eic": [
+     "17W100P100P0132S"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 6224446,
+    "facteur_charge_12m": 0.781
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -659,6 +1343,24 @@
    "fin_vie_hyp": 2041,
    "rte": "GRAVELINES 4",
    "eic": "17W100P100P0133Q",
+   "registre": {
+    "installations": [
+     "GRAV5N04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE GRAVELINES"
+    ],
+    "eic": [
+     "17W100P100P0133Q"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 5000512,
+    "facteur_charge_12m": 0.627
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -676,6 +1378,24 @@
    "fin_vie_hyp": 2044,
    "rte": "GRAVELINES 5",
    "eic": "17W100P100P0135M",
+   "registre": {
+    "installations": [
+     "GRAV5N05 - GROUPE 05 DE LA CENTRALE NUCLEAIRE DE GRAVELINES"
+    ],
+    "eic": [
+     "17W100P100P0135M"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 5867546,
+    "facteur_charge_12m": 0.736
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -693,6 +1413,24 @@
    "fin_vie_hyp": 2045,
    "rte": "GRAVELINES 6",
    "eic": "17W100P100P0136K",
+   "registre": {
+    "installations": [
+     "GRAV5N06 - GROUPE 06 DE LA CENTRALE NUCLEAIRE DE GRAVELINES"
+    ],
+    "eic": [
+     "17W100P100P0136K"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 910.0,
+    "e_injectee_12m_mwh": 6604383,
+    "facteur_charge_12m": 0.828
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -710,6 +1448,24 @@
    "fin_vie_hyp": 2047,
    "rte": "NOGENT 1",
    "eic": "17W100P100P0137I",
+   "registre": {
+    "installations": [
+     "N.SE5N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE NOGENT-SUR-SEINE"
+    ],
+    "eic": [
+     "17W100P100P0137I"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1310.0,
+    "e_injectee_12m_mwh": 10625000,
+    "facteur_charge_12m": 0.926
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -727,6 +1483,24 @@
    "fin_vie_hyp": 2048,
    "rte": "NOGENT 2",
    "eic": "17W100P100P0138G",
+   "registre": {
+    "installations": [
+     "N.SE5N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE NOGENT-SUR-SEINE"
+    ],
+    "eic": [
+     "17W100P100P0138G"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1310.0,
+    "e_injectee_12m_mwh": 8248552,
+    "facteur_charge_12m": 0.719
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -744,6 +1518,24 @@
    "fin_vie_hyp": 2044,
    "rte": "PALUEL 1",
    "eic": "17W100P100P0139E",
+   "registre": {
+    "installations": [
+     "PALUEN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE PALUEL"
+    ],
+    "eic": [
+     "17W100P100P0139E"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1330.0,
+    "e_injectee_12m_mwh": 3457026,
+    "facteur_charge_12m": 0.297
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -761,6 +1553,24 @@
    "fin_vie_hyp": 2044,
    "rte": "PALUEL 2",
    "eic": "17W100P100P0140T",
+   "registre": {
+    "installations": [
+     "PALUEN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE PALUEL"
+    ],
+    "eic": [
+     "17W100P100P0140T"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1330.0,
+    "e_injectee_12m_mwh": 9358336,
+    "facteur_charge_12m": 0.803
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -778,6 +1588,24 @@
    "fin_vie_hyp": 2045,
    "rte": "PALUEL 3",
    "eic": "17W100P100P0141R",
+   "registre": {
+    "installations": [
+     "PALUEN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE PALUEL"
+    ],
+    "eic": [
+     "17W100P100P0141R"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1330.0,
+    "e_injectee_12m_mwh": 9308647,
+    "facteur_charge_12m": 0.799
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -795,6 +1623,24 @@
    "fin_vie_hyp": 2046,
    "rte": "PALUEL 4",
    "eic": "17W100P100P0142P",
+   "registre": {
+    "installations": [
+     "PALUEN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE PALUEL"
+    ],
+    "eic": [
+     "17W100P100P0142P"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1330.0,
+    "e_injectee_12m_mwh": 10404013,
+    "facteur_charge_12m": 0.893
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -812,6 +1658,24 @@
    "fin_vie_hyp": 2050,
    "rte": "PENLY 1",
    "eic": "17W100P100P0143N",
+   "registre": {
+    "installations": [
+     "PENLYN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE PENLY"
+    ],
+    "eic": [
+     "17W100P100P0143N"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1330.0,
+    "e_injectee_12m_mwh": 9712216,
+    "facteur_charge_12m": 0.834
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -829,6 +1693,24 @@
    "fin_vie_hyp": 2052,
    "rte": "PENLY 2",
    "eic": "17W100P100P0144L",
+   "registre": {
+    "installations": [
+     "PENLYN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE PENLY"
+    ],
+    "eic": [
+     "17W100P100P0144L"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1330.0,
+    "e_injectee_12m_mwh": 9407987,
+    "facteur_charge_12m": 0.807
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -846,6 +1728,24 @@
    "fin_vie_hyp": 2045,
    "rte": "ST ALBAN 1",
    "eic": "17W100P100P0145J",
+   "registre": {
+    "installations": [
+     "SSAL7N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE ST-ALBAN-ST-MAURICE"
+    ],
+    "eic": [
+     "17W100P100P0145J"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1335.0,
+    "e_injectee_12m_mwh": 7029439,
+    "facteur_charge_12m": 0.601
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -863,6 +1763,24 @@
    "fin_vie_hyp": 2046,
    "rte": "ST ALBAN 2",
    "eic": "17W100P100P0146H",
+   "registre": {
+    "installations": [
+     "SSAL7N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE ST-ALBAN-ST-MAURICE"
+    ],
+    "eic": [
+     "17W100P100P0146H"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 1335.0,
+    "e_injectee_12m_mwh": 8207201,
+    "facteur_charge_12m": 0.702
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -880,6 +1798,24 @@
    "fin_vie_hyp": 2041,
    "rte": "ST LAURENT 1",
    "eic": "17W100P100P0147F",
+   "registre": {
+    "installations": [
+     "SSEA2N01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE ST-LAURENT-DES-EAUX B"
+    ],
+    "eic": [
+     "17W100P100P0147F"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 6288015,
+    "facteur_charge_12m": 0.784
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -897,6 +1833,24 @@
    "fin_vie_hyp": 2041,
    "rte": "ST LAURENT 2",
    "eic": "17W100P100P0148D",
+   "registre": {
+    "installations": [
+     "SSEA2N02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE ST-LAURENT-DES-EAUX B"
+    ],
+    "eic": [
+     "17W100P100P0148D"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 5915229,
+    "facteur_charge_12m": 0.738
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -914,6 +1868,24 @@
    "fin_vie_hyp": 2040,
    "rte": "TRICASTIN 1",
    "eic": "17W100P100P0149B",
+   "registre": {
+    "installations": [
+     "TRICAN01 - GROUPE 01 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)"
+    ],
+    "eic": [
+     "17W100P100P0149B"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 5110741,
+    "facteur_charge_12m": 0.638
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -931,6 +1903,24 @@
    "fin_vie_hyp": 2040,
    "rte": "TRICASTIN 2",
    "eic": "17W100P100P0150Q",
+   "registre": {
+    "installations": [
+     "TRICAN02 - GROUPE 02 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)"
+    ],
+    "eic": [
+     "17W100P100P0150Q"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 6607611,
+    "facteur_charge_12m": 0.824
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -948,6 +1938,24 @@
    "fin_vie_hyp": 2041,
    "rte": "TRICASTIN 3",
    "eic": "17W100P100P0152M",
+   "registre": {
+    "installations": [
+     "TRICAN03 - GROUPE 03 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)"
+    ],
+    "eic": [
+     "17W100P100P0152M"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 5626130,
+    "facteur_charge_12m": 0.702
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
@@ -965,6 +1973,24 @@
    "fin_vie_hyp": 2041,
    "rte": "TRICASTIN 4",
    "eic": "17W100P100P0153K",
+   "registre": {
+    "installations": [
+     "TRICAN04 - GROUPE 04 DE LA CENTRALE NUCLEAIRE DE TRICASTIN (LE)"
+    ],
+    "eic": [
+     "17W100P100P0153K"
+    ],
+    "nb_groupes": 1,
+    "regime": [
+     "En service"
+    ],
+    "gestionnaire": [
+     "RTE"
+    ],
+    "pmax_mw": 915.0,
+    "e_injectee_12m_mwh": 5660665,
+    "facteur_charge_12m": 0.706
+   },
    "verif": {
     "puissance": "ENTSO-E 14.1.B, relevé du 2026-10-19",
     "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",

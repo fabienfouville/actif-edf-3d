@@ -51,14 +51,42 @@ class Pipeline(unittest.TestCase):
         self.assertEqual(out[h]["consommation"], 51000)
 
 
-if __name__ == "__main__":
-    unittest.main()
-
     def test_rapprochement_groupes_exacts(self):
         h = datetime(2026, 10, 14, 0, tzinfo=UTC)
         raw = {norm(n): {h: v} for n, v in [("SEYSSEL", 30), ("CHAUTAGNE", 60), ("SEYSSEL BIS", 9)]}
         cat = {"tranches": [], "assets": [{"id": "hyd-CNR", "filiere": "hydraulique", "rte": "SEYSSEL", "groupes_entsoe": ["SEYSSEL", "CHAUTAGNE"]}]}
         ser, unmatched = sources.match_units(raw, cat)
-        self.assertEqual(ser["hyd-CNR"][h], 90)
-        self.assertEqual(unmatched, ["SEYSSEL BIS"])
+        self.assertEqual(ser["hyd-CNR"][h], 99)  # SEYSSEL BIS contient la clé
+        self.assertEqual(unmatched, [])
+        raw = {norm(n): {h: v} for n, v in [("BAYET", 300), ("FR GA MORANT1", 100), ("CERNAY", 5)]}
+        cat = {"tranches": [], "assets": [{"id": "gaz-BAY", "filiere": "gaz", "rte": "BAYET", "cles_entsoe": ["BAYET", "MORANT"], "groupes_entsoe": ["BAYET"]}]}
+        ser, unmatched = sources.match_units(raw, cat)
+        self.assertEqual(ser["gaz-BAY"][h], 400)
+        self.assertEqual(unmatched, ["CERNAY"])
 
+
+class Indispos(unittest.TestCase):
+    def test_lecture_message_a80(self):
+        import indispos
+        xml = b"""<?xml version="1.0" encoding="UTF-8"?>
+<Unavailability_MarketDocument xmlns="urn:iec62325.351:tc57wg16:451-6:outagedocument:3:0">
+ <mRID>DOC1</mRID><revisionNumber>3</revisionNumber><docStatus><value>A05</value></docStatus>
+ <TimeSeries><businessType>A53</businessType>
+  <start_DateAndOrTime.date>2027-03-01</start_DateAndOrTime.date><start_DateAndOrTime.time>22:00:00Z</start_DateAndOrTime.time>
+  <end_DateAndOrTime.date>2027-05-10</end_DateAndOrTime.date><end_DateAndOrTime.time>06:00:00Z</end_DateAndOrTime.time>
+  <production_RegisteredResource.pSRType.powerSystemResources.mRID>17W100P100P0090I</production_RegisteredResource.pSRType.powerSystemResources.mRID>
+  <production_RegisteredResource.pSRType.powerSystemResources.name>BELLEVILLE 1</production_RegisteredResource.pSRType.powerSystemResources.name>
+  <production_RegisteredResource.pSRType.powerSystemResources.nominalP>1310</production_RegisteredResource.pSRType.powerSystemResources.nominalP>
+  <Available_Period><Point><position>1</position><quantity>0</quantity></Point></Available_Period>
+ </TimeSeries>
+ <Reason><code>B19</code><text>Visite partielle</text></Reason>
+</Unavailability_MarketDocument>"""
+        ev = indispos.parse(xml)
+        self.assertEqual(len(ev), 1)
+        e = ev[0]
+        self.assertEqual((e["eic"], e["type"], e["rev"], e["dispo_mw"], e["pn"]), ("17W100P100P0090I", "planifiée", 3, 0.0, 1310.0))
+        self.assertEqual((e["debut"], e["fin"], e["motif"]), ("2027-03-01T22:00Z", "2027-05-10T06:00Z", "Visite partielle"))
+
+
+if __name__ == "__main__":
+    unittest.main()

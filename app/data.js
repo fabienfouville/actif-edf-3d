@@ -13,7 +13,7 @@ const MIX = ['consommation', 'nucleaire', 'hydraulique', 'gaz', 'charbon', 'fiou
 export async function loadAll(onProgress = () => {}) {
   const [assetsF, tranchesF, params, meta, regions, market] = await Promise.all(
     ['data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/meta.json', 'data/geo/regions.json', 'data/market.json'].map(get));
-  const live = await get('data/live.json').catch(() => null);
+  const [live, indispos, grid] = await Promise.all(['data/live.json', 'data/indispos.json', 'data/grid.json'].map((f) => get(f).catch(() => null)));
   const keys = (meta.mois || []).slice(-13);
   let done = 0;
   const months = await Promise.all(keys.map((k) => get(`data/series/${k}.json`).then((m) => { onProgress(++done / keys.length); return m; })));
@@ -42,7 +42,7 @@ export async function loadAll(onProgress = () => {}) {
   let now = H - 1;
   while (now > 0 && Number.isNaN(mix.nucleaire[now])) now--;
 
-  const D = { params, meta, live, regions, market, t0, H, now, price, mix, real, sources: srcs };
+  const D = { params, meta, live, regions, market, indispos, grid, t0, H, now, price, mix, real, sources: srcs };
   D.assets = assetsF.assets;
   D.tranches = tranchesF.tranches;
   buildUnits(D);

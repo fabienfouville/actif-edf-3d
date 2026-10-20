@@ -107,7 +107,7 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
       return row(a.id, a.nom, D.siteProd(a.id, hour), a.p_mw, extra);
     }).join('') + diffus.map((u) => row(u.id, u.nom, D.prod[u.idx][hour], u.p_mw, 'petites installations')).join('');
     const title = f === 'nucleaire' ? `Les ${sites.length} sites et leurs ${e.units.length} tranches` : 'Ce que regroupe cette maquette';
-    return `<section><h3>${title}</h3><p class="muted small">Une seule maquette représente toute la filière. Ouvre un site pour sa fiche détaillée.</p><ul class="tranches members">${items}</ul></section>`;
+    return `<section><h3>${title}</h3><p class="muted small">Sur la carte, la filière s'est éclatée en ses sites réels, posés à leur vraie position. Clique un site, sur la carte ou dans la liste, pour sa fiche.</p><ul class="tranches members">${items}</ul></section>`;
   }
 
   function tranchesList(e) {
@@ -157,6 +157,8 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
       ${lines([{ v: Array.from(e.prod.slice(r0, r1)), color: col(e.u.filiere), area: true }], { yLabel: 'MW', xLabels: xl, zero: true, marker: hour - r0, h: 100 })}
       ${lines([{ v: Array.from(D.price.slice(r0, r1)), color: 'var(--accent)' }, { v: new Array(r1 - r0).fill(e.cmg), color: 'var(--muted)', dash: true }], { yLabel: '€/MWh (pointillé : CMg)', xLabels: xl, marker: hour - r0, h: 100 })}
     </section>
+    ${outagesSection(e)}
+    ${registreSection(e)}
     ${tranchesList(e)}
     <p class="src">${sourceNote(e)}</p>`;
   }
@@ -254,6 +256,67 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
     </section>`;
   }
 
+
+
+  // ---------------------------------------------------------------- indisponibilités déclarées (ENTSO-E A80)
+  /** Événements des tranches ou de la centrale de l'entité. */
+  function outagesOf(e) {
+    const P = D.indispos?.par_id;
+    if (!P || e.fil) return [];
+    const ids = e.u.tranche ? [e.u.id] : [...new Set([e.id, ...e.units.map((u) => u.id)])];
+    return ids.flatMap((id) => (P[id] || []).map((ev) => ({ ...ev, id })));
+  }
+  const dDay = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: '2-digit', timeZone: 'Europe/Paris' });
+  function outagesSection(e) {
+    if (!D.indispos || e.fil) return '';
+    const evs = outagesOf(e);
+    const t0 = Date.parse(D.indispos.fenetre[0]), t1 = Date.parse(D.indispos.fenetre[1]), now = hourDate(D, D.now).getTime();
+    const ids = [...new Set(evs.map((v) => v.id))].sort();
+    const W = 340, L = ids.length > 1 ? 40 : 8, X = (t) => L + (Math.min(Math.max(t, t0), t1) - t0) / (t1 - t0) * (W - L - 8);
+    const rowH = 14, H = Math.max(1, ids.length) * rowH + 22;
+    let svg = `<svg viewBox="0 0 ${W} ${H}" class="chart" role="img" aria-label="Indisponibilités">`;
+    ids.forEach((id, r) => {
+      if (ids.length > 1) svg += `<text x="2" y="${r * rowH + 11}" class="ax">${esc(id)}</text>`;
+      for (const v of evs.filter((x) => x.id === id)) {
+        const a = Date.parse(v.debut), b = Date.parse(v.fin), x0 = X(a), w = Math.max(1.5, X(b) - x0);
+        const op = v.pn ? 0.35 + 0.65 * Math.min(1, Math.max(0, 1 - (v.dispo_mw ?? 0) / v.pn)) : 0.9;
+        svg += `<rect x="${x0.toFixed(1)}" y="${r * rowH + 2}" width="${w.toFixed(1)}" height="${rowH - 4}" rx="2" fill="${v.type === 'fortuite' ? 'var(--bad)' : 'var(--accent)'}" opacity="${op.toFixed(2)}"><title>${esc(v.nom || id)} · ${v.type} · ${dDay.format(a)} → ${dDay.format(b)} · dispo ${fmt(v.dispo_mw)} / ${fmt(v.pn)} MW</title></rect>`;
+      }
+    });
+    const xn = X(now);
+    svg += `<line x1="${xn}" x2="${xn}" y1="0" y2="${H - 16}" stroke="var(--fg)"/><text x="${xn}" y="${H - 4}" class="ax" text-anchor="middle">aujourd'hui</text>`;
+    svg += `<text x="${L}" y="${H - 4}" class="ax">${dDay.format(t0)}</text><text x="${W - 8}" y="${H - 4}" class="ax" text-anchor="end">${dDay.format(t1)}</text></svg>`;
+    const next = evs.filter((v) => Date.parse(v.fin) > now).sort((a, b) => a.debut.localeCompare(b.debut)).slice(0, 6);
+    return `<section><h3>Indisponibilités déclarées <span class="muted">ENTSO-E (REMIT)</span></h3>
+      ${evs.length ? `<p class="muted small">Barres bleues : arrêts planifiés ; rouges : fortuits. Plus la barre est opaque, plus la puissance perdue est grande. Survol : détail.</p>${svg}
+      ${next.length ? `<ul class="files small">${next.map((v) => `<li><b>${esc(v.nom || v.id)}</b> · ${v.type} · ${dDay.format(Date.parse(v.debut))} → ${dDay.format(Date.parse(v.fin))} · reste ${fmt(v.dispo_mw)} MW${v.motif ? ` · <span class="muted">${esc(v.motif)}</span>` : ''}</li>`).join('')}</ul>` : '<p class="muted small">Aucune indisponibilité en cours ou annoncée.</p>'}`
+        : '<p class="muted small">Aucune indisponibilité déclarée sur la période (ou groupe non publié sur ENTSO-E).</p>'}
+    </section>`;
+  }
+
+  // ---------------------------------------------------------------- registre national
+  function registreSection(e) {
+    const r = e.u.tranche?.registre || e.asset?.registre;
+    if (!r || e.fil) return '';
+    const row = (k, v) => (v == null || v === '' ? '' : `<li>${k}<b class="mono">${v}</b></li>`);
+    const h = r.hydro || {};
+    return `<section><h3>Registre national <span class="muted">ODRÉ</span></h3><ul class="qmix">
+      ${row('Facteur de charge 12 mois', r.facteur_charge_12m != null ? `${fmt(r.facteur_charge_12m * 100)} %` : null)}
+      ${row('Énergie injectée 12 mois', r.e_injectee_12m_mwh != null ? `${fmt(r.e_injectee_12m_mwh / 1e3)} GWh` : null)}
+      ${row('Puissance au registre', r.pmax_mw != null ? `${fmt(r.pmax_mw)} MW` : null)}
+      ${row('Groupes', r.nb_groupes)}
+      ${row('Pompage', r.pompage_mw != null ? `${fmt(r.pompage_mw)} MW` : null)}
+      ${row('Énergie stockable', r.energie_stockable_mwh != null ? `${fmt(r.energie_stockable_mwh)} MWh` : null)}
+      ${row('Réservoir', h.reservoir_mm3 != null ? `${fmt(h.reservoir_mm3, 1)} Mm³` : null)}
+      ${row('Hauteur de chute', h.chute_m != null ? `${fmt(h.chute_m)} m` : null)}
+      ${row('Productible', h.productible_gwh != null ? `${fmt(h.productible_gwh)} GWh` : null)}
+      ${row('Débit maximal', h.debit_m3s != null ? `${fmt(h.debit_m3s)} m³/s` : null)}
+      ${row('Poste de raccordement', r.poste_source?.join(', '))}
+      ${row('Tension', r.tension?.join(', '))}
+      ${row('Régime', r.regime?.join(', '))}
+      ${row('Gestionnaire', r.gestionnaire?.join(', '))}
+    </ul><p class="muted small">${esc(r.installations.length > 1 ? `${r.installations.length} installations du registre` : r.installations[0])}</p></section>`;
+  }
 
   // ---------------------------------------------------------------- prévision (HPFC)
   const MOIS = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
@@ -357,6 +420,10 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
       <div class="px-row"><button class="btn" data-act="price">Pricer</button>
         <label class="btn ghost small">Importer des scénarios (JSON)<input type="file" accept=".json,application/json" data-act="scen" hidden></label>
         <span class="muted small">${scen ? `${scen.paths.length} trajectoires chargées` : 'Sans scénarios : intrinsèque seul'}</span></div>
+      ${(() => {
+        const ov = outagesOf(e).filter((v) => v.fin.slice(0, 10) >= st.from && v.debut.slice(0, 10) <= st.to);
+        return ov.length ? `<p class="tag warn">Indisponibilités déjà déclarées sur la période : ${ov.slice(0, 3).map((v) => `${esc(v.nom || v.id)} ${dDay.format(Date.parse(v.debut))} → ${dDay.format(Date.parse(v.fin))}`).join(' ; ')}${ov.length > 3 ? '…' : ''}</p>` : '';
+      })()}
       <div id="px-out">${lastPrice && lastPrice.id === e.id ? priceResult(e, st, lastPrice.r) : ''}</div>
     </section>`;
   }
@@ -406,6 +473,8 @@ export function createPanel(el, D, { onClose, onPick, emit }) {
       heure_affichee: { t: hourDate(D, hour).toISOString(), production_mw: r(e.prod[hour], 0), prix_spot: r(D.price[hour], 1) },
       kpi_12_mois: Object.fromEntries(Object.entries(k).map(([kk, v]) => [kk, r(v, 3)])),
       simulation: s,
+      registre: (e.u.tranche?.registre || e.asset?.registre) ?? undefined,
+      indisponibilites: D.indispos ? outagesOf(e).slice(-20) : undefined,
       sources_verifiees: (e.u.tranche?.verif || e.asset?.verif) ?? undefined,
       donnees: { mode: D.meta.mode, production: e.units.every((u) => u.real) ? 'mesurée' : 'modélisée', genere: D.meta.genere },
       fichiers: ['data/assets.json', 'data/edf_tranches.json', 'data/params.json', 'data/meta.json', `data/series/${lastMonth}.json`],

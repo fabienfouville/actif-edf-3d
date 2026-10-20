@@ -65,6 +65,47 @@ def main():
         verif["coordonnees"] = (f"relevées à la main, à {d:.0f} km du centre de la commune ({c['nom']}, geo.api.gouv.fr)"
                                 if d <= 15 else f"à vérifier : {d:.0f} km du centre de la commune {c['nom']}")
 
+    reg_by_eic = {}
+    for r in ref["registre"]:
+        if r.get("codeeicresourceobject"):
+            reg_by_eic.setdefault(r["codeeicresourceobject"], []).append(r)
+
+    def fnum(v):
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            return None
+
+    def registre_block(rows):
+        """Champs du registre national agrégés sur les installations d'une centrale (kW → MW, kWh → MWh)."""
+        seen, uniq = set(), []
+        for r in rows:
+            k = (r.get("nominstallation"), r.get("codeeicresourceobject"))
+            if k not in seen:
+                seen.add(k); uniq.append(r)
+        if not uniq:
+            return None
+        tot = lambda f: sum(fnum(r.get(f)) or 0 for r in uniq) or None
+        vals = lambda f: sorted({str(r[f]) for r in uniq if r.get(f) not in (None, "")}) or None
+        pkw, e_inj = tot("puismaxinstallee"), tot("energieannuelleglissanteinjectee")
+        b = {
+            "installations": [r.get("nominstallation") for r in uniq],
+            "eic": vals("codeeicresourceobject"),
+            "nb_groupes": int(tot("nbgroupes") or 0) or None,
+            "regime": vals("regime"),
+            "poste_source": vals("postesource"), "tension": vals("tensionraccordement"), "s3renr": vals("codes3renr"),
+            "gestionnaire": vals("gestionnaire"),
+            "pmax_mw": round(pkw / 1000, 1) if pkw else None,
+            "e_injectee_12m_mwh": round(e_inj / 1000) if e_inj else None,
+            "e_produite_12m_mwh": round(tot("energieannuelleglissanteproduite") / 1000) if tot("energieannuelleglissanteproduite") else None,
+            "facteur_charge_12m": round(e_inj / 1000 / (pkw / 1000 * 8760), 3) if e_inj and pkw else None,
+            "pompage_mw": round(tot("puismaxcharge") / 1000, 1) if tot("puismaxcharge") else None,
+            "energie_stockable_mwh": round(tot("energiestockable") / 1000) if tot("energiestockable") else None,
+            "hydro": {k: v for k, v in {"reservoir_mm3": tot("capacitereservoir"), "chute_m": max([fnum(r.get("hauteurchute")) or 0 for r in uniq]) or None,
+                                        "productible_gwh": tot("productible"), "debit_m3s": tot("debitmaximal")}.items() if v} or None,
+        }
+        return {k: v for k, v in b.items() if v is not None}
+
     assets, report = [], []
     # ------------------------------------------------------------ centrales hors nucléaire
     for c in cmap["centrales"]:
@@ -86,6 +127,7 @@ def main():
             verif.setdefault("puissance", "valeur de la carte, non publiée par unité sur ENTSO-E")
         if keys:
             a["rte"] = c["cles"][0]
+            a["cles_entsoe"] = keys
             a["groupes_entsoe"] = sorted({g["nom"] for g in gens}) or None
             a["eic"] = sorted({u["eic"] for u in units}) or None
         if insee and insee in communes and "nom" in communes[insee]:
@@ -99,6 +141,10 @@ def main():
                 a["commune"] = communes.get(insee, {}).get("nom") or r["commune"]
                 verif["commune"] = f"Registre national des installations (ODRÉ), « {r['nominstallation']} »"
         check_position(a, verif, insee)
+        rows = [r for u in units for r in reg_by_eic.get(u["eic"], [])] + rrows
+        a["registre"] = registre_block(rows)
+        if a["registre"]:
+            verif["registre"] = f"Registre national des installations (ODRÉ), {len(a['registre']['installations'])} installation(s)"
         a["verif"] = verif
         a = {k: v for k, v in a.items() if v is not None}
         assets.append(a)
@@ -117,6 +163,7 @@ def main():
                 "id": tid, "site": f'nuc-{s["code"]}', "nom": f'{s["nom"]} {num}', "num": num,
                 "palier": s.get("paliers", {}).get(str(num), s["palier"]), "p_net_mw": round(u["p_mw"]) if u else s.get("p_defaut"),
                 "couplage": coupl, "fin_vie_hyp": coupl + 60, "rte": f'{s["cle"]} {num}', "eic": u["eic"] if u else None,
+                "registre": registre_block(reg_by_eic.get(u["eic"], [])) if u else None,
                 "verif": {"puissance": f"ENTSO-E 14.1.B, relevé du {date_ref}" if u else "non trouvée sur ENTSO-E",
                           "couplage": "WNA / IAEA PRIS, recoupé (vérification du 16/10/2026)",
                           "palier": "ASN, WNA (vérification du 16/10/2026)"}})
@@ -125,6 +172,7 @@ def main():
                        "region": REG_CODE[s["reg"]], "lat": s["lat"], "lon": s["lon"],
                        "p_mw": sum(t["p_net_mw"] for t in tranches if t["site"] == f'nuc-{s["code"]}'), "tranches": ids,
                        "commune": communes.get(insee, {}).get("nom"),
+                       "registre": registre_block([r for u in units for r in reg_by_eic.get(u["eic"], [])]),
                        "verif": {"coordonnees": "Wikipédia / WNA, à ±0,01° (vérification du 16/10/2026)",
                                  "puissance": f"somme des tranches, ENTSO-E 14.1.B, relevé du {date_ref}",
                                  "commune": "Registre national des installations (ODRÉ)"}})

@@ -294,3 +294,5 @@ label.btn { display: inline-flex; align-items: center; cursor: pointer; }
   .search:focus-within input::placeholder { color: var(--muted); }
   .form3 { grid-template-columns: 1fr 1fr; }
 }
+.camctl button[aria-pressed="true"] { background: var(--fg); color: var(--panel); }
+#c-grid { font: 700 11px var(--f-mono); }

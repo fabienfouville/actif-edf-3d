@@ -26,10 +26,14 @@ jobs:
       - name: Sonde
         env:
           ENTSOE_TOKEN: ${{ secrets.ENTSOE_TOKEN }}
-        run: cd pipeline && python catalog.py && python build_catalog.py
+        run: |
+          cd pipeline && python catalog.py && python build_catalog.py
+          python indispos.py || echo "indisponibilités : échec"
+          python reseau.py || echo "réseau : échec"
       - name: Commit du rapport
         run: |
           git config user.name "parc3d-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add probe data/reference.json data/assets.json data/edf_tranches.json
+          for f in data/indispos.json data/grid.json; do if [ -f "$f" ]; then git add "$f"; fi; done
           git diff --cached --quiet || { git commit -m "Catalogue de référence depuis les sources officielles"; git push; }

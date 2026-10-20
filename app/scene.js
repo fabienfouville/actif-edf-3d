@@ -1,4 +1,5 @@
-// Maquette 3D : la France en plateau blanc, une maquette par site (un modèle unique par filière).
+// Maquette 3D : la France en plateau blanc, une maquette par filière. Un clic sur une filière l'éclate en
+// ses vrais sites, qui s'envolent vers leur position réelle ; un clic sur un site ouvre sa fiche.
 // L'anneau au sol indique la charge à l'heure choisie ; vapeur, pales et eau s'animent quand le site produit.
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -130,6 +131,34 @@ export function createScene(el, D, { onPick, onHover }) {
     scene.add(root);
   }
 
+  // ---------------------------------------------------------------- réseau HT (RTE, ODRÉ), masqué par défaut
+  let gridObj = null;
+  function buildGrid() {
+    const segs = { 400: [], 225: [] };
+    for (const l of D.grid?.lignes || []) {
+      const arr = segs[l.kv]; if (!arr) continue;
+      for (let i = 0; i < l.c.length - 1; i++) {
+        const [x1, z1] = toXZ(...l.c[i]), [x2, z2] = toXZ(...l.c[i + 1]);
+        arr.push(x1, TOP + 0.05, z1, x2, TOP + 0.05, z2);
+      }
+    }
+    const g = new THREE.Group();
+    for (const [kv, col, op] of [[225, '#3aa17e', 0.55], [400, '#d6453d', 0.85]]) {
+      if (!segs[kv].length) continue;
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.Float32BufferAttribute(segs[kv], 3));
+      g.add(new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: op })));
+    }
+    const pts = (D.grid?.postes || []).filter((p) => p.kv >= 400);
+    if (pts.length) {
+      const pg = new THREE.CylinderGeometry(0.14, 0.14, 0.12, 8), pm = new THREE.MeshBasicMaterial({ color: '#d6453d' });
+      const inst = new THREE.InstancedMesh(pg, pm, pts.length), m4 = new THREE.Matrix4();
+      pts.forEach((p, i) => { const [x, z] = toXZ(p.lon, p.lat); m4.makeTranslation(x, TOP + 0.08, z); inst.setMatrixAt(i, m4); });
+      g.add(inst);
+    }
+    return g;
+  }
+
   // ---------------------------------------------------------------- caméra
   const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 1000);
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -166,11 +195,17 @@ export function createScene(el, D, { onPick, onHover }) {
   function placeTag() {
     const st = hovered || selected;
     if (!st || !st.root.visible) { tag.hidden = true; return; }
-    const p = screenOf(st.x, TOP + 4.6 * st.s, st.z);
+    const r = st.root.position, k = st.root.scale.x;
+    const p = screenOf(r.x, r.y + 4.6 * st.s * k, r.z);
     tag.hidden = false;
     tag.style.transform = `translate(${p.x}px, ${p.y}px) translate(-50%, -100%)`;
   }
   function fillTag(st) {
+    if (st.mini) {
+      const mw = (v) => Math.round(v).toLocaleString('fr-FR');
+      tag.innerHTML = `<i style="background:${COLORS[st.f]}"></i><b>${st.a.nom}</b><span>${mw(D.siteProd(st.id, hour))} / ${mw(st.a.p_mw)} MW</span>`;
+      return;
+    }
     const prod = D.filProd(st.f, hour);
     const gw = (v) => (v / 1000).toLocaleString('fr-FR', { maximumFractionDigits: 1 });
     tag.innerHTML = `<i style="background:${COLORS[st.f]}"></i><b>${st.a.nom}</b><span>${gw(prod)} / ${gw(st.a.p_mw)} GW</span>`;
@@ -182,7 +217,8 @@ export function createScene(el, D, { onPick, onHover }) {
     const r = renderer.domElement.getBoundingClientRect();
     ndc.set(((ev.clientX - r.left) / r.width) * 2 - 1, -((ev.clientY - r.top) / r.height) * 2 + 1);
     ray.setFromCamera(ndc, camera);
-    const hits = ray.intersectObjects(sites.filter((s) => s.root.visible).map((s) => s.hit), false);
+    const pool = [...minis.filter((m) => m.root.visible && !m.leaving), ...sites.filter((s) => s.root.visible && !s.gone)];
+    const hits = ray.intersectObjects(pool.map((s) => s.hit), false);
     return hits[0]?.object.userData.site || null;
   }
   let down = null;
@@ -201,20 +237,107 @@ export function createScene(el, D, { onPick, onHover }) {
 
   // ---------------------------------------------------------------- état
   let hour = D.now, filter = null, fly = null;
+  const ringArc = (st, load) => {
+    st.ring.geometry.dispose();
+    const arc = Math.max(0.0001, load) * Math.PI * 2;
+    st.ring.geometry = new THREE.RingGeometry(2.4 * st.s, 2.75 * st.s, 48, 1, Math.PI / 2 - arc, arc);
+  };
   function setLoads() {
     for (const st of sites) {
-      const load = Math.max(0, Math.min(1, D.filProd(st.f, hour) / st.a.p_mw));
-      st.load = load;
-      st.ring.geometry.dispose();
-      const arc = Math.max(0.0001, load) * Math.PI * 2;
-      st.ring.geometry = new THREE.RingGeometry(2.4 * st.s, 2.75 * st.s, 64, 1, Math.PI / 2 - arc, arc);
+      st.load = Math.max(0, Math.min(1, D.filProd(st.f, hour) / st.a.p_mw));
+      ringArc(st, st.load);
+    }
+    for (const m of minis) {
+      m.load = Math.max(0, Math.min(1, D.siteProd(m.id, hour) / m.a.p_mw));
+      ringArc(m, m.load);
     }
     const st = hovered || selected;
     if (st) fillTag(st);
   }
-  setLoads();
+
+  // ---------------------------------------------------------------- éclatement d'une filière en sites réels
+  // La maquette de la filière rétrécit ; chaque site part de là en arc et se pose à sa position réelle.
+  const minis = [];
+  let expanded = null;
+  const ease = (k) => 1 - (1 - k) ** 3;
+  function expand(f) {
+    if (expanded === f) return;
+    collapse();
+    const big = sites.find((s) => s.f === f);
+    if (!big) return;
+    expanded = f;
+    const t0 = clock.getElapsedTime();
+    big.anim = { t0, from: big.root.scale.x, to: 0.001 };
+    // les autres filières se font discrètes pour ne pas masquer les sites
+    for (const o of sites) if (o !== big) o.anim = { t0, from: o.root.scale.x, to: 0.4 };
+    const list = D.assets.filter((a) => a.filiere === f && Number.isFinite(a.lat) && Number.isFinite(a.lon) && (D.byMap[a.id] || []).length)
+      .sort((a, b) => b.p_mw - a.p_mw);
+    list.forEach((a, i) => {
+      const [x, z] = toXZ(a.lon, a.lat);
+      const m = { id: a.id, f, a, x, z, mini: true, s: 0.32 + 0.3 * Math.sqrt(a.p_mw / 1000), load: 0,
+        from: new THREE.Vector3(big.x, TOP, big.z), to: new THREE.Vector3(x, TOP, z), t0: t0 + 0.12 + i * Math.min(0.035, 1 / list.length), dur: 0.9 };
+      m.model = buildModel(f);
+      m.model.g.scale.setScalar(m.s);
+      const root = new THREE.Group();
+      root.position.copy(m.from);
+      root.rotation.y = f === 'eolien' ? 0.4 : -0.1;
+      root.scale.setScalar(0.001);
+      root.add(m.model.g);
+      m.ringMat = new THREE.MeshBasicMaterial({ color: COLORS[f] });
+      m.ring = new THREE.Mesh(new THREE.BufferGeometry(), m.ringMat);
+      m.ring.rotation.x = -Math.PI / 2; m.ring.position.y = 0.03;
+      root.add(m.ring);
+      const hit = new THREE.Mesh(hitGeo, hitMat);
+      hit.scale.setScalar(Math.max(m.s, 0.45)); hit.position.y = 2 * m.s; hit.userData.site = m;
+      root.add(hit);
+      m.hit = hit; m.root = root;
+      root.visible = !filter || filter.has(f);
+      scene.add(root);
+      minis.push(m);
+    });
+    setLoads();
+  }
+  function collapse() {
+    if (!expanded) return;
+    const big = sites.find((s) => s.f === expanded);
+    const t0 = clock.getElapsedTime();
+    for (const m of minis) {
+      if (m.leaving) continue;
+      m.leaving = true;
+      m.from = m.root.position.clone(); m.to = new THREE.Vector3(big.x, TOP, big.z); m.t0 = t0; m.dur = 0.55;
+    }
+    big.gone = false;
+    big.root.visible = !filter || filter.has(big.f);
+    big.anim = { t0: t0 + 0.25, from: big.root.scale.x, to: 1 };
+    for (const o of sites) if (o !== big) o.anim = { t0, from: o.root.scale.x, to: 1 };
+    expanded = null;
+    if (hovered?.mini) hovered = null;
+  }
+  function animateSplit(t) {
+    for (const st of sites) {
+      if (!st.anim) continue;
+      const k = Math.max(0, Math.min(1, (t - st.anim.t0) / 0.45));
+      st.root.scale.setScalar(st.anim.from + (st.anim.to - st.anim.from) * ease(k));
+      if (k >= 1) { if (st.anim.to < 0.01) { st.root.visible = false; st.gone = true; } st.anim = null; }
+    }
+    for (let i = minis.length - 1; i >= 0; i--) {
+      const m = minis[i];
+      const k = Math.max(0, Math.min(1, (t - m.t0) / m.dur));
+      if (k === 0 && !m.leaving) continue;
+      const e = ease(k);
+      m.root.position.lerpVectors(m.from, m.to, e);
+      m.root.position.y = TOP + Math.sin(Math.PI * k) * (m.leaving ? 2 : 6);
+      m.root.scale.setScalar(m.leaving ? Math.max(0.001, 1 - e) : Math.max(0.001, e));
+      if (m.leaving && k >= 1) {
+        scene.remove(m.root);
+        m.ring.geometry.dispose(); m.ringMat.dispose();
+        minis.splice(i, 1);
+      }
+    }
+  }
 
   const clock = new THREE.Clock();
+  setLoads();
   let ready;
   const readyP = new Promise((r) => { ready = r; });
   renderer.setAnimationLoop(() => {
@@ -228,8 +351,14 @@ export function createScene(el, D, { onPick, onHover }) {
       if (k >= 1) fly = null;
     }
     controls.update();
+    animateSplit(t);
     for (const st of sites) if (st.root.visible) st.model.tick(t, st.load);
-    if (selRing.visible) { const p = 1 + 0.05 * Math.sin(t * 4); selRing.scale.set(selected.s * p, selected.s * p, 1); }
+    for (const m of minis) if (m.root.visible) m.model.tick(t, m.load);
+    if (selRing.visible && selected) {
+      const p = (1 + 0.05 * Math.sin(t * 4)) * selected.s * selected.root.scale.x;
+      selRing.scale.set(p, p, 1);
+      selRing.position.set(selected.root.position.x, TOP + 0.04, selected.root.position.z);
+    }
     placeTag();
     renderer.render(scene, camera);
     if (ready) { ready(); ready = null; }
@@ -238,19 +367,38 @@ export function createScene(el, D, { onPick, onHover }) {
   return {
     ready: readyP,
     setHour(h) { hour = h; setLoads(); },
-    setFilter(set) { filter = set; for (const st of sites) st.root.visible = !filter || filter.has(st.a.filiere); },
+    setFilter(set) {
+      filter = set;
+      for (const st of sites) st.root.visible = !st.gone && (!filter || filter.has(st.a.filiere));
+      for (const m of minis) m.root.visible = !filter || filter.has(m.f);
+    },
+    /** id = fil-<filière> : éclate la filière ; id d'un site ou d'une tranche : éclate sa filière et vise le site. */
     select(id) {
-      const f = id && (D.unitById[id]?.filiere || D.assets.find((a) => a.id === id)?.filiere || id.replace(/^fil-/, ''));
-      selected = sites.find((s) => s.f === f) || null;
+      if (!id) { collapse(); selected = null; selRing.visible = false; if (!hovered) tag.hidden = true; return; }
+      const u = D.unitById[id], a = D.assets.find((x) => x.id === (u?.mapId || id));
+      const f = u?.filiere || a?.filiere || id.replace(/^fil-/, '');
+      expand(f);
+      const siteId = id.startsWith('fil-') ? null : (u?.mapId || id);
+      const target = siteId && minis.find((m) => m.id === siteId && !m.leaving);
+      selected = target || null;
       selRing.visible = !!selected;
-      if (!selected) { if (!hovered) tag.hidden = true; return; }
-      selRing.position.set(selected.x, TOP + 0.04, selected.z);
-      fillTag(selected);
+      if (selected) fillTag(selected); else if (!hovered) tag.hidden = true;
       const wide = matchMedia('(min-width: 900px)').matches;
-      // décale la cible pour que le site reste visible à côté de la fiche
-      const toZ = Math.max(camera.zoom, 1.6);
+      let cx, cz, toZ;
+      if (selected) {
+        cx = selected.x; cz = selected.z; toZ = Math.max(camera.zoom, 2.4);
+      } else {
+        // cadre l'ensemble des sites de la filière
+        const pts = minis.filter((m) => !m.leaving).map((m) => m.to);
+        if (!pts.length) return;
+        const xs = pts.map((p) => p.x), zs = pts.map((p) => p.z);
+        cx = (Math.min(...xs) + Math.max(...xs)) / 2; cz = (Math.min(...zs) + Math.max(...zs)) / 2;
+        const span = Math.max(Math.max(...xs) - Math.min(...xs), (Math.max(...zs) - Math.min(...zs)) * 1.4, 12);
+        toZ = Math.max(1, Math.min(3, 70 / span));
+      }
+      // décale la cible pour que les sites restent visibles à côté de la fiche
       const shift = new THREE.Vector3(wide ? 9 / toZ * 2.2 : 0, 0, wide ? 0 : 14 / toZ * 2.2);
-      fly = { t0: clock.getElapsedTime(), fromT: controls.target.clone(), toT: new THREE.Vector3(selected.x, 0, selected.z).add(shift),
+      fly = { t0: clock.getElapsedTime(), fromT: controls.target.clone(), toT: new THREE.Vector3(cx, 0, cz).add(shift),
         fromO: camera.position.clone().sub(controls.target), toO: camera.position.clone().sub(controls.target), fromZ: camera.zoom, toZ };
     },
     home() {
@@ -264,5 +412,9 @@ export function createScene(el, D, { onPick, onHover }) {
     project(lon, lat) { const [x, z] = toXZ(lon, lat); return screenOf(x, TOP + 1, z); },
     projectFiliere(f) { const st = sites.find((s) => s.f === f); return st ? screenOf(st.x, TOP + 2 * st.s, st.z) : { x: el.clientWidth / 2, y: el.clientHeight }; },
     resize,
+    showGrid(on) {
+      if (on && !gridObj) { gridObj = buildGrid(); scene.add(gridObj); }
+      if (gridObj) gridObj.visible = on;
+    },
   };
 }
