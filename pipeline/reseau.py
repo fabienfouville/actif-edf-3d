@@ -63,6 +63,38 @@ def lines_of(geom):
     return []
 
 
+OVERPASS = "https://overpass-api.de/api/interpreter"
+
+
+def osm():
+    """Lignes 400/225 kV et postes 400 kV de France métropolitaine (OpenStreetMap)."""
+    q = """[out:json][timeout:600];
+area["ISO3166-1"="FR"][admin_level=2]->.fr;
+(way["power"~"^(line|cable)$"]["voltage"~"(^|;)(400000|225000)(;|$)"](area.fr););
+out geom;
+(node["power"="substation"]["voltage"~"400000"](area.fr);way["power"="substation"]["voltage"~"400000"](area.fr););
+out center;"""
+    from common import http
+    d = json.loads(http(OVERPASS, data=urllib.parse.urlencode({"data": q}).encode(), timeout=900).decode("utf-8"))
+    lignes, postes = [], []
+    for el in d.get("elements", []):
+        tags = el.get("tags", {})
+        if el["type"] == "way" and tags.get("power") in ("line", "cable") and el.get("geometry"):
+            v = [int(x) for x in re.findall(r"\d+", tags.get("voltage", "")) if int(x) in (400000, 225000)]
+            s = simplify([(p["lon"], p["lat"]) for p in el["geometry"]])
+            if v and len(s) >= 2:
+                lignes.append({"kv": max(v) // 1000, "c": s, "s": "souterrain" if tags.get("power") == "cable" else "aerien"})
+        elif tags.get("power") == "substation":
+            c = el.get("center") or {"lat": el.get("lat"), "lon": el.get("lon")}
+            if c.get("lat") is not None:
+                postes.append({"nom": tags.get("name"), "kv": 400, "lon": round(c["lon"], 3), "lat": round(c["lat"], 3)})
+    # les fonds DOM-TOM ne sont pas sur la carte
+    keep = lambda lon, lat: -5.5 < lon < 10 and 41 < lat < 51.5
+    lignes = [l for l in lignes if all(keep(*p) for p in l["c"])]
+    postes = [p for p in postes if keep(p["lon"], p["lat"])]
+    return lignes, postes
+
+
 def main():
     report = {"genere": iso(now()), "candidats": {}}
     cands = {}
@@ -131,12 +163,22 @@ def main():
         except Exception as e:  # noqa: BLE001
             report["erreur_postes"] = str(e)[:300]
 
+    # RTE ne publie plus la géométrie de ses ouvrages sur ODRÉ (champ vide) : tracés OpenStreetMap
+    source = "RTE (ODRÉ)"
+    if not lignes:
+        try:
+            lignes, postes = osm()
+            source = "OpenStreetMap (Overpass), © contributeurs OpenStreetMap, ODbL"
+            report["osm"] = {"lignes": len(lignes), "postes": len(postes)}
+        except Exception as e:  # noqa: BLE001
+            report["erreur_osm"] = str(e)[:300]
+
     os.makedirs(os.path.join(ROOT, "probe"), exist_ok=True)
     save_json(os.path.join(ROOT, "probe", "reseau.json"), report, pretty=True)
     if lignes:
         save_json(f"{DATA}/grid.json", {
-            "_doc": "Réseau de transport RTE 400 et 225 kV (ODRÉ, Licence Ouverte), tracés simplifiés à 0,01°.",
-            "genere": iso(now()), "sources": report["choisis"], "lignes": lignes, "postes": postes}, pretty=False)
+            "_doc": "Réseau de transport 400 et 225 kV, tracés simplifiés à 0,01°.", "source": source,
+            "genere": iso(now()), "lignes": lignes, "postes": postes}, pretty=False)
     print(json.dumps({"choisis": report["choisis"], "lignes": len(lignes), "postes": len(postes)}, ensure_ascii=False))
 
 
