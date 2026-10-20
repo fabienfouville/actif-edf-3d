@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-20T08:32:09Z",
+ "genere": "2026-10-20T08:39:58Z",
  "candidats": {
   "aerien": [
    "postes-electriques-rte",
@@ -424,10 +424,10 @@
  },
  "exemple_lignes-aeriennes-rte-nv": {
   "type_ouvrage": "AERIEN",
-  "code_ligne": "CHAFAL42CZELL",
-  "nom_ligne": "LIAISON 90kV N0 2 CHAFAUDS-COURELLES (LES)",
+  "code_ligne": "FARRAL61GRANZ",
+  "nom_ligne": "LIAISON 225kV N0 1 FARRADIERE (LA)-GRANZAY",
   "etat": "EN EXPLOITATION",
-  "tension": "90kV",
+  "tension": "225kV",
   "source": "RTE",
   "nombre_circuit": "1",
   "identification_2": null,
@@ -439,12 +439,28 @@
   "identification_5": null,
   "nom_ouvrage_5": null
  },
+ "stats_lignes-aeriennes-rte-nv": {
+  "features": 2597,
+  "geometries": {
+   "null": 2597
+  },
+  "tensions": {
+   "225kV": 1957,
+   "400kV": 640
+  },
+  "geometrie_exemple": "null",
+  "cles_feature": [
+   "geometry",
+   "properties",
+   "type"
+  ]
+ },
  "exemple_lignes-souterraines-rte-nv": {
   "type_ouvrage": "SOUTERRAIN",
-  "code_ligne": "B.DA5L31FROUA",
-  "nom_ouvrage_1": "LIAISON 63kV N0 1 BAN LA DAME-FROUARD",
+  "code_ligne": "CHEVIL61VLEJU",
+  "nom_ouvrage_1": "LIAISON 225kV N0 1 CHEVILLY-VILLEJUST",
   "etat": "EN EXPLOITATION",
-  "tension": "63kV",
+  "tension": "225kV",
   "nombre_circuit": "1",
   "identification_2": null,
   "nom_ouvrage_2": null,
@@ -455,12 +471,34 @@
   "identification_5": null,
   "nom_ouvrage_5": null
  },
+ "stats_lignes-souterraines-rte-nv": {
+  "features": 773,
+  "geometries": {
+   "null": 773
+  },
+  "tensions": {
+   "225kV": 755,
+   "400kV": 18
+  },
+  "geometrie_exemple": "null",
+  "cles_feature": [
+   "geometry",
+   "properties",
+   "type"
+  ]
+ },
  "exemple_postes": {
-  "code_poste": ".PIOS",
-  "nom_poste": "PIOSSASCO",
+  "code_poste": "1CLAM",
+  "nom_poste": "CLAMART",
   "fonction": "Poste de transformation",
   "etat": "EN EXPLOITATION",
-  "tension": "COURANT CONTINU",
-  "departement": "Savoie"
+  "tension": "225kV",
+  "departement": "Hauts-de-Seine"
+ },
+ "stats_postes": {
+  "features": 1238,
+  "geometries": {
+   "null": 1238
+  }
  }
 }
