@@ -1,5 +1,5 @@
 {
- "genere": "2026-10-19T23:24:32Z",
+ "genere": "2026-10-22T13:50:31Z",
  "mode": "reel",
  "mois": [
   "2025-09",
@@ -21,31 +21,22 @@
   "mix": {
    "ok": true,
    "source": "eco2mix",
-   "heures": 95
+   "heures": 86
   },
+  "prix_erreurs": [
+   "entsoe: HTTP Error 599: status code 599"
+  ],
   "prix": {
    "ok": true,
-   "source": "entsoe",
-   "heures": 96
+   "source": "energy-charts",
+   "heures": 120
   },
   "units": {
-   "ok": true,
-   "source": "entsoe",
-   "groupes": 101,
-   "groupes_publies": 159
+   "ok": false,
+   "erreur": "ENTSO-E A73 : aucun groupe"
   }
  },
- "rte_non_apparies": [
-  "AMFARD14",
-  "AMFARD15",
-  "BESS AFD7 BARBAN SAUCATS 1",
-  "BRENNILIS 1",
-  "BRENNILIS 2",
-  "CERNAY",
-  "CLAUD1TB",
-  "FR GA MORANT1",
-  "FR LANDIVISIAUGU"
- ],
+ "rte_non_apparies": [],
  "licences": {
   "eco2mix": "RTE éCO2mix via ODRÉ, Licence Ouverte Etalab 2.0",
   "entsoe": "ENTSO-E Transparency Platform, réutilisation avec attribution",
